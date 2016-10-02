@@ -1,0 +1,17 @@
+{
+    IBClasses = (
+        {
+            CLASS = "Action_Growl"; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                "_rdActualText" = NSTextField; 
+                "_rdInternalConfigurationView" = NSView; 
+                "_rdTitleText" = NSTextField; 
+            }; 
+            SUPERCLASS = BaseAction; 
+        }, 
+        {CLASS = BaseAction; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }
+    ); 
+    IBVersion = 1; 
+}

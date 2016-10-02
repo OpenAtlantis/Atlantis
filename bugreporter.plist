@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>BRBundleIdentifier</key>
+    <string>net.riverdark.Atlantis</string>
+
+    <key>BRProductName</key>
+    <string>Atlantis</string>
+
+    <key>BRBundleVersion</key>
+    <string>92</string>
+
+    <key>BRProblemDescription</key>
+    <string>Describe what you were doing at the time of the crash, preferably in detail.  Not just, 'I was clicking on a button' but what button, and what dialog, etc.  The more detail, the more likely I am to be able to find and fix what happened.  (And PLEASE, PLEASE, include your e-mail address!  Often, the crash report alone is NOT enough information for me to determine what happened if people provide only a one-sentence description.)</string>
+
+    <key>BRRequireProblemDescription</key>
+    <string>1</string>
+
+    <key>BRSubmitWeb</key>
+    <string>http://www.riverdark.net/atlantis/bugreporter.cgi</string>
+
+    <key>BRUserName</key>
+    <string>Rachel Blackman</string>
+
+    <key>BRRegistrationCode</key>
+    <string>BREP-1B40C37E-6FF59DC2-DE559106-32FC1A66</string>
+    
+    <key>BRReportInfo</key>
+    <array>
+        <string>BRReportCrashLog</string>
+        <string>BRReportSystemProfile</string>
+        <string>BRReportLogs</string>
+    </array>
+
+    <key>BRReportSystemProfileDetailLevel</key>
+    <string>basic</string>
+
+    <key>BRReportSystemProfileDataTypes</key>
+    <array>
+        <string>SPHardwareDataType</string>
+    </array>
+
+    <key>BRCustomPropertyDictionary</key>
+    <dict>
+        <key>Public Release Number</key>
+        <string>0.9.8.7</string>
+    </dict>
+
+</dict>
+</plist>

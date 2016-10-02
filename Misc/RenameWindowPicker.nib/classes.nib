@@ -1,0 +1,13 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            ACTIONS = {cancel = id; rename = id; }; 
+            CLASS = RenameWindowPanel; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {"_rdRenamePanel" = NSPanel; "_rdRenameText" = NSTextField; }; 
+            SUPERCLASS = NSWindowController; 
+        }
+    ); 
+    IBVersion = 1; 
+}

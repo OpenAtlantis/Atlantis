@@ -1,0 +1,55 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {CLASS = RDView; LANGUAGE = ObjC; SUPERCLASS = NSView; }, 
+        {CLASS = WorldConfigurationTab; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            ACTIONS = {chooseCodepage = id; chooseFont = id; toggleDefault = id; }; 
+            CLASS = WorldFormattingEditor; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                "_rdAnsiBolding" = NSButton; 
+                "_rdAnsiColor00" = NSColorWell; 
+                "_rdAnsiColor01" = NSColorWell; 
+                "_rdAnsiColor02" = NSColorWell; 
+                "_rdAnsiColor03" = NSColorWell; 
+                "_rdAnsiColor04" = NSColorWell; 
+                "_rdAnsiColor05" = NSColorWell; 
+                "_rdAnsiColor06" = NSColorWell; 
+                "_rdAnsiColor07" = NSColorWell; 
+                "_rdAnsiColor08" = NSColorWell; 
+                "_rdAnsiColor09" = NSColorWell; 
+                "_rdAnsiColor10" = NSColorWell; 
+                "_rdAnsiColor11" = NSColorWell; 
+                "_rdAnsiColor12" = NSColorWell; 
+                "_rdAnsiColor13" = NSColorWell; 
+                "_rdAnsiColor14" = NSColorWell; 
+                "_rdAnsiColor15" = NSColorWell; 
+                "_rdAnsiDefaults" = NSButton; 
+                "_rdBackgroundColor" = NSColorWell; 
+                "_rdCodepage" = NSPopUpButton; 
+                "_rdCodepageDefault" = NSButton; 
+                "_rdConfigView" = NSView; 
+                "_rdConsoleColor" = NSColorWell; 
+                "_rdFontChange" = NSButton; 
+                "_rdFontDefault" = NSButton; 
+                "_rdFontName" = NSTextField; 
+                "_rdForegroundColor" = NSColorWell; 
+                "_rdGrabpass" = NSTextField; 
+                "_rdGrabpassDefault" = NSButton; 
+                "_rdIndent" = NSTextField; 
+                "_rdIndentDefault" = NSButton; 
+                "_rdIndentStepper" = NSStepper; 
+                "_rdLocalEcho" = NSButton; 
+                "_rdLocalEchoDefault" = NSButton; 
+                "_rdLocalEchoPrefix" = NSTextField; 
+                "_rdRhost" = NSButton; 
+                "_rdSelectionColor" = NSColorWell; 
+                "_rdTimestamps" = NSButton; 
+                "_rdUrlColor" = NSColorWell; 
+            }; 
+            SUPERCLASS = WorldConfigurationTab; 
+        }
+    ); 
+    IBVersion = 1; 
+}

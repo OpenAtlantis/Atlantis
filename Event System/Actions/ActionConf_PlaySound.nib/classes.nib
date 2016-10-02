@@ -1,0 +1,17 @@
+{
+    IBClasses = (
+        {
+            ACTIONS = {browseForFile = id; }; 
+            CLASS = "Action_SoundPlay"; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                "_rdInternalConfigurationView" = NSView; 
+                "_rdSoundFilenameField" = NSTextField; 
+            }; 
+            SUPERCLASS = BaseAction; 
+        }, 
+        {CLASS = BaseAction; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }
+    ); 
+    IBVersion = 1; 
+}

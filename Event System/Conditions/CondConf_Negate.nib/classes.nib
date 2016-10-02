@@ -1,0 +1,19 @@
+{
+    IBClasses = (
+        {CLASS = BaseCondition; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            ACTIONS = {conditionTypeChanged = id; }; 
+            CLASS = "Condition_Negate"; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                "_rdConditionPicker" = NSPopUpButton; 
+                "_rdDisplayView" = RDChainedListView; 
+                "_rdInternalConfigurationView" = NSView; 
+            }; 
+            SUPERCLASS = BaseCondition; 
+        }, 
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {CLASS = RDChainedListView; LANGUAGE = ObjC; SUPERCLASS = NSView; }
+    ); 
+    IBVersion = 1; 
+}

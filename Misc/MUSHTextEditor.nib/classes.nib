@@ -1,0 +1,32 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            ACTIONS = {
+                ansiPicked = id; 
+                clearEditor = id; 
+                colorPicked = id; 
+                doConversion = id; 
+                switchContext = id; 
+                toggleInverse = id; 
+                toggleUnderline = id; 
+            }; 
+            CLASS = MUSHTextEditor; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                "_rdAnsiTypePicker" = NSMatrix; 
+                "_rdColorPicker" = NSMatrix; 
+                "_rdCurrentBackground" = NSButton; 
+                "_rdCurrentColor" = NSButton; 
+                "_rdEditorView" = NSTextView; 
+                "_rdInvertColors" = NSButton; 
+                "_rdSourceView" = NSTextView; 
+                "_rdUnderline" = NSButton; 
+            }; 
+            SUPERCLASS = NSWindowController; 
+        }, 
+        {CLASS = NSLevelIndicator; LANGUAGE = ObjC; SUPERCLASS = NSControl; }, 
+        {CLASS = RDMUSHTextView; LANGUAGE = ObjC; SUPERCLASS = NSTextView; }
+    ); 
+    IBVersion = 1; 
+}

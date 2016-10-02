@@ -1,0 +1,24 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            CLASS = WindowingPreferences; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                "_rdBottomSpawn" = NSButton; 
+                "_rdConfigView" = NSView; 
+                "_rdDefaultGrouping" = NSButtonCell; 
+                "_rdDragEnabled" = NSButton; 
+                "_rdKillSpawn" = NSButton; 
+                "_rdOneGrouping" = NSButtonCell; 
+                "_rdOutlineStyle" = NSButton; 
+                "_rdScatterGrouping" = NSButtonCell; 
+                "_rdSmallIcons" = NSButton; 
+                "_rdSourceStyle" = NSButton; 
+                "_rdTabbedStyle" = NSButton; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }
+    ); 
+    IBVersion = 1; 
+}

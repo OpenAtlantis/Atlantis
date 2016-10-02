@@ -1,0 +1,29 @@
+{
+    IBClasses = (
+        {
+            ACTIONS = {
+                logTypeChanged = id; 
+                optionsButton = id; 
+                scrollbackEnabledChanged = id; 
+                spawnEnabledChanged = id; 
+                timestampsChanged = id; 
+            }; 
+            CLASS = "Action_OpenLog"; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                "_rdFilename" = NSTextField; 
+                "_rdInternalConfigurationView" = NSView; 
+                "_rdLogScrollback" = NSButton; 
+                "_rdLogTypes" = NSPopUpButton; 
+                "_rdOptionsButton" = NSButton; 
+                "_rdSpawnEnabled" = NSButton; 
+                "_rdSpawnTextfield" = NSTextField; 
+                "_rdTimestampsEnabled" = NSButton; 
+            }; 
+            SUPERCLASS = BaseAction; 
+        }, 
+        {CLASS = BaseAction; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }
+    ); 
+    IBVersion = 1; 
+}

@@ -1,0 +1,16 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            CLASS = WorldNotesView; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                "_rdNotesLabel" = NSTextField; 
+                "_rdNotesText" = NSTextView; 
+                "_rdNotesView" = NSView; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }
+    ); 
+    IBVersion = 1; 
+}

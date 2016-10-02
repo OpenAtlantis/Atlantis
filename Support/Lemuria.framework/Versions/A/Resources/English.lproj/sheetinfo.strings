@@ -1,0 +1,8 @@
+/* Localized versions of Lemuria sheet info strings */
+
+RDOkayButton = "OK";
+RDCancelButton = "Cancel";
+RDViewClose = "Do you really want to close this view?";
+RDViewGeneric = "Closing this view will also close all views beneath it.";
+RDWindowClose = "Do you really want to close this window?";
+RDWindowCloseInfo = "Closing a window will close all the views within it.";

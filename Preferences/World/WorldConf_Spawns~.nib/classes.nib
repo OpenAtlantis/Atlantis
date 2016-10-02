@@ -1,0 +1,42 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {CLASS = RDBlockingOutlineView; LANGUAGE = ObjC; SUPERCLASS = NSOutlineView; }, 
+        {CLASS = WorldConfigurationTab; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            ACTIONS = {
+                addException = id; 
+                addPattern = id; 
+                addSpawn = id; 
+                priorityChanged = id; 
+                removeException = id; 
+                removePattern = id; 
+                removeSpawn = id; 
+                toggleActivity = id; 
+            }; 
+            CLASS = WorldSpawnEditor; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                "_rdActivityButton" = NSButton; 
+                "_rdAddException" = NSButton; 
+                "_rdAddFolder" = NSButton; 
+                "_rdAddPattern" = NSButton; 
+                "_rdAddSpawn" = NSButton; 
+                "_rdConfigView" = NSView; 
+                "_rdExceptionList" = NSTableView; 
+                "_rdLineField" = NSTextField; 
+                "_rdPatternList" = NSTableView; 
+                "_rdPrefixField" = NSTextField; 
+                "_rdPriority" = NSTextField; 
+                "_rdPriorityStepper" = NSStepper; 
+                "_rdRemoveException" = NSButton; 
+                "_rdRemovePattern" = NSButton; 
+                "_rdRemoveSpawn" = NSButton; 
+                "_rdSpawnList" = NSOutlineView; 
+                "_rdStatusbarButton" = NSButton; 
+            }; 
+            SUPERCLASS = WorldConfigurationTab; 
+        }
+    ); 
+    IBVersion = 1; 
+}

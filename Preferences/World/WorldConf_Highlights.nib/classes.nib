@@ -1,0 +1,34 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {CLASS = RDColorWellCell; LANGUAGE = ObjC; SUPERCLASS = NSButtonCell; }, 
+        {CLASS = WorldConfigurationTab; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            ACTIONS = {
+                addHighlight = id; 
+                changeColor = id; 
+                changePatternType = id; 
+                removeHighlight = id; 
+                toggleBackground = id; 
+                toggleForeground = id; 
+            }; 
+            CLASS = WorldHighlightEditor; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                "_rdAddHighlightButton" = NSButton; 
+                "_rdBackgroundColorWell" = NSColorWell; 
+                "_rdConfigView" = NSView; 
+                "_rdForegroundColorWell" = NSColorWell; 
+                "_rdHighlightPattern" = NSTextField; 
+                "_rdHighlightTypeButton" = NSPopUpButton; 
+                "_rdHighlightTypeColumn" = NSTableColumn; 
+                "_rdHighlightUseBgButton" = NSButton; 
+                "_rdHighlightUseFgButton" = NSButton; 
+                "_rdHighlightsTable" = NSTableView; 
+                "_rdRemoveHighlightButton" = NSButton; 
+            }; 
+            SUPERCLASS = WorldConfigurationTab; 
+        }
+    ); 
+    IBVersion = 1; 
+}

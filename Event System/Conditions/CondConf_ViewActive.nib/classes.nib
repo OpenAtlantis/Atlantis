@@ -1,0 +1,16 @@
+{
+    IBClasses = (
+        {CLASS = BaseCondition; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            CLASS = "Condition_ViewActive"; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                "_rdActivityChooser" = NSPopUpButton; 
+                "_rdInternalConfigurationView" = NSView; 
+            }; 
+            SUPERCLASS = BaseCondition; 
+        }, 
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }
+    ); 
+    IBVersion = 1; 
+}

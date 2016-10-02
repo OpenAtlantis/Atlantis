@@ -1,0 +1,13 @@
+{
+    IBClasses = (
+        {
+            ACTIONS = {addCondition = id; cancel = id; }; 
+            CLASS = ConditionPicker; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {"_rdConditionList" = NSPopUpButton; "_rdConditionPicker" = NSPanel; }; 
+            SUPERCLASS = NSWindowController; 
+        }, 
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }
+    ); 
+    IBVersion = 1; 
+}

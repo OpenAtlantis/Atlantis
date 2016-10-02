@@ -1,0 +1,13 @@
+{
+    IBClasses = (
+        {CLASS = BaseCondition; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            CLASS = "Condition_LineClass"; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {"_rdInternalConfigurationView" = NSView; "_rdLineClassField" = NSTextField; }; 
+            SUPERCLASS = BaseCondition; 
+        }, 
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }
+    ); 
+    IBVersion = 1; 
+}

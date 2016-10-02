@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IBClasses</key>
+	<array>
+		<dict>
+			<key>CLASS</key>
+			<string>FirstResponder</string>
+			<key>LANGUAGE</key>
+			<string>ObjC</string>
+			<key>SUPERCLASS</key>
+			<string>NSObject</string>
+		</dict>
+		<dict>
+			<key>CLASS</key>
+			<string>GeneralPreferences</string>
+			<key>LANGUAGE</key>
+			<string>ObjC</string>
+			<key>OUTLETS</key>
+			<dict>
+				<key>_rdAutoShrink</key>
+				<string>NSButton</string>
+				<key>_rdAutoShrinkLen</key>
+				<string>NSTextField</string>
+				<key>_rdBeepBehavior</key>
+				<string>NSPopUpButton</string>
+				<key>_rdCheckOnStartup</key>
+				<string>NSButton</string>
+				<key>_rdClearInput</key>
+				<string>NSButton</string>
+				<key>_rdConfigView</key>
+				<string>NSView</string>
+				<key>_rdDockBadgeActive</key>
+				<string>NSButton</string>
+				<key>_rdDockBadgeHidden</key>
+				<string>NSButton</string>
+				<key>_rdDoubleConnect</key>
+				<string>NSButton</string>
+				<key>_rdEasyShortcut</key>
+				<string>NSButton</string>
+				<key>_rdFugueEnabled</key>
+				<string>NSButton</string>
+				<key>_rdNoSlashies</key>
+				<string>NSButton</string>
+				<key>_rdOpenAddressBook</key>
+				<string>NSButton</string>
+				<key>_rdSilentConvert</key>
+				<string>NSButton</string>
+			</dict>
+			<key>SUPERCLASS</key>
+			<string>NSObject</string>
+		</dict>
+	</array>
+	<key>IBVersion</key>
+	<string>1</string>
+</dict>
+</plist>

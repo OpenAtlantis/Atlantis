@@ -1,0 +1,20 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {CLASS = RDTextField; LANGUAGE = ObjC; SUPERCLASS = NSSearchField; }, 
+        {CLASS = ToolbarOption; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            CLASS = ToolbarSearch; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {"_rdSearchField" = NSSearchField; "_rdSearchView" = NSView; }; 
+            SUPERCLASS = ToolbarOption; 
+        }, 
+        {
+            CLASS = ToolbarSearchController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {"_rdSearchField" = RDTextField; "_rdSearchView" = NSView; }; 
+            SUPERCLASS = NSObject; 
+        }
+    ); 
+    IBVersion = 1; 
+}

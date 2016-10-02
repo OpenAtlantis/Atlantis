@@ -1,0 +1,13 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            ACTIONS = {cancelLogs = id; closeLogs = id; }; 
+            CLASS = RDLogCloser; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {"_rdCloserView" = NSPanel; "_rdTableView" = NSTableView; }; 
+            SUPERCLASS = NSObject; 
+        }
+    ); 
+    IBVersion = 1; 
+}

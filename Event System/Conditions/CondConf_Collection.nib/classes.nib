@@ -1,0 +1,22 @@
+{
+    IBClasses = (
+        {CLASS = BaseCondition; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            ACTIONS = {addSubCondition = id; conditionAndedChanged = id; removeSubCondition = id; }; 
+            CLASS = "Condition_CollectedConditions"; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                "_rdAddConditionButton" = NSSegmentedControl; 
+                "_rdConditionsAndedPicker" = NSPopUpButton; 
+                "_rdConditionsChain" = RDChainedListView; 
+                "_rdInternalConfigurationView" = NSView; 
+                "_rdRemoveConditionButton" = NSSegmentedControl; 
+            }; 
+            SUPERCLASS = BaseCondition; 
+        }, 
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {CLASS = NSSegmentedControl; LANGUAGE = ObjC; SUPERCLASS = NSControl; }, 
+        {CLASS = RDChainedListView; LANGUAGE = ObjC; SUPERCLASS = NSView; }
+    ); 
+    IBVersion = 1; 
+}

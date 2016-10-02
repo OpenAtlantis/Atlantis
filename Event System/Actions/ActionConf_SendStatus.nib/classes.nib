@@ -1,0 +1,17 @@
+{
+    IBClasses = (
+        {
+            CLASS = "Action_StatusSend"; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                "_rdActualTargetSpawn" = NSTextField; 
+                "_rdActualText" = NSTextField; 
+                "_rdInternalConfigurationView" = NSView; 
+            }; 
+            SUPERCLASS = BaseAction; 
+        }, 
+        {CLASS = BaseAction; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }
+    ); 
+    IBVersion = 1; 
+}

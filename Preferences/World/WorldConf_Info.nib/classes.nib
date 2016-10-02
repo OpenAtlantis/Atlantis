@@ -1,0 +1,20 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {CLASS = WorldConfigurationTab; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            ACTIONS = {launchWebsite = id; }; 
+            CLASS = WorldInfoEditor; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                "_rdConfigView" = NSView; 
+                "_rdDescription" = NSTextView; 
+                "_rdIconOverride" = NSButton; 
+                "_rdIconWell" = NSImageView; 
+                "_rdWebsite" = NSTextField; 
+            }; 
+            SUPERCLASS = WorldConfigurationTab; 
+        }
+    ); 
+    IBVersion = 1; 
+}

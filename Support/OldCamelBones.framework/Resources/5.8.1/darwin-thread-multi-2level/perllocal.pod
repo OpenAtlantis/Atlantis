@@ -1,0 +1,462 @@
+=head2 Wed Mar 21 17:44:26 2007: C<Module> L<List::Util|List::Util>
+
+=over 4
+
+=item *
+
+C<installed into: /Users/sherm/Projects/CamelBones/build/PAR/5.8.1>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 1.19>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Wed Mar 21 17:44:33 2007: C<Module> L<IO::Compress::Base|IO::Compress::Base>
+
+=over 4
+
+=item *
+
+C<installed into: /Users/sherm/Projects/CamelBones/build/PAR/5.8.1>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 2.003>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Wed Mar 21 17:45:15 2007: C<Module> L<Compress::Raw::Zlib|Compress::Raw::Zlib>
+
+=over 4
+
+=item *
+
+C<installed into: /Users/sherm/Projects/CamelBones/build/PAR/5.8.1>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 2.003>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Wed Mar 21 17:49:42 2007: C<Module> L<IO::Compress::Zlib|IO::Compress::Zlib>
+
+=over 4
+
+=item *
+
+C<installed into: /Users/sherm/Projects/CamelBones/build/PAR/5.8.1>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 2.003>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Wed Mar 21 17:50:04 2007: C<Module> L<Compress::Raw::Bzip2|Compress::Raw::Bzip2>
+
+=over 4
+
+=item *
+
+C<installed into: /Users/sherm/Projects/CamelBones/build/PAR/5.8.1>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 2.003>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Wed Mar 21 17:51:04 2007: C<Module> L<IO::Compress::Bzip2|IO::Compress::Bzip2>
+
+=over 4
+
+=item *
+
+C<installed into: /Users/sherm/Projects/CamelBones/build/PAR/5.8.1>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 2.003>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Wed Mar 21 17:51:21 2007: C<Module> L<Compress::Zlib|Compress::Zlib>
+
+=over 4
+
+=item *
+
+C<installed into: /Users/sherm/Projects/CamelBones/build/PAR/5.8.1>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 2.003>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Wed Mar 21 17:51:27 2007: C<Module> L<File::Which|File::Which>
+
+=over 4
+
+=item *
+
+C<installed into: /Users/sherm/Projects/CamelBones/build/PAR/5.8.1>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 0.05>
+
+=item *
+
+C<EXE_FILES: bin/pwhich>
+
+=back
+
+=head2 Wed Mar 21 17:51:58 2007: C<Module> L<Test::Simple|Test::Simple>
+
+=over 4
+
+=item *
+
+C<installed into: /Users/sherm/Projects/CamelBones/build/PAR/5.8.1>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 0.67>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Wed Mar 21 17:52:04 2007: C<Module> L<File::Temp|File::Temp>
+
+=over 4
+
+=item *
+
+C<installed into: /Users/sherm/Projects/CamelBones/build/PAR/5.8.1>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 0.18>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Wed Mar 21 17:52:32 2007: C<Module> L<PAR::Dist|PAR::Dist>
+
+=over 4
+
+=item *
+
+C<installed into: /Users/sherm/Projects/CamelBones/build/PAR/5.8.1>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 0.21>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Wed Mar 21 17:52:36 2007: C<Module> L<AutoLoader|AutoLoader>
+
+=over 4
+
+=item *
+
+C<installed into: /Users/sherm/Projects/CamelBones/build/PAR/5.8.1>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 5.63>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Wed Mar 21 17:53:07 2007: C<Module> L<Module::Signature|Module::Signature>
+
+=over 4
+
+=item *
+
+C<installed into: /Users/sherm/Projects/CamelBones/build/PAR/5.8.1>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 0.55>
+
+=item *
+
+C<EXE_FILES: script/cpansign>
+
+=back
+
+=head2 Wed Mar 21 17:53:19 2007: C<Module> L<PAR|PAR>
+
+=over 4
+
+=item *
+
+C<installed into: /Users/sherm/Projects/CamelBones/build/PAR/5.8.1>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 0.973>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Wed Mar 21 20:09:40 2007: C<Module> L<IO::Compress::Base|IO::Compress::Base>
+
+=over 4
+
+=item *
+
+C<installed into: /Users/sherm/Projects/CamelBones/build/PAR/5.8.1>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 2.004>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Wed Mar 21 20:10:25 2007: C<Module> L<Compress::Raw::Zlib|Compress::Raw::Zlib>
+
+=over 4
+
+=item *
+
+C<installed into: /Users/sherm/Projects/CamelBones/build/PAR/5.8.1>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 2.004>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Wed Mar 21 20:13:20 2007: C<Module> L<Compress::Raw::Bzip2|Compress::Raw::Bzip2>
+
+=over 4
+
+=item *
+
+C<installed into: /Users/sherm/Projects/CamelBones/build/PAR/5.8.1>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 2.004>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Wed Mar 21 20:14:29 2007: C<Module> L<IO::Compress::Bzip2|IO::Compress::Bzip2>
+
+=over 4
+
+=item *
+
+C<installed into: /Users/sherm/Projects/CamelBones/build/PAR/5.8.1>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 2.004>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Wed Mar 21 20:19:25 2007: C<Module> L<IO::Compress::Zlib|IO::Compress::Zlib>
+
+=over 4
+
+=item *
+
+C<installed into: /Users/sherm/Projects/CamelBones/build/PAR/5.8.1>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 2.004>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Wed Mar 21 20:19:41 2007: C<Module> L<Compress::Zlib|Compress::Zlib>
+
+=over 4
+
+=item *
+
+C<installed into: /Users/sherm/Projects/CamelBones/build/PAR/5.8.1>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 2.004>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Wed Mar 21 20:21:08 2007: C<Module> L<Test::Simple|Test::Simple>
+
+=over 4
+
+=item *
+
+C<installed into: /Users/sherm/Projects/CamelBones/build/PAR/5.8.1>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 0.70>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+

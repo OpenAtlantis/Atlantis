@@ -1,0 +1,17 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            ACTIONS = {cancel = id; send = id; }; 
+            CLASS = MCPLocalEditor; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                "_rdCancelButton" = NSButton; 
+                "_rdSendButton" = NSButton; 
+                "_rdTextEditor" = NSTextView; 
+            }; 
+            SUPERCLASS = NSWindowController; 
+        }
+    ); 
+    IBVersion = 1; 
+}

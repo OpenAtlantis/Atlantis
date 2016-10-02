@@ -1,0 +1,21 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            CLASS = NetworkPreferences; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                "_rdCompressNet" = NSButton; 
+                "_rdConfigView" = NSView; 
+                "_rdDropNetOnLoss" = NSButton; 
+                "_rdProxyHost" = NSTextField; 
+                "_rdProxyPass" = NSTextField; 
+                "_rdProxyPort" = NSTextField; 
+                "_rdProxyType" = NSPopUpButton; 
+                "_rdProxyUser" = NSTextField; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }
+    ); 
+    IBVersion = 1; 
+}

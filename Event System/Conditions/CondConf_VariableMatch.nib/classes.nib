@@ -1,0 +1,19 @@
+{
+    IBClasses = (
+        {CLASS = BaseCondition; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            ACTIONS = {patternTypeChanged = id; }; 
+            CLASS = "Condition_VariableMatch"; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                "_rdActualText" = NSTextField; 
+                "_rdActualVariable" = NSTextField; 
+                "_rdInternalConfigurationView" = NSView; 
+                "_rdPatternType" = NSPopUpButton; 
+            }; 
+            SUPERCLASS = BaseCondition; 
+        }, 
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }
+    ); 
+    IBVersion = 1; 
+}

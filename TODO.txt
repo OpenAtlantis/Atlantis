@@ -1,0 +1,319 @@
+0.8.3.3 -------------------------------------
+
+[X] Address book fixes
+    [X] A couple spawn configuration oddities
+    [X] Adding the 'connect' button a'la Thenomain's suggestion
+    [X] Automatically focus a world's main view on connect from
+        address book.
+
+[X] Lemuria 0.5.4
+    [X] Change the window-picking logic to tend to keep things
+        together
+    [X] Add a 'toggle view list visible' command.
+        (Lemuria 'views' are what Atlantis uses to hold its spawns.)
+
+[X] New actions
+    [X] 'Show/Hide List of Spawns' action for hotkey bindings
+
+
+0.8.4 ---------------------------------------
+
+[X] Logfile System
+    [X] Support for logfile format options.  (For instance,
+        turning indent, word-wrap and extra blank lines on and off
+        in the Formatted Plain Text log type.)
+    [X] 'Options' panel in Open Log Panel
+    [X] 'Save as Default' functionality for options
+    [X] Remember last selected logfile type
+
+[X] New actions
+    [X] 'Open Log' action for events
+    [X] 'Close all logs' action for events
+
+[X] New conditions
+    [X] Timer condition
+
+[X] About Box
+    [X] Nice little pretty about box, with version information 
+        and a nice little thank-you to all the testers as well. 
+
+0.8.5 ---------------------------------------
+
+[X] UserConf system
+    [X] userconf.* variables
+    [X] UserConf configuration tab
+    
+[X] New Conditions
+    [X] variable matches pattern
+    [X] spawn does not have unseen activity already
+
+[X] New Event Actions
+    [X] Move/Copy Text to Spawn
+    [X] Output text as status
+    [X] Bounce dock icon once
+    [X] Do not mark text with activity
+
+[X] Spawns
+    [X] Remove 'Add Folder' stuff, just add spawns.
+    [X] Rework spawn config to have a world representation at the
+        top, makes it clearer how stuff works.
+    [X] Allow spawn scrollback size limits
+    [X] Change 'display name' functionality to be root spawn name
+
+[X] Change variables
+    [X] Allow variables to be computed on-the-fly
+    [X] Convert datetime stuff to on-the-fly
+        (should save processing time on slower computers,
+        speed up scrolling a bit)
+        
+[X] Preferences 
+    [X] Create preference controller thingie
+    [X] Fold 'Globals' (renamed as 'World Defaults') into preferences
+    [X] Fold 'Key Bindings' into preferences
+    [X] Add 'General' ('Check for Updates on start,' etc.) pane
+
+[X] /Command system
+    [X] Ability to register new commands
+    [X] Ability to call commands (will use AtlantisState).
+    [X] /grab command (a'la SimpleMU)
+    [X] /sc command (a'la SimpleMU)
+
+[X] Menu System
+    [X] Ability to register new menus, and items in menus.
+    [X] Ability to call menu items (which will basically be
+        events, and will use AtlantisState).
+    [X] World menu
+        [X] Address Book
+        [X] Connect
+        [X] Disconnect
+    [X] MUSH menu
+        [X] Convert LF/TAB/Space to/from %r/%t/%b
+
+
+0.8.6 ---------------------------------------
+
+[X] More Conditions
+    [X] Computer has been idle for at least...
+    [X] Have not typed anything for game in at least...
+    [X] Atlantis is not active app
+    [X] Redo 'Spawn is not active spawn'
+    
+[X] Low-level support (Telnet et al)
+    [X] Width/height
+        [X] Calculate width/height of spawn
+            [X] Display to user
+            [X] Store width/height of main spawn as NAWS data
+            [X] Send NAWS data for servers that support it.
+    [X] NOP support
+        [X] Try to detect NOP support intelligently
+        [X] If supported, send NOP sequences for keepalive
+    [X] MCCP support
+
+[X] Logfile stuff
+    [X] HTML logfile
+    [X] 'Log Scrollback' option
+    
+[X] More Actions
+    [X] Play sound
+    [X] Mark line as class of text...
+
+[X] Rework URLFilter
+    [X] Handle mailto:
+    [X] Handle generic URIs?  (FTP, et al.)  Eegh.
+
+[X] Upload stuff
+    [X] Upload File Engine
+        [X] w/prefix
+        [X] from formatted code
+    [X] New commands
+        [X] /ul command
+        [X] /quote command
+
+0.8.7 ---------------------------------------
+
+[X] Laptop support
+    [X] Handle sleep/awake properly
+
+[X] General stuff
+    [X] Local echo option
+    [X] Dock badging
+
+[X] Event improvements
+    [X] Make string matching conditions expand variables
+    [X] Redo 'Add Condition' and 'Add Action' UI.
+    [X] Add 'Line is class' condition
+
+[X] Lemuria 0.5.6
+    [X] Add 'Show Current View Name in Titlebar'
+    [X] Text View should zap timestamp rollover when app loses focus.
+    [X] Convert to RBSplitView
+    [X] Add toolbar support to Lemuria windows
+    [X] Activity indicator notice count, rather than just yes/no. 
+    [X] Add window open behavior setting
+        [X] 'Open where view was last put' (i.e., current logic)
+        [X] 'Open everything in one window' 
+            (i.e., can be dragged, but always open in the main window)
+        [X] 'Open everything in its own window'
+            (would hide the view list by default, sort of Rapscallion-UI).
+    [X] Add tab display view.  (For Matt.)
+        [X] Basic tab view / collection mapping
+        [X] Drag and drop of tabs
+        [X] Show activity on tabs
+
+[X] Toolbar
+    [X] Support global toolbar
+    [X] Search view
+    [X] Adding new toolbar options
+    [X] Connect/disconnect
+    [X] Customization
+    [X] Address Book (with NSMenu popupContextMenu)
+
+[X] Preferences stuff
+    [X] Add 'Windowing' preference pane
+    [X] Windowing Style
+    [X] Display Style
+
+0.8.8 ---------------------------------------
+
+[X] Toolbar Event options
+    [X] Toolbar event base class
+    [X] Event editor
+        [X] General editing
+        [X] Icon picker
+        [X] Icon for Preference page (argh)
+    [X] Add ToolbarEvents to toolbar
+    [X] Fix conditions to be checkable by type.
+
+[X] MUSH text editor
+    [X] Basic editor
+        [X] Color setting
+    [X] Convert to text
+
+[X] Perl
+    [X] Include CamelBones
+    [X] All state variables must be available to Perl.
+    [X] Execute Perl Script Action
+    [X] API for Perl script to do things (v1)
+        [X] Basic output/input accessors
+            [X] Send Text to World
+            [X] Display Status on Spawn
+            [X] Get text from input
+            [X] Send text to input
+            [X] Set temporary state variable
+
+0.9.x ---------------------------------------
+
+[X] Perl scripting
+    [X] Atlantis::World class
+        [X] Get world by name
+        [X] Is connected (Y/N)
+        [X] Connect / Disconnect
+        [X] Get characters
+        [X] Get preference (for character)
+        [X] Set preference (for character)
+    [X] Atlantis::Spawn class
+        [X] Access current spawn
+        [X] Focus spawn
+        [X] Get currently selected text from spawn
+        [X] Get input text from spawn
+        [X] Output status text to spawn
+        [X] Output real text to spawn (HTML)
+        [X] Output real text to spawn (AML)
+    [X] Text accessor thingie
+        [X] Get current line of colored text as AML
+        [X] Output text to window taken from AML
+    [X] General automation
+        [X] Upload Textfile
+        [X] Upload Code file
+        [X] Process Command as Alias
+        [X] Register alias
+        [X] Register trigger
+        [X] Register hotkey (?)
+
+[X] User Feedback
+    [X] Requests
+        [X] Bind Keypad Keys
+        [X] Speak Text action
+        [X] Bolded 'intense' option
+    [X] Bugs
+        [X] Fix sound action
+        [X] Fix status output action
+        [X] Fix highlight issue
+    [X] User Status
+        [X] Show connected time, SSL, MCCP, etc.
+        [X] 'Info' tab of address book world editor.
+    [X] New Actions
+        [X] Log scrollback
+        [X] Substitution
+    [ ] MCP
+        [X] MCP 1.0 Local Editing
+        [ ] MCP 2.1 full
+            [X] Parser
+            [X] mcp-negotiate
+            [ ] mcp-cords
+            [X] SimpleEdit
+
+[ ] Plugins
+    [ ] Figure out the plugin stuff.  Argh. :P
+    [ ] Write plugin API.
+    [ ] Load plugins at startup.
+
+[ ] Kagi 
+    [ ] Look into license key validation stuff 
+    [ ] Sign up, whee
+    [ ] Evaluation phase code
+    [ ] Disable features when past eval phase.
+        [ ] Text editor
+        [ ] Plugins
+        [ ] Perl scripting(?)
+
+[ ] Graphics
+    [ ] Better icons for toolbar items
+    [ ] Better 'explanatory' icons in preferences
+    [ ] Better about box?
+    [ ] Better disk image background?
+
+1.0.0 + -------------------------------------
+
+(Features for down the line, after 1.0.0 release)
+
+[ ] New Textview System
+    [ ] Each paragraph as a self-contained, pre-rendered textview.
+
+[ ] .Mac
+    [ ] Synchronize worlds/settings to .Mac option.
+    [ ] Automatically upload HTML logs to .Mac option.
+
+[ ] MXP
+    [X] Multi-font display window (argh)
+    [ ] Store MXP classes as line-classes, for HTML logging.
+
+[ ] MCP
+    [X] Core MCP parser
+    [X] mcp-negotiate
+    [ ] mcp-cords
+    [X] SimpleEdit
+    
+[ ] Firan Player plugin
+    [ ] MCP implementations
+        [ ] @bb
+    [ ] Combat
+        [ ] Show engaged to/by
+        [ ] Show aimed at/by
+        [ ] Show mount info
+        [ ] Show timers
+        [ ] Show damage
+        [ ] Show energy
+    [ ] Messengers
+        [ ] Messenger 'inbox' system
+        
+[ ] Firan Wizard plugin
+    [ ] MCP implementations
+        [ ] @file
+        [ ] observer control
+    [ ] CVS wrapper
+        [ ] Edit news files
+        [ ] Edit softcode
+        [ ] CVS Update/Commit wrapper
+        [ ] Automatic /ul of softcode?
+

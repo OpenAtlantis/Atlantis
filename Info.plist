@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleDocumentTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeExtensions</key>
+			<array>
+				<string>axworld</string>
+			</array>
+			<key>CFBundleTypeIconFile</key>
+			<string>world</string>
+			<key>CFBundleTypeMIMETypes</key>
+			<array>
+				<string>application/x-atlantis-world</string>
+			</array>
+			<key>CFBundleTypeName</key>
+			<string>Atlantis World (XML)</string>
+			<key>CFBundleTypeOSTypes</key>
+			<array>
+				<string>RDAL</string>
+			</array>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>LSTypeIsPackage</key>
+			<false/>
+			<key>NSPersistentStoreTypeKey</key>
+			<string>XML</string>
+		</dict>
+		<dict>
+			<key>CFBundleTypeExtensions</key>
+			<array>
+				<string>atlantis</string>
+			</array>
+			<key>CFBundleTypeIconFile</key>
+			<string>world</string>
+			<key>CFBundleTypeName</key>
+			<string>Atlantis Shortcut</string>
+			<key>CFBundleTypeOSTypes</key>
+			<array>
+				<string>RDAL</string>
+			</array>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>LSTypeIsPackage</key>
+			<false/>
+			<key>NSPersistentStoreTypeKey</key>
+			<string>XML</string>
+		</dict>
+	</array>
+	<key>CFBundleExecutable</key>
+	<string>${EXECUTABLE_NAME}</string>
+	<key>CFBundleIconFile</key>
+	<string>atlantis-logo</string>
+	<key>CFBundleIdentifier</key>
+	<string>net.riverdark.Atlantis</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>${PRODUCT_NAME}</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>${PROJECT_DISPLAY_VERSION}</string>
+	<key>CFBundleSignature</key>
+	<string>RDAL</string>
+	<key>CFBundleVersion</key>
+	<string>${CURRENT_PROJECT_VERSION}</string>
+	<key>NSMainNibFile</key>
+	<string>MainMenu</string>
+	<key>NSPrincipalClass</key>
+	<string>RDAtlantisApplication</string>
+	<key>RDBundleBuildDate</key>
+	<string>__DATE__</string>
+</dict>
+</plist>

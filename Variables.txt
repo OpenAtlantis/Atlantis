@@ -1,0 +1,54 @@
+CURRENT VARIABLES:
+
+application.*
+    application.version     Current Atlantis version, like 0.8.6.6
+    application.spawn       Full path of the current focused spawn (if any)
+
+world.*
+    world.name              Current instance display name, like 'Jeanne@Firan'
+    world.character         Current connection's character, like 'Jeanne'
+    world.game              Current connection's game name, like 'Firan'
+    world.connected         How long the game has been connected, in seconds.  (-1 means offline)
+
+event.*
+    event.cause             Why this event was triggered ('line' 'statechange' 'hotkey' 'menu' 'command')
+    event.line              The line triggering this event
+    event.statechange       The state change triggering this event ('connected' 'charlogin' 'disconnected')
+    event.detail            Details on the state change, if any.
+    event.command           The command (or alias) triggering this event
+    event.spawn             The full name of the spawn this event fired in ('Jeanne@Firan:Wizards')
+    event.highlighted       Line was colored by a highlighting rule, 'yes' or 'no'.  Line events only.
+    event.script.lineAML    The line triggering this rule, in AML format.  Only valid in scripts.
+    event.script.command    The full command line including the command name.  Only valid in scripts.
+
+regexp.*
+    regexp.0                The entire string matching the regexp
+    regexp.1+               The value of each regexp capture register
+
+datetime.*
+    datetime.date           The current date, like '2006-02-15'
+    datetime.time           The current time, like '22:13:00'
+    datetime.year           The current year, like '2006'
+    datetime.month          The current month, like '02'
+    datetime.day            The current day, like '15'
+    datetime.hour           The current hour, like '22'
+    datetime.minute         The current minute, like '13'
+    datetime.second         The current second, like '00'
+    datetime.weekday        The current weekday, like 'Wednesday'
+    datetime.weekdayshort   The current weekday abbreviation, like 'Wed'
+    datetime.monthname      The current month name, like 'February'
+    datetime.monthnameshort The current month abbreviation, like 'Feb'
+    
+command.*                   << only valid for 'command' events >>
+    command.data            The main text passed to the command.
+    command.fulltext        The full text of all parameters, as passed to the command.
+    command.*               The value of any -parameter given to the command, or '0' if not set.
+    
+userconf.*
+    << anything, all user-defined >>
+    
+temp.*
+    << anything, all user-defined >>
+    
+worldtemp.*
+    << anything, all user-defined >>

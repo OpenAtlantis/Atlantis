@@ -1,0 +1,17 @@
+{
+    IBClasses = (
+        {
+            CLASS = "Action_Substitute"; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                "_rdInternalConfigurationView" = NSView; 
+                "_rdRegisterField" = NSTextField; 
+                "_rdSubstitutionField" = NSTextField; 
+            }; 
+            SUPERCLASS = BaseAction; 
+        }, 
+        {CLASS = BaseAction; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }
+    ); 
+    IBVersion = 1; 
+}

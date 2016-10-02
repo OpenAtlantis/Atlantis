@@ -1,0 +1,13 @@
+{
+    IBClasses = (
+        {
+            ACTIONS = {addAction = id; cancel = id; }; 
+            CLASS = ActionPicker; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {"_rdActionList" = NSPopUpButton; "_rdActionPicker" = NSPanel; }; 
+            SUPERCLASS = NSWindowController; 
+        }, 
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }
+    ); 
+    IBVersion = 1; 
+}

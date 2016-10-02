@@ -1,0 +1,28 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {CLASS = RDAtlantisApplication; LANGUAGE = ObjC; SUPERCLASS = NSApplication; }, 
+        {
+            ACTIONS = {
+                aboutBox = id; 
+                addressBook = id; 
+                checkForUpdates = id; 
+                customizeToolbar = id; 
+                focusSpawn = id; 
+                launchDocWiki = id; 
+                openPreferences = id; 
+                renameWindow = id; 
+            }; 
+            CLASS = RDAtlantisMainController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                "_rdActiveSpawnsMenu" = NSMenu; 
+                "_rdCustomizeToolbarMenuItem" = NSMenuItem; 
+                "_rdMainMenu" = NSMenu; 
+                "_rdRenameMenuItem" = NSMenuItem; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }
+    ); 
+    IBVersion = 1; 
+}

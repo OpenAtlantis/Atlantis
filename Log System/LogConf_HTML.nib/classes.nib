@@ -1,0 +1,33 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            ACTIONS = {
+                cancelButton = id; 
+                cssToggled = id; 
+                footerToggled = id; 
+                headerToggled = id; 
+                makeDefaults = id; 
+                okButton = id; 
+                titleToggled = id; 
+            }; 
+            CLASS = RDHTMLLog; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                "_rdConfigWindow" = NSWindow; 
+                "_rdCssEnabled" = NSButton; 
+                "_rdCssFilename" = NSTextField; 
+                "_rdFooterData" = NSTextView; 
+                "_rdFooterEnabled" = NSButton; 
+                "_rdHeaderData" = NSTextView; 
+                "_rdHeaderEnabled" = NSButton; 
+                "_rdNbspSpaceEnabled" = NSButton; 
+                "_rdTitle" = NSTextField; 
+                "_rdTitleEnabled" = NSButton; 
+            }; 
+            SUPERCLASS = RDLogType; 
+        }, 
+        {CLASS = RDLogType; LANGUAGE = ObjC; SUPERCLASS = NSObject; }
+    ); 
+    IBVersion = 1; 
+}

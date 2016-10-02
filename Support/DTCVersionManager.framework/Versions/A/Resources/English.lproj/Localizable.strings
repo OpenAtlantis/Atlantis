@@ -1,0 +1,23 @@
+/* This is the primary (bold) text field at the top of our new version window.  The first argument is the version number; the second argument is the application name. */
+"A new version (%@) of %@ is available!" = "A new version (%@) of %@ is available!";
+
+/* Explain to them that their software is current. */
+"No updates are available at this time." = "No updates are available at this time.";
+
+/* Dismiss the current dialog. */
+"OK" = "OK";
+
+/* Tell the user that the version check was unsuccessful. */
+"The version check was unsuccessful." = "The version check was unsuccessful.";
+
+/* Describe the reasons why the version check may have been unsuccessful. */
+"This is probably a result of one of the following:\r\r%@ Your internet connection is not currently available.\r%@ The server containing the version data is not accessible at this time.\r\rCheck your internet connection and/or try again later." = "This is probably a result of one of the following:\r\r%@ Your internet connection is not currently available.\r%@ The server containing the version data is not accessible at this time.\r\rCheck your internet connection and/or try again later.";
+
+/* Explain that their software is up to date because they have chosen to ignore the latest version. */
+"You have previously ignored the latest available version." = "You have previously ignored the latest available version.";
+
+/* This is the secondary text field at the top of our new version window.  The argument is the current version number. */
+"Your current version is %@.  See details below for a list of updates in the new version." = "Your current version is %@.  See details below for a list of updates in the new version.";
+
+/* Tell the user that their software is current. */
+"Your software is up to date." = "Your software is up to date.";

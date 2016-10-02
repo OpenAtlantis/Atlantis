@@ -1,0 +1,36 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {CLASS = WorldConfigurationTab; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            ACTIONS = {
+                autoconnectChanged = id; 
+                autoconnectTypeChanged = id; 
+                hostSSLChanged = id; 
+                keepaliveChanged = id; 
+                serverTypeChanged = id; 
+            }; 
+            CLASS = WorldMainEditor; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                "_rdAutoconnect" = NSButton; 
+                "_rdAutopicker" = NSPopUpButton; 
+                "_rdCharacterInternal" = NSTextField; 
+                "_rdCharacterName" = NSTextField; 
+                "_rdCharacterPass" = NSTextField; 
+                "_rdConfigView" = NSView; 
+                "_rdDisplayAs" = NSTextField; 
+                "_rdHostName" = NSTextField; 
+                "_rdHostPort" = NSTextField; 
+                "_rdHostSSL" = NSButton; 
+                "_rdKeepaliveLogic" = NSPopUpButton; 
+                "_rdLastConnected" = NSTextField; 
+                "_rdServerType" = NSPopUpButton; 
+                "_rdTotalConnections" = NSTextField; 
+                "_rdWorldName" = NSTextField; 
+            }; 
+            SUPERCLASS = WorldConfigurationTab; 
+        }
+    ); 
+    IBVersion = 1; 
+}

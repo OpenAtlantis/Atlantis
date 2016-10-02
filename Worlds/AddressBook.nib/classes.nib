@@ -1,0 +1,29 @@
+{
+    IBClasses = (
+        {
+            ACTIONS = {
+                addCharacter = id; 
+                addWorld = id; 
+                connectWorld = id; 
+                createShortcut = id; 
+                removeCharacter = id; 
+                removeWorld = id; 
+            }; 
+            CLASS = AddressBook; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                "_rdAddCharacterButton" = NSButton; 
+                "_rdConfigContent" = NSTabView; 
+                "_rdConnectButton" = NSButton; 
+                "_rdRemoveCharacterButton" = NSButton; 
+                "_rdRemoveWorldButton" = NSButton; 
+                "_rdShortcutButton" = NSButton; 
+                "_rdWorldList" = NSOutlineView; 
+            }; 
+            SUPERCLASS = NSWindowController; 
+        }, 
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {CLASS = RDBlockingOutlineView; LANGUAGE = ObjC; SUPERCLASS = NSOutlineView; }
+    ); 
+    IBVersion = 1; 
+}

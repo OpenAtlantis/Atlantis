@@ -1,0 +1,25 @@
+{
+    IBClasses = (
+        {
+            ACTIONS = {
+                downloadNewVersion = id; 
+                ignoreThisVersion = id; 
+                remindMeLater = id; 
+                showDetails = id; 
+            }; 
+            CLASS = DTCVersionManager; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                detailsButton = NSButton; 
+                detailsLine = NSBox; 
+                detailsTextView = NSTextView; 
+                iconImageView = NSImageView; 
+                messageTextView = NSTextView; 
+                newVersionWindow = NSWindow; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }
+    ); 
+    IBVersion = 1; 
+}

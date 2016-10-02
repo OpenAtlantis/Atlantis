@@ -1,0 +1,20 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            ACTIONS = {logTypeChanged = id; logTypeOptions = id; }; 
+            CLASS = RDLogOpener; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                "_rdLogTypes" = NSPopUpButton; 
+                "_rdOptionsButton" = NSButton; 
+                "_rdOptionsView" = NSView; 
+                "_rdScrollbackButton" = NSButton; 
+                "_rdSpawnOnlyButton" = NSButton; 
+                "_rdTimestampButton" = NSButton; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }
+    ); 
+    IBVersion = 1; 
+}

@@ -1,0 +1,51 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {CLASS = ImageBackgroundView; LANGUAGE = ObjC; SUPERCLASS = NSView; }, 
+        {CLASS = NSLevelIndicator; LANGUAGE = ObjC; SUPERCLASS = NSControl; }, 
+        {
+            ACTIONS = {didAdjustSubviews = id; willAdjustSubviews = id; }; 
+            CLASS = NSObject; 
+            LANGUAGE = ObjC; 
+        }, 
+        {CLASS = RBSplitSubview; LANGUAGE = ObjC; SUPERCLASS = NSView; }, 
+        {
+            CLASS = RBSplitView; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {delegate = id; }; 
+            SUPERCLASS = RBSplitSubview; 
+        }, 
+        {
+            ACTIONS = {clearSearchString = id; searchForString = id; }; 
+            CLASS = RDAtlantisSpawn; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                "_rdInputView" = NSTextView; 
+                "_rdOutputView" = RDTextView; 
+                "_rdSSLImage" = NSImageView; 
+                "_rdSpawnContentView" = NSView; 
+                "_rdSplitView" = RBSplitView; 
+                "_rdStatusBar" = ImageBackgroundView; 
+                "_rdStatusField" = NSTextField; 
+                "_rdTimerField" = NSTextField; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            CLASS = RDAtlantisTextInputView; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {passInputsTo = NSTextView; }; 
+            SUPERCLASS = NSTextView; 
+        }, 
+        {CLASS = RDScrollView; LANGUAGE = ObjC; SUPERCLASS = NSScrollView; }, 
+        {CLASS = RDScroller; LANGUAGE = ObjC; SUPERCLASS = NSScroller; }, 
+        {
+            ACTIONS = {searchForString = id; }; 
+            CLASS = RDTextView; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {"_rdRedirectFocusOnKeyTo" = NSView; }; 
+            SUPERCLASS = NSTextView; 
+        }
+    ); 
+    IBVersion = 1; 
+}

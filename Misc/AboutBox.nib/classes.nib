@@ -1,0 +1,17 @@
+{
+    IBClasses = (
+        {
+            CLASS = AtlantisAboutBox; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                "_rdAboutBox" = NSWindow; 
+                "_rdBuildInfo1" = NSTextField; 
+                "_rdBuildInfo2" = NSTextField; 
+                "_rdCreditInfo" = NSTextView; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }
+    ); 
+    IBVersion = 1; 
+}

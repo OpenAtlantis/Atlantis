@@ -1,0 +1,25 @@
+{
+    IBClasses = (
+        {
+            ACTIONS = {
+                bgColorActive = id; 
+                bgColorChanged = id; 
+                fgColorActive = id; 
+                fgColorChanged = id; 
+            }; 
+            CLASS = "Action_TextHighlight"; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                "_rdBgColorActive" = NSButton; 
+                "_rdBgColorPicker" = NSColorWell; 
+                "_rdFgColorActive" = NSButton; 
+                "_rdFgColorPicker" = NSColorWell; 
+                "_rdInternalConfigurationView" = NSView; 
+            }; 
+            SUPERCLASS = BaseAction; 
+        }, 
+        {CLASS = BaseAction; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }
+    ); 
+    IBVersion = 1; 
+}

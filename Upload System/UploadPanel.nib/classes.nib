@@ -1,0 +1,19 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            ACTIONS = {codeToggled = id; }; 
+            CLASS = UploadPanel; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                "_rdCodeButton" = NSButton; 
+                "_rdDelayField" = NSTextField; 
+                "_rdOptionsView" = NSView; 
+                "_rdPrefixField" = NSTextField; 
+                "_rdSuffixField" = NSTextField; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }
+    ); 
+    IBVersion = 1; 
+}

@@ -1,0 +1,24 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            CLASS = GeneralPreferences; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                "_rdBeepBehavior" = NSPopUpButton; 
+                "_rdCheckOnStartup" = NSButton; 
+                "_rdClearInput" = NSButton; 
+                "_rdConfigView" = NSView; 
+                "_rdDockBadgeActive" = NSButton; 
+                "_rdDockBadgeHidden" = NSButton; 
+                "_rdEasyShortcut" = NSButton; 
+                "_rdFugueEnabled" = NSButton; 
+                "_rdNoSlashies" = NSButton; 
+                "_rdOpenAddressBook" = NSButton; 
+                "_rdSilentConvert" = NSButton; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }
+    ); 
+    IBVersion = 1; 
+}

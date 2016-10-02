@@ -1,0 +1,38 @@
+{
+    IBClasses = (
+        {
+            ACTIONS = {
+                addAction = id; 
+                addCondition = id; 
+                addEvent = id; 
+                changeConditionsAnded = id; 
+                moveEventDown = id; 
+                moveEventUp = id; 
+                removeAction = id; 
+                removeCondition = id; 
+                removeEvent = id; 
+            }; 
+            CLASS = EventEditor; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                "_rdActionChainView" = RDChainedListView; 
+                "_rdActionScrollView" = NSScrollView; 
+                "_rdAddActionButton" = NSSegmentedControl; 
+                "_rdAddConditionButton" = NSSegmentedControl; 
+                "_rdConditionChainView" = RDChainedListView; 
+                "_rdConditionScrollView" = NSScrollView; 
+                "_rdConditionType" = NSPopUpButton; 
+                "_rdEditorContentView" = NSView; 
+                "_rdRemoveActionButton" = NSSegmentedControl; 
+                "_rdRemoveConditionButton" = NSSegmentedControl; 
+                "_rdTabView" = NSTabView; 
+                "_rdTableView" = NSTableView; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {CLASS = NSSegmentedControl; LANGUAGE = ObjC; SUPERCLASS = NSControl; }, 
+        {CLASS = RDChainedListView; LANGUAGE = ObjC; SUPERCLASS = NSView; }
+    ); 
+    IBVersion = 1; 
+}

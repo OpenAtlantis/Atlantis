@@ -1,0 +1,13 @@
+{
+    IBClasses = (
+        {
+            CLASS = "Action_PerlEval"; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {"_rdActualText" = NSTextView; "_rdInternalConfigurationView" = NSView; }; 
+            SUPERCLASS = BaseAction; 
+        }, 
+        {CLASS = BaseAction; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }
+    ); 
+    IBVersion = 1; 
+}

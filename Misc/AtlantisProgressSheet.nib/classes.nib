@@ -1,0 +1,18 @@
+{
+    IBClasses = (
+        {
+            ACTIONS = {cancelButton = id; }; 
+            CLASS = AtlantisProgressSheet; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                "_rdCancelButton" = NSButton; 
+                "_rdProgressBar" = NSProgressIndicator; 
+                "_rdProgressLabel" = NSTextField; 
+                "_rdProgressSheet" = NSPanel; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }
+    ); 
+    IBVersion = 1; 
+}

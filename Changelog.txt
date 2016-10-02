@@ -1,0 +1,978 @@
+[2008/05/31] - Sparks
+    - Somewhere between this one and the last one, I released 0.9.8.4, 0.9.8.5 and 0.9.8.6
+    - I utterly stopped updating this again.  Oops. :(
+    - Perl works again under all versions.  THANK GOD.
+    - Major performance changes made.
+    - Released 0.9.8.7
+
+[2007/12/25] - Sparks
+    - Wow, I completely forgot to keep updating this, AGAIN, thanks to Leopard 
+      craziness.
+    - I released some other versions in here, somewhere.  Oy. :P
+    - Redid RDSourceListCell to compile properly on Leopard and still run fine on Tiger.  Feh.
+    - More Perl insanity.  Kill me now.
+
+[2007/09/20] - Sparks
+    - Fixed MCP
+    - Fixed text log issues
+    - Text system cleanup
+    - Released 0.9.8.3
+    - Fixed worldtemp.* clearing bug.
+
+[2007/09/16] - Sparks
+    - Added AML support to status bar.
+    - Released 0.9.8.2
+
+[2007/09/09] - Sparks
+    - Fixed Tab view overflow
+    - Fixed plaintext issue in Open Log action.
+
+[2007/09/08] - Sparks
+    - Released 0.9.8
+    - Fixed MUSH text editor view
+    - Released 0.9.8.1
+
+[2007/09/08] - Sparks
+    - Wow, I completely forgot to keep updating this.  Bad me.
+    - Lots of UI stuff (new tabbed view, etc.)
+    - Rhost support
+    - Fixed lots of bugs
+    - More things.  I need to start keeping this again properly!
+
+[2007/06/21] - Sparks
+    - Added RegisterTimer()
+    - Cleaned up Lemuria more.
+    - Added world/spawn icons to spawn views.
+
+[2007/06/07] - Sparks
+    - Refreshed a few Lemuria-related things.
+
+[2007/05/21] - Sparks
+    - Added SystemVersionCheck support, to ensure we're running on 10.3.9+ and
+      present a friendly error if run on something earlier.
+
+[2007/05/20] - Sparks
+    - Improved Formatted Text logfile for timestamps.
+    - Fixed log scrollback issues.
+    - Released 0.9.7.7
+    - RDNestedOutlineView redone to have proper Unified Aqua spacing (IndieHIG).
+    - RBSplitView changed to support image-pattern backgrounds (IndieHIG).
+
+[2007/05/19] - Sparks
+    - Added move up/down buttons to event item editor.
+    - Fixed some Lemuria bugs.
+
+[2007/05/16] - Sparks
+    - Added 'Silent Conversion' option to preferences.
+    - Fixed RDStringPattern bug.
+
+[2007/05/16] - Sparks
+    - Modified preferences to begin to adhere to IndieHIG guidelines.
+
+[2007/05/15] - Sparks
+    - Fixed clear scrollback issue.
+
+[2007/05/10] - Sparks
+    - Rewrote toolbar status item controller.
+    - Fixed an issue in the event system, with spawn activity info not being properly reset.
+
+[2007/05/09] - Sparks
+    - Found and fixed a significant memory leak issue.
+
+[2007/05/08] - Sparks
+    - Rewrote chunks of the Perl event system.
+
+[2007/05/01] - Sparks
+    - Lemuria focus changes.
+
+[2007/04/23] - Sparks
+    - Rewrote a chunk of the key-binding system.
+    - Added 'Control-Tab' as a shortcut for 'next spawn' in any Lemuria window.
+
+[2007/04/22] - Sparks
+    - Rewrote part of PerlScriptingEngine to hopefully free up memory?  Blargh.
+    - Fixed a potential crash issue with malformed regexps and some associated errors in 
+      RDStringPattern.
+
+[2007/04/19] - Sparks
+    - Rewrote chunks of the ScriptBridge, to make spawn location and creation 
+      work better.
+    - Fixed text-to-spawn family of commands so that a nil or zero-length string doesn't
+      make Atlantis go kersplodey.
+
+[2007/04/16] - Sparks
+    - Lemuria: changed tooltip logic to be a bit better.
+    - Added 'gag' AML tag.  '<gag log>' or '<gag screen>' or '<gag screen log>' work.
+    - Added statechange of 'charlogin' to event system and scripting.
+    - Added 'Login was just sent' condition to event system.
+
+[2007/04/02] - Sparks
+    - Added 'Shrink URL' item option to input window.
+    - Fixed infinite scrollback for MUDs.
+
+[2007/03/23] - Sparks
+    - Fixes for Perl on Panther.
+    - Released 0.9.7.6
+
+[2007/03/22] - Sparks
+    - CamelBones 1.0.2 is here, la!
+    - Released 0.9.7.4
+    - Fixes for weird telnet goo, to allow Winter's Edge to work.
+    - Released 0.9.7.5
+
+[2007/03/19] - Sparks
+    - Tweaked space() behavior in MUSH Text Editor.  
+    - 0.9.7.4 is ready, as soon as CamelBones 1.0.2 is packaged.
+
+[2007/03/14] - Sparks
+    - Reworked scrollback logging to have a progress meter and a cancel button.
+    - Reworked Perl exception-grabbing to be cleaner, and always display on a 
+      spawn if we have one, even on the reinit portions.  Just waiting on 1.0.2 from
+      Sherm at this point.
+
+[2007/03/13] - Sparks
+    - Upgraded to CamelBones 1.0.1 (thanks, Sherm!)
+    - Downgraded to 1.0.0 pending resolution of double-free bug.  Eep. :(
+    - Found issue in 1.0.1, reported to Sherm.
+
+[2007/03/11] - Sparks
+    - Performance fixes/tweaks, to help eliminate beach ball of death.
+
+[2007/03/09] - Sparks
+    - Fixed timestamps on local echo.
+    - Fixed logging of local echo.
+    - Improved performance of 'log scrollback' in worlds without spawns.
+    - Fixed Lemuria drag-and-drop bug.
+
+[2007/03/08] - Sparks
+    - Fixed formatting tab bug.
+    - MUDs now default to 500 line scrollback.    
+
+[2007/03/07] - Sparks
+    - Fixes for character set negotiation, to properly prioritize.
+    - Fix for bold-is-lost spawn bug.
+    - Changed pointing hand cursor coloring.
+    - Released 0.9.7.3.
+
+[2007/03/06] - Sparks
+    - Improved defaults.
+
+[2007/03/05] - Sparks
+    - ChainedListView cleanup.
+
+[2007/03/04] - Sparks
+    - Selection background color can be changed per-world as part
+      of the formatting options.
+    - General Lemuria cleanup.
+
+[2007/03/03] - Sparks
+    - More Goddamned Debugging.
+    - More script system internal sortout.
+    - Tooltips use HTML-escaping.
+
+[2007/03/02] - Sparks
+    - Reworked script system internals to be cleaner.
+
+[2007/03/01] - Sparks
+    - More debugging.  Whee.
+    - Added 'Remove all Scrollback' action.
+    - Fixed wrapping on 'heldover' bits.
+    - Fixed wrapping on status stuff.
+    - Tweaked MUD line-ending logic as best I could, grmph.
+    - Yet more debugging.  ARGH.  I really broke something down 
+      in the guts of this with the 0.9.7.3 additions...
+    - Toolbar engine improvements, properly tracking toolbars and keeping
+      them on a per-window basis.  *sigh*  I'm a moron.  I just wanted it to
+      update properly across the entire app...
+    - Fixed up font metrics more.
+    - Quicky ruler in MUSH Text Editor.  (SERIOUSLY needs work here...)
+
+[2007/02/28] - Sparks
+    - Added AML <tooltip> tag.
+    - Support for MUDs that only do VT100 codes.
+    - Support for 16-color ANSI.
+    - Added AML <class> tag.
+    - Lots and lots and lots of debugging crap.  What did I break?!
+
+[2007/02/27] - Sparks
+    - Fixed multiline input problem with blank lines.
+    - Fixed tooltip behavior with Always On Top and virtual desktops.
+    - Fixed mouseover behavior on little close buttons of doom.
+    - ReplaceEventLine scripting addition.
+
+[2007/02/26] - Sparks
+    - Fixed Perl module documentation.
+    - Registered alias handlers now expand for state data.
+    - Changed Perl alias registration functionality slightly.
+    - Released 0.9.7.1, whee.
+    - Augh, fixed /ul and /grab and /gname for parameter counting.
+    - Speak, Beep, PlaySound scripting additions.
+    - Released 0.9.7.2
+
+[2007/02/25] - Sparks
+    - Added 'AML' simple markup language, for outputting proper text to spawns.
+      And getting the existing formatting.
+    - Added 'displayHTML' option for outputting HTML-formatted text to spawns.
+      THIS DOES NOT YET WORK PROPERLY WITH HTML LOGFILES.  Sorry; I need to redo
+      my nice clean CSS to make this happen.
+    - Added registration of aliases, triggers and hotkeys to Perl.
+    - Released 0.9.7, finally!
+    - Fixed default color to function as input window default color.
+    - Fixed default color to update in spawns/ANSI when world is updated.
+
+[2007/02/24] - Sparks
+    - Atlantis::Spawn Perl class
+    - Added 'Default text color' to formatting.
+    - Added upload code/text, process as input, focus spawn, etc. to Perl.
+    - Refactored some input handling.
+
+[2007/02/23] - Sparks
+    - Atlantis::World Perl class
+    - Further cleanup of startup sequence.
+    - Fixed a quirk in default color settings.  Doh.
+    - Atlantis shortcut files, whoo.
+
+[2007/02/22] - Sparks
+    - Ability to load small .axworld XML files to import a world.
+    - Ability to block address book from opening on startup.
+
+[2007/02/21] - Sparks
+    - /ul and /quote handle null filenames more smoothly.
+
+[2007/02/20] - Sparks
+    - Redid startup sequence to separate out from awakeFromNib and simply properly load 
+      things when the app is done launching.  Hopefully eliminates some of the spinny 
+      ball of death on startup with autoconnects.
+
+[2007/02/18] - Sparks
+    - Invalid regexps no longer cause an exception, but are simply ignored.
+
+[2007/02/17] - Sparks
+    - Lemuria: Rewrote a chunk of the textview stuff to try and shave off yet more text-lag.
+    - Finally fixed link cursor logic.
+
+[2007/02/16] - Sparks
+    - Improved keepalive system.  La.
+    - Reworked menu system internally, now plugins can add submenus to real menus.
+    - Got rid of 'MUSH' menubar item, moved to 'Edit -> MUSH' submenu.
+    - Added 'Include Timestamps' option to logfiles.
+
+[2007/02/14] - Sparks
+    - 'Atlantis Help' menu item now opens the Wiki.
+    - Dock badging now matches Mail/iPhoto/Xcode/etc.
+    - Dock badges can be disabled when Atlantis is hidden or all windows are minimized.
+    - Fixed NAWS negotiation at login.
+
+[2007/02/13] - Sparks
+    - ScriptingEngine now returns a value from any given call into a script.
+    - PerlScriptingEngine modified for new ScriptingEngine.
+    - Perl eval action now takes a whole block of Perl text (rather than just a single function),
+      so some Perl can be done without requiring .pm files.
+    - Disabled aliases do not run.  Oops.
+    - Fixed that longstanding (and annoying!) status display action bug.
+    - Aliases properly change spaces in names to underscores.
+    - Fixed a bug with setting blank temporary variables.
+
+[2007/02/12] - Sparks
+    - Changed 'Script: Set Variable' to be able to set temp.*, worldtemp.* and userconf.*
+    - Decreased speed of MUD style login slightly, to support CoffeeMUD servers.
+    - Each line of a multiline input is processed separately for aliases and suchnot.
+    - Cleaned up Perl variable accessors.
+    - Added 'Atlantis is Visible' condition.
+    - Added support for 'bell' character, with several different behaviors (including ignore).
+    - Began cleanup of app preferences panes.
+    - Added Global Reconnect action.
+    - Added Command-D (Disconnect) and Command-R (Reconnect) to default key bindings.
+    - Added GetPreference and SetPreference options to Perl.
+
+[2007/02/11] - Sparks
+    - Look!  Coding again!
+    - Added support for codepage/charset negotiation to Telnet.
+    - Added manual setting of codepage/charset.
+    - Fixed linefeeds on paste from certain text editors (TextWrangler).
+    - Added worldtemp.* variable class, added new Perl accessors.
+    - Added userconf setter to Perl.
+    - Pulled regexp.* variables through to scripting StateData.
+
+[2006/11/10] - Sparks
+    - Added Telnet EOR support.
+    - Released 0.9.6
+    - Changed scrolling behavior.
+    - Re-released 0.9.6
+
+[2006/10/15] - Sparks
+    - Fixed event editor crash.
+    - Fixed MUD ANSI bug.
+
+[2006/10/04] - Sparks
+    - Reverted to 0.9.4 textview.
+
+[2006/10/02] - Sparks
+    - Spawns now remember the sizing of their input portion, even if it's 
+      entirely collapsed.
+    - Spawns remember if they were expanded or collapsed in outline view.
+    - HTML logfiles no longer escape apostrophes, for compatibility with more
+      browsers.
+    - Improved ansi() mode of MUSH text editor.
+    - MUSH text editor now remembers last setting.
+    - Released 0.9.5
+    - Fixed the key chaining for input/output views.
+    - Made perl script executions evaluate for state variables before execution.
+
+[2006/09/30] - Sparks
+    - Made 'send text' command support ; as a separator.
+
+[2006/09/20] - Sparks
+    - Added SOCKS4/SOCKS5/HTTP proxy support.
+
+[2006/09/19] - Sparks
+    - Enabled Undo in MUSH Text Editor, oops.
+
+[2006/09/15] - Sparks
+    - Tweak to URL parser.
+
+[2006/09/14] - Sparks
+    - Fixed up indent calculation for fonts with odd metrics.
+    - Fixed up crash bug in Perl script initialization.
+
+[2006/09/13] - Sparks
+    - Fixed up issue with single-character commands in 'No Slashies' mode.
+
+[2006/09/12] - Sparks
+    - Changed text engine significantly.  Rewrote underlying tools to
+      access the Cocoa text backend directly, rather than the trick I was
+      using.
+    - Fixed up MCCP support.
+
+[2006/09/11] - Sparks
+    - Fixed another linefeed issue, affecting games like Aardwolf.
+
+[2006/09/10] - Sparks
+    - Added 'No Slashies' option to not require the leading / on aliases. 
+
+[2006/09/09] - Sparks
+    - Added 'Log Scrollback' option to Open Specific Log action.
+    - Added 'Substitution' action.
+    - Added 'Info' tab to worlds.
+    - Added 'World Status' toolbar option.
+    - Added MCP 1.0 local editing
+    - Got ambitious, added MCP 2.1 local editing
+    - Added /gname command
+
+[2006/09/02] - Sparks
+    - Finished basic MCP parser (1.0 edit only, 2.1 general parser).
+
+[2006/09/01] - Sparks
+    - Redid font size calculation for cols X rows tooltip and NAWS.
+
+[2006/08/31] - Sparks
+    - Improvements to MUSH ANSI Text Editor generation.
+    - Changed spawn shortcuts to be Command-Number, rather than 
+      Command-Control-Number.
+
+[2006/08/30] - Sparks
+   - Fixed a linefeed issue on some servers.
+
+[2006/08/25] - Sparks
+   - Fixed regexp register bug, oops.
+
+[2006/08/18] - Sparks
+    - Added /qc (quick connect) action.
+    - Improved cursor color-picking on Tiger.
+    - Released 0.9.3
+
+[2006/08/17] - Sparks
+    - Removed cursor thingie for Panther entirely, hopefully eliminating
+      crash.
+    - Made input view match output view for colors.
+    - Improved WorldHighlightsEditor.
+    - Fixed the disappearing regexp event bug.
+    - Tweaked preferences UI slightly.
+    - Fixed Lemuria 'Lost Spawn' bug.
+    - Added 'Clear Screen' event action.
+    - Added 'Beep' action.
+
+[2006/08/09] - Sparks
+    - Fixed an issue with logging scrollback in 'plain text' format
+      logs, as opposed to 'formatted text.'
+
+[2006/08/08] - Sparks
+    - More attempts to fix the Panther crash bug, which I thought
+      had been fixed!    
+
+[2006/08/06] - Sparks
+    - Fixed a telnet state bug when MCCP initialization occurred in an
+      odd way.  (Affected Rapture games.)
+    - First MCP support hooks.
+    - Released 0.9.2
+
+[2006/08/05] - Sparks
+    - Changed autoscroll logic to be more friendly.
+
+[2006/08/04] - Sparks
+    - Fixed address book crash.
+    - Re-released 0.9.1.
+    - Added SW:Sagas to the default address book.
+    - Fixed Panther crash bug again.  ARGH!
+    - Re-released 0.9.1 again, as release 70.
+    - Fixed 'log scrollback' bug.
+    - Fixed Panther crash bug yet AGAIN.  This time, confirmed!
+
+[2006/08/03] - Sparks
+    - Added 'Open Address Book...' option to the address book toolbar menu.
+    - Fixed crash issue under Panther.
+    - Fixed cursor issues.
+    - Fixed a formatting issue in MUSH Text Editor.
+    - Added 'Toggle Drag and Drop' event action.
+    - Released 0.9.1
+
+[2006/08/02] - Sparks
+    - Fixed autoscroll issue.
+
+[2006/08/01] - Sparks
+    - Fixed a spawn crash.
+    - Added support for self-signed and expired SSL certificates under Tiger.
+    - Added /clear command.
+    - Released 0.9.0
+
+[2006/07/31] - Sparks
+    - Added support for keypad keys in bindings.
+
+[2006/07/30] - Sparks
+    - Fixed reconnect issue when output buffer went away.  Eep!
+    - Fixed some autoscroll quirks.
+
+[2006/07/29] - Sparks
+    - Fixed 'Output Status to Spawn' event to work properly in all cases.
+    - Rewrote Quicktime routine in PlaySound action.
+    - Added 'Speak Text' event action.
+    - Cleaned up input handling slightly.
+    - Added 'Bold font on intense color' option.
+    - Added 'regexp.*' variable set.
+    - Added 'event.highlighted' variable.
+
+[2006/07/28] - Sparks
+    - Fixed a Highlight crash bug.
+    - Added a Logs menu to the menubar.
+    - Added 'World Has Logs' condition.
+    - Added 'Close Focused Element' action.
+    - Added 'Disable Ansi Entirely' mode to MUSH Text Editor
+    - Cleaned up toolbar engine.
+    - Added 'Upload File' panel, menu entry and action.
+    - Released 0.8.9
+    - Minor tweak to fix 'Disable ANSI' mode entirely.
+    - Fixed breakage in User Toolbar events.
+
+[2006/07/26] - Sparks
+    - Added 'Disable Telnet keepalive' checkbox to world config
+
+[2006/07/24] - Sparks
+    - Added 'prefix' option to spawn configuration.
+
+[2006/07/23] - Sparks
+    - Added 'Prepend timestamps' formatting option.
+    - Tweaked MUSH Text Editor to give it more editor-space.
+
+[2006/07/22] - Sparks
+    - Improved cursor behavior slightly.
+
+[2006/07/21] - Sparks
+    - Fixed a copy/paste bug in MUSH Text Editor.
+    - Changed default toolbar to include address book.
+
+[2006/07/20] - Sparks
+    - Minor network efficiency fixes.
+    - Added 'Disconnect all worlds when network lost' checkbox.
+    - Released 0.8.8
+    - Fixed version stamping to work with VersionTracker Pro.
+
+[2006/07/19] - Sparks
+    - Updated credits.
+    - Updated Beta Readme.
+    - Marked build as 'beta' instead of 'pre-beta.'
+
+[2006/07/18] - Sparks
+    - Fixed a bug with selecting the color type for MUSH Text Editor
+    - Changed space-to-%b logic in MUSH Text Editor to work properly
+    - Changed copy/paste to obscure color from all non-Atlantis tools
+    - Added 'Clear' button to MUSH Text Editor
+    - Released 0.8.7.8
+
+[2006/07/15] - Sparks
+    - Added temp.* state variables, for temporary state data.
+    - Added 'Set Temporary State Variable' action.
+    - Released 0.8.7.6
+    - Fixed a Perl launch bug.
+    - Released 0.8.7.7
+    - Added Undo/Redo functionality to input window.    
+
+[2006/07/13] - Sparks
+    - Network support improvements, for when a host is unreachable and all.
+    - Added event.details to statechange for connection.
+    - Perl modules are loaded from ~/Library/Atlantis/Scripts now.
+    - Created 'execute Perl code' action.
+
+[2006/07/12] - Sparks
+    - Tweaks to Lemuria ChainedListView classes, for smoother animation.
+    - Released 0.8.7.5
+    - Fixes to MUSH Text Editor.
+
+[2006/07/11] - Sparks
+    - Fixed missing disconnect message.  Whups!
+    - Fixed closing-last-tabitem bug.
+
+[2006/07/10] - Sparks
+    - Fixed a crash bug if you had no events defined anywhere.
+    - Released 0.8.7.3
+    - Fixed quick-drag bug in views.
+    - Fixed event system crash.
+    - Released 0.8.7.4
+    - Hotkey events are now enabled by default.
+    - Sped up network poll times.
+    - Embedded CamelBones/Perl, for building the Perl scripting engine.
+
+[2006/07/09] - Sparks
+    - Added 'event.detail' which -- for instance -- is 'Network connection lost' or
+      whatever for a 'disconnected' state change event.  I'll add more detail bits later.
+    - Added a MUSH ANSI text editor.
+    - Added 'Strip Linefeeds from Input' action.
+    - Released 0.8.7.2
+    - Changed text editor to support pasting text in from spawns and preserving color.
+
+[2006/07/08] - Sparks
+    - Changed world.character to be blank on parent worlds, rather than
+      undefined.
+
+[2006/07/07] - Sparks
+    - Added support for busted-ass MOO ANSI codes that contain newlines.  WTF?
+    - Fixed a tab-spacing bug.
+
+[2006/07/04] - Sparks
+    - Toolbar item icons implemented.
+    - Released 0.8.7.1
+
+[2006/07/03] - Sparks
+    - Fixed window focus weirdness.
+    - Added support for 'only dock badge when inactive.'
+    - Changed Command-Option-digit to Command-Control-digit.
+    - Added Address Book focus World action.
+    - Added events for 'Copy Selected text to Clipboard' (for in a multiple-action flow)
+      and 'Copy Selected Text to Input'
+    - Improved Address Book open time.
+    - Released 0.8.7
+    - Logfile fixes.
+    - First cut of user-defined toolbar items.
+    
+[2006/07/02] - Sparks
+    - Memory usage cleanup, round 3
+    - Lemuria: Addition of tabbed view display style.
+    - Released 0.8.6.9
+    - Lemuria: Made tabbed display view smaller.
+
+[2006/07/01] - Sparks
+    - Memory usage cleanup, round 2
+    - Lemuria: Memory cleanup
+    - Lemuria: Views now track number of 'unseen activity' messages.
+    - Lemuria: Change to RBSplitView
+    - Window behavior option
+    - Fixed string match condition bug
+    - Released 0.8.6.7
+    - Fixed critical event bug
+    - Released 0.8.6.8
+    - Fixed dock badge 'never goes away' bug.
+    - Fixed address book bug as a result of cleanup.
+    - Changed Command-Shift-digit to Command-Option-digit
+
+[2006/06/29] - Sparks
+    - Fixed connection loss/reconnect crash.
+    - Improved connection loss detection and automatic reconnect.
+    - Added application.spawn and application.version variables.
+    - Changed output status event to take a spawn.
+    - Released 0.8.6.6
+    - Memory usage cleanup, round 1
+
+[2006/06/25] - Sparks
+    - Added 'Command-Shift-number' shortcut to skip to spawns, 1-0 being the first 
+      ten spawns in the current window.
+    - Added dock badging to show number of spawns with unseen activity.
+
+[2006/06/22] - Sparks
+    - Fixed a biiiig bug in line class matching event.
+    - Fixed a highlight action bug.
+
+[2006/06/20] - Sparks
+    - Reworked event editing system to have easier UI
+    - Added line class condition
+    - Added 'local echo' option
+    - Released 0.8.6.5
+    - Fixed a bug in pattern matching and highlighting.
+    - Vastly improved toolbar validation speed.
+
+[2006/06/19] - Sparks
+    - Made string match events support variables.
+
+[2006/06/11] - Sparks
+    - Fixed the 'Highlight Last Matched' crash bug.
+    - Added 'Clear Input on Enter' checkbox.
+    - Released 0.8.6.4
+
+[2006/06/07] - Sparks
+    - Added 'Repeat Last Command' hotkey action.
+
+[2006/06/04] - Sparks
+    - Fixed the 'resize view' tooltip notification.
+
+[2006/05/30] - Sparks
+    - Added 'Customize Toolbar' window menu setting.
+    - Tweaked focus behavior.
+    - Released 0.8.6.3
+
+[2006/05/29] - Sparks
+    - Fixed up some 'disconnect' state issues, such as the inability to disconnect
+      while connecting.
+    - Added support for Sleep state notifications, causing a mark-and-disconnect
+      so as to reconnect on awake.
+
+[2006/05/27] - Sparks
+    - Fixed some toolbar issues with multiple-window Atlantis setups.
+    - Made toolbar customizable.
+
+[2006/05/26] - Sparks
+    - Fixes to the detection of disconnected worlds.  Whups!
+    - Changed Atlantis windows to use a standardized toolbar. Whoot.
+    - Released 0.8.6.2
+
+[2006/05/22] - Sparks
+    - First reworking of event UI system, standardize UI on condition and
+      action option views.
+    - Lemuria 0.5.6: Better spacing on ChainedListItem content
+    - Lemuria 0.5.6: Support for a 'nestedWindowToolbar' function on 
+      Lemuria delegate.
+
+[2006/05/22] - Sparks
+    - Rewrote part of the stream handling / buffer goo.
+    - Released 0.8.6.1
+
+[2006/05/21] - Sparks
+    - Added UploadEngine system
+    - Added TextfileUploader
+    - Added CodeUploader
+    - Added /quote command
+    - Added /ul command
+    - Released 0.8.6
+
+[2006/05/20] - Sparks
+    - Added support for SSL connections.
+    - Added basic support for SOCKS proxies.
+
+[2006/05/19] - Sparks
+    - Changed notification center registration/removal to avoid a corner case crash bug.
+
+[2006/05/13] - Sparks
+    - Changed 'World is Idle' to work more intuitively.  I.e., no text has been sent to
+      or from the world in at least that long. :P
+
+[2006/05/11] - Sparks
+    - Change to alerts to make 'escape' function to back out, and 'return' accept.
+
+[2006/05/10] - Sparks
+    - Change to ANSI code to hopefully speed things up.
+    - Lots of changes to RDTextView behavior.
+    - Released 0.8.5.7
+    - A few more performance tweaks, and code to lay the framework for multiple fonts per world.
+      (To support MXP and possibly Pueblo down the road, in a post-1.0.0 version.) 
+
+[2006/04/19] - Sparks
+    - Released 0.8.5.6
+
+[2006/04/16] - Sparks
+    - Added 'Disconnect All Worlds' action.
+
+[2006/04/14] - Sparks
+    - Changed 'Focus Specific Spawn' to fallback to trying to find sub-spawns.
+
+[2006/04/12] - Sparks
+    - Fixed a preferences bug with the address book and world names. Whups!
+    - Tweaked some windowing behavior.
+    - Added 'Aliases' config tab, letting you create your own /commands as events.
+    - Fixed up the event editor a bit.
+
+[2006/04/11] - Sparks
+    - Added custom CSS classes to HTML logging.
+    - Added 'Log: Set Line to Class' action, for setting custom CSS classes.
+    - Performance fix for ANSI parsing, should speed up scrolling again.
+    - Changed to unified look when on Tiger.
+    - Released 0.8.5.5
+    - Fixed a bug with 'Copy to Command History' action.
+
+[2006/04/10] - Sparks
+    - Added 'Computer has been idle for' condition
+    - Added 'World has been idle for' condition
+    - Fixed screen width calculation, silly textview insets!
+    - Added HTML logfile type.
+    - Released 0.8.5.4
+    - Made HTML logs honor the URL color.
+    - Fixed wrap bug in HTML logs.
+
+[2006/04/09] - Sparks
+    - Added a 'Windowing' preference pane (doesn't have much yet, but will have
+      a LOT by 0.8.7).
+    - Added the ability to disable drag-and-drop of spawns between windows.
+    - Added support for additional custom tooltips to RDTextView.
+    - Added 'display to user' functionality for row/col calculation.
+    - Released 0.8.5.2
+    - Fixed a huge Collected Condition bug.
+    - Fixed a huge event system bug.
+    - Released 0.8.5.3
+
+[2006/04/08] - Sparks
+    - Fixed another preference pane resize/position bug.
+    - Added support for screen width/height calculation.
+    - Added support for Telnet screen size negotiation (PennMUSH, MUDs).
+    - Added support for NOP negotiation.
+    - Added automatic support for NOP (invisible NAT keepalive) on servers that support it.
+    - Added support for MCCP (MUD Client Compression Protocol).
+    - Added 'Atlantis is not active app' condition
+    - Changed 'Spawn is active/not active spawn' to be true for the focused spawn 
+      even if Atlantis isn't the active app.
+    - Rewrote the URL highlighting filter, should only highlight URLs that your
+      computer has handlers for, and should be smarter about highlighting URLs 
+      properly.
+    - Added 'Play Sound' action.
+    - Fixed a couple of Lemuria 'Rename Window' bugs.
+
+[2006/04/07] - Sparks
+    - FINALLY fixed that accursed scroll bug in limited scrollback.  YEEGH.
+    - Added 'Log scrollback' functionality.
+    - Released 0.8.5.1
+
+[2006/04/06] - Sparks
+    - Fixed 'General' preference sizing bug.
+
+[2006/04/05] - Sparks
+    - Added 'current spawn' indication in window titlebars.
+    - Added SimpleMU-style /sc command.
+    - Added menu registration system
+    - Added 'World' menu, moved Address Book there.
+    - Added 'MUSH' menu.
+    - Released 0.8.5
+
+[2006/04/04] - Sparks
+    - Changed spawns to auto-expand and focus spawn when new spawns are created.
+    - Made proper 'preferences' window.
+    - Converted Hotkey and World Defaults to panes of the preference window.
+    - Added General pane to preference window.
+    - Released 0.8.4.9
+    - Added /command support
+    - Added /grab command
+    - Added FugueEdit support
+
+[2006/04/03] - Sparks
+    - Fixed scrolling behavior when trimming scrollback.
+    - Fixed 'auto-open' behavior for top-level worlds.
+
+[2006/04/01] - Sparks
+    - Made the dock menu work properly to show active spawns when 'Focus Next Active'
+      is used.
+    - Released 0.8.4.8
+
+[2006/03/31] - Sparks
+    - Fixed a significant 'limit scrollback' performance problem, erk.
+    - Added 'convert input to MUSH' and 'convert input from MUSH' hotkey actions.
+
+[2006/03/30] - Sparks
+    - Fixed a lockup bug in one odd Lemuria case.
+    - Changed the root spawn to be renameable (sets the display name).
+    - Changed around how the 'main' tab and all work, to hopefully be clearer.
+    - Released 0.8.4.6
+    - Tweaked Lemuria, hopefully made textview scrolling faster.
+    - Support for on-the-fly variables, should speed up state-initialization.
+
+[2006/03/29] - Sparks
+    - Changed spawns to have a 'maximum lines' setting.  (0 means 'no limit')
+    - Changed 'Add Character' to highlight the new character.
+
+[2006/03/28] - Sparks
+    - Fixed a name problem in one action.
+    - Made some requested tweaks to the highlight editor.
+    - Fixed a big bug in timer event conditions.  Ergh!  Sorry.
+    - Released 0.8.4.5 to fix timer bug.
+    - Fixed focus on 'New Event' in event editor.
+    - Changed a bunch of hotkey actions to also be event actions.
+
+[2006/03/26] - Sparks
+    - Added a 'Do not trigger activity notice' event action.
+    - Added a 'Copy or Move text to spawn' event action.
+    - Added a 'Spawn Does Not Have Activity Indicator' event condition.
+    - Added a 'Close Current Spawn' hotkey event action.
+    - Released 0.8.4.4 to get new event stuff out.
+
+[2006/03/25] - Sparks
+    - Took a much-needed break for several days.
+    - Added a 'bounce dock icon' action.
+    - Added a 'display status text in active spawn' action.
+
+[2006/03/21] - Sparks
+    - Tweaked it so that the default display name shows properly when a character
+      is renamed.  Whups!
+    - Added support for multiple server types.  Now Atlantis supports CircleMUDs which
+      do not terminate lines (grmph), and supports MUD-style login.
+    - Released 0.8.4.3 to add support for MUD servers as well as MUSH/MUSE/MUCK/etc.
+    - Made next/prev actions wrap around to top or bottom.
+
+[2006/03/20] - Sparks
+    - Lemuria 0.5.5.2: Redid text view using a Stupid Coding Trick.  Let's see if
+      it improves the scroll speed for other people!
+    - Changed input to support Unicode, and attempt to downsample to ASCII as best
+      as possible.  This allows pasting stuff in from Word, et al.
+    - Because of the previous fixes, am releasing 0.8.4.2 instead of waiting 
+      to do another release until 0.8.5.
+    - Changed 'timer' events to also work as rate-limiters when put into ANDed
+      condition lists.
+    - Changed spawn weighting logic slightly.  (Only Paradigm should care about this.)
+
+[2006/03/19] - Sparks
+    - Fixed it so hostname is a clickable-to-edit field. *sigh*  Whups!
+    - Added a 'Variable Matches Pattern' event condition.
+    - Hooked up the 'any/all' logic on the event editor.  *sigh*
+    - Added a 'User Variables' configuration tab, and 'userconf.*' variables.
+    - Found a significant bug in world addition, fixed.
+    - Released 0.8.4.1 to fix this.
+    - Fixed a bug where userconf variables could get lost.
+    - Changed it so newly-created world events have their condition logic set to
+      'all' instead of 'any.'  Most likely, people want all anyway, and this has
+      bitten ME before, too.
+    - Reworked a bunch of how the spawn config tab works.
+    - Made Growl events actually remember their titles.  Whups!
+    - Added the ability to detect network drops and reconnect when it comes back.
+    - Added support for SimpleMU-style text-grabbing.
+
+[2006/03/18] - Sparks
+    - Added an 'auto open' option, to augment autoconnect.  Now you can have a world
+      open on startup, but not actually connect.
+    - Added 'options' capability to logfile base type.  This is how logs will get
+      default option settings, info from the options panel, or info from a /log
+      command down the road.
+    - 'Open Log' panel now handles append/replace warnings in a more intelligible 
+      manner.
+    - Rearranged layout of address book buttons.
+    - Fixed a silly field-editor focus bug if you did 'Add Spawn' while still
+      editing the name of an existing spawn.
+    - Fixed a bug where you could delete a world's name entirely, and crash the 
+      address book.  Eek!
+    - Added a 'Negate' condition to the events system, effectively giving you a 
+      logical 'not.'
+    - Changed Address Book to remember selected tab even when you move worlds.
+    - Added new 'Timer' event condition, to do keepalives and so on.  Keep in mind
+      that timers can be used even in combined conditions!  (Such as, 'Every 60 
+      seconds if this is not the active world' or whatever.)
+    - Added support for logfile types having options.
+    - Added 'Open Log' and 'Close all Logs' events.
+    - Added options to 'Formatted Text' logfile type (wordwrap on/off, etc.)    
+    - Pretty About Box.
+    - Released 0.8.4
+
+[2006/03/17] - Sparks
+    - Added stripes in Address Book world list, to make it easier to read, now that
+      its cluttered with the connect indicators!
+    - Fixed Display Name bug, also made display name work more intuitively.  
+      (Character default display name is now Char@ParentDisplayName instead 
+      of Char@ParentWorldName)
+
+[2006/03/16] - Sparks
+    - Fixed an issue with spawn editing, where if you deleted a spawn while you were
+      editing the name, the edit message went into freed memory and KERBOOM!
+    - When editing a spawn's priority with the stepper, it should properly keep
+      that spawn selected.  Whups!
+    - Made Atlantis automatically focus on the world when you connect manually
+      from address book.
+    - If there are no autoconnects, Atlantis automatically opens the address book
+      on startup.
+    - Added 'Close Current Window' action type.  Bind this to Command-W to get normal
+      Mac OS X window closing!  (I've added that to the defaults.)
+    - Lemuria 0.5.4
+      + Views (spawns) now open in the most-active window if they don't have
+        a window preference set.
+      + Display classes now have an expand/collapse view list capability.
+      + Fixed some activity indicator bugs.
+    - Added 'Show/Hide Spawn List' action.
+    - Fixed a bunch of dock menu bugs.
+    - Next/Prev spawn actions are no longer blocked by placeholder views
+      (i.e., 'folders').
+    - When changing the selected world in address book, it automatically jumps to
+      the first tab for sanity's sake.
+    - Added the connection indicators and quick-connect clicker in Address Book,
+      as per discussion with Thenomain.
+    - Released 0.8.3.3
+
+[2006/03/15] - Sparks
+    - Fixed an issue with spawns and the pattern view getting out of sync.
+    - Released 0.8.3 (build 24) -- I should probably just have done 0.8.3.1 :P
+    - Fixed a bug where if Telnet IAC characters happened on a packet boundary,
+      we missed them and Telnet negotiation broke.
+    - Fixed a bug with world refresh, where parent world highlight and events
+      could get lost.
+    - Fixed a bug where gagged lines still triggered the activity notice.
+    - Changed address book to refresh spawns and highlights if you change
+      focus from it, not just when you close.
+    - Lemuria 0.5.2
+      + Fixes vanishing-spawn or crash bug if you dragged a placeholder (folder) 
+        back to a window with a real spawn of that name.  Erk!
+      + RDNestedOutline Lemuria display class should not get out of synch.
+      + Made changes necessary to get rid of spawn folders by 0.8.4
+      + Sub-views (spawns) now open in the same world as their parent where
+        at all applicable, unless they were left in another window last time.
+      + Fixed up responder chain so the X appears even if the outline view isn't
+        the primary view.
+    - Released 0.8.3.1
+    - RE-fixed the bug where gagged lines still triggered the activity notice.  Sigh.
+    - Evidently, PennMUSH doesn't like it if you send data before telnet negotiation.  
+      So now, we wait until we've gotten at least one packet of Stuff from the server, 
+      before we send the login/pass.
+    - Lemuria 0.5.3
+      + Outline view shouldn't jump-and-dance on creation of spawns anymore.
+      + Lemuria will remember how you had the outline view portion of any window laid 
+        out, so if it was hidden it will remain hidden on the next run.
+      + Outline view properly displays a scrollbar if you have a ton of spawns. :P
+    - Added 'Previous Spawn' and 'Next Spawn' actions, which move you up or down the
+      list of worlds/spawns in a window.
+    - Added 'Unseen Activity' menu to both the 'Windows' menu in the menubar,
+      and to the application dock menu.
+    - Found and fixed a MAJOR bug where the address book could lose your spawns and
+      highlights, as a result of one change in 0.8.3.1.  Erk!  I am so sorry.
+    - Released 0.8.3.2 as a result of previous bug.
+    - Redid my Xcode project to let me set my versions in a single inspector, then
+      have it automatically generate all my plists and whatnot, so that I don't have to
+      keep changing stuff in four different places.  Now it also builds release images
+      for me, and uploads them, when I mark something as ready for release.
+    - Rewrote some of the socket class to remove six annoying (but harmless) warning
+      messages.  Now Atlantis compiles warning-free!
+    
+
+[2006/03/14] - Sparks
+    - Fixed 'Spawns' configuration tab so it won't crash on delete
+      of a spawn you've got an editor field open for.
+    - Pre-emptively fixed everything else the same way. :P
+    - Fixed a bunch of address book commit quirks.
+    - Released 0.8.1
+    - Fixed highlighting/event bug introduced by 0.8.1 changes
+    - Released 0.8.2 :P
+    - Nailed a crash bug in Lemuria, now it's Lemuria 0.5.1, whee.
+    - Added a Crash Reporter library.  Owie, pricy.  But the only one that
+      seemed to work reliably on both PowerPC and Intel...
+    - Added actions for gagging text from both world and from logfiles
+    - Added action for opening the address book
+    - Made child worlds inherit the spawns of their parent world
+    - Reworked some of the 'flow' for creating spawns.
+    - Added a divider line between recent searches and 'clear' option
+      in search menu.
+    - Fixed bug where you could not truly remove character/password from
+      a world.
+    - Fixed bug with placeholder strings in the 'Main' tab of world config.
+    - Spawns will refuse to accept empty names.
+    - Released 0.8.3
+    
+    
+[2006/03/13] - Sparks
+    - Complete rewrite finished after very long time, whoot.
+    - 0.8.0, initial preliminary limited beta

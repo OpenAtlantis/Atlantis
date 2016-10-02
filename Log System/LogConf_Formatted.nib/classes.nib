@@ -1,0 +1,27 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            ACTIONS = {
+                cancelButton = id; 
+                makeDefaults = id; 
+                okButton = id; 
+                skipToggled = id; 
+                wrapToggled = id; 
+            }; 
+            CLASS = RDFormattedText; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                "_rdCharactersField" = NSTextField; 
+                "_rdCondenseLines" = NSButton; 
+                "_rdConfigWindow" = NSWindow; 
+                "_rdIndentField" = NSTextField; 
+                "_rdSkipLines" = NSButton; 
+                "_rdWordWrap" = NSButton; 
+            }; 
+            SUPERCLASS = RDLogType; 
+        }, 
+        {CLASS = RDLogType; LANGUAGE = ObjC; SUPERCLASS = NSObject; }
+    ); 
+    IBVersion = 1; 
+}
