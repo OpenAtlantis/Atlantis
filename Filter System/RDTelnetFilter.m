@@ -13,6 +13,14 @@
 #define TELOPT_CHARSET 42
 #define TELOPT_COMPRESS 85
 #define TELOPT_COMPRESS2 86
+
+#define TELOPT_MSDP 69
+#define MSDP_VAR 1
+#define MSDP_VAL 2
+#define MSDP_OPEN 3
+#define MSDP_CLOSE 4
+
+
 #define ESC 24
 
 #define TQ_NO               0
@@ -111,6 +119,7 @@ enum ScanStates { scanNormal, scanIAC, scanWILL, scanWONT, scanDO, scanDONT, sca
         case TELOPT_EOR:
         case TELOPT_EXOPL:
         case TELOPT_COMPRESS:
+        case TELOPT_MSDP:
             return NO;            
     }
     
@@ -174,6 +183,7 @@ enum ScanStates { scanNormal, scanIAC, scanWILL, scanWONT, scanDO, scanDONT, sca
 
 - (void) worldConnected:(NSNotification *) notification
 {
+    ttypeCycle = 0;
     [telnetSessionData clear];
     int keepalive = [[[self world] preferenceForKey:@"atlantis.network.keepalive"] intValue];
     if ((keepalive == 1) || (keepalive == 2)) {
@@ -261,6 +271,23 @@ enum ScanStates { scanNormal, scanIAC, scanWILL, scanWONT, scanDO, scanDONT, sca
                         NSEnumerator *encodeEnum = [serverEncoding objectEnumerator];
                         NSString *encode;
                         BOOL found = NO;
+                        
+                        if ([[self world] stringEncoding] != -1) {
+                            // If we have a manually-set encoding, we will check if it's in the list.
+                            CFStringEncoding currentEncoding = CFStringConvertNSStringEncodingToEncoding([[self world] stringEncoding]);
+                            CFStringRef currentEncodingName = CFStringConvertEncodingToIANACharSetName(currentEncoding);
+                            
+                            if ([serverEncoding containsObject:(NSString *)currentEncodingName] && ([[self world] stringEncoding] != NSASCIIStringEncoding)) {
+                                found = YES;
+                                NSMutableData *d = [NSMutableData data];
+                                uint8_t accepted = 2;
+                                [d appendBytes:&accepted length:1];
+                                [d appendData:[(NSString *)currentEncodingName dataUsingEncoding:NSASCIIStringEncoding] ];
+                                [self sendSuboption:TELOPT_CHARSET withData:d];
+                                [[self world] handleStatusOutput:[NSString stringWithFormat:@"Negotiated string encoding: %@\n", [NSString localizedNameOfStringEncoding:[[self world] stringEncoding]]]];
+                            }
+                        }
+                        
                         // RFC 2066 requires charsets to be in preferred order.
                         while ((encode = [encodeEnum nextObject]) && !found) {
                             CFStringEncoding testEncoding = CFStringConvertIANACharSetNameToEncoding((CFStringRef)encode);
@@ -272,8 +299,7 @@ enum ScanStates { scanNormal, scanIAC, scanWILL, scanWONT, scanDO, scanDONT, sca
                                 [d appendBytes:&accepted length:1];
                                 [d appendData:[encode dataUsingEncoding:NSASCIIStringEncoding] ];
                                 [self sendSuboption:TELOPT_CHARSET withData:d];
-                                if ([[self world] stringEncoding] != realEncoding)
-                                    [[self world] handleStatusOutput:[NSString stringWithFormat:@"Negotiated new string encoding: %@\n", [NSString localizedNameOfStringEncoding:realEncoding]]];
+                                [[self world] handleStatusOutput:[NSString stringWithFormat:@"Negotiated string encoding: %@\n", [NSString localizedNameOfStringEncoding:realEncoding]]];
                                 [[self world] setStringEncoding:realEncoding];
                             }
                         }
@@ -296,8 +322,39 @@ enum ScanStates { scanNormal, scanIAC, scanWILL, scanWONT, scanDO, scanDONT, sca
                 NSMutableData *terminfo = [NSMutableData data];
                 [terminfo appendBytes:&ISc length:1];
                 
-                const char *termname = "Atlantis";
-                [terminfo appendBytes:termname length:strlen(termname)];
+                switch (ttypeCycle) {
+                    case 0:
+                    {
+                        const char *termname = "Atlantis";
+                        [terminfo appendBytes:termname length:strlen(termname)];
+                    }
+                    break;
+                    
+                    case 1:
+                    {
+                        const char *termname = "Atlantis-256color";
+                        [terminfo appendBytes:termname length:strlen(termname)];
+                    }
+                    break;
+                    
+                    case 2:
+                    {
+                        const char *termname = "xterm-256color";
+                        [terminfo appendBytes:termname length:strlen(termname)];
+                    }
+                    break;
+                    
+                    case 3:
+                    {
+                        const char *termname = "xterm-256color";
+                        [terminfo appendBytes:termname length:strlen(termname)];
+                    }
+                    break;
+                }
+                
+                ttypeCycle++;
+                if (ttypeCycle > 3)
+                    ttypeCycle = 0;
                 
                 [self sendSuboption:TELOPT_TTYPE withData:terminfo];
             }
@@ -317,6 +374,12 @@ enum ScanStates { scanNormal, scanIAC, scanWILL, scanWONT, scanDO, scanDONT, sca
             [[self world] compress:YES];            
         }
             break;
+            
+        case TELOPT_MSDP:
+        {
+        
+        }
+            break;
     }
 }
 
@@ -332,6 +395,7 @@ enum ScanStates { scanNormal, scanIAC, scanWILL, scanWONT, scanDO, scanDONT, sca
         case TELOPT_CHARSET:
             return YES;
             
+        case TELOPT_MSDP:
         case TELOPT_TM:
         case TELOPT_SNDLOC:
         case TELOPT_TSPEED:

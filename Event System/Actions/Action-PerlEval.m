@@ -21,7 +21,13 @@
     self = [super init];
     if (self) {
         _rdString = nil;
-        _rdLanguage = [[NSString alloc] initWithString:@"Perl"];
+
+        ScriptingDispatch *scriptSystem = [[RDAtlantisMainController controller] scriptDispatch];
+        NSArray *languages = [scriptSystem languages];
+        
+        if ([languages count]) {
+            _rdLanguage = [[languages objectAtIndex:0] retain];
+        }
     }
     return self;
 }
@@ -31,7 +37,13 @@
     self = [self init];
     if (self) {
         _rdString = [[string copyWithZone:nil] retain];
-        _rdLanguage = [[NSString stringWithString:@"Perl"] retain];
+
+        ScriptingDispatch *scriptSystem = [[RDAtlantisMainController controller] scriptDispatch];
+        NSArray *languages = [scriptSystem languages];
+        
+        if ([languages count]) {
+            _rdLanguage = [[languages objectAtIndex:0] retain];
+        }
     }
     return self;
 }
@@ -50,7 +62,12 @@
         _rdString = [[coder decodeObjectForKey:@"action.perlCode"] retain];
         _rdLanguage = [[coder decodeObjectForKey:@"action.language"] retain];
         if (!_rdLanguage) {
-            _rdLanguage = [[NSString stringWithString:@"Perl"] retain];
+            ScriptingDispatch *scriptSystem = [[RDAtlantisMainController controller] scriptDispatch];
+            NSArray *languages = [scriptSystem languages];
+            
+            if ([languages count]) {
+                _rdLanguage = [[languages objectAtIndex:0] retain];
+            }
         }
     }
     return self;

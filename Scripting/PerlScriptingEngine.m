@@ -14,6 +14,7 @@
 #import "RDAtlantisMainController.h"
 #import "NSAttributedStringAdditions.h"
 #import <CamelBones/Runtime.h>
+#import <Growl/Growl.h>
 
 @implementation PerlScriptingEngine
 
@@ -41,14 +42,38 @@
 
 - (void) engineReinit:(AtlantisState *)state
 {
+    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"disablePerl"])
+        return;
+
     if (![_rdPerlLock tryLock]) {
         return;
     }
-
+    
+    if (![CBPerl isAvailable]) {
+        if (!_rdPerlDisabled) {
+            _rdPerlDisabled = YES;
+            BOOL warned = [[NSUserDefaults standardUserDefaults] boolForKey:@"perlWarned"];
+            if ([GrowlApplicationBridge isGrowlRunning]) {
+                [GrowlApplicationBridge
+                    notifyWithTitle:@"Perl Unavailable"
+                        description:@"Atlantis was unable to find an appropriate Perl library, and has disabled Perl scripting."
+                   notificationName:@"User Defined" 
+                           iconData:nil
+                           priority:0 
+                           isSticky:!warned
+                       clickContext:nil];  
+                [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"perlWarned"];
+            }
+            NSLog(@"Perl not available!");
+        }
+        return;
+    }
+    
     if (!_rdPerlInterpreter) {
         _rdPerlInterpreter = [[CBPerl alloc] init];
     }
 
+    [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"perlWarned"];
     [[RDAtlantisMainController controller] removeAllScriptedEventsForLanguage:@"Perl"];
 
     NSString *libPath = @"~/Library/Atlantis/Scripts";
@@ -177,6 +202,12 @@
 
 - (id) executeFunction:(NSString *)string withState:(AtlantisState *)state
 {
+    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"disablePerl"])
+        return nil;
+
+    if (![CBPerl isAvailable])
+        return nil;
+
     int counter = 0;
     BOOL locked = [_rdPerlLock tryLock];
     struct timespec tsp;

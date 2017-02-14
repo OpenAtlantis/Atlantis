@@ -42,7 +42,7 @@ typedef enum {
     NSTimer                     *_rdOutputTimer;
     BOOL                         _rdDataReceived;
     
-    NSString                    *_rdHoldoverBlock;
+    NSData                      *_rdHoldoverBlock;
     BOOL                         _rdLastHeldover;
     
     NSStringEncoding             _rdInputEncoding;
@@ -96,6 +96,8 @@ typedef enum {
     BOOL                         _rdLocalEcho;
     NSString                    *_rdLocalEchoPrefix;
     int                          _rdServerCodebase;
+    
+    BOOL                         _rdAlternateLinefeed;
     
     NSMutableArray              *_rdDelayQueue;
     

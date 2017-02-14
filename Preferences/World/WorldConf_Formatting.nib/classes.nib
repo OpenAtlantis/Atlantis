@@ -1,55 +1,141 @@
-{
-    IBClasses = (
-        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
-        {CLASS = RDView; LANGUAGE = ObjC; SUPERCLASS = NSView; }, 
-        {CLASS = WorldConfigurationTab; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
-        {
-            ACTIONS = {chooseCodepage = id; chooseFont = id; colorWasSet = id; toggleDefault = id; }; 
-            CLASS = WorldFormattingEditor; 
-            LANGUAGE = ObjC; 
-            OUTLETS = {
-                "_rdAnsiBolding" = NSButton; 
-                "_rdAnsiColor00" = NSColorWell; 
-                "_rdAnsiColor01" = NSColorWell; 
-                "_rdAnsiColor02" = NSColorWell; 
-                "_rdAnsiColor03" = NSColorWell; 
-                "_rdAnsiColor04" = NSColorWell; 
-                "_rdAnsiColor05" = NSColorWell; 
-                "_rdAnsiColor06" = NSColorWell; 
-                "_rdAnsiColor07" = NSColorWell; 
-                "_rdAnsiColor08" = NSColorWell; 
-                "_rdAnsiColor09" = NSColorWell; 
-                "_rdAnsiColor10" = NSColorWell; 
-                "_rdAnsiColor11" = NSColorWell; 
-                "_rdAnsiColor12" = NSColorWell; 
-                "_rdAnsiColor13" = NSColorWell; 
-                "_rdAnsiColor14" = NSColorWell; 
-                "_rdAnsiColor15" = NSColorWell; 
-                "_rdAnsiDefaults" = NSButton; 
-                "_rdBackgroundColor" = NSColorWell; 
-                "_rdCodepage" = NSPopUpButton; 
-                "_rdCodepageDefault" = NSButton; 
-                "_rdConfigView" = NSView; 
-                "_rdConsoleColor" = NSColorWell; 
-                "_rdFontChange" = NSButton; 
-                "_rdFontDefault" = NSButton; 
-                "_rdFontName" = NSTextField; 
-                "_rdForegroundColor" = NSColorWell; 
-                "_rdGrabpass" = NSTextField; 
-                "_rdGrabpassDefault" = NSButton; 
-                "_rdIndent" = NSTextField; 
-                "_rdIndentDefault" = NSButton; 
-                "_rdIndentStepper" = NSStepper; 
-                "_rdLocalEcho" = NSButton; 
-                "_rdLocalEchoDefault" = NSButton; 
-                "_rdLocalEchoPrefix" = NSTextField; 
-                "_rdRhost" = NSButton; 
-                "_rdSelectionColor" = NSColorWell; 
-                "_rdTimestamps" = NSButton; 
-                "_rdUrlColor" = NSColorWell; 
-            }; 
-            SUPERCLASS = WorldConfigurationTab; 
-        }
-    ); 
-    IBVersion = 1; 
-}
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IBClasses</key>
+	<array>
+		<dict>
+			<key>CLASS</key>
+			<string>WorldConfigurationTab</string>
+			<key>LANGUAGE</key>
+			<string>ObjC</string>
+			<key>SUPERCLASS</key>
+			<string>NSObject</string>
+		</dict>
+		<dict>
+			<key>CLASS</key>
+			<string>RDView</string>
+			<key>LANGUAGE</key>
+			<string>ObjC</string>
+			<key>SUPERCLASS</key>
+			<string>NSView</string>
+		</dict>
+		<dict>
+			<key>ACTIONS</key>
+			<dict>
+				<key>chooseCodepage</key>
+				<string>id</string>
+				<key>chooseFont</key>
+				<string>id</string>
+				<key>chooseLinefeed</key>
+				<string>id</string>
+				<key>colorWasSet</key>
+				<string>id</string>
+				<key>toggleDefault</key>
+				<string>id</string>
+			</dict>
+			<key>CLASS</key>
+			<string>WorldFormattingEditor</string>
+			<key>LANGUAGE</key>
+			<string>ObjC</string>
+			<key>OUTLETS</key>
+			<dict>
+				<key>_rdAnsiBolding</key>
+				<string>NSButton</string>
+				<key>_rdAnsiColor00</key>
+				<string>NSColorWell</string>
+				<key>_rdAnsiColor01</key>
+				<string>NSColorWell</string>
+				<key>_rdAnsiColor02</key>
+				<string>NSColorWell</string>
+				<key>_rdAnsiColor03</key>
+				<string>NSColorWell</string>
+				<key>_rdAnsiColor04</key>
+				<string>NSColorWell</string>
+				<key>_rdAnsiColor05</key>
+				<string>NSColorWell</string>
+				<key>_rdAnsiColor06</key>
+				<string>NSColorWell</string>
+				<key>_rdAnsiColor07</key>
+				<string>NSColorWell</string>
+				<key>_rdAnsiColor08</key>
+				<string>NSColorWell</string>
+				<key>_rdAnsiColor09</key>
+				<string>NSColorWell</string>
+				<key>_rdAnsiColor10</key>
+				<string>NSColorWell</string>
+				<key>_rdAnsiColor11</key>
+				<string>NSColorWell</string>
+				<key>_rdAnsiColor12</key>
+				<string>NSColorWell</string>
+				<key>_rdAnsiColor13</key>
+				<string>NSColorWell</string>
+				<key>_rdAnsiColor14</key>
+				<string>NSColorWell</string>
+				<key>_rdAnsiColor15</key>
+				<string>NSColorWell</string>
+				<key>_rdAnsiDefaults</key>
+				<string>NSButton</string>
+				<key>_rdBackgroundColor</key>
+				<string>NSColorWell</string>
+				<key>_rdCodepage</key>
+				<string>NSPopUpButton</string>
+				<key>_rdCodepageDefault</key>
+				<string>NSButton</string>
+				<key>_rdConfigView</key>
+				<string>NSView</string>
+				<key>_rdConsoleColor</key>
+				<string>NSColorWell</string>
+				<key>_rdFontChange</key>
+				<string>NSButton</string>
+				<key>_rdFontDefault</key>
+				<string>NSButton</string>
+				<key>_rdFontName</key>
+				<string>NSTextField</string>
+				<key>_rdForegroundColor</key>
+				<string>NSColorWell</string>
+				<key>_rdGrabpass</key>
+				<string>NSTextField</string>
+				<key>_rdGrabpassDefault</key>
+				<string>NSButton</string>
+				<key>_rdIndent</key>
+				<string>NSTextField</string>
+				<key>_rdIndentDefault</key>
+				<string>NSButton</string>
+				<key>_rdIndentStepper</key>
+				<string>NSStepper</string>
+				<key>_rdLinefeedDefault</key>
+				<string>NSButton</string>
+				<key>_rdLinefeedType</key>
+				<string>NSPopUpButton</string>
+				<key>_rdLocalEcho</key>
+				<string>NSButton</string>
+				<key>_rdLocalEchoDefault</key>
+				<string>NSButton</string>
+				<key>_rdLocalEchoPrefix</key>
+				<string>NSTextField</string>
+				<key>_rdRhost</key>
+				<string>NSButton</string>
+				<key>_rdSelectionColor</key>
+				<string>NSColorWell</string>
+				<key>_rdTimestamps</key>
+				<string>NSButton</string>
+				<key>_rdUrlColor</key>
+				<string>NSColorWell</string>
+			</dict>
+			<key>SUPERCLASS</key>
+			<string>WorldConfigurationTab</string>
+		</dict>
+		<dict>
+			<key>CLASS</key>
+			<string>FirstResponder</string>
+			<key>LANGUAGE</key>
+			<string>ObjC</string>
+			<key>SUPERCLASS</key>
+			<string>NSObject</string>
+		</dict>
+	</array>
+	<key>IBVersion</key>
+	<string>1</string>
+</dict>
+</plist>

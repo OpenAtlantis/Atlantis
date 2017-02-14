@@ -8,6 +8,7 @@
 
 #import <Cocoa/Cocoa.h>
 #import "MCPHandler.h"
+#import "MCPMessage.h"
 
 @interface MCPIcecrewServer : MCPHandler {
 

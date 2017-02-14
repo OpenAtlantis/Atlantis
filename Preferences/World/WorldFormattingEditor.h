@@ -60,11 +60,14 @@
     IBOutlet NSTextField        *_rdGrabpass;
     IBOutlet NSButton           *_rdRhost;
     
+    IBOutlet NSPopUpButton      *_rdLinefeedType;
+    
     BOOL                         _rdGlobal;
 }
 
 - (IBAction) chooseFont:(id) sender;
 - (IBAction) chooseCodepage:(id) sender;
+- (IBAction) chooseLinefeed:(id) sender;
 
 - (IBAction) toggleDefault:(id) sender;
 - (IBAction) colorWasSet:(id)sender;

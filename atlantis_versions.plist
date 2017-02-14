@@ -2,16 +2,88 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>100</key>
+	<dict>
+		<key>newFeatures</key>
+		<array>
+		    <string>*** This has one significant bugfix, and as such will still work on Panther and Tiger. ***</string>
+		    <string>GENERAL: There was a second string input lockup bug, where a server that sent Latin1-encoded text when UTF8 had been negotiated would cause the input stream to lock up.  Now, if a data blob is unparseable, Atlantis will try to use a previous encoding to generate a string.  This primarily affected certain MUX2 setups.</string>
+        </array>
+		<key>versionString</key>
+		<string>0.9.9.4</string>
+    </dict>
+	<key>99</key>
+	<dict>
+		<key>newFeatures</key>
+		<array>
+		    <string>*** This has several small bugfixes, and as such will still work on Panther and Tiger. ***</string>
+            <string>GENERAL: URL detection now respects Unicode directional quotes as delimiters as well.  No more missing URLs because you're on MUX2!</string>
+            <string>GENERAL: Tweaks to handle a strange encoding situation that could lock up a connection.  (If this still happens, PLEASE give me more info.  I couldn't reproduce the reported issue, so this was a blind fix.)</string>
+            <string>GENERAL: Unicode ellipsis characters will be converted to three individual periods, to avoid issues with MUX2 servers and Lion's automatic text filling.</string>
+            <string>PERL: For those who Perl still causes Atlantis to fail to load, you can set a special option to disable it.  From the command line, type: defaults write net.riverdark.atlantis disablePerl -bool YES</string>
+        </array>
+		<key>versionString</key>
+		<string>0.9.9.3</string>
+    </dict>
+	<key>98</key>
+	<dict>
+		<key>newFeatures</key>
+		<array>
+		    <string>*** IMPORTANT *** Unless there are critical bugs to be fixed, this will be the final version of Atlantis 0.9!  After this, I am finally taking it out of beta and going to 1.0.  YAY!  However, this will also entail end of support for Panther and Tiger, to be able to roll out features that have been stuck in stasis due to having to support really old operating systems.  For more information, please visit the Atlantis forums.</string>
+		    <string>PERL: If Perl cannot be initialized on a system, Atlantis will disable Perl scripting instead of crashing. (In other words, 0.9 will not explode under Lion, even if Perl doesn't work there.)</string>
+		    <string>WORLD: Added linefeed option to formatting tab, to change to CRLF for games that require it.</string>
+		    <string>GENERAL: Extraneous network debug logging removed.  Oops.</string>
+		    <string>GENERAL: Added /logs command, shows what logs are currently open for that world.</string>
+		    <string>GENERAL: Atlantis will now cycle through multiple terminal types, for servers that support detection of 256-color support in that fashion.</string>
+		</array>
+		<key>versionString</key>
+		<string>0.9.9.2</string>
+	</dict>
+	<key>97</key>
+	<dict>
+		<key>newFeatures</key>
+		<array>
+			<string>GENERAL: Tweak to new ANSI engine, to handle intense no-attribute text as white.</string>
+			<string>NETWORK: Fixed a 'decompression failed' issue when using MCCP with the new network layer. (Thanks for reporting, dak)</string>
+			<string>PERL: Tweaks to the Perl library, to hopefully provide more useful data if the library can't be initialized.</string>
+		</array>
+		<key>versionString</key>
+		<string>0.9.9.1</string>
+	</dict>
+	<key>96</key>
+	<dict>
+		<key>newFeatures</key>
+		<array>
+			<string>GENERAL: Rewritten ANSI engine, now supports 256-color ANSI properly.</string>
+			<string>GENERAL: Rewritten Unicode engine, to deal with UTF-8 buffer errors when network engine truncates a line mid-character.  (This occurred most prominently on MUX 2.7 and later.)</string>
+			<string>GENERAL: Character set will not autonegotiate if one is set manually.</string>
+		</array>
+		<key>versionString</key>
+		<string>0.9.9.0</string>
+	</dict>
+	<key>95</key>
+	<dict>
+		<key>newFeatures</key>
+		<array>
+			<string>GENERAL: Perl *REALLY* works on Snow Leopard now.  Sigh.</string>
+			<string>GENERAL: All worlds show up as submenu of 'Worlds' now.</string>
+			<string>GENERAL: Spawns always focus their input area when selected now.</string>
+		</array>
+		<key>versionString</key>
+		<string>0.9.8.9</string>
+	</dict>
 	<key>94</key>
 	<dict>
 		<key>newFeatures</key>
 		<array>
+			<string>GENERAL: Should support perl on Snow Leopard now.</string>
 			<string>GENERAL: More tweaking of network and text layers. (I have no idea how much speed increase this will give in general, but now the code is easier to maintain.)</string>
+			<string>GENERAL: Major reworking/cleanup of internals as we move towards 1.0 and the plugin API.</string>
 			<string>GENERAL: TinyURL no longer strips off hashes.</string>
 			<string>GENERAL: Address Book drop-down can optionally connect a world twice.</string>
 			<string>SCRIPT: Delete All Scrollback now takes an optional spawn.</string>
 			<string>SCRIPT: New 'On world open' and 'On world close' events.</string>
-			<string>SCRIPT: Added support for IceCrew MCP charset negotiation, for MOO servers that support such.</string>
+			<string>UNICODE: Added support for IceCrew MCP charset negotiation, for MOO servers that support such.</string>
 		</array>
 		<key>versionString</key>
 		<string>0.9.8.8</string>

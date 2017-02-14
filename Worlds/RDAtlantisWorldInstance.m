@@ -198,11 +198,13 @@ static NSString *alphabet = @"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWX
     }
 }
 
-
 - (void) refreshConveniencePointers:(NSNotification *) notification
 {
     NSNumber *localEcho = [self preferenceForKey:@"atlantis.text.localEcho"];
     _rdLocalEcho = [localEcho boolValue];
+    
+    NSNumber *linefeed = [self preferenceForKey:@"atlantis.text.linefeed"];
+    _rdAlternateLinefeed = [linefeed boolValue];
     
     NSString *localEchoPrefix = [self preferenceForKey:@"atlantis.text.localEchoPrefix"];
     if (!localEchoPrefix) {
@@ -1350,6 +1352,9 @@ static NSString *alphabet = @"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWX
     BOOL noSlashies = [[NSUserDefaults standardUserDefaults] boolForKey:@"atlantis.input.noSlashies"];
     BOOL hasSlash = NO;
     RDAtlantisSpawn *spawn = eventSpawn;
+
+    // Nuke obnoxious Lion ellipsis conversion.
+    [baseString replaceOccurrencesOfString:[NSString stringWithCString:"\311"] withString:@"..." options:0 range:NSMakeRange(0,[baseString length])];
     
     if (!spawn)
         spawn = _rdMainView;
@@ -1453,7 +1458,6 @@ static NSString *alphabet = @"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWX
             if (![baseString canBeConvertedToEncoding:_rdOutputEncoding]) {
                 
                 // Attempt our 'default' fallback to get rid of Unicode markup, then try once more
-                [baseString replaceOccurrencesOfString:[NSString stringWithCString:"\311"] withString:@"..." options:0 range:NSMakeRange(0,[baseString length])];
                 [baseString replaceOccurrencesOfString:[NSString stringWithCString:"\320"] withString:@"-" options:0 range:NSMakeRange(0,[baseString length])];
                 [baseString replaceOccurrencesOfString:[NSString stringWithCString:"\324"] withString:@"'" options:0 range:NSMakeRange(0,[baseString length])];
                 [baseString replaceOccurrencesOfString:[NSString stringWithCString:"\325"] withString:@"'" options:0 range:NSMakeRange(0,[baseString length])];
@@ -1559,7 +1563,10 @@ static NSString *alphabet = @"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWX
 - (void) sendString:(NSString *) string
 {
     NSMutableString *realString = [string mutableCopy];
-    [realString appendString:@"\n"];
+    if (!_rdAlternateLinefeed)    
+        [realString appendString:@"\n"];
+    else 
+        [realString appendString:@"\r\n"];
 
     NSEnumerator *filterEnum = [_rdInputFilters reverseObjectEnumerator];
     RDAtlantisFilter *filter;
@@ -1639,6 +1646,9 @@ static NSString *alphabet = @"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWX
 
 - (NSStringEncoding) stringEncoding
 {
+    if (_rdInputEncoding != _rdOutputEncoding)
+        return -1;
+
     return _rdOutputEncoding;
 }
 
@@ -1892,9 +1902,10 @@ static NSString *alphabet = @"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWX
 -(void) handleData:(NSData *)data
 {
     if ([data length]) {
-        NSMutableData *mutableData = [data mutableCopy];
         [_rdLastNetActivity release];
         _rdLastNetActivity = [[NSDate date] retain];
+
+        NSMutableData *mutableData  = [data mutableCopy];
 
         NSEnumerator *filterEnum = [_rdInputFilters objectEnumerator];
         RDAtlantisFilter *filter;
@@ -1903,15 +1914,27 @@ static NSString *alphabet = @"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWX
             [filter filterInput:mutableData];
         }       
 
+        if (_rdHoldoverBlock) {
+            NSData *tempData = mutableData;
+            mutableData = [_rdHoldoverBlock mutableCopy];
+            [mutableData appendData:tempData];
+            [_rdHoldoverBlock release];
+            _rdHoldoverBlock = nil;
+            [tempData release];
+        }
+
         if ([mutableData length]) {
             // Split up into multiple newlines for processing
             NSCharacterSet *cset = [NSCharacterSet characterSetWithCharactersInString:@"\n"];
             NSMutableString *tempString = [[NSMutableString alloc] initWithData:mutableData encoding:_rdInputEncoding];
             
-            if (_rdHoldoverBlock) {
-                [tempString insertString:_rdHoldoverBlock atIndex:0];
-                [_rdHoldoverBlock release];
-                _rdHoldoverBlock = nil;
+            if (!tempString) {
+                tempString = [[NSMutableString alloc] initWithData:mutableData encoding:NSISOLatin1StringEncoding];
+                if (!tempString) {
+                    _rdHoldoverBlock = [mutableData retain];
+                    [mutableData release];
+                    return;
+                }
             }
             
             [tempString replaceOccurrencesOfString:@"\r" withString:@"" options:0 range:NSMakeRange(0,[tempString length])];
@@ -1931,7 +1954,7 @@ static NSString *alphabet = @"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWX
                 }
                 else {
                     NSRange getme = NSMakeRange(curPos,length - curPos);                
-                    _rdHoldoverBlock = [[tempString substringWithRange:getme] retain];
+                    _rdHoldoverBlock = [[[tempString substringWithRange:getme] dataUsingEncoding:_rdInputEncoding] retain];
                     curPos = nextLinebreak.location + nextLinebreak.length;
                     done = YES;
                 }
@@ -1954,7 +1977,8 @@ static NSString *alphabet = @"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWX
             
             if (_rdServerCodebase == AtlantisServerMud) {
                 if (_rdHoldoverBlock) {
-                    NSMutableAttributedString *realString = [[NSMutableAttributedString alloc] initWithString:[NSString stringWithFormat:@"%@",_rdHoldoverBlock]];
+                    NSString *tempString = [[[NSString alloc] initWithData:_rdHoldoverBlock encoding:_rdInputEncoding] autorelease];
+                    NSMutableAttributedString *realString = [[NSMutableAttributedString alloc] initWithString:tempString];
                     
                     filterEnum = [_rdInputFilters objectEnumerator];
                     while (filter = [filterEnum nextObject]) {
@@ -2030,11 +2054,11 @@ static NSString *alphabet = @"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWX
 
 - (void) handleBytesOnStream:(NSInputStream *)stream
 {
-    uint8_t buffer[8000];
+    uint8_t buffer[5000];
     int buflen;
     
-    memset(&buffer[0],0,8000);
-    buflen = [(NSInputStream *)stream read:&buffer[0] maxLength:7999];
+    memset(&buffer[0],0,5000);
+    buflen = [(NSInputStream *)stream read:&buffer[0] maxLength:4999];
     
     if (buflen > 0) {
         NSMutableData *tempData = [[NSData dataWithBytes:&buffer[0] length:buflen] mutableCopy];
@@ -2136,6 +2160,11 @@ static NSString *alphabet = @"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWX
         break;
             
         case NSStreamEventNone:
+        {
+            NSLog(@"WTF?");
+        }
+        break;
+        
         case NSStreamEventHasSpaceAvailable:
         {
             // We don't care about these.

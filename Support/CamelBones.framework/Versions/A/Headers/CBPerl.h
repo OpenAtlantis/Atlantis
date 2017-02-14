@@ -102,4 +102,5 @@
 
 @interface CBPerl (StubInit)
 + (void) initialize;
++ (BOOL) isAvailable;
 @end;

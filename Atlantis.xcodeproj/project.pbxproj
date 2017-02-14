@@ -52,6 +52,7 @@
 		FF0C2BE90A27A4E2002484B9 /* ToolbarDisconnect.m in Sources */ = {isa = PBXBuildFile; fileRef = FF0C2BE70A27A4E2002484B9 /* ToolbarDisconnect.m */; };
 		FF0C2BF10A27A4FA002484B9 /* ToolbarSearch.m in Sources */ = {isa = PBXBuildFile; fileRef = FF0C2BEF0A27A4FA002484B9 /* ToolbarSearch.m */; };
 		FF0C2FAE0A27AC6F002484B9 /* ToolbarSearch.nib in Resources */ = {isa = PBXBuildFile; fileRef = FF0C2FAD0A27AC6F002484B9 /* ToolbarSearch.nib */; };
+		FF1218A0136D021900363EB5 /* LogsCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = FF12189F136D021900363EB5 /* LogsCommand.m */; };
 		FF16E7E909A0733A00724F23 /* RDEmailFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = FF16E7E709A0733A00724F23 /* RDEmailFilter.m */; };
 		FF16EC6F09A16E4200724F23 /* PTKeyComboPanel.nib in Resources */ = {isa = PBXBuildFile; fileRef = FF16EC6E09A16E4200724F23 /* PTKeyComboPanel.nib */; };
 		FF191CFB09F33C7C0071917F /* Action-GlobalDisconnect.m in Sources */ = {isa = PBXBuildFile; fileRef = FF191CF909F33C7C0071917F /* Action-GlobalDisconnect.m */; };
@@ -103,9 +104,6 @@
 		FF26F3AF0B84559D003043E5 /* CTBadge_3.pdf in Resources */ = {isa = PBXBuildFile; fileRef = FF26F3AB0B84559D003043E5 /* CTBadge_3.pdf */; };
 		FF26F3B00B84559D003043E5 /* CTBadge_4.pdf in Resources */ = {isa = PBXBuildFile; fileRef = FF26F3AC0B84559D003043E5 /* CTBadge_4.pdf */; };
 		FF26F3B10B84559D003043E5 /* CTBadge_5.pdf in Resources */ = {isa = PBXBuildFile; fileRef = FF26F3AD0B84559D003043E5 /* CTBadge_5.pdf */; };
-		FF2CA47A0CD5095E00EC2E79 /* PerlScriptingEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = FF2CA4790CD5095E00EC2E79 /* PerlScriptingEngine.m */; };
-		FF2CA47E0CD5096F00EC2E79 /* CamelBones.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF2CA47D0CD5096F00EC2E79 /* CamelBones.framework */; };
-		FF2CA4810CD5097D00EC2E79 /* CamelBones.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = FF2CA47D0CD5096F00EC2E79 /* CamelBones.framework */; };
 		FF2D6E440F36440100E766CB /* MCPIcecrewServer.m in Sources */ = {isa = PBXBuildFile; fileRef = FF2D6E430F36440100E766CB /* MCPIcecrewServer.m */; };
 		FF2EA2A509E34F4100DDD57E /* WorldDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = FF2EA2A309E34F4100DDD57E /* WorldDefaults.m */; };
 		FF2EA31A09E35C6800DDD57E /* globe.tiff in Resources */ = {isa = PBXBuildFile; fileRef = FF2EA31909E35C6800DDD57E /* globe.tiff */; };
@@ -326,6 +324,9 @@
 		FFEC02F10C3AE8DD000FF14D /* Action-WorldNotesShow.m in Sources */ = {isa = PBXBuildFile; fileRef = FFEC02EF0C3AE8DD000FF14D /* Action-WorldNotesShow.m */; };
 		FFECBB2D09DE15320049FF54 /* Action-InputConvertToMUSH.m in Sources */ = {isa = PBXBuildFile; fileRef = FFECBB2B09DE15320049FF54 /* Action-InputConvertToMUSH.m */; };
 		FFECBB5C09DE174A0049FF54 /* Action-InputConvertFromMUSH.m in Sources */ = {isa = PBXBuildFile; fileRef = FFECBB5A09DE174A0049FF54 /* Action-InputConvertFromMUSH.m */; };
+		FFEDD9B8120E39EA00254015 /* PerlScriptingEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = FFEDD9B7120E39EA00254015 /* PerlScriptingEngine.m */; };
+		FFEDD9D2120E39FF00254015 /* CamelBones.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = FF2CA47D0CD5096F00EC2E79 /* CamelBones.framework */; };
+		FFEDD9F0120E3A0600254015 /* CamelBones.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF2CA47D0CD5096F00EC2E79 /* CamelBones.framework */; };
 		FFF02C060A2CE90C000DC42B /* AddressBook.tiff in Resources */ = {isa = PBXBuildFile; fileRef = FFF02C050A2CE90C000DC42B /* AddressBook.tiff */; };
 		FFF02C0F0A2CEA15000DC42B /* ToolbarAddressBook.m in Sources */ = {isa = PBXBuildFile; fileRef = FFF02C0D0A2CEA15000DC42B /* ToolbarAddressBook.m */; };
 		FFF03CFC0A86964B00E514DA /* MCPMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = FFF03CFA0A86964B00E514DA /* MCPMessage.m */; };
@@ -405,7 +406,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				FF2CA4810CD5097D00EC2E79 /* CamelBones.framework in Copy Frameworks */,
+				FFEDD9D2120E39FF00254015 /* CamelBones.framework in Copy Frameworks */,
 				FFF39E4F0CB067BC008F9D1D /* LuaCore.framework in Copy Frameworks */,
 				FF261F6C09C68B3C000E0026 /* DTCVersionManager.framework in Copy Frameworks */,
 				FFFE5ECD09A2B496003F118B /* Growl.framework in Copy Frameworks */,
@@ -457,6 +458,8 @@
 		FF0C2BEE0A27A4FA002484B9 /* ToolbarSearch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ToolbarSearch.h; path = "Toolbar System/ToolbarSearch.h"; sourceTree = "<group>"; };
 		FF0C2BEF0A27A4FA002484B9 /* ToolbarSearch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ToolbarSearch.m; path = "Toolbar System/ToolbarSearch.m"; sourceTree = "<group>"; };
 		FF0C2FAD0A27AC6F002484B9 /* ToolbarSearch.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = ToolbarSearch.nib; path = "Toolbar System/ToolbarSearch.nib"; sourceTree = "<group>"; };
+		FF12189E136D021900363EB5 /* LogsCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogsCommand.h; sourceTree = "<group>"; };
+		FF12189F136D021900363EB5 /* LogsCommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogsCommand.m; sourceTree = "<group>"; };
 		FF16E7E609A0733A00724F23 /* RDEmailFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RDEmailFilter.h; path = "Filter System/RDEmailFilter.h"; sourceTree = "<group>"; };
 		FF16E7E709A0733A00724F23 /* RDEmailFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RDEmailFilter.m; path = "Filter System/RDEmailFilter.m"; sourceTree = "<group>"; };
 		FF16EC6609A16E3700724F23 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/PTKeyComboPanel.nib; sourceTree = "<group>"; };
@@ -545,8 +548,6 @@
 		FF26F3AB0B84559D003043E5 /* CTBadge_3.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = CTBadge_3.pdf; path = "Utility Classes/CTBadge_3.pdf"; sourceTree = "<group>"; };
 		FF26F3AC0B84559D003043E5 /* CTBadge_4.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = CTBadge_4.pdf; path = "Utility Classes/CTBadge_4.pdf"; sourceTree = "<group>"; };
 		FF26F3AD0B84559D003043E5 /* CTBadge_5.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = CTBadge_5.pdf; path = "Utility Classes/CTBadge_5.pdf"; sourceTree = "<group>"; };
-		FF2CA4780CD5095E00EC2E79 /* PerlScriptingEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PerlScriptingEngine.h; path = Scripting/PerlScriptingEngine.h; sourceTree = "<group>"; };
-		FF2CA4790CD5095E00EC2E79 /* PerlScriptingEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PerlScriptingEngine.m; path = Scripting/PerlScriptingEngine.m; sourceTree = "<group>"; };
 		FF2CA47D0CD5096F00EC2E79 /* CamelBones.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CamelBones.framework; path = Support/CamelBones.framework; sourceTree = "<group>"; };
 		FF2D6E420F36440100E766CB /* MCPIcecrewServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MCPIcecrewServer.h; path = "MCP System/MCPIcecrewServer.h"; sourceTree = "<group>"; };
 		FF2D6E430F36440100E766CB /* MCPIcecrewServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MCPIcecrewServer.m; path = "MCP System/MCPIcecrewServer.m"; sourceTree = "<group>"; };
@@ -910,6 +911,8 @@
 		FFECBB2B09DE15320049FF54 /* Action-InputConvertToMUSH.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Action-InputConvertToMUSH.m"; path = "Event System/Actions/Action-InputConvertToMUSH.m"; sourceTree = "<group>"; };
 		FFECBB5909DE174A0049FF54 /* Action-InputConvertFromMUSH.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Action-InputConvertFromMUSH.h"; path = "Event System/Actions/Action-InputConvertFromMUSH.h"; sourceTree = "<group>"; };
 		FFECBB5A09DE174A0049FF54 /* Action-InputConvertFromMUSH.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Action-InputConvertFromMUSH.m"; path = "Event System/Actions/Action-InputConvertFromMUSH.m"; sourceTree = "<group>"; };
+		FFEDD9B6120E39EA00254015 /* PerlScriptingEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PerlScriptingEngine.h; path = Scripting/PerlScriptingEngine.h; sourceTree = "<group>"; };
+		FFEDD9B7120E39EA00254015 /* PerlScriptingEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PerlScriptingEngine.m; path = Scripting/PerlScriptingEngine.m; sourceTree = "<group>"; };
 		FFF02C050A2CE90C000DC42B /* AddressBook.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = AddressBook.tiff; path = "Toolbar System/AddressBook.tiff"; sourceTree = "<group>"; };
 		FFF02C0C0A2CEA15000DC42B /* ToolbarAddressBook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ToolbarAddressBook.h; path = "Toolbar System/ToolbarAddressBook.h"; sourceTree = "<group>"; };
 		FFF02C0D0A2CEA15000DC42B /* ToolbarAddressBook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ToolbarAddressBook.m; path = "Toolbar System/ToolbarAddressBook.m"; sourceTree = "<group>"; };
@@ -962,6 +965,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FFEDD9F0120E3A0600254015 /* CamelBones.framework in Frameworks */,
 				FFFF6CE90999E22000E56390 /* Lemuria.framework in Frameworks */,
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
 				FF967108099E69FF005886F4 /* OgreKit.framework in Frameworks */,
@@ -975,7 +979,6 @@
 				FF783E2D09EB853000D23B45 /* IOKit.framework in Frameworks */,
 				FFD59B120A80AA1300B4F5ED /* CoreServices.framework in Frameworks */,
 				FFF39E4E0CB067B1008F9D1D /* LuaCore.framework in Frameworks */,
-				FF2CA47E0CD5096F00EC2E79 /* CamelBones.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1540,6 +1543,8 @@
 				FF59F2590AB426FA0026D7DB /* GrabNameCommand.m */,
 				FF0900870C93A07A00969DAD /* WaitCommand.h */,
 				FF0900880C93A07A00969DAD /* WaitCommand.m */,
+				FF12189E136D021900363EB5 /* LogsCommand.h */,
+				FF12189F136D021900363EB5 /* LogsCommand.m */,
 			);
 			name = "Command System";
 			sourceTree = "<group>";
@@ -1693,8 +1698,6 @@
 		FFABE4EE0A646A3900C36EA8 /* Scripting System */ = {
 			isa = PBXGroup;
 			children = (
-				FF2CA4780CD5095E00EC2E79 /* PerlScriptingEngine.h */,
-				FF2CA4790CD5095E00EC2E79 /* PerlScriptingEngine.m */,
 				FF921BDA0B925DDF00F2D5EC /* Events */,
 				FFCA45AE0A6781FA0055DAEC /* Scripts */,
 				FF6E565E0A66D31500AE3E0B /* ScriptingEngine.h */,
@@ -1703,6 +1706,8 @@
 				FF6E56750A66D3B000AE3E0B /* ScriptingDispatch.m */,
 				FFCA43C60A67168A0055DAEC /* ScriptBridge.h */,
 				FFCA43C70A67168A0055DAEC /* ScriptBridge.m */,
+				FFEDD9B6120E39EA00254015 /* PerlScriptingEngine.h */,
+				FFEDD9B7120E39EA00254015 /* PerlScriptingEngine.m */,
 				FFBF43CA0CB0861A00E309E6 /* LuaScriptingEngine.h */,
 				FFBF43CB0CB0861A00E309E6 /* LuaScriptingEngine.m */,
 			);
@@ -1927,14 +1932,7 @@
 			isa = PBXProject;
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Atlantis" */;
 			compatibilityVersion = "Xcode 2.4";
-			developmentRegion = English;
 			hasScannedForEncodings = 1;
-			knownRegions = (
-				English,
-				Japanese,
-				French,
-				German,
-			);
 			mainGroup = 29B97314FDCFA39411CA2CEA /* Atlantis */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -2061,7 +2059,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /usr/bin/perl;
-			shellScript = "#!/usr/bin/perl\n# Generate our InfoPlist.strings file\n\nuse Unicode::String;\nuse Time::Piece;\n\n$t = localtime;\n$projectbuilddate = $t->fullmonth . \" \" . $t->mday . \", \" . $t->year;\n\nmy $tmpfile=\"$ENV{'PROJECT_DIR'}/English.lproj/InfoPlist.strings\";\nopen(OUTFILE, \"> $tmpfile\") || exit (1);\n\nmy $u = Unicode::String::latin1(\"/* Localized versions of Info.plist keys, as generated by build script. */\\n\\n\");\n$u->stringify_as(utf16);\nprint OUTFILE \"$u\";\n\n$u = Unicode::String::latin1(\"CFBundleName = \\\"$ENV{'PROJECT'}\\\";\\n\");\n$u->stringify_as(utf16);\nprint OUTFILE \"$u\";\n$u = Unicode::String::latin1(\"CFBundleShortVersionString = \\\"$ENV{'PROJECT_DISPLAY_VERSION'}\\\";\\n\");\n$u->stringify_as(utf16);\nprint OUTFILE \"$u\";\n\n$tempval = \"$ENV{'PROJECT'} $ENV{'PROJECT_DISPLAY_VERSION'}\";\n\nif ($ENV{'PROJECT_RELEASE_STATUS'} ne \"\") {\n   $tempval .= \" $ENV{'PROJECT_RELEASE_STATUS'}\";\n}\n\n$u = Unicode::String::latin1(\"CFBundleGetInfoString = \\\"$tempval, Copyright 2007 $ENV{'PROJECT_COMPANY'}\\\";\\n\");\n$u->stringify_as(utf16);\nprint OUTFILE \"$u\";\n$u = Unicode::String::latin1(\"RDProjectBuildDate = \\\"$projectbuilddate\\\";\\n\");\n$u->stringify_as(utf16);\nprint OUTFILE \"$u\";\n$u = Unicode::String::latin1(\"RDProjectStatus = \\\"$ENV{'PROJECT_RELEASE_STATUS'}\\\";\\n\");\n$u->stringify_as(utf16);\nprint OUTFILE \"$u\";\n$u = Unicode::String::latin1(\"RDBuildStyle = \\\"$ENV{'BUILD_STYLE'}\\\";\\n\");\n$u->stringify_as(utf16);\nprint OUTFILE \"$u\";\n\nclose (OUTFILE);\n\nUnicode::String::stringify_as(utf8);\n\nupdateFile(\"$ENV{'PROJECT_DIR'}/bugreporter.template\",\n\t\t\"$ENV{'PROJECT_DIR'}/bugreporter.plist\");\n\nexit (0);\n\nsub updateFile {\n    local($infilename, $outfilename) = @_;\n\n\topen (INFILE, \"< $infilename\") || exit(1);\n\topen (OUTFILE, \"> $outfilename\") || exit(1);\n\n\twhile ($line = <INFILE>) {\n\t\t$u = Unicode::String::utf8($line);\n   \t\t$u =~ s/\\$bundleversion/$ENV{'CURRENT_PROJECT_VERSION'}/;\n   \t\t$u =~ s/\\$projectversion/$ENV{'PROJECT_DISPLAY_VERSION'}/;\n   \t\t$u =~ s/\\$projectstatus/$ENV{'PROJECT_DISPLAY_VERSION'}/;\n\t\t$u =~ s/\\$projectbuilddate/$projectbuilddate/;\n   \t\tprint OUTFILE $u;\n\t}\n\n\tclose (INFILE);\n\tclose (OUTFILE);\n    \n}\n";
+			shellScript = "#!/usr/bin/perl\n# Generate our InfoPlist.strings file\n\nuse Unicode::String;\nuse Time::Piece;\n\n$t = localtime;\n$projectbuilddate = $t->fullmonth . \" \" . $t->mday . \", \" . $t->year;\n\nmy $tmpfile=\"$ENV{'PROJECT_DIR'}/English.lproj/InfoPlist.strings\";\nopen(OUTFILE, \"> $tmpfile\") || exit (1);\n\nmy $u = Unicode::String::latin1(\"/* Localized versions of Info.plist keys, as generated by build script. */\\n\\n\");\n$u->stringify_as(utf16);\nprint OUTFILE \"$u\";\n\n$u = Unicode::String::latin1(\"CFBundleName = \\\"$ENV{'PROJECT'}\\\";\\n\");\n$u->stringify_as(utf16);\nprint OUTFILE \"$u\";\n$u = Unicode::String::latin1(\"CFBundleShortVersionString = \\\"$ENV{'PROJECT_DISPLAY_VERSION'}\\\";\\n\");\n$u->stringify_as(utf16);\nprint OUTFILE \"$u\";\n\n$tempval = \"$ENV{'PROJECT'} $ENV{'PROJECT_DISPLAY_VERSION'}\";\n\nif ($ENV{'PROJECT_RELEASE_STATUS'} ne \"\") {\n   $tempval .= \" $ENV{'PROJECT_RELEASE_STATUS'}\";\n}\n\n$u = Unicode::String::latin1(\"CFBundleGetInfoString = \\\"$tempval, Copyright 2007-2010 $ENV{'PROJECT_COMPANY'}\\\";\\n\");\n$u->stringify_as(utf16);\nprint OUTFILE \"$u\";\n$u = Unicode::String::latin1(\"RDProjectBuildDate = \\\"$projectbuilddate\\\";\\n\");\n$u->stringify_as(utf16);\nprint OUTFILE \"$u\";\n$u = Unicode::String::latin1(\"RDProjectStatus = \\\"$ENV{'PROJECT_RELEASE_STATUS'}\\\";\\n\");\n$u->stringify_as(utf16);\nprint OUTFILE \"$u\";\n$u = Unicode::String::latin1(\"RDBuildStyle = \\\"$ENV{'BUILD_STYLE'}\\\";\\n\");\n$u->stringify_as(utf16);\nprint OUTFILE \"$u\";\n\nclose (OUTFILE);\n\nUnicode::String::stringify_as(utf8);\n\nupdateFile(\"$ENV{'PROJECT_DIR'}/bugreporter.template\",\n\t\t\"$ENV{'PROJECT_DIR'}/bugreporter.plist\");\n\nexit (0);\n\nsub updateFile {\n    local($infilename, $outfilename) = @_;\n\n\topen (INFILE, \"< $infilename\") || exit(1);\n\topen (OUTFILE, \"> $outfilename\") || exit(1);\n\n\twhile ($line = <INFILE>) {\n\t\t$u = Unicode::String::utf8($line);\n   \t\t$u =~ s/\\$bundleversion/$ENV{'CURRENT_PROJECT_VERSION'}/;\n   \t\t$u =~ s/\\$projectversion/$ENV{'PROJECT_DISPLAY_VERSION'}/;\n   \t\t$u =~ s/\\$projectstatus/$ENV{'PROJECT_DISPLAY_VERSION'}/;\n\t\t$u =~ s/\\$projectbuilddate/$projectbuilddate/;\n   \t\tprint OUTFILE $u;\n\t}\n\n\tclose (INFILE);\n\tclose (OUTFILE);\n    \n}\n";
 		};
 		FF5E93FE09C97AAA00B263C5 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -2294,13 +2292,14 @@
 				FF09008A0C93A07A00969DAD /* WaitCommand.m in Sources */,
 				FF0226360C94AA310049BE2B /* HIDIdleTime.m in Sources */,
 				FFBF43CD0CB0861A00E309E6 /* LuaScriptingEngine.m in Sources */,
-				FF2CA47A0CD5095E00EC2E79 /* PerlScriptingEngine.m in Sources */,
 				FF557F220D1C5C4D0092B7A5 /* Action-SpawnPrefix.m in Sources */,
 				FF60A3AF0D6121B200D7B9F2 /* MCPVMooClient.m in Sources */,
 				FFD9D6360DF2339400EA6602 /* NSColorAdditions.m in Sources */,
 				FFAD772E0F2ADAE500FA2652 /* Condition-WorldClosed.m in Sources */,
 				FFAD772F0F2ADAE500FA2652 /* Condition-WorldOpened.m in Sources */,
 				FF2D6E440F36440100E766CB /* MCPIcecrewServer.m in Sources */,
+				FFEDD9B8120E39EA00254015 /* PerlScriptingEngine.m in Sources */,
+				FF1218A0136D021900363EB5 /* LogsCommand.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2402,6 +2401,7 @@
 					i386,
 					ppc,
 				);
+				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(FRAMEWORK_SEARCH_PATHS)",
 					"$(SRCROOT)/Support",
@@ -2425,7 +2425,7 @@
 		C01FCF4F08A954540054247B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CURRENT_PROJECT_VERSION = 92;
+				CURRENT_PROJECT_VERSION = 100;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_ALLOW_INCOMPLETE_PROTOCOL = NO;
@@ -2433,7 +2433,7 @@
 				OTHER_CFLAGS = "-D_ATLANTIS_DEBUG";
 				PREBINDING = NO;
 				PROJECT_COMPANY = "Riverdark Studios";
-				PROJECT_DISPLAY_VERSION = 0.9.8.7;
+				PROJECT_DISPLAY_VERSION = 0.9.9.4;
 				PROJECT_RELEASE_STATUS = beta;
 				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -2444,7 +2444,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
-				CURRENT_PROJECT_VERSION = 93;
+				CURRENT_PROJECT_VERSION = 100;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_OPTIMIZATION_LEVEL = 3;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -2452,7 +2452,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				PREBINDING = NO;
 				PROJECT_COMPANY = "Riverdark Studios";
-				PROJECT_DISPLAY_VERSION = 0.9.8.7;
+				PROJECT_DISPLAY_VERSION = 0.9.9.4;
 				PROJECT_RELEASE_STATUS = beta;
 				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
 				VERSIONING_SYSTEM = "apple-generic";

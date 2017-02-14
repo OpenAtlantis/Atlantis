@@ -16,6 +16,7 @@
     NSDate                  *_rdNewestModificationDate;
     
     BOOL                     _rdWrapperDone;
+    BOOL                     _rdPerlDisabled;
     
     NSLock                  *_rdPerlLock;
 

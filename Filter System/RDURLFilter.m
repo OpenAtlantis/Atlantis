@@ -32,7 +32,7 @@ static NSString *s_eightSpaces = @"        ";
 
         NSMutableString *finalString = (NSMutableString *)output;
         NSMutableCharacterSet *urlTerminatorSet = [[NSCharacterSet whitespaceAndNewlineCharacterSet] mutableCopy];
-        [urlTerminatorSet addCharactersInString:@"<>(\"')|"];
+        [urlTerminatorSet addCharactersInString:@"<>(\"')|\u2018\u2019\u201b\u201c\u201d\u201e\u201f"];
                 
         NSRange foundUrlRange;
         NSRange searchRange;
@@ -131,7 +131,7 @@ static NSString *s_eightSpaces = @"        ";
 
         NSMutableAttributedString *finalString = (NSMutableAttributedString *)input;
         NSMutableCharacterSet *urlTerminatorSet = [[NSCharacterSet whitespaceAndNewlineCharacterSet] mutableCopy];
-        [urlTerminatorSet addCharactersInString:@"<>(\"')|"];
+        [urlTerminatorSet addCharactersInString:@"<>(\"')|\u2018\u2019\u201b\u201c\u201d\u201e\u201f"];
                 
         NSRange foundUrlRange;
         NSRange searchRange;

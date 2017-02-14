@@ -30,6 +30,7 @@
     NSTimer *           _rdNopTimer;
     BOOL                mudProtocol;
     BOOL                mudPrompted;
+    int                 ttypeCycle;
 
 }
 

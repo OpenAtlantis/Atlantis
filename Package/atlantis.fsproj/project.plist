@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
 	<key>Auto Encode</key>
@@ -42,7 +42,7 @@
 			<key>Origin</key>
 			<string>{268, 91}</string>
 			<key>Path</key>
-			<string>build/Release/Atlantis.app</string>
+			<string>/Users/sparks/Source/Riverdark/Atlantis/build/Release/Atlantis.app</string>
 			<key>Type</key>
 			<string>File Item</string>
 		</dict>
@@ -52,7 +52,7 @@
 	<key>Lock Frame</key>
 	<string>FALSE</string>
 	<key>Project File Path</key>
-	<string>/Users/sparks/Source/Riverdark/Atlantis/</string>
+	<string>/Users/sparks/Source/Riverdark/Atlantis/Package/</string>
 	<key>Show Toolbar</key>
 	<string>TRUE</string>
 	<key>Volume Name</key>

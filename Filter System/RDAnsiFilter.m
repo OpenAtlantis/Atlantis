@@ -8,6 +8,7 @@
 
 #import "RDAnsiFilter.h"
 #import "RDAtlantisMainController.h"
+#import "NSColorAdditions.h"
 
 static NSMutableArray *s_extendedColors = nil;
 
@@ -17,11 +18,12 @@ static NSMutableArray *s_extendedColors = nil;
 {
 	if (!s_extendedColors) {
 		s_extendedColors = [[NSMutableArray alloc] init];
+        int loop1, loop2, loop3;
 
 		NSArray *points = [NSArray arrayWithObjects:@"00",@"5f",@"87",@"af",@"d7",@"ff",nil];
-		for (int loop1 = 0; loop1 < [points count]; loop1++) {
-			for (int loop2 = 0; loop2 < [points count]; loop2++) {
-				for (int loop3 = 0; loop3 < [points count]; loop3++) {
+		for (loop1 = 0; loop1 < [points count]; loop1++) {
+			for (loop2 = 0; loop2 < [points count]; loop2++) {
+				for (loop3 = 0; loop3 < [points count]; loop3++) {
 					NSString *colorString = [NSString stringWithFormat:@"%@%@%@",
 											 [points objectAtIndex:loop1],
 											 [points objectAtIndex:loop2],
@@ -32,8 +34,10 @@ static NSMutableArray *s_extendedColors = nil;
 			}
 		}
 		
-		for (int colorLoop = 0; colorLoop < 24; colorLoop++) {
-			NSString *colorString = [NSString stringWithFormat:@"%X%X%X",
+        int colorLoop;
+        
+		for (colorLoop = 0; colorLoop < 24; colorLoop++) {
+			NSString *colorString = [NSString stringWithFormat:@"%02X%02X%02X",
 									 (colorLoop * 10) + 8, (colorLoop * 10) + 8, (colorLoop * 10) + 8];
 			
 			[s_extendedColors addObject:[NSColor colorWithWebCode:colorString]];
@@ -108,6 +112,9 @@ static NSMutableArray *s_extendedColors = nil;
 {
     _rdAnsiBoldMe = bold;
     
+    if ((_rdAnsiLastColor != -1) && (_rdAnsiLastColor > [_rdColors count]))
+        return;
+    
     int effFg = _rdAnsiLastColor + (((_rdAnsiLastColor != -1) && (_rdAnsiLastColor < 8)) ? (_rdAnsiBoldMe ? 8 : 0) : 0);
     NSColor *fgColor = nil;
 
@@ -120,13 +127,13 @@ static NSMutableArray *s_extendedColors = nil;
             fgColor = _rdDefaultColor;
         }
     }
-     else 
+     else if (effFg < [_rdColors count])
         fgColor = [_rdColors objectAtIndex:effFg];
 
     if (fgColor)
         [_rdCurrentAttributes setObject:fgColor forKey:(_rdAnsiInvertMe ? NSBackgroundColorAttributeName : NSForegroundColorAttributeName)];
 
-    if (effFg != -1)
+    if ((effFg != -1) && (effFg < [_rdColors count]))
         [_rdCurrentAttributes setObject:[NSNumber numberWithInt:effFg] forKey:(_rdAnsiInvertMe ? @"RDAnsiBackgroundColor" : @"RDAnsiForegroundColor")];
     else
         [_rdCurrentAttributes removeObjectForKey:(_rdAnsiInvertMe ? @"RDAnsiBackgroundColor" : @"RDAnsiForegroundColor")];
@@ -154,20 +161,32 @@ static NSMutableArray *s_extendedColors = nil;
             fgColor = _rdDefaultColor;
         }
     }
-     else 
+    else if (effFg < [_rdColors count]) {
         fgColor = [_rdColors objectAtIndex:effFg];
+    }
+    else {
+        int tempFg = effFg - 16;
+        
+        fgColor = [s_extendedColors objectAtIndex:tempFg];
+    }
 
     if (_rdAnsiLastBackground == -1)
         bgColor = _rdBackground;
-    else
+    else if (effBg < [_rdColors count]) {
         bgColor = [_rdColors objectAtIndex:effBg];
+    }
+    else {
+        int tempBg = effBg - 16;
+        
+        bgColor = [s_extendedColors objectAtIndex:tempBg];
+    }
 
-    if (effFg != -1)
+    if ((effFg != -1) && (effFg < [_rdColors count]))
         [_rdCurrentAttributes setObject:[NSNumber numberWithInt:effFg] forKey:(_rdAnsiInvertMe ? @"RDAnsiBackgroundColor" : @"RDAnsiForegroundColor")];
     else
         [_rdCurrentAttributes removeObjectForKey:(_rdAnsiInvertMe ? @"RDAnsiBackgroundColor" : @"RDAnsiForegroundColor")];
 
-    if (effBg != -1)
+    if ((effBg != -1) && (effBg < [_rdColors count]))
         [_rdCurrentAttributes setObject:[NSNumber numberWithInt:effBg] forKey:(_rdAnsiInvertMe ? @"RDAnsiForegroundColor" : @"RDAnsiBackgroundColor")];
     else
         [_rdCurrentAttributes removeObjectForKey:(_rdAnsiInvertMe ? NSForegroundColorAttributeName : NSBackgroundColorAttributeName)];
@@ -234,7 +253,7 @@ static NSMutableArray *s_extendedColors = nil;
 
     if (_rdAnsiLastBackground == -1)
         bgColor = _rdBackground;
-    else if (bgColor < [_rdColors count])
+    else if (_rdAnsiLastBackground < [_rdColors count])
         bgColor = [_rdColors objectAtIndex:_rdAnsiLastBackground];
 	else {
 		int tempBg = _rdAnsiLastBackground - 16;
@@ -693,7 +712,7 @@ static NSMutableArray *s_extendedColors = nil;
             }
 
             NSRange realRange = NSMakeRange(lastPosition,foundRange.location - lastPosition);
-            if (realRange.length)
+            if (realRange.length && (realRange.location != NSNotFound))
                 [result appendAttributedString:[[[NSAttributedString alloc] initWithString:[tempString substringWithRange:realRange] attributes:[_rdState attributes]] autorelease]];            
 
             lastPosition = endRange.location + endRange.length;

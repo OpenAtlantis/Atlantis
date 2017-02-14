@@ -226,7 +226,10 @@ static NSImage *s_statusLockGreyImage = nil;
     }
     [_rdTimerField setStringValue:connectTime];
 
-    NSString *encoding = [NSString localizedNameOfStringEncoding:[_rdWorld stringEncoding]];    
+    NSString *encoding = [NSString localizedNameOfStringEncoding:[_rdWorld stringEncoding]];  
+    if (![encoding length])
+        encoding = @"default";
+        
     NSString *dimensions = [NSString stringWithFormat:@"%dx%d", _rdScreenWidth, _rdScreenHeight];
     
     NSMutableString *tooltip = [[NSString stringWithFormat:@"World is %@\n%@ encoding\n%@ screen size", [_rdWorld isConnected] ? @"online" : @"offline",
@@ -527,12 +530,7 @@ extern int compareViews(id view1, id view2, void *context);
     if (![NSApp isActive])
         return;
 
-    NSResponder *firstResponder = [[_rdInputView window] firstResponder];
-    
-    // TODO: BETTER LOGIC HERE!!!
-    if (![[firstResponder className] isEqualToString:@"RDOutlineView"]) {
-        [[_rdInputView window] makeFirstResponder:_rdInputView];        
-    }
+    [[_rdInputView window] makeFirstResponder:_rdInputView];        
     
     [_rdOutputView testForCustomTooltip];
 }

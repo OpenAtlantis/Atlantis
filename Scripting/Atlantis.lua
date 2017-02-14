@@ -112,7 +112,7 @@ function Atlantis:setStatusText(spawn, string)
         spawn = AtlantisState["event.spawn"];
     end
 
-    ScriptBridge:setStatusBarText_forSpawn_inWorld(string,spawn,AtlantisState["event.world"]);
+    ScriptBridge:setStatusBarText_forSpawn(string,spawn,AtlantisState["event.world"]);
 end
 
 

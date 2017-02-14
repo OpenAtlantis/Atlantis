@@ -196,12 +196,12 @@ int compareWorlds(id obj1, id obj2, void *context)
     
     // OGR
     tempPref = [[RDAtlantisWorldPreferences alloc] init];
-    [tempPref setPreference:@"Online Gaming Resource" forKey:@"atlantis.world.name" withCharacter:nil];
-    [tempPref setPreference:@"ogrmush.com" forKey:@"atlantis.world.host" withCharacter:nil];
+    [tempPref setPreference:@"Gateway" forKey:@"atlantis.world.name" withCharacter:nil];
+    [tempPref setPreference:@"connect.mu-gateway.net" forKey:@"atlantis.world.host" withCharacter:nil];
     [tempPref setPreference:[NSNumber numberWithInt:6700] forKey:@"atlantis.world.port" withCharacter:nil];
     [tempPref setPreference:@"OGR" forKey:@"atlantis.world.displayName" withCharacter:nil];
-    [tempPref setPreference:@"http://www.ogrmush.com/" forKey:@"atlantis.world.website" withCharacter:nil];
-    [tempPref setPreference:@"Online Gaming Resource is a server set up specifically to provide resources to the MUSH/MUX community.  You can find advertisements for games, help with coding, recruit players, or even try to find staff for your budding game there." forKey:@"atlantis.world.description" withCharacter:nil];
+    [tempPref setPreference:@"http://www.mu-gateway.net/" forKey:@"atlantis.world.website" withCharacter:nil];
+    [tempPref setPreference:@"GATEWAY is a server set up specifically to provide resources to the MUSH/MUX community.  You can find advertisements for games, help with coding, recruit players, or even try to find staff for your budding game there." forKey:@"atlantis.world.description" withCharacter:nil];
     [tempPref addCharacter:@"Guest"];
     [tempPref setPreference:@"Guest" forKey:@"atlantis.world.character" withCharacter:@"Guest"];
     [tempPref setPreference:@"guest" forKey:@"atlantis.world.password" withCharacter:@"Guest"];
@@ -221,26 +221,24 @@ int compareWorlds(id obj1, id obj2, void *context)
     [_rdWorlds addObject:tempPref];
     [tempPref release];
     
-    // Star Wars Sagas
-    tempPref = [[RDAtlantisWorldPreferences alloc] init];
-    [tempPref setPreference:@"Star Wars Sagas" forKey:@"atlantis.world.name" withCharacter:nil];
-    [tempPref setPreference:@"mush.swsagas.net" forKey:@"atlantis.world.host" withCharacter:nil];
-    [tempPref setPreference:[NSNumber numberWithInt:1138] forKey:@"atlantis.world.port" withCharacter:nil];
-    [tempPref setPreference:@"SWS" forKey:@"atlantis.world.displayName" withCharacter:nil];
-    [tempPref setPreference:@"http://www.swsagas.net/" forKey:@"atlantis.world.website" withCharacter:nil];
-    [tempPref setPreference:@"Will your character have a hand in raising the ragtag of rebels into the true Rebel Alliance? Will your character oppress countless beings on thousands of worlds in their service to the Emperor? Will you run the space lanes, smuggle spice, drink lum, and owe too much money to a gangster on some backwater world? You will decide these things.\n\nThe theme of our MUSH is simple: the star wars universe, but at the same time very complex. With control over the characters of the galaxy, we are free to explore hundreds of different stories and we invite you to explore them with us. We will create the great bounty hunters, the slickest smugglers, and the most heroic rebels. We create the bad-guys and the good-guys and meld them into the great stories of Star Wars." forKey:@"atlantis.world.description" withCharacter:nil];
-    [tempPref addCharacter:@"Guest"];
-    [tempPref setPreference:@"Guest" forKey:@"atlantis.world.character" withCharacter:@"Guest"];
-    [tempPref setPreference:@"guest" forKey:@"atlantis.world.password" withCharacter:@"Guest"];
-    [_rdWorlds addObject:tempPref];
-    [tempPref release];
-    
     tempPref = [[RDAtlantisWorldPreferences alloc] init];
     [tempPref setPreference:@"Cuendillar" forKey:@"atlantis.world.name" withCharacter:nil];
     [tempPref setPreference:@"cuendillar.org" forKey:@"atlantis.world.host" withCharacter:nil];
     [tempPref setPreference:[NSNumber numberWithInt:7200] forKey:@"atlantis.world.port" withCharacter:nil];
     [tempPref setPreference:@"http://www.cuendillar.org/" forKey:@"atlantis.world.website" withCharacter:nil];
     [tempPref setPreference:@"Cuendillar MUSH is a online roleplaying game based loosely on Robert Jordan's Wheel of Time Series. The world is set in an alternate dimension, as depicted in 'The Great Hunt', and carries it's own plots and story lines for that alternate dimension. History diverges after the Aiel War. Players do not need to read the books to play the game, as they have extensive theme files that detail the setting of the world. " forKey:@"atlantis.world.description" withCharacter:nil];
+    [tempPref addCharacter:@"Guest"];
+    [tempPref setPreference:@"Guest" forKey:@"atlantis.world.character" withCharacter:@"Guest"];
+    [tempPref setPreference:@"guest" forKey:@"atlantis.world.password" withCharacter:@"Guest"];
+    [_rdWorlds addObject:tempPref];
+    [tempPref release];
+
+    tempPref = [[RDAtlantisWorldPreferences alloc] init];
+    [tempPref setPreference:@"Multiverse" forKey:@"atlantis.world.name" withCharacter:nil];
+    [tempPref setPreference:@"mcmush.org" forKey:@"atlantis.world.host" withCharacter:nil];
+    [tempPref setPreference:[NSNumber numberWithInt:5001] forKey:@"atlantis.world.port" withCharacter:nil];
+    [tempPref setPreference:@"http://www.mcmush.org/" forKey:@"atlantis.world.website" withCharacter:nil];
+    [tempPref setPreference:@"Years ago, reality decided to fall in on our heads. All our heads. And never stopped. The result was a nexus of universes; a vast landscape unlike anything ever seen before, comprised with thousands of worlds blended together, and within, a vast space-like region where starships, suns and individual planets coexisted. And of course, the inhabitants survived the ride, coming together to form great factions among the like-minded, ultimately resulting in the heroic Union and villainous Confederacy.\n\nTaking characters from books, movies, anime, TV, manga, comics, games, your own imagination and more, Multiverse Crisis MUSH pits the Union versus the Confederacy in a titanic struggle for the fate of the Multiverse. With a balancing system in place to allow themes to coexist evenly despite extreme differences, an extensively written theme, and simple enough basics to allow you to start quickly, we offer a friendly atmosphere with coherent RP and helpful staff. We're open to most ideas, from unusual OCs to canon and non-canon FCs, if you can write and RP them well. If you're at all interested, especially if you have a great character idea you can't find another MUSH for, give us a shot!" forKey:@"atlantis.world.description" withCharacter:nil];
     [tempPref addCharacter:@"Guest"];
     [tempPref setPreference:@"Guest" forKey:@"atlantis.world.character" withCharacter:@"Guest"];
     [tempPref setPreference:@"guest" forKey:@"atlantis.world.password" withCharacter:@"Guest"];

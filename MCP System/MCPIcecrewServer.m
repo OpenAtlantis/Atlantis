@@ -7,6 +7,8 @@
 //
 
 #import "MCPIcecrewServer.h"
+#import "AtlantisState.h"
+#import "RDAtlantisWorldInstance.h"
 
 
 @implementation MCPIcecrewServer

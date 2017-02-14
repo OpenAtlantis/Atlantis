@@ -67,6 +67,7 @@
 #import "ClearCommand.h"
 #import "QuickConnectCommand.h"
 #import "WaitCommand.h"
+#import "LogsCommand.h"
 
 #import "TextfileUploader.h"
 #import "CodeUploader.h"
@@ -97,6 +98,7 @@
 #import "MCPNegotiateHandler.h"
 #import "MCPEditHandler.h"
 #import "MCPVMooClient.h"
+#import "MCPIcecrewServer.h"
 
 #import "CTBadge.h"
 
@@ -486,6 +488,7 @@ static void networkReachabilityChangedCallback(SCNetworkReachabilityRef target, 
     [self addCommand:[[QuickConnectCommand alloc] init] forText:@"qc"];
     [self addCommand:[[GrabNameCommand alloc] init] forText:@"gname"];
     [self addCommand:[[WaitCommand alloc] init] forText:@"wait"];
+    [self addCommand:[[LogsCommand alloc] init] forText:@"logs"];
     
     [NSApp setDelegate:self];
     [[RDNestedViewManager manager] setDelegate:self];
@@ -504,14 +507,26 @@ static void networkReachabilityChangedCallback(SCNetworkReachabilityRef target, 
     [self addPreferencePane:[[WindowingPreferences alloc] init]];
     
     // Set up default menu goo
-    RDMenuEvent *menuEvent = [[RDMenuEvent alloc] init];
-    [menuEvent eventAddAction:[[Action_AddressBook alloc] init]];
-    [self addMenuEvent:menuEvent toMenu:@"World" withTitle:@"Address Book..."];
+//    RDMenuEvent *menuEvent = [[RDMenuEvent alloc] init];
+//    [menuEvent eventAddAction:[[Action_AddressBook alloc] init]];
+//    [self addMenuEvent:menuEvent toMenu:@"World" withTitle:@"Address Book..."];
+  
     
+    NSMenuItem *worldMenu = [_rdMainMenu itemWithTitle:@"World"];
+    if (!worldMenu) {
+        worldMenu = [[NSMenuItem alloc] initWithTitle:@"World" action:@selector(executeMenuItem:) keyEquivalent:@""];
+        NSMenu *subMenu = [[NSMenu alloc] initWithTitle:@"World"];
+        [worldMenu setSubmenu:subMenu];
+        [_rdMainMenu insertItem:worldMenu atIndex:3];
+    }
+    NSMenuItem *worldList = [[NSMenuItem alloc] initWithTitle:@"Address Book" action:@selector(executeMenuItem:) keyEquivalent:@""];
+    [worldList setSubmenu:[[[RDAtlantisMainController controller] worlds] worldMenu]];
+    [[worldMenu submenu] addItem:worldList];
+            
     [self addDividerToMenu:@"World"];
 
     [self addDividerToMenu:@"Edit"];
-    menuEvent = [[RDMenuEvent alloc] init];
+    RDMenuEvent * menuEvent = [[RDMenuEvent alloc] init];
     [menuEvent eventAddCondition:[[Condition_WorldIsMUSH alloc] init]];
     [menuEvent eventAddAction:[[Action_OpenTextEditor alloc] init]];
     [self addMenuEvent:menuEvent toMenu:@"Edit" inSubMenu:@"MUSH" withTitle:@"Open MUSH ANSI Text Editor..."];
@@ -1236,7 +1251,7 @@ static void networkReachabilityChangedCallback(SCNetworkReachabilityRef target, 
             background:[NSColor blackColor]];
     [tempArray addObject:highlight];
     highlight = [[HighlightEvent alloc] 
-            initWithPattern:[RDStringPattern patternWithString:@"^[^<>\\[\\]]* pages[:,] .*" type:RDPatternRegexp] 
+            initWithPattern:[RDStringPattern patternWithString:@"^[^<>\\[\\]\\\"\\+\\|]* pages[:,] .*" type:RDPatternRegexp] 
             foreground:[NSColor yellowColor]
             background:[NSColor blackColor]];
     [tempArray addObject:highlight];
@@ -1448,6 +1463,12 @@ static void networkReachabilityChangedCallback(SCNetworkReachabilityRef target, 
 }
 
 #pragma mark Application Stuff
+
+- (BOOL)applicationShouldHandleReopen:(NSApplication *)theApplication hasVisibleWindows:(BOOL)flag
+{
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"AtlantisReopenedNotification" object:self];
+    return YES;
+}
 
 - (NSApplicationTerminateReply)applicationShouldTerminate:(NSApplication *)sender
 {

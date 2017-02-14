@@ -327,6 +327,16 @@
     }
 }
 
+- (IBAction) chooseLinefeed: (id)sender
+{
+    if ([_rdCodepageDefault state] == NSOnState) {
+        [[self preferences] removePreferenceForKey:@"atlantis.text.linefeed" withCharacter:[self character]];
+    }
+    else {
+        [[self preferences] setPreference:[NSNumber numberWithInt:[sender indexOfSelectedItem]] forKey:@"atlantis.text.linefeed" withCharacter:[self character]];
+    }
+}
+
 - (NSFont *) font
 {
     NSFont *oldFont = _rdFont;
@@ -504,11 +514,15 @@
         if (enabled) {
             [_rdCodepage setEnabled:NO];
             [[self preferences] removePreferenceForKey:@"atlantis.encoding" withCharacter:[self character]];
+            [_rdLinefeedType setEnabled:NO];
+            [[self preferences] removePreferenceForKey:@"atlantis.text.linefeed" withCharacter:[self character]];
         }
         else {
             [_rdCodepage setEnabled:YES];
             int encoding = [[_rdCodepage selectedItem] tag];
             [[self preferences] setPreference:[NSNumber numberWithUnsignedInt:encoding] forKey:@"atlantis.encoding" withCharacter:[self character]];
+            [_rdLinefeedType setEnabled:YES];
+            [[self preferences] setPreference:[NSNumber numberWithInt:[_rdLinefeedType indexOfSelectedItem]] forKey:@"atlantis.text.linefeed" withCharacter:[self character]];
         }
     }
     
@@ -521,7 +535,7 @@
             [_rdGrabpass setEnabled:YES];
             [[self preferences] setPreference:[_rdGrabpass stringValue] forKey:@"atlantis.grab.password" withCharacter:[self character]];
         }
-    }
+    }    
 }
 
 
@@ -824,6 +838,25 @@
     else {
         [_rdGrabpass setStringValue:grabpass];
         [_rdGrabpassDefault setState:NSOffState];
+    }
+    
+    NSNumber *linefeed = [[self preferences] preferenceForKey:@"atlantis.text.linefeed" withCharacter:[self character] fallback:NO];
+    if (!linefeed) {
+        linefeed = [[self preferences] preferenceForKey:@"atlantis.text.linefeed" withCharacter:[self character] fallback:YES];
+        if (linefeed) {
+            [_rdLinefeedType selectItemAtIndex:[linefeed intValue]];        
+        }
+        else {
+            [_rdLinefeedType selectItemAtIndex:0];
+        }
+        
+        if (!_rdGlobal) {
+            [_rdLinefeedType setEnabled:NO];
+        }        
+    }
+    else {
+        [_rdLinefeedType setEnabled:YES];
+        [_rdLinefeedType selectItemAtIndex:[linefeed intValue]];
     }
 }
 

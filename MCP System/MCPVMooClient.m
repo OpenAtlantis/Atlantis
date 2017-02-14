@@ -58,10 +58,6 @@
 
 - (void) sendScreenSize:(RDAtlantisWorldInstance *)world
 {
-    NSString *mcpKey = [world mcpSessionKey];
-    int width = [world mainScreenWidth];
-    int height = [world mainScreenHeight];
-
     NSString *namespace = nil;
     if ([world supportsMcpPackage:@"dns-com-vmoo-client" version:1.0]) {
         namespace = @"dns-com-vmoo-client";
@@ -75,6 +71,10 @@
 
 
     if (namespace) {
+        NSString *mcpKey = [world mcpSessionKey];
+        int width = [world mainScreenWidth];
+        int height = [world mainScreenHeight];
+
         MCPMessage *message = [[MCPMessage alloc] initWithNamespace:namespace command:@"screensize"];
         [message setSessionKey:mcpKey];
         
