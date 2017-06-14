@@ -207,56 +207,25 @@ int compareWorlds(id obj1, id obj2, void *context)
     [tempPref setPreference:@"guest" forKey:@"atlantis.world.password" withCharacter:@"Guest"];
     [_rdWorlds addObject:tempPref];
     [tempPref release];
-    
-    // Firan
-    tempPref = [[RDAtlantisWorldPreferences alloc] init];
-    [tempPref setPreference:@"Firan" forKey:@"atlantis.world.name" withCharacter:nil];
-    [tempPref setPreference:@"firan.legendary.org" forKey:@"atlantis.world.host" withCharacter:nil];
-    [tempPref setPreference:[NSNumber numberWithInt:5000] forKey:@"atlantis.world.port" withCharacter:nil];
-    [tempPref setPreference:@"http://firan.legendary.org/" forKey:@"atlantis.world.website" withCharacter:nil];
-    [tempPref setPreference:@"On FiranMUX, religion, politics, warfare and romance all mesh into a fantasy world reminiscent of ancient Rome to create a distinctive role-playing experience. Set in the capital city of Anarinuell, rival clans unite as a single Republic to fight a more dangerous foe.  Having recaptured their homelands from the Shamibelians, their hated horned enemy, the Firans had at least two crucial tasks before them: to take back the last enslaved Firan city of Ellish, and to learn to live as one people under a new government despite internal conflicts.  Several long years ago the Republic splintered when one clan left, and the remaining clans struggled to come together again under a new Alliance and new leadership. That leadership has proved ineffectual and now their children are being trained and taught to become leaders themselves under a guidance of a Viceroy, who holds the position of supreme authority over the Firan people until one of those children can prove himself to be an effective leader and be elected by a council of his peers as Ranivor.\n\nExtensive coded systems enhance role-play and provide an easy-to-use, intellectually challenging, and character-focused environment.  Helpful staff and friendly players all contribute to a fun time for all!  Choose from more than a hundred different characters, each with a rich background and built-in relationships, or create one of your own through a thematically guided chargen process that allows you to forge your own path." forKey:@"atlantis.world.description" withCharacter:nil];
-    [tempPref addCharacter:@"Guest"];
-    [tempPref setPreference:@"Guest" forKey:@"atlantis.world.character" withCharacter:@"Guest"];
-    [tempPref setPreference:@"guest" forKey:@"atlantis.world.password" withCharacter:@"Guest"];
-    [_rdWorlds addObject:tempPref];
-    [tempPref release];
-    
-    tempPref = [[RDAtlantisWorldPreferences alloc] init];
-    [tempPref setPreference:@"Cuendillar" forKey:@"atlantis.world.name" withCharacter:nil];
-    [tempPref setPreference:@"cuendillar.org" forKey:@"atlantis.world.host" withCharacter:nil];
-    [tempPref setPreference:[NSNumber numberWithInt:7200] forKey:@"atlantis.world.port" withCharacter:nil];
-    [tempPref setPreference:@"http://www.cuendillar.org/" forKey:@"atlantis.world.website" withCharacter:nil];
-    [tempPref setPreference:@"Cuendillar MUSH is a online roleplaying game based loosely on Robert Jordan's Wheel of Time Series. The world is set in an alternate dimension, as depicted in 'The Great Hunt', and carries it's own plots and story lines for that alternate dimension. History diverges after the Aiel War. Players do not need to read the books to play the game, as they have extensive theme files that detail the setting of the world. " forKey:@"atlantis.world.description" withCharacter:nil];
-    [tempPref addCharacter:@"Guest"];
-    [tempPref setPreference:@"Guest" forKey:@"atlantis.world.character" withCharacter:@"Guest"];
-    [tempPref setPreference:@"guest" forKey:@"atlantis.world.password" withCharacter:@"Guest"];
-    [_rdWorlds addObject:tempPref];
-    [tempPref release];
 
+    // Arx
     tempPref = [[RDAtlantisWorldPreferences alloc] init];
-    [tempPref setPreference:@"Multiverse" forKey:@"atlantis.world.name" withCharacter:nil];
-    [tempPref setPreference:@"mcmush.org" forKey:@"atlantis.world.host" withCharacter:nil];
-    [tempPref setPreference:[NSNumber numberWithInt:5001] forKey:@"atlantis.world.port" withCharacter:nil];
-    [tempPref setPreference:@"http://www.mcmush.org/" forKey:@"atlantis.world.website" withCharacter:nil];
-    [tempPref setPreference:@"Years ago, reality decided to fall in on our heads. All our heads. And never stopped. The result was a nexus of universes; a vast landscape unlike anything ever seen before, comprised with thousands of worlds blended together, and within, a vast space-like region where starships, suns and individual planets coexisted. And of course, the inhabitants survived the ride, coming together to form great factions among the like-minded, ultimately resulting in the heroic Union and villainous Confederacy.\n\nTaking characters from books, movies, anime, TV, manga, comics, games, your own imagination and more, Multiverse Crisis MUSH pits the Union versus the Confederacy in a titanic struggle for the fate of the Multiverse. With a balancing system in place to allow themes to coexist evenly despite extreme differences, an extensively written theme, and simple enough basics to allow you to start quickly, we offer a friendly atmosphere with coherent RP and helpful staff. We're open to most ideas, from unusual OCs to canon and non-canon FCs, if you can write and RP them well. If you're at all interested, especially if you have a great character idea you can't find another MUSH for, give us a shot!" forKey:@"atlantis.world.description" withCharacter:nil];
-    [tempPref addCharacter:@"Guest"];
-    [tempPref setPreference:@"Guest" forKey:@"atlantis.world.character" withCharacter:@"Guest"];
-    [tempPref setPreference:@"guest" forKey:@"atlantis.world.password" withCharacter:@"Guest"];
+    [tempPref setPreference:@"Arx" forKey:@"atlantis.world.name" withCharacter:nil];
+    [tempPref setPreference:@"play.arxgame.org" forKey:@"atlantis.world.host" withCharacter:nil];
+    [tempPref setPreference:[NSNumber numberWithInt:4000] forKey:@"atlantis.world.port" withCharacter:nil];
+    [tempPref setPreference:@"http://play.arxgame.org/" forKey:@"atlantis.world.website" withCharacter:nil];
     [_rdWorlds addObject:tempPref];
     [tempPref release];
     
+    // BSGU
     tempPref = [[RDAtlantisWorldPreferences alloc] init];
-    [tempPref setPreference:@"X-Men Retribution" forKey:@"atlantis.world.name" withCharacter:nil];
-    [tempPref setPreference:@"xmr.dune.net" forKey:@"atlantis.world.host" withCharacter:nil];
-    [tempPref setPreference:[NSNumber numberWithInt:4567] forKey:@"atlantis.world.port" withCharacter:nil];
-    [tempPref setPreference:@"XMR" forKey:@"atlantis.world.displayName" withCharacter:nil];
-    [tempPref setPreference:@"http://xmr.dune.net/" forKey:@"atlantis.world.website" withCharacter:nil];
-    [tempPref setPreference:@"Welcome to the world of the X-Men. Set in the near future, X-Men: Retribution explores what it is to be different in a world that fears those who are not the same. A heated political debate rages over the proposed 'Mutant Registration Act'. Many are opposed, many are for it - and both sides have those who will take to violence to try to prove their point in an ever escalating war being fought on many fronts.\n\nFrom students at Xavier's just learning what their powers can do, to an an embittered member of the terrorist Brotherhood, to an average Joe on the street, there's a role for everyone on X-Men: Retribution. OOCly, we emphasize community and involvement both from staff and players. OCs and FCs are equally welcome." forKey:@"atlantis.world.description" withCharacter:nil];
-    [tempPref addCharacter:@"Guest"];
-    [tempPref setPreference:@"Guest" forKey:@"atlantis.world.character" withCharacter:@"Guest"];
-    [tempPref setPreference:@"guest" forKey:@"atlantis.world.password" withCharacter:@"Guest"];
+    [tempPref setPreference:@"BSGU" forKey:@"atlantis.world.name" withCharacter:nil];
+    [tempPref setPreference:@"mush.aresmush.com" forKey:@"atlantis.world.host" withCharacter:nil];
+    [tempPref setPreference:[NSNumber numberWithInt:7206] forKey:@"atlantis.world.port" withCharacter:nil];
+    [tempPref setPreference:@"http://bsgunificationmush.wikidot.com/" forKey:@"atlantis.world.website" withCharacter:nil];
     [_rdWorlds addObject:tempPref];
     [tempPref release];
+    
 }
 
 - (void) loadAllWorlds
