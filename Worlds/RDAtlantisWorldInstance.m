@@ -50,6 +50,10 @@ static NSString *alphabet = @"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWX
 - (void) fireEventsForState:(AtlantisState *)state;
 @end
 
+@interface NSFont (StringWidth)
+- (CGFloat) widthOfString:(NSString *)string;
+@end
+
 @implementation RDAtlantisWorldInstance
 
 #pragma mark Initialization
@@ -233,7 +237,7 @@ static NSString *alphabet = @"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWX
     BOOL timestamps = [[self preferenceForKey:@"atlantis.formatting.timestamps"] boolValue];
 
     float fontWidth;    
-    fontWidth = [realFont widthOfString:alphabet] / [alphabet length];    
+    fontWidth = ((float)[realFont widthOfString:alphabet]) / [alphabet length];
 
     NSNumber *temp = [self preferenceForKey:@"atlantis.mcp.disabled"];
     if (temp) {

@@ -333,7 +333,7 @@ static NSImage *s_statusLockGreyImage = nil;
 - (void) outputViewFrameChanged:(NSNotification *) notification
 {
     NSSize advance = [_rdFont maximumAdvancement];
-    float lineheight = [_rdFont defaultLineHeightForFont];
+    float lineheight = [[_rdOutputView layoutManager] defaultLineHeightForFont:_rdFont];
     
     float cellwidth;
     cellwidth = advance.width;    

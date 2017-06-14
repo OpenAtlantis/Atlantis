@@ -13,6 +13,10 @@
         
 static NSString *alphabet = @"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
+@interface NSFont (StringWidth)
+- (CGFloat) widthOfString:(NSString *)string;
+@end
+
 
 @implementation RDMonospaceRulerView
 
