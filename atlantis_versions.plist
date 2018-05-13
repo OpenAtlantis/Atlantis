@@ -2,6 +2,16 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>101</key>
+	<dict>
+		<key>newFeatures</key>
+		<array>
+		    <string>LOGS: Fix for issue under Sierra and later where closing a log when multiple are open would cause a crash.</string>
+		    <string>GENERAL: Fix for issue under Sierra and later where hotkey combinations wouldn't show in the Hotkeys panel of preferences.</string>
+        </array>
+		<key>versionString</key>
+		<string>0.9.9.5</string>
+    </dict>
 	<key>100</key>
 	<dict>
 		<key>newFeatures</key>

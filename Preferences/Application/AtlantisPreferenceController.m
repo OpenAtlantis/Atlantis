@@ -48,7 +48,7 @@
         [_rdPrefsWindow makeKeyAndOrderFront:self];
     }
     else {
-        unsigned int styleMask = NSClosableWindowMask | NSResizableWindowMask;
+        unsigned int styleMask = NSClosableWindowMask | NSResizableWindowMask | NSTitledWindowMask;
         
 /*        if ([RDAtlantisApplication isTiger])
             styleMask = styleMask | (1 << 12); // Tiger's unified look flag. */

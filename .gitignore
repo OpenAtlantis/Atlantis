@@ -2,3 +2,4 @@ build/*
 .svn
 Atlantis.xcodeproj/project.xcworkspace/contents.xcworkspacedata
 Atlantis.xcodeproj/project.xcworkspace/xcuserdata
+*.xcbkptlist

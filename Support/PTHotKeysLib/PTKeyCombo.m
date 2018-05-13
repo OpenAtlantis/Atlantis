@@ -160,6 +160,8 @@
 	if( !str )
 		str = @"";
 	
+    str = [str stringByReplacingOccurrencesOfString:@"\0" withString:@""];
+    
 	return str;
 }
 

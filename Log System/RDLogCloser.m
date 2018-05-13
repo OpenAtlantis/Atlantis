@@ -35,6 +35,7 @@
 - (void)sheetDidEnd:(NSWindow *)sheet returnCode:(int)returnCode  contextInfo:(void  *)contextInfo
 {
     // TODO: Unload Bundle?
+    [_rdTableView setDataSource:nil];
 }
 
 - (void) openPanel
