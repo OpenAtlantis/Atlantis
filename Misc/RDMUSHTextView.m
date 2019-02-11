@@ -48,7 +48,7 @@
 
 - (void)recolorCursor
 {
-    if ([RDAtlantisApplication isTiger]) {
+//    if ([RDAtlantisApplication isTiger]) {
         if (!_rdBaseCursor) {
             NSCursor *iBeam = [NSCursor IBeamCursor];
             NSImage *iBeamImg = [[iBeam image] copy];
@@ -72,7 +72,7 @@
         }
         [[self enclosingScrollView] setDocumentCursor:_rdBaseCursor];
         [self addCursorRect:[self visibleRect] cursor:_rdBaseCursor];
-    }
+//    }
 }
 
 

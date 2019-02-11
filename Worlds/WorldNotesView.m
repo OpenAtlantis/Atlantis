@@ -67,7 +67,7 @@ static NSImage *s_notebookImage = nil;
     return @"Notepad";
 }
 
-- (unsigned) viewWeight
+- (NSUInteger) viewWeight
 {
     return 0;
 }

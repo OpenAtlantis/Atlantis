@@ -970,7 +970,7 @@ static NSString *alphabet = @"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWX
         
         NSDictionary *tempDict = [NSDictionary dictionaryWithObjectsAndKeys:
             [self preferenceForKey:@"atlantis.colors.url"],NSForegroundColorAttributeName,
-            [NSNumber numberWithInt:NSSingleUnderlineStyle],NSUnderlineStyleAttributeName,
+            [NSNumber numberWithInt:NSUnderlineStyleSingle],NSUnderlineStyleAttributeName,
             [NSCursor pointingHandCursor],NSCursorAttributeName,nil];
 
         [view setLinkStyle:tempDict];        
@@ -1731,7 +1731,7 @@ static NSString *alphabet = @"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWX
     
     NSNumber *sslOn = [self preferenceForKey:@"atlantis.world.ssl"];
     if (sslOn && [sslOn boolValue] && ((proxyType != 3) && (proxyType != 4)) ) {
-        if ([RDAtlantisApplication isTiger]) {
+//        if ([RDAtlantisApplication isTiger]) {
             NSDictionary *settings = [[NSDictionary alloc] initWithObjectsAndKeys:
                 [NSNumber numberWithBool:YES], @"kCFStreamSSLAllowsExpiredCertificates",
                 [NSNumber numberWithBool:YES], @"kCFStreamSSLAllowsAnyRoot",
@@ -1741,11 +1741,11 @@ static NSString *alphabet = @"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWX
         
             CFReadStreamSetProperty((CFReadStreamRef)_rdInputStream, (CFStringRef)@"kCFStreamPropertySSLSettings", (CFTypeRef)settings);
             CFWriteStreamSetProperty((CFWriteStreamRef)_rdOutputStream, (CFStringRef)@"kCFStreamPropertySSLSettings", (CFTypeRef)settings);    
-        }
-        else {
-            [_rdInputStream setProperty:NSStreamSocketSecurityLevelNegotiatedSSL forKey:NSStreamSocketSecurityLevelKey];
-            [_rdOutputStream setProperty:NSStreamSocketSecurityLevelNegotiatedSSL forKey:NSStreamSocketSecurityLevelKey];
-        }
+//        }
+//        else {
+//            [_rdInputStream setProperty:NSStreamSocketSecurityLevelNegotiatedSSL forKey:NSStreamSocketSecurityLevelKey];
+//            [_rdOutputStream setProperty:NSStreamSocketSecurityLevelNegotiatedSSL forKey:NSStreamSocketSecurityLevelKey];
+//        }
     }
     
     if ((proxyType == 1) || (proxyType == 2)) {

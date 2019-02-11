@@ -240,16 +240,16 @@ AddressBook *s_addyBook = nil;
         imagePath = [[NSBundle bundleForClass:[self class]] pathForImageResource:@"whitelight"];
         _rdWhiteLightImage = [[NSImage alloc] initByReferencingFile:imagePath];
 
-        if ([RDAtlantisApplication isTiger])
+//        if ([RDAtlantisApplication isTiger])
             [[[[_rdWorldList tableColumns] objectAtIndex:0] dataCell] setLineBreakMode:NSLineBreakByTruncatingTail];
 
         NSTableColumn *imageCol = [[NSTableColumn alloc] initWithIdentifier:@"worldConnected"];
         [imageCol setWidth:16.0f];
         [imageCol setDataCell:[[NSImageCell alloc] init]];
-        if ([RDAtlantisApplication isTiger])
+//        if ([RDAtlantisApplication isTiger])
             [(id)imageCol setResizingMask:0];
-        else
-            [imageCol setResizable:NO];
+//        else
+//            [imageCol setResizable:NO];
         [_rdWorldList addTableColumn:imageCol];
         int newColIndex = [[_rdWorldList tableColumns] indexOfObject:imageCol];
         if (newColIndex != NSNotFound)

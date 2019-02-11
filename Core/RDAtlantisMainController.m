@@ -189,9 +189,9 @@ static void networkReachabilityChangedCallback(SCNetworkReachabilityRef target, 
 
 - (void) applicationDidFinishLaunching:(NSNotification *)notification
 {
-#ifndef _ATLANTIS_DEBUG
+//#ifndef _ATLANTIS_DEBUG
     [_rdWorlds doAutoconnects];
-#endif
+//#endif
     
     if (![_rdConnectedWorlds count]) {
         BOOL openAddressBook = [[NSUserDefaults standardUserDefaults] boolForKey:@"atlantis.startup.openBook"];

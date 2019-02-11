@@ -95,8 +95,9 @@ static NSImage *s_statusLockGreyImage = nil;
             NSImage *tempImage = [[[NSImage alloc] initByReferencingFile:[[NSBundle mainBundle] pathForImageResource:@"spawn-dimple"]] autorelease];
             [_rdSplitView setDivider:tempImage];
             
-            tempImage = [[[NSImage alloc] initByReferencingFile:[[NSBundle mainBundle] pathForImageResource:@"spawn-splitter"]] autorelease];            
-            [_rdSplitView setBackgroundPattern:tempImage];
+            tempImage = [[[NSImage alloc] initByReferencingFile:[[NSBundle mainBundle] pathForImageResource:@"spawn-splitter"]] autorelease];
+            [tempImage setFlipped:YES];
+            [_rdSplitView setBackground:[NSColor colorWithPatternImage:tempImage]];
             [_rdSplitView setDividerThickness:8.0f];
 
             _rdResizeTooltip = [[NSPanel alloc] initWithContentRect:NSMakeRect(0,0,100,25)
@@ -412,7 +413,7 @@ static NSImage *s_statusLockGreyImage = nil;
     return _rdName;
 }
 
-- (unsigned) viewWeight
+- (NSUInteger) viewWeight
 {
     return _rdWeight;
 }
@@ -440,7 +441,7 @@ static NSImage *s_statusLockGreyImage = nil;
     }
 }
 
-extern int compareViews(id view1, id view2, void *context);
+extern NSInteger compareViews(id view1, id view2, void *context);
 
 - (BOOL) addSubview:(id <RDNestedViewDescriptor>) aView
 {
