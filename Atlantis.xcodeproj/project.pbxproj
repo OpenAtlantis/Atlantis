@@ -35,7 +35,7 @@
 /* Begin PBXBuildFile section */
 		5311D1882210FA390010AB9D /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5311D1872210FA390010AB9D /* AVFoundation.framework */; };
 		5311D18B2210FF300010AB9D /* PTKeyComboPanel.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5311D1892210FF300010AB9D /* PTKeyComboPanel.xib */; };
-		53ED3A8422112F03002BDC0F /* Lemuria.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53ED3A8322112F03002BDC0F /* Lemuria.framework */; };
+		53A09A1A221131AF00139F8B /* Lemuria.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53E1940122110F4E00A0B0BE /* Lemuria.framework */; };
 		8D11072A0486CEB800E47090 /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 29B97318FDCFA39411CA2CEA /* MainMenu.nib */; };
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
@@ -434,7 +434,6 @@
 		5311D1872210FA390010AB9D /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		5311D18A2210FF300010AB9D /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/PTKeyComboPanel.xib; sourceTree = "<group>"; };
 		53E193FC22110F4E00A0B0BE /* Lemuria.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Lemuria.xcodeproj; path = ../Lemuria/Lemuria.xcodeproj; sourceTree = "<group>"; };
-		53ED3A8322112F03002BDC0F /* Lemuria.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Lemuria.framework; path = Support/Lemuria.framework; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; explicitFileType = text.plist; fileEncoding = 4; path = Info.plist; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* Atlantis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Atlantis.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF00C30F09E1F90600083573 /* AtlantisPreferenceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AtlantisPreferenceController.h; path = Preferences/Application/AtlantisPreferenceController.h; sourceTree = "<group>"; };
@@ -968,13 +967,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53A09A1A221131AF00139F8B /* Lemuria.framework in Frameworks */,
 				5311D1882210FA390010AB9D /* AVFoundation.framework in Frameworks */,
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
 				FF967108099E69FF005886F4 /* OgreKit.framework in Frameworks */,
 				FF267E7709A16F8900198A44 /* Carbon.framework in Frameworks */,
 				FFFE5E8E09A2B26D003F118B /* Growl.framework in Frameworks */,
 				FF4E2CA809CE690900826DD9 /* SystemConfiguration.framework in Frameworks */,
-				53ED3A8422112F03002BDC0F /* Lemuria.framework in Frameworks */,
 				FF53276709E8CCD50013FB8A /* libz.dylib in Frameworks */,
 				FF783E2D09EB853000D23B45 /* IOKit.framework in Frameworks */,
 				FFD59B120A80AA1300B4F5ED /* CoreServices.framework in Frameworks */,
@@ -1116,7 +1115,6 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				53ED3A8322112F03002BDC0F /* Lemuria.framework */,
 				5311D1872210FA390010AB9D /* AVFoundation.framework */,
 				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
 				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,

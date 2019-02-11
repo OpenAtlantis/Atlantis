@@ -38,7 +38,7 @@
     [super dealloc];
 }
 
-int scrollbackSort(id obj1, id obj2, void *context)
+NSInteger scrollbackSort(id obj1, id obj2, void *context)
 {
     NSAttributedString *st1 = (NSAttributedString *)obj1;
     NSAttributedString *st2 = (NSAttributedString *)obj2;

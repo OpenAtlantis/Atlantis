@@ -10,7 +10,7 @@
 #import <objc/runtime.h>
 
 
-int conditionSort(id obj1, id obj2, void *context)
+NSInteger conditionSort(id obj1, id obj2, void *context)
 {
     NSString *s1;
     NSString *s2;

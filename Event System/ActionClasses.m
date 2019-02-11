@@ -10,7 +10,7 @@
 #import <objc/runtime.h>
 
 
-int actionSort(id obj1, id obj2, void *context)
+NSInteger actionSort(id obj1, id obj2, void *context)
 {
     NSString *s1;
     NSString *s2;

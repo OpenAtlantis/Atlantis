@@ -25,7 +25,7 @@
 
 +(id)			dictionaryWithContentsOfXMLFile: (NSString*)path
 {
-	NSString*	str = [NSString stringWithContentsOfFile: path];
+	NSString*	str = [NSString stringWithContentsOfFile: path encoding:NSUTF8StringEncoding error:nil];
 	
 	return [[self class] dictionaryWithXML: str];
 }
@@ -33,7 +33,7 @@
 
 +(id)			dictionaryWithContentsOfXMLFile: (NSString*)path flags: (unsigned int)flags
 {
-	NSString*	str = [NSString stringWithContentsOfFile: path];
+	NSString*	str = [NSString stringWithContentsOfFile: path encoding:NSUTF8StringEncoding error:nil];
 	
 	return [[self class] dictionaryWithXML: str flags: flags];
 }
@@ -55,7 +55,7 @@
 {
 	NSString*	str = [self xmlRepresentation];
 	
-	return [str writeToFile: path atomically: atm];
+    return [str writeToFile: path atomically: atm encoding:NSUTF8StringEncoding error:nil];
 }
 
 
@@ -63,7 +63,7 @@
 {
 	NSString*	str = [self xmlRepresentationWithFlags: flags];
 	
-	return [str writeToFile: path atomically: atm];
+	return [str writeToFile: path atomically: atm encoding:NSUTF8StringEncoding error:nil];
 }
 
 

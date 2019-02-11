@@ -13,7 +13,7 @@
 #import <Lemuria/Lemuria.h>
 #import "NSDictionary+XMLPersistence.h"
 
-int compareWorlds(id obj1, id obj2, void *context)
+NSInteger compareWorlds(id obj1, id obj2, void *context)
 {
     RDAtlantisWorldPreferences *prefs1 = (RDAtlantisWorldPreferences *)obj1;
     RDAtlantisWorldPreferences *prefs2 = (RDAtlantisWorldPreferences *)obj2;
