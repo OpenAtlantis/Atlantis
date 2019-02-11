@@ -26,6 +26,7 @@ typedef enum {
 	NSString* autosaveName;		// This name is used for storing subview proportions in user defaults.
 	NSColor* background;		// The color used to paint the view's background (may be nil).
 	NSImage* divider;			// The image used for the divider "dimple".
+    NSImage* dividerBg;         // Image to use for divider backgrounds;
 	NSRect* dividers;			// A C array of NSRects, one for each divider.
 	CGFloat dividerThickness;	// Actual divider width; should be an integer and at least 1.0.
 	BOOL mustAdjust;			// Set internally if the subviews need to be adjusted.
@@ -113,6 +114,9 @@ typedef enum {
 // and no mouse events will be processed, so that the dividers can be moved only programmatically.
 - (void)setDivider:(NSImage*)image;
 - (NSImage*)divider;
+
+- (void)setDividerBackground:(NSImage *)image;
+- (NSImage*)dividerBackground;
 
 // Sets and gets the view background. The default is nil, meaning no background is
 // drawn and the view and its subviews are considered transparent.

@@ -97,7 +97,7 @@ static NSImage *s_statusLockGreyImage = nil;
             
             tempImage = [[[NSImage alloc] initByReferencingFile:[[NSBundle mainBundle] pathForImageResource:@"spawn-splitter"]] autorelease];
             [tempImage setFlipped:YES];
-            [_rdSplitView setBackground:[NSColor colorWithPatternImage:tempImage]];
+            [_rdSplitView setDividerBackground:tempImage];
             [_rdSplitView setDividerThickness:8.0f];
 
             _rdResizeTooltip = [[NSPanel alloc] initWithContentRect:NSMakeRect(0,0,100,25)

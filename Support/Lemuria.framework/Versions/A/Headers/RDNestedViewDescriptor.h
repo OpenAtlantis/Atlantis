@@ -16,7 +16,7 @@
 - (NSString *) viewUID;
 - (NSString *) viewPath;
 - (NSString *) viewName;
-- (unsigned)   viewWeight;
+- (NSUInteger)   viewWeight;
 - (NSImage *)  viewIcon;
 
 - (NSView *) view;
