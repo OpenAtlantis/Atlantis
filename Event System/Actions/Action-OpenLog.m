@@ -12,6 +12,7 @@
 #import "RDLogType.h"
 #import "NSStringExtensions.h"
 #import "RDAtlantisSpawn.h"
+#import <objc/runtime.h>
 
 @implementation Action_OpenLog
 

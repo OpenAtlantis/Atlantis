@@ -34,7 +34,6 @@
 
 @interface PTKeyCombo (UserDisplayAdditions)
 
-+ (NSDictionary *) _keyCodesDictionary;
 - (NSString*)description;
 
 @end

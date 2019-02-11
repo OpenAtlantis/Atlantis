@@ -11,16 +11,7 @@
 #import "PTKeyCombo.h"
 #import <Carbon/Carbon.h>
 
-#if __PROTEIN__
-#import "PTNSObjectAdditions.h"
-#endif
-
 @interface PTHotKeyCenter (Private)
-- (BOOL)_hasCarbonEventSupport;
-
-- (PTHotKey*)_hotKeyForCarbonHotKey: (EventHotKeyRef)carbonHotKey;
-- (EventHotKeyRef)_carbonHotKeyForHotKey: (PTHotKey*)hotKey;
-
 - (void)_updateEventHandler;
 - (void)_hotKeyDown: (PTHotKey*)hotKey;
 - (void)_hotKeyUp: (PTHotKey*)hotKey;
@@ -36,9 +27,6 @@ static id _sharedHotKeyCenter = nil;
 	if( _sharedHotKeyCenter == nil )
 	{
 		_sharedHotKeyCenter = [[self alloc] init];
-		#if __PROTEIN__
-			[_sharedHotKeyCenter releaseOnTerminate];
-		#endif
 	}
 	
 	return _sharedHotKeyCenter;
@@ -51,6 +39,8 @@ static id _sharedHotKeyCenter = nil;
 	if( self )
 	{
 		mHotKeys = [[NSMutableDictionary alloc] init];
+        mHotKeyMap = [[NSMutableDictionary alloc] init];
+        mNextKeyID = 1;
 	}
 	
 	return self;
@@ -66,60 +56,114 @@ static id _sharedHotKeyCenter = nil;
 
 - (BOOL)registerHotKey: (PTHotKey*)hotKey
 {
+    //NSLog(@"registerHotKey: %@", hotKey);
 	OSStatus err;
 	EventHotKeyID hotKeyID;
 	EventHotKeyRef carbonHotKey;
-	NSValue* key;
-
-	if( [[self allHotKeys] containsObject: hotKey] == YES )
-		[self unregisterHotKey: hotKey];
-	
+/*
+	if([mHotKeys objectForKey:[hotKey name]])
+    	[self unregisterHotKey: hotKey];
+*/	
 	if( [[hotKey keyCombo] isValidHotKeyCombo] == NO )
-		return YES;
+    {
+        //NSLog(@"not valid keycombo:");
+        return YES;
+    }
+		
 	
-	hotKeyID.signature = 'PTHk';
-	hotKeyID.id = (long)hotKey;
-	
+	hotKeyID.signature = UTGetOSTypeFromString(CFSTR("PTHk"));
+	hotKeyID.id = mNextKeyID;
+    
+	//NSLog(@"registering...");
 	err = RegisterEventHotKey(  [[hotKey keyCombo] keyCode],
 								[[hotKey keyCombo] modifiers],
 								hotKeyID,
 								GetEventDispatcherTarget(),
-								nil,
+								0,
 								&carbonHotKey );
 
 	if( err )
-		return NO;
+    {
+        //NSLog(@"error --");
+        return NO;
+    }
+	
+    NSNumber *kid = [NSNumber numberWithUnsignedInt:mNextKeyID];
+    [mHotKeyMap setObject:hotKey forKey:kid];
+    mNextKeyID += 1;
+    
 
-	key = [NSValue valueWithPointer: carbonHotKey];
-	if( hotKey && key )
-		[mHotKeys setObject: hotKey forKey: key];
+    [hotKey setCarbonHotKey:carbonHotKey];
+	[mHotKeys setObject: hotKey forKey: [hotKey name]];
 
 	[self _updateEventHandler];
-	
+	//NSLog(@"Eo registerHotKey:");
 	return YES;
 }
 
 - (void)unregisterHotKey: (PTHotKey*)hotKey
 {
-	OSStatus err;
+    //NSLog(@"unregisterHotKey: %@", hotKey);
 	EventHotKeyRef carbonHotKey;
-	NSValue* key;
 
-	if( [[self allHotKeys] containsObject: hotKey] == NO )
+	if(![mHotKeys objectForKey:[hotKey name]])
 		return;
 	
-	carbonHotKey = [self _carbonHotKeyForHotKey: hotKey];
+	carbonHotKey = [hotKey carbonHotKey];
 	NSAssert( carbonHotKey != nil, @"" );
 
-	err = UnregisterEventHotKey( carbonHotKey );
+	(void)UnregisterEventHotKey( carbonHotKey );
 	//Watch as we ignore 'err':
 
-	key = [NSValue valueWithPointer: carbonHotKey];
-	[mHotKeys removeObjectForKey: key];
+	[mHotKeys removeObjectForKey: [hotKey name]];
+    NSArray *remKeys = [mHotKeyMap allKeysForObject:hotKey];
+    if (remKeys && [remKeys count] > 0)
+        [mHotKeyMap removeObjectsForKeys:remKeys];
 	
 	[self _updateEventHandler];
-
+    //NSLog(@"Eo unregisterHotKey:");
 	//See that? Completely ignored
+}
+
+- (void) unregisterHotKeyForName:(NSString *)name
+{
+    [self unregisterHotKey:[mHotKeys objectForKey:name]];
+}
+
+- (void) unregisterAllHotKeys;
+{
+    NSEnumerator *enumerator = [mHotKeys objectEnumerator];
+    id thing;
+    while ((thing = [enumerator nextObject]))
+    {
+        [self unregisterHotKey:thing];
+    }
+}
+
+- (void) setHotKeyRegistrationForName:(NSString *)name enable:(BOOL)ena
+{
+    if (ena)
+    {
+        [self registerHotKey:[mHotKeys objectForKey:name]];
+    } else
+    {
+        [self unregisterHotKey:[mHotKeys objectForKey:name]];
+    }
+}
+
+- (void) updateHotKey:(PTHotKey *)hk
+{
+    [hk retain];
+    //NSLog(@"updateHotKey: %@", hk);
+    [self unregisterHotKey:[mHotKeys objectForKey:[hk name]]];
+    //NSLog(@"unreg'd: %@", hk);
+    [self registerHotKey:hk];
+    //NSLog(@"Eo updateHotKey:");
+}
+
+- (PTHotKey *) hotKeyForName:(NSString *)name
+{
+    return [mHotKeys objectForKey:name];
 }
 
 - (NSArray*)allHotKeys
@@ -127,54 +171,9 @@ static id _sharedHotKeyCenter = nil;
 	return [mHotKeys allValues];
 }
 
-- (PTHotKey*)hotKeyWithIdentifier: (id)ident
-{
-	NSEnumerator* hotKeysEnum = [[self allHotKeys] objectEnumerator];
-	PTHotKey* hotKey;
-	
-	if( !ident )
-		return nil;
-	
-	while( (hotKey = [hotKeysEnum nextObject]) != nil )
-	{
-		if( [[hotKey identifier] isEqual: ident] )
-			return hotKey;
-	}
-
-	return nil;
-}
-
 #pragma mark -
-
-- (BOOL)_hasCarbonEventSupport
-{
-	return floor(NSAppKitVersionNumber) > NSAppKitVersionNumber10_1;
-}
-
-- (PTHotKey*)_hotKeyForCarbonHotKey: (EventHotKeyRef)carbonHotKey
-{
-	NSValue* key = [NSValue valueWithPointer: carbonHotKey];
-	return [mHotKeys objectForKey: key];
-}
-
-- (EventHotKeyRef)_carbonHotKeyForHotKey: (PTHotKey*)hotKey
-{
-	NSArray* values;
-	NSValue* value;
-	
-	values = [mHotKeys allKeysForObject: hotKey];
-	NSAssert( [values count] == 1, @"Failed to find Carbon Hotkey for PTHotKey" );
-	
-	value = [values lastObject];
-	
-	return (EventHotKeyRef)[value pointerValue];
-}
-
 - (void)_updateEventHandler
 {
-	if( [self _hasCarbonEventSupport] == NO ) //Don't use event handler on these systems
-		return;
-
 	if( [mHotKeys count] && mEventHandlerInstalled == NO )
 	{
 		EventTypeSpec eventSpec[2] = {
@@ -197,40 +196,7 @@ static id _sharedHotKeyCenter = nil;
 
 - (void)_hotKeyUp: (PTHotKey*)hotKey
 {
-}
-
-- (void)sendEvent: (NSEvent*)event
-{
-	long subType;
-	EventHotKeyRef carbonHotKey;
-	
-	//We only have to intercept sendEvent to do hot keys on old system versions
-	if( [self _hasCarbonEventSupport] )
-		return;
-	
-	if( [event type] == NSSystemDefined )
-	{
-		subType = [event subtype];
-		
-		if( subType == 6 ) //6 is hot key down
-		{
-			carbonHotKey= (EventHotKeyRef)[event data1]; //data1 is our hot key ref
-			if( carbonHotKey != nil )
-			{
-				PTHotKey* hotKey = [self _hotKeyForCarbonHotKey: carbonHotKey];
-				[self _hotKeyDown: hotKey];
-			}
-		}
-		else if( subType == 9 ) //9 is hot key up
-		{
-			carbonHotKey= (EventHotKeyRef)[event data1];
-			if( carbonHotKey != nil )
-			{
-				PTHotKey* hotKey = [self _hotKeyForCarbonHotKey: carbonHotKey];
-				[self _hotKeyUp: hotKey];
-			}
-		}
-	}
+    //[hotKey uninvoke];
 }
 
 - (OSStatus)sendCarbonEvent: (EventRef)event
@@ -239,7 +205,6 @@ static id _sharedHotKeyCenter = nil;
 	EventHotKeyID hotKeyID;
 	PTHotKey* hotKey;
 
-	NSAssert( [self _hasCarbonEventSupport], @"" );
 	NSAssert( GetEventClass( event ) == kEventClassKeyboard, @"Unknown event class" );
 
 	err = GetEventParameter(	event,
@@ -253,24 +218,25 @@ static id _sharedHotKeyCenter = nil;
 		return err;
 	
 
-	NSAssert( hotKeyID.signature == 'PTHk', @"Invalid hot key id" );
-	NSAssert( hotKeyID.id != nil, @"Invalid hot key id" );
+	NSAssert( hotKeyID.signature == UTGetOSTypeFromString(CFSTR("PTHk")), @"Invalid hot key id" );
 
-	hotKey = (PTHotKey*)hotKeyID.id;
+    NSNumber *kid = [NSNumber numberWithUnsignedInt:hotKeyID.id];
+	hotKey = [mHotKeyMap objectForKey:kid];
+    
+    NSAssert( hotKey != nil, @"Invalid hot key id" );
 
 	switch( GetEventKind( event ) )
 	{
 		case kEventHotKeyPressed:
-			[self _hotKeyDown: hotKey];
-		break;
+            [self _hotKeyDown: hotKey];
+            break;
 
 		case kEventHotKeyReleased:
-			[self _hotKeyUp: hotKey];
-		break;
+            [self _hotKeyUp: hotKey];
+            break;
 
 		default:
 			NSAssert( 0, @"Unknown event kind" );
-		break;
 	}
 	
 	return noErr;

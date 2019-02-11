@@ -9,6 +9,7 @@
 #import "Condition-Negate.h"
 #import "RDAtlantisMainController.h"
 #import "ConditionClasses.h"
+#import <objc/runtime.h>
 
 @interface Condition_Negate (Private)
 - (void) resetContentView;

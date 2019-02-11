@@ -9,6 +9,7 @@
 #import "RDAtlantisApplication.h"
 #import "RDAtlantisMainController.h"
 #import "HotkeyCollection.h"
+#import <Carbon/Carbon.h>
 #import <Lemuria/Lemuria.h>
 
 @implementation RDAtlantisApplication
@@ -29,14 +30,14 @@
 
 + (BOOL) isTiger
 {    
-    SInt32 MacVersion;
-    if (Gestalt(gestaltSystemVersion, &MacVersion) == noErr){
-        if (MacVersion >= 0x1040){
-            return YES;
-        }
-    }    
-    
-    return NO;
+//    SInt32 MacVersion;
+//    if (Gestalt(gestaltSystemVersion, &MacVersion) == noErr){
+//        if (MacVersion >= 0x1040){
+//            return YES;
+//        }
+//    }
+//
+    return YES;
 }
 
 - (long)cocoaModifiersAsCarbonModifiers: (long)cocoaModifiers

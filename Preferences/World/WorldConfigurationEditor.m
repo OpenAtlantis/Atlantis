@@ -9,6 +9,7 @@
 #import "WorldConfigurationEditor.h"
 #import "RDAtlantisMainController.h"
 #import "WorldConfigurationTab.h"
+#import <objc/runtime.h>
 
 @implementation WorldConfigurationEditor
 

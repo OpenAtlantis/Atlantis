@@ -9,7 +9,7 @@
 #import "AtlantisAboutBox.h"
 #import <Lemuria/Lemuria.h>
 #import <OgreKit/OgreKit.h>
-#import <CamelBones/CamelBones.h>
+//#import <CamelBones/CamelBones.h>
 #import "ScriptingDispatch.h"
 #import "ScriptingEngine.h"
 #import "RDAtlantisMainController.h"
@@ -58,15 +58,15 @@
                                 version:[OGRegularExpression onigurumaVersion]
                                 copyright:@"2002-2006 K.Kosako"];
                     
-                    [self addCreditProduct:@"DTCVersionChecker" version:@"2.0" copyright:@"Daniel Todd Currie"];
-                    
-                    [self addCreditProduct:@"CamelBones" 
-                                version:@"1.0.3"
-                                copyright:@"2005-2007 Sherm Pendley"];
-
-                    [self addCreditProduct:@"LuaCore" 
-                                version:@"0.2"
-                                copyright:@"2006 Flying Meat Inc."];
+//                    [self addCreditProduct:@"DTCVersionChecker" version:@"2.0" copyright:@"Daniel Todd Currie"];
+//
+//                    [self addCreditProduct:@"CamelBones" 
+//                                version:@"1.0.3"
+//                                copyright:@"2005-2007 Sherm Pendley"];
+//
+//                    [self addCreditProduct:@"LuaCore" 
+//                                version:@"0.2"
+//                                copyright:@"2006 Flying Meat Inc."];
                                 
                     ScriptingDispatch *scriptSystem = [[RDAtlantisMainController controller] scriptDispatch];
                     NSArray *languages = [scriptSystem languages];

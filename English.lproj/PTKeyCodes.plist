@@ -1,96 +1,103 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
-<dict>
-	<key>padKeyString</key>
-	<string>Pad</string>
-	<key>padKeys</key>
-	<array>
-		<string>65</string>
-		<string>67</string>
-		<string>69</string>
-		<string>75</string>
-		<string>78</string>
-		<string>81</string>
-		<string>82</string>
-		<string>83</string>
-		<string>84</string>
-		<string>85</string>
-		<string>86</string>
-		<string>87</string>
-		<string>88</string>
-		<string>89</string>
-		<string>91</string>
-		<string>92</string>
-	</array>
-	<key>unmappedKeys</key>
-	<dict>
-		<key>100</key>
-		<string>F8</string>
-		<key>101</key>
-		<string>F9</string>
-		<key>103</key>
-		<string>F11</string>
-		<key>105</key>
-		<string>F13</string>
-		<key>107</key>
-		<string>F14</string>
-		<key>109</key>
-		<string>F10</string>
-		<key>111</key>
-		<string>F12</string>
-		<key>113</key>
-		<string>F15</string>
-		<key>114</key>
-		<string>Ins</string>
-		<key>115</key>
-		<string>Home</string>
-		<key>116</key>
-		<string>Page Up</string>
-		<key>117</key>
-		<string>Del</string>
-		<key>118</key>
-		<string>F4</string>
-		<key>119</key>
-		<string>End</string>
-		<key>120</key>
-		<string>F2</string>
-		<key>121</key>
-		<string>Page Down</string>
-		<key>122</key>
-		<string>F1</string>
-		<key>123</key>
-		<string>Left Arrow</string>
-		<key>124</key>
-		<string>Right Arrow</string>
-		<key>125</key>
-		<string>Down Arrow</string>
-		<key>126</key>
-		<string>Up Arrow</string>
-		<key>36</key>
-		<string>Return</string>
-		<key>48</key>
-		<string>Tab</string>
-		<key>49</key>
-		<string>Space</string>
-		<key>51</key>
-		<string>Backspace</string>
-		<key>53</key>
-		<string>ESC</string>
-		<key>71</key>
-		<string>Clear</string>
-		<key>76</key>
-		<string>Pad Enter</string>
-		<key>96</key>
-		<string>F5</string>
-		<key>97</key>
-		<string>F6</string>
-		<key>98</key>
-		<string>F7</string>
-		<key>99</key>
-		<string>F3</string>
-	</dict>
-	<key>version</key>
-	<integer>1</integer>
-</dict>
-</plist>
+{
+ 	0 = "A";
+ 	1 = "S";
+ 	2 = "D";
+ 	3 = "F";
+ 	4 = "H";
+ 	5 = "G";
+ 	6 = "Z";
+ 	7 = "X";
+ 	8 = "C";
+ 	9 = "V";
+	10 = "$";
+ 	11 = "B";
+ 	12 = "Q";
+ 	13 = "W";
+ 	14 = "E";
+ 	15 = "R";
+ 	16 = "Y";
+ 	17 = "T";
+ 	18 = "1";
+ 	19 = "2";
+ 	20 = "3";
+ 	21 = "4";
+ 	22 = "6";
+ 	23 = "5";
+ 	24 = "=";
+ 	25 = "9";
+ 	26 = "7";
+ 	27 = "-";
+ 	28 = "8";
+ 	29 = "0";
+ 	30 = "\]";
+ 	31 = "O";
+ 	32 = "U";
+ 	33 = "\[";
+ 	34 = "I";
+ 	35 = "P";
+ 	36 = "Return";
+ 	37 = "L";
+ 	38 = "J";
+ 	39 = "\'";
+ 	40 = "K";
+ 	41 = ";";
+ 	42 = "\\";
+ 	43 = ",";
+ 	44 = "\/";
+ 	45 = "N";
+ 	46 = "M";
+ 	47 = ".";
+ 	48 = "Tab";
+ 	49 = "Space";
+ 	50 = "\`";
+ 	51 = "Delete";
+ 	53 = "ESC";
+ 	55 = "Command";
+ 	56 = "Shift";
+ 	57 = "Caps Lock";
+ 	58 = "Option";
+ 	59 = "Control";
+ 	65 = "Pad .";
+ 	67 = "Pad *";
+ 	69 = "Pad +";
+ 	71 = "Clear";
+ 	75 = "Pad /";
+ 	76 = "Pad Enter";
+ 	78 = "Pad -";
+ 	81 = "Pad =";
+ 	82 = "Pad 0";
+ 	83 = "Pad 1";
+ 	84 = "Pad 2";
+ 	85 = "Pad 3";
+ 	86 = "Pad 4";
+ 	87 = "Pad 5";
+ 	88 = "Pad 6";
+ 	89 = "Pad 7";
+ 	91 = "Pad 8";
+ 	92 = "Pad 9";
+ 	96 = "F5";
+ 	97 = "F6";
+ 	98 = "F7";
+ 	99 = "F3";
+ 	100 = "F8";
+ 	101 = "F9";
+ 	103 = "F11";
+ 	105 = "F13";
+ 	107 = "F14";
+ 	109 = "F10";
+ 	111 = "F12";
+ 	113 = "F15";
+ 	114 = "Ins";
+ 	115 = "Home";
+ 	116 = "Page Up";
+ 	117 = "Del";
+ 	118 = "F4";
+ 	119 = "End";
+ 	120 = "F2";
+ 	121 = "Page Down";
+ 	122 = "F1";
+ 	123 = "Left Arrow";
+ 	124 = "Right Arrow";
+ 	125 = "Down Arrow";
+ 	126 = "Up Arrow";
+}

@@ -35,6 +35,8 @@
 
 #include <string.h>
 
+#import <objc/runtime.h>
+
         
 static NSString *alphabet = @"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
@@ -1702,18 +1704,18 @@ static NSString *alphabet = @"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWX
         [_rdOutputStream release];
     }
 
-    NSHost *newHost = [NSHost hostWithName:hostName];
+    NSString *newHost = hostName;
 
     int proxyType = [[NSUserDefaults standardUserDefaults] integerForKey:@"atlantis.network.proxyType"];
     if (proxyType) {
         if ((proxyType == 3) || (proxyType == 4)) {
             NSString *proxyServer = [[NSUserDefaults standardUserDefaults] stringForKey:@"atlantis.network.proxyHost"];
             port = [[NSUserDefaults standardUserDefaults] integerForKey:@"atlantis.network.proxyPort"];
-            newHost = [NSHost hostWithName:proxyServer];
+            newHost = proxyServer;
         } 
     }
     
-	[NSStream getStreamsToHost:newHost port:port inputStream:&_rdInputStream outputStream:&_rdOutputStream];
+	[NSStream getStreamsToHostWithName:newHost port:port inputStream:&_rdInputStream outputStream:&_rdOutputStream];
     
     if (!_rdInputStream || !_rdOutputStream) {
         [self handleStatusOutput:@"Unable to reach host, cannot connect.\n"];

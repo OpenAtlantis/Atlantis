@@ -7,6 +7,7 @@
 //
 
 #import "ConditionClasses.h"
+#import <objc/runtime.h>
 
 
 int conditionSort(id obj1, id obj2, void *context)

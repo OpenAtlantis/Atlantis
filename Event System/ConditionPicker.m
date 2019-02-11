@@ -8,6 +8,7 @@
 
 #import "ConditionPicker.h"
 #import "BaseCondition.h"
+#import <objc/runtime.h>
 
 @interface ConditionPickerDelegate
 - (void) newConditionPicked:(BaseCondition *)action context:(void *)context;

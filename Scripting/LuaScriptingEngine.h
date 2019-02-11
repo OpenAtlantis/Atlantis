@@ -7,18 +7,18 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#import <LuaCore/LuaCore.h>
+//#import <LuaCore/LuaCore.h>
 #import "ScriptingEngine.h"
 #import "ScriptBridge.h"
 
 @interface LuaScriptingEngine : ScriptingEngine {
 
-    LCLua                   *_rdLuaInterpreter;
-    NSDate                  *_rdNewestModificationDate;
-
-    ScriptBridge            *_rdBridge;
-    
-    NSLock                  *_rdLuaLock;
+//    LCLua                   *_rdLuaInterpreter;
+//    NSDate                  *_rdNewestModificationDate;
+//
+//    ScriptBridge            *_rdBridge;
+//    
+//    NSLock                  *_rdLuaLock;
 
 }
 

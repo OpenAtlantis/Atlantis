@@ -11,6 +11,7 @@
 #import "RDLogType.h"
 #import "RDAtlantisSpawn.h"
 #import "AtlantisProgressSheet.h"
+#import <objc/runtime.h>
 
 @implementation RDLogOpener
 

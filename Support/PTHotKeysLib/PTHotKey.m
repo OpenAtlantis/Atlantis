@@ -15,18 +15,11 @@
 
 - (id)init
 {
-	return [self initWithIdentifier: nil keyCombo: nil];
-}
-
-
-- (id)initWithIdentifier: (id)identifier keyCombo: (PTKeyCombo*)combo
-{
 	self = [super init];
 	
 	if( self )
 	{
-		[self setIdentifier: identifier];
-		[self setKeyCombo: combo];
+		[self setKeyCombo: [PTKeyCombo clearKeyCombo]];
 	}
 	
 	return self;
@@ -34,7 +27,6 @@
 
 - (void)dealloc
 {
-	[mIdentifier release];
 	[mName release];
 	[mKeyCombo release];
 	
@@ -43,28 +35,21 @@
 
 - (NSString*)description
 {
-	return [NSString stringWithFormat: @"<%@: %@, %@>", NSStringFromClass( [self class] ), [self identifier], [self keyCombo]];
+	return [NSString stringWithFormat: @"<%@: %@>", NSStringFromClass( [self class] ), [self keyCombo]];
 }
 
 #pragma mark -
 
-- (void)setIdentifier: (id)ident
-{
-	[ident retain];
-	[mIdentifier release];
-	mIdentifier = ident;
+- (EventHotKeyRef)carbonHotKey {
+	return carbonHotKey;
 }
 
-- (id)identifier
-{
-	return mIdentifier;
+- (void)setCarbonHotKey:(EventHotKeyRef)hotKey {
+	carbonHotKey = hotKey;
 }
 
 - (void)setKeyCombo: (PTKeyCombo*)combo
 {
-	if( combo == nil )
-		combo = [PTKeyCombo clearKeyCombo];	
-
 	[combo retain];
 	[mKeyCombo release];
 	mKeyCombo = combo;

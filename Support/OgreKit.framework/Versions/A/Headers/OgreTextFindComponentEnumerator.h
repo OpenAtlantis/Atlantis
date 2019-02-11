@@ -3,8 +3,8 @@
  * Project: OgreKit
  *
  * Creation Date: Jun 05 2004
- * Author: Isao Sonobe <sonoisa (AT) muse (DOT) ocn (DOT) ne (DOT) jp>
- * Copyright: Copyright (c) 2003 Isao Sonobe, All rights reserved.
+ * Author: Isao Sonobe <sonoisa@gmail.com>
+ * Copyright: Copyright (c) 2003-2018 Isao Sonobe, All rights reserved.
  * License: OgreKit License
  *
  * Encoding: UTF8
@@ -18,14 +18,14 @@
 @interface OgreTextFindComponentEnumerator : NSEnumerator
 {
     OgreTextFindBranch	*_branch;
-    unsigned			*_indexes, _count;
-	int					_nextIndex;
-    int					_terminalIndex;
+    NSUInteger			*_indexes, _count;
+	NSInteger			_nextIndex;
+    NSInteger			_terminalIndex;
     BOOL				_inSelection;
 }
 
 - (id)initWithBranch:(OgreTextFindBranch*)aBranch inSelection:(BOOL)inSelection;
-- (void)setTerminalIndex:(int)index;
-- (void)setStartIndex:(int)index;
+- (void)setTerminalIndex:(NSInteger)index;
+- (void)setStartIndex:(NSInteger)index;
 
 @end

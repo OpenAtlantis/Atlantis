@@ -8,6 +8,7 @@
 
 #import "ActionPicker.h"
 #import "BaseAction.h"
+#import <objc/runtime.h>
 
 @interface ActionPickerDelegate
 - (void) newActionPicked:(BaseAction *)action context:(void *)context;

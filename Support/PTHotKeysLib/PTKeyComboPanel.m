@@ -13,10 +13,6 @@
 #import "PTKeyBroadcaster.h"
 #import "PTHotKeyCenter.h"
 
-#if __PROTEIN__
-#import "PTNSObjectAdditions.h"
-#endif
-
 @implementation PTKeyComboPanel
 
 static id _sharedKeyComboPanel = nil;
@@ -26,10 +22,6 @@ static id _sharedKeyComboPanel = nil;
 	if( _sharedKeyComboPanel == nil )
 	{
 		_sharedKeyComboPanel = [[self alloc] init];
-	
-		#if __PROTEIN__
-			[_sharedKeyComboPanel releaseOnTerminate];
-		#endif
 	}
 
 	return _sharedKeyComboPanel;
@@ -37,6 +29,8 @@ static id _sharedKeyComboPanel = nil;
 
 - (id)init
 {
+    mTitleFormat = @"empty";
+    mKeyName = @"empty";
 	return [self initWithWindowNibName: @"PTKeyComboPanel"];
 }
 
@@ -62,80 +56,70 @@ static id _sharedKeyComboPanel = nil;
 
 - (void)_refreshContents
 {
-	if( mComboField )
+    if( mComboField)
 		[mComboField setStringValue: [mKeyCombo description]];
+    
 
 	if( mTitleField )
 		[mTitleField setStringValue: [NSString stringWithFormat: mTitleFormat, mKeyName]];
+     
 }
 
-#pragma mark -
-
-- (int)runModal
-{
-	int resultCode;
-
-	[self window]; //Force us to load
-
-	[self _refreshContents];
-	[[self window] center];
-	[self showWindow: self];
-	resultCode = [[NSApplication sharedApplication] runModalForWindow: [self window]];
-	[self close];
-
-	return resultCode;
+- (void)chooseHotKeyDidEnd:(NSWindow *)sheet returnCode:(int)returnCode contextInfo:(void  *)contextInfo {
+	PTHotKey *hotKey = (PTHotKey *)contextInfo;
+	
+	[[self window] close];
+	
+	if (hotKey && returnCode == NSOKButton) {
+        [hotKey setKeyCombo: [self keyCombo]];
+		[[PTHotKeyCenter sharedCenter] updateHotKey: hotKey];
+		if ([currentModalDelegate respondsToSelector:@selector(keyComboPanelEnded:)])
+			[currentModalDelegate keyComboPanelEnded:self];
+		else
+			NSLog(@"currentModalDelegate doesn't respond to keyComboPanelEnded:!");
+	}
+	
+	[hotKey release];
+	[currentModalDelegate release];
 }
 
-- (void)runModalForHotKey: (PTHotKey*)hotKey
-{
-	int resultCode;
-
-	[self setKeyBindingName: [hotKey name]];
+- (void)showSheetForHotkey:(PTHotKey*)hotKey forWindow:(NSWindow*)mainWindow modalDelegate:(id)target {
+	[[self window] makeFirstResponder:mKeyBcaster];
+	
 	[self setKeyCombo: [hotKey keyCombo]];
-
-	resultCode = [self runModal];
+	[self setKeyBindingName: [hotKey name]];
 	
-	if( resultCode == NSOKButton )
-	{
-		[hotKey setKeyCombo: [self keyCombo]];
-		[[PTHotKeyCenter sharedCenter] registerHotKey: hotKey];
-	}
+	currentModalDelegate = [target retain];
+	[hotKey retain];
+
+	[NSApp beginSheet:[self window] modalForWindow:mainWindow modalDelegate:self 
+	   didEndSelector:@selector(chooseHotKeyDidEnd:returnCode:contextInfo:) contextInfo:hotKey];
 }
 
-#pragma mark -
-
-- (void)_sheetDidEnd:(NSWindow *)sheet returnCode:(int)returnCode contextInfo:(void *)contextInfo
-{
-	id delegate = (id)contextInfo;
-	
-	[sheet orderOut: nil];
-	[self close];
-	
-	if( delegate )
-	{
-		NSNumber* returnObj = [NSNumber numberWithInt: returnCode];
-		[delegate performSelector: @selector( hotKeySheetDidEndWithReturnCode: ) withObject: returnObj];
-		[delegate release];
+- (void)runModalForHotKey: (PTHotKey*)hotKey {
+	NSInteger resultCode;
+    
+    [self setKeyCombo: [hotKey keyCombo]];
+	[self setKeyBindingName: [hotKey name]];
+     
+    resultCode = [NSApp runModalForWindow: [self window]];
+	[[self window] orderOut:self];
+    
+	if (resultCode == NSOKButton) {
+        [hotKey setKeyCombo: [self keyCombo]];
+		[[PTHotKeyCenter sharedCenter] updateHotKey: hotKey];
 	}
-}
-
-- (void)runSheeetForModalWindow: (NSWindow*)wind target: (id)obj
-{
-	[[self window] center]; //Force us to load
-	[self _refreshContents];
-		
-	[[NSApplication sharedApplication] beginSheet: [self window]
-										modalForWindow: wind
-										modalDelegate: self
-										didEndSelector: @selector(_sheetDidEnd:returnCode:contextInfo:)
-										contextInfo: [obj retain]];
 }
 
 #pragma mark -
 
 - (void)setKeyCombo: (PTKeyCombo*)combo
 {
-	[combo retain];
+    if (combo == nil)
+        combo = [PTKeyCombo clearKeyCombo];
+    else
+        [combo retain];
+    
 	[mKeyCombo release];
 	mKeyCombo = combo;
 	[self _refreshContents];
@@ -161,37 +145,31 @@ static id _sharedKeyComboPanel = nil;
 
 #pragma mark -
 
-- (IBAction)ok: (id)sender
-{
-	if( [[self window] isSheet] )
-		[[NSApplication sharedApplication] endSheet: [self window] returnCode: NSOKButton];
+- (IBAction)ok: (id)sender {
+	if ([[self window] isModalPanel])
+		[NSApp stopModalWithCode:NSOKButton];
 	else
-		[[NSApplication sharedApplication] stopModalWithCode: NSOKButton];
+		[NSApp endSheet:[self window] returnCode:NSOKButton];
+		
 }
 
-- (IBAction)cancel: (id)sender
-{
-	if( [[self window] isSheet] )
-		[[NSApplication sharedApplication] endSheet: [self window] returnCode: NSCancelButton];
+- (IBAction)cancel: (id)sender {
+	if ([[self window] isModalPanel])
+		[NSApp stopModalWithCode:NSCancelButton];
 	else
-		[[NSApplication sharedApplication] stopModalWithCode: NSCancelButton];
+		[NSApp endSheet:[self window] returnCode:NSCancelButton];
 }
 
 - (IBAction)clear: (id)sender
 {
-	[self setKeyCombo: [PTKeyCombo clearKeyCombo]];
-
-	if( [[self window] isSheet] )
-		[[NSApplication sharedApplication] endSheet: [self window] returnCode: NSOKButton];
-	else
-		[[NSApplication sharedApplication] stopModalWithCode: NSOKButton];
+    [self setKeyCombo: [PTKeyCombo clearKeyCombo]];
+	if ([[self window] isModalPanel])
+		[NSApp stopModalWithCode:NSOKButton];
 }
 
 - (void)noteKeyBroadcast: (NSNotification*)note
 {
-	PTKeyCombo* keyCombo;
-	
-	keyCombo = [[note userInfo] objectForKey: @"keyCombo"];
+	PTKeyCombo* keyCombo = [[note userInfo] objectForKey: @"keyCombo"];
 
 	[self setKeyCombo: keyCombo];
 }

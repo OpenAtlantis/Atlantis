@@ -16,7 +16,7 @@ NSString* PTKeyBroadcasterKeyEvent = @"PTKeyBroadcasterKeyEvent";
 
 - (void)_bcastKeyCode: (short)keyCode modifiers: (long)modifiers
 {
-	PTKeyCombo* keyCombo = [PTKeyCombo keyComboWithKeyCode: keyCode modifiers: modifiers];
+	PTKeyCombo* keyCombo = [PTKeyCombo keyComboWithKeyCode: keyCode modifiers: (int)modifiers];
 	NSDictionary* userInfo = [NSDictionary dictionaryWithObject: keyCombo forKey:@"keyCombo"];
 
 	[[NSNotificationCenter defaultCenter]
@@ -35,6 +35,10 @@ NSString* PTKeyBroadcasterKeyEvent = @"PTKeyBroadcasterKeyEvent";
 	modifiers = [[self class] cocoaModifiersAsCarbonModifiers: modifiers];
 
 	[self _bcastKeyCode: keyCode modifiers: modifiers];
+}
+
+- (BOOL)resignFirstResponder {
+	return NO;
 }
 
 - (void)keyDown: (NSEvent*)event

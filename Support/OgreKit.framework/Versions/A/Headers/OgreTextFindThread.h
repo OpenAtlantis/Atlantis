@@ -3,8 +3,8 @@
  * Project: OgreKit
  *
  * Creation Date: Sep 26 2003
- * Author: Isao Sonobe <sonoisa (AT) muse (DOT) ocn (DOT) ne (DOT) jp>
- * Copyright: Copyright (c) 2003 Isao Sonobe, All rights reserved.
+ * Author: Isao Sonobe <sonoisa@gmail.com>
+ * Copyright: Copyright (c) 2003-2018 Isao Sonobe, All rights reserved.
  * License: OgreKit License
  *
  * Encoding: UTF8
@@ -15,31 +15,13 @@
 #import <OgreKit/OGRegularExpression.h>
 #import <OgreKit/OGReplaceExpression.h>
 //#import <OgreKit/OgreTextFinder.h>
+#import <OgreKit/OgreTextFindProgressSheet.h>
 #import <OgreKit/OgreTextFindResult.h>
 #import <OgreKit/OgreTextFindComponent.h>
 #import <OgreKit/OgreTextFindLeaf.h>
 #import <OgreKit/OgreTextFindBranch.h>
+#import <OgreKit/OgreTextFindProgressDelegate.h>
 
-
-@protocol OgreTextFindProgressDelegate 
-// show progress
-- (void)setProgress:(double)progression message:(NSString*)message; // progression < 0: indeterminate
-- (void)setDonePerTotalMessage:(NSString*)message;
-// finish
-- (void)done:(double)progression message:(NSString*)message; // progression < 0: indeterminate
-
-// close
-- (void)close:(id)sender;
-- (void)setReleaseWhenOKButtonClicked:(BOOL)shouldRelease;
-
-// cancel
-- (void)setCancelSelector:(SEL)aSelector toTarget:(id)aTarget withObject:(id)anObject;
-
-// show error alert
-- (void)showErrorAlert:(NSString*)title message:(NSString*)errorMessage;
-@end
-
-#import <OgreKit/OgreTextFindProgressSheet.h>
 
 @class OgreTextFindRoot;
 
@@ -57,7 +39,7 @@
 	OGRegularExpression *_regex;			// regular expression
 	OGReplaceExpression *_repex;			// replace expression
 	NSColor				*_highlightColor;	// highlight color
-	unsigned			_searchOptions;		// search option
+	OnigOptionType		_searchOptions;		// search option
 	BOOL				_inSelection;		// find scope
 	BOOL				_asynchronous;		// synchronous or asynchronous 
 	SEL					_didEndSelector;	// selector for sending a finish message
@@ -72,7 +54,7 @@
 	BOOL				_exceptionRaised;
 	unsigned			_numberOfMatches;	// number of matches
 	OgreTextFindResult	*_textFindResult;	// result
-	int					_numberOfDoneLeaves,
+	NSInteger			_numberOfDoneLeaves,
 						_numberOfTotalLeaves;
 	
 	NSDate				*_processTime;		// process time

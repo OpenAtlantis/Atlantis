@@ -57,7 +57,8 @@
         _rdSoundFilename = [[coder decodeObjectForKey:@"action.sound"] retain];
         
         if (_rdSoundFilename) {
-            _rdSound = [[NSMovie alloc] initWithURL:[NSURL fileURLWithPath:_rdSoundFilename] byReference:YES];
+            NSURL *fileURL = [NSURL fileURLWithPath:_rdSoundFilename];
+            _rdSound = [[AVAudioPlayer alloc] initWithContentsOfURL:fileURL error:nil];
         }
     }
     return self;
@@ -73,12 +74,12 @@
 - (BOOL) executeForState:(AtlantisState *) state
 {
     if (!_rdSound && _rdSoundFilename) {
-        _rdSound = [[NSMovie alloc] initWithURL:[NSURL fileURLWithPath:_rdSoundFilename] byReference:YES];
+        NSURL *fileURL = [NSURL fileURLWithPath:_rdSoundFilename];
+        _rdSound = [[AVAudioPlayer alloc] initWithContentsOfURL:fileURL error:nil];
     }
 
-    if (_rdSound && (IsMovieDone([_rdSound QTMovie]) || !GetMovieActive([_rdSound QTMovie]))) {
-        GoToBeginningOfMovie([_rdSound QTMovie]);
-        StartMovie([_rdSound QTMovie]);
+    if (_rdSound && !_rdSound.playing) {
+        [_rdSound play];
     }
 
     return NO;

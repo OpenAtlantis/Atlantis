@@ -2,49 +2,58 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>102</key>
+	<dict>
+		<key>versionString</key>
+		<string>0.9.9.6</string>
+		<key>newFeatures</key>
+		<array>
+			<string>GENERAL: Convert Atlantis to 64-bit. This meant losing the Lua and Perl support entirely. :(</string>
+		</array>
+	</dict>
 	<key>101</key>
 	<dict>
 		<key>newFeatures</key>
 		<array>
-		    <string>LOGS: Fix for issue under Sierra and later where closing a log when multiple are open would cause a crash.</string>
-		    <string>GENERAL: Fix for issue under Sierra and later where hotkey combinations wouldn't show in the Hotkeys panel of preferences.</string>
-        </array>
+			<string>LOGS: Fix for issue under Sierra and later where closing a log when multiple are open would cause a crash.</string>
+			<string>GENERAL: Fix for issue under Sierra and later where hotkey combinations wouldn&apos;t show in the Hotkeys panel of preferences.</string>
+		</array>
 		<key>versionString</key>
 		<string>0.9.9.5</string>
-    </dict>
+	</dict>
 	<key>100</key>
 	<dict>
 		<key>newFeatures</key>
 		<array>
-		    <string>*** This has one significant bugfix, and as such will still work on Panther and Tiger. ***</string>
-		    <string>GENERAL: There was a second string input lockup bug, where a server that sent Latin1-encoded text when UTF8 had been negotiated would cause the input stream to lock up.  Now, if a data blob is unparseable, Atlantis will try to use a previous encoding to generate a string.  This primarily affected certain MUX2 setups.</string>
-        </array>
+			<string>*** This has one significant bugfix, and as such will still work on Panther and Tiger. ***</string>
+			<string>GENERAL: There was a second string input lockup bug, where a server that sent Latin1-encoded text when UTF8 had been negotiated would cause the input stream to lock up.  Now, if a data blob is unparseable, Atlantis will try to use a previous encoding to generate a string.  This primarily affected certain MUX2 setups.</string>
+		</array>
 		<key>versionString</key>
 		<string>0.9.9.4</string>
-    </dict>
+	</dict>
 	<key>99</key>
 	<dict>
 		<key>newFeatures</key>
 		<array>
-		    <string>*** This has several small bugfixes, and as such will still work on Panther and Tiger. ***</string>
-            <string>GENERAL: URL detection now respects Unicode directional quotes as delimiters as well.  No more missing URLs because you're on MUX2!</string>
-            <string>GENERAL: Tweaks to handle a strange encoding situation that could lock up a connection.  (If this still happens, PLEASE give me more info.  I couldn't reproduce the reported issue, so this was a blind fix.)</string>
-            <string>GENERAL: Unicode ellipsis characters will be converted to three individual periods, to avoid issues with MUX2 servers and Lion's automatic text filling.</string>
-            <string>PERL: For those who Perl still causes Atlantis to fail to load, you can set a special option to disable it.  From the command line, type: defaults write net.riverdark.atlantis disablePerl -bool YES</string>
-        </array>
+			<string>*** This has several small bugfixes, and as such will still work on Panther and Tiger. ***</string>
+			<string>GENERAL: URL detection now respects Unicode directional quotes as delimiters as well.  No more missing URLs because you&apos;re on MUX2!</string>
+			<string>GENERAL: Tweaks to handle a strange encoding situation that could lock up a connection.  (If this still happens, PLEASE give me more info.  I couldn&apos;t reproduce the reported issue, so this was a blind fix.)</string>
+			<string>GENERAL: Unicode ellipsis characters will be converted to three individual periods, to avoid issues with MUX2 servers and Lion&apos;s automatic text filling.</string>
+			<string>PERL: For those who Perl still causes Atlantis to fail to load, you can set a special option to disable it.  From the command line, type: defaults write net.riverdark.atlantis disablePerl -bool YES</string>
+		</array>
 		<key>versionString</key>
 		<string>0.9.9.3</string>
-    </dict>
+	</dict>
 	<key>98</key>
 	<dict>
 		<key>newFeatures</key>
 		<array>
-		    <string>*** IMPORTANT *** Unless there are critical bugs to be fixed, this will be the final version of Atlantis 0.9!  After this, I am finally taking it out of beta and going to 1.0.  YAY!  However, this will also entail end of support for Panther and Tiger, to be able to roll out features that have been stuck in stasis due to having to support really old operating systems.  For more information, please visit the Atlantis forums.</string>
-		    <string>PERL: If Perl cannot be initialized on a system, Atlantis will disable Perl scripting instead of crashing. (In other words, 0.9 will not explode under Lion, even if Perl doesn't work there.)</string>
-		    <string>WORLD: Added linefeed option to formatting tab, to change to CRLF for games that require it.</string>
-		    <string>GENERAL: Extraneous network debug logging removed.  Oops.</string>
-		    <string>GENERAL: Added /logs command, shows what logs are currently open for that world.</string>
-		    <string>GENERAL: Atlantis will now cycle through multiple terminal types, for servers that support detection of 256-color support in that fashion.</string>
+			<string>*** IMPORTANT *** Unless there are critical bugs to be fixed, this will be the final version of Atlantis 0.9!  After this, I am finally taking it out of beta and going to 1.0.  YAY!  However, this will also entail end of support for Panther and Tiger, to be able to roll out features that have been stuck in stasis due to having to support really old operating systems.  For more information, please visit the Atlantis forums.</string>
+			<string>PERL: If Perl cannot be initialized on a system, Atlantis will disable Perl scripting instead of crashing. (In other words, 0.9 will not explode under Lion, even if Perl doesn&apos;t work there.)</string>
+			<string>WORLD: Added linefeed option to formatting tab, to change to CRLF for games that require it.</string>
+			<string>GENERAL: Extraneous network debug logging removed.  Oops.</string>
+			<string>GENERAL: Added /logs command, shows what logs are currently open for that world.</string>
+			<string>GENERAL: Atlantis will now cycle through multiple terminal types, for servers that support detection of 256-color support in that fashion.</string>
 		</array>
 		<key>versionString</key>
 		<string>0.9.9.2</string>
@@ -54,8 +63,8 @@
 		<key>newFeatures</key>
 		<array>
 			<string>GENERAL: Tweak to new ANSI engine, to handle intense no-attribute text as white.</string>
-			<string>NETWORK: Fixed a 'decompression failed' issue when using MCCP with the new network layer. (Thanks for reporting, dak)</string>
-			<string>PERL: Tweaks to the Perl library, to hopefully provide more useful data if the library can't be initialized.</string>
+			<string>NETWORK: Fixed a &apos;decompression failed&apos; issue when using MCCP with the new network layer. (Thanks for reporting, dak)</string>
+			<string>PERL: Tweaks to the Perl library, to hopefully provide more useful data if the library can&apos;t be initialized.</string>
 		</array>
 		<key>versionString</key>
 		<string>0.9.9.1</string>
@@ -76,7 +85,7 @@
 		<key>newFeatures</key>
 		<array>
 			<string>GENERAL: Perl *REALLY* works on Snow Leopard now.  Sigh.</string>
-			<string>GENERAL: All worlds show up as submenu of 'Worlds' now.</string>
+			<string>GENERAL: All worlds show up as submenu of &apos;Worlds&apos; now.</string>
 			<string>GENERAL: Spawns always focus their input area when selected now.</string>
 		</array>
 		<key>versionString</key>
@@ -92,7 +101,7 @@
 			<string>GENERAL: TinyURL no longer strips off hashes.</string>
 			<string>GENERAL: Address Book drop-down can optionally connect a world twice.</string>
 			<string>SCRIPT: Delete All Scrollback now takes an optional spawn.</string>
-			<string>SCRIPT: New 'On world open' and 'On world close' events.</string>
+			<string>SCRIPT: New &apos;On world open&apos; and &apos;On world close&apos; events.</string>
 			<string>UNICODE: Added support for IceCrew MCP charset negotiation, for MOO servers that support such.</string>
 		</array>
 		<key>versionString</key>
@@ -106,7 +115,7 @@
 			<string>GENERAL: Traffic light view spaces properly under Tiger again.</string>
 			<string>GENERAL: Atlantis no longer crashes on start on Panther. (See below.)</string>
 			<string>PERL: Works on Panther again.  THAT WAS PAINFUL.  *cries*</string>
-			<string>SCRIPT: Addition of AML color and bg tags, which take a six-character HTML hex color, or '-1' to reset to using the current colors from the world.</string>
+			<string>SCRIPT: Addition of AML color and bg tags, which take a six-character HTML hex color, or &apos;-1&apos; to reset to using the current colors from the world.</string>
 		</array>
 		<key>versionString</key>
 		<string>0.9.8.7</string>
@@ -131,7 +140,7 @@
 			<string>SCRIPT: RegisterTimer will delay the given number of seconds instead of immediately firing then delaying before repeat.</string>
 			<string>SCRIPT: New SetLineSpawn(spawn,copy) function in Perl and Lua, lets you set an additional output spawn for a line, or move entirely.</string>
 			<string>SCRIPT: Added SetSpawnPrefix(spawn,prefix) function in Perl and Lua to change the prefix of a given spawn.</string>
-			<string>PERL: SetStatusbarText now will accept empty string as target for 'current spawn'.</string>
+			<string>PERL: SetStatusbarText now will accept empty string as target for &apos;current spawn&apos;.</string>
 			<string>PERL: Modulename::initialize_module() called for each loaded module (if the function exists) once all modules are loaded.</string>
 			<string>PERL: CamelBones upgraded to 1.1.0, should work on Leopard PowerPC and be solid/stable again!</string>
 		</array>
@@ -143,16 +152,16 @@
 		<key>newFeatures</key>
 		<array>
 			<string>GENERAL: Support for Leopard (Mac OS X 10.5).</string>
-			<string>GENERAL: Reworked how address book commits work, should make changes 'stick' better.</string>
-			<string>GENERAL: TinyURL shrinkage does not 'absorb' surrounding text.</string>
+			<string>GENERAL: Reworked how address book commits work, should make changes &apos;stick&apos; better.</string>
+			<string>GENERAL: TinyURL shrinkage does not &apos;absorb&apos; surrounding text.</string>
 			<string>GENERAL: Upgraded OgreKit and Oniguruma to latest versions.</string>
 			<string>GENERAL: Text system revamped, again.</string>
 			<string>SCRIPT: Event system Growl action click-context works properly across events.</string>
 			<string>SCRIPT: Worldtemp variables are preserved across world config refreshes.</string>
 			<string>PERL: Perl engine rewritten to try and speed things up.</string>
-			<string>PERL: Added 'RegisterPattern()' function, to handle line events in a more efficient manner.</string>
+			<string>PERL: Added &apos;RegisterPattern()&apos; function, to handle line events in a more efficient manner.</string>
 			<string>LUA: Atlantis scripts can now be written in Lua, as well.</string>
-			<string>WORLD: Timestamps will not 'bleed' the background color.</string>
+			<string>WORLD: Timestamps will not &apos;bleed&apos; the background color.</string>
 			<string>WORLD: Rewrote the ANSI engine entirely, hopefully a great deal more efficient.</string>
 			<string>WORLD: MUD prompts are handled more gracefully now.</string>
 			<string>WORLD: Repeated commands will no longer add repeats to command history.</string>
@@ -180,7 +189,7 @@
 		<array>
 			<string>UI: Tabs do not overflow out of the window into a menu.</string>
 			<string>MCP: Escaping bug in MCP local-edit mode for MOOcode.</string>
-			<string>SCRIPT: Fixed bug with logging plaintext from an 'Open Specific Logfile' action.</string>
+			<string>SCRIPT: Fixed bug with logging plaintext from an &apos;Open Specific Logfile&apos; action.</string>
 			<string>PERL: Status bar text can be formatted with AML.</string>
 			<string>GENERAL: Ripped SystemVersionCheck tool back out to avoid conflicts.</string>
 		</array>
@@ -206,16 +215,16 @@
 			<string>GENERAL: When computer is shutting down or restarting, Atlantis does not prompt before quitting (but will still execute all disconnect scripts).</string>
 			<string>GENERAL: Major reworking internally for timer functionality.</string>
 			<string>UI: MAJOR revisions and cleanup of UI.  (UI refresh is not wholly done, but many changes have happened.)</string>
-			<string>UI: New 'source list' display style option for Lemuria windows.</string>
+			<string>UI: New &apos;source list&apos; display style option for Lemuria windows.</string>
 			<string>UI: Complete reworking of tabbed display style.</string>
 			<string>UI: Script-modifiable status bar added to spawns.</string>
-			<string>UI: New 'Connection' toolbar item, changes between connect/disconnect depending on state.</string>
+			<string>UI: New &apos;Connection&apos; toolbar item, changes between connect/disconnect depending on state.</string>
 			<string>LEMURIA: General Lemuria cleanups.</string>
 			<string>WORLD: Spawns are available globally.</string>
 			<string>WORLD: Simple per-world scratchpad added.</string>
 			<string>WORLD: Fixed slash-escaping logic.</string>
 			<string>WORLD: New command to send text to world after a delay: /wait &lt;seconds&gt; &lt;text&gt;</string>
-			<string>WORLD: Special 'Rhost' checkbox for Rhost ANSI functionality</string>
+			<string>WORLD: Special &apos;Rhost&apos; checkbox for Rhost ANSI functionality</string>
 			<string>WORLD: Ability to set MUSH grab password on a per-world basis.</string>
 			<string>LOGS: HTML logs now properly inherit the world display font and size when writing the HTML out.</string>
 			<string>LOGS: Logs should now log backscroll properly when the spawn has timestamps.</string>
@@ -234,26 +243,26 @@
 	<dict>
 		<key>newFeatures</key>
 		<array>
-			<string>WORLD: Fixed problem with 'infinite' scrollback no longer sticking on MUD worlds.</string>
+			<string>WORLD: Fixed problem with &apos;infinite&apos; scrollback no longer sticking on MUD worlds.</string>
 			<string>WORLD: Events can be reordered.</string>
 			<string>WORLD: Event conditions/actions can be reordered.</string>
 			<string>GENERAL: Atlantis can be told not to warn when doing a lossy conversion of input text to another codepage.</string>
-			<string>GENERAL: Added 'Shrink URL' option to right-click context menu of Atlantis input window if you have a URL highlighted.  This action will go generate a TinyURL for the selected URL, and replace the original URL in the input window with the new TinyURL equivalent.  Useful for pasting large stuff onto a channel or whatever, though it will (briefly) lag Atlantis.</string>
+			<string>GENERAL: Added &apos;Shrink URL&apos; option to right-click context menu of Atlantis input window if you have a URL highlighted.  This action will go generate a TinyURL for the selected URL, and replace the original URL in the input window with the new TinyURL equivalent.  Useful for pasting large stuff onto a channel or whatever, though it will (briefly) lag Atlantis.</string>
 			<string>GENERAL: Control-Tab will now automatically move focus through the spawns in a window.</string>
 			<string>GENERAL: General keyboard-handling system tweaks.</string>
 			<string>GENERAL: Rewrite of event system, to hopefully improve performance.</string>
 			<string>GENERAL: Found and squished a hidden memory leak, responsible for Atlantis bloating over long runs.</string>
-			<string>GENERAL: 'Clear All Scrollback' now works properly.</string>
+			<string>GENERAL: &apos;Clear All Scrollback&apos; now works properly.</string>
 			<string>LEMURIA: Improved tooltip/timestamp logic.</string>
 			<string>LEMURIA: General performance improvements.</string>
 			<string>LOG: Logging scrollback of a single spawn now works properly.</string>
 			<string>LOG: Formatted Text logs now account for timestamps when wordwrapping.</string>
-			<string>SCRIPT: Added 'gag' AML tag, with 'log' and 'screen' options.</string>
-			<string>SCRIPT: Added new statechange type 'charlogin' for right after login/password has been sent, and a 'World: Character has just been logged in' event system condition.  (Perl can register for this with a RegisterTrigger on 'statechange' and checking 'event.statechange' to see if it is 'charlogin'.)</string>
+			<string>SCRIPT: Added &apos;gag&apos; AML tag, with &apos;log&apos; and &apos;screen&apos; options.</string>
+			<string>SCRIPT: Added new statechange type &apos;charlogin&apos; for right after login/password has been sent, and a &apos;World: Character has just been logged in&apos; event system condition.  (Perl can register for this with a RegisterTrigger on &apos;statechange&apos; and checking &apos;event.statechange&apos; to see if it is &apos;charlogin&apos;.)</string>
 			<string>SCRIPT: Spawn text commands will no longer explode when a zero-length string is passed.</string>
 			<string>SCRIPT: Passing a nonexistent spawn as a target will now create the spawn.</string>
 			<string>SCRIPT: Fixed a potential crash issue if a regexp string match condition had a malformed regexp pattern.</string>
-			<string>SCRIPT: Fixed an error in 'String Is'-type string-matching patterns.</string>
+			<string>SCRIPT: Fixed an error in &apos;String Is&apos;-type string-matching patterns.</string>
 			<string>PERL: Rapid-fire Perl bindings should no longer leave state data sitting around, unfreed.</string>
 			<string>PERL: Added thread-safety wrapper around Perl engine.</string>
 			<string>PERL: Cleaned up function-calling.</string>
@@ -277,7 +286,7 @@
 	<dict>
 		<key>newFeatures</key>
 		<array>
-			<string>NETWORK: Following TinyFugue's lead, if we get certain unlikely Telnet sequence combinations, we ignore them.</string>
+			<string>NETWORK: Following TinyFugue&apos;s lead, if we get certain unlikely Telnet sequence combinations, we ignore them.</string>
 			<string>NETWORK: Properly escape IAC on outgoing network, for multibyte-charset games that support telnet.</string>
 		</array>
 		<key>versionString</key>
@@ -287,10 +296,10 @@
 	<dict>
 		<key>newFeatures</key>
 		<array>
-			<string>GENERAL: Fixed 'Formatting' tab text quirk.</string>
-			<string>GENERAL: Improved 'log scrollback' performance.</string>
-			<string>GENERAL: General performance improvements on processing of each line. Should fix the slowdown introduced by 0.9.7.3's Perl hooks.</string>
-			<string>GENERAL: Logging scrollback now produces a progress-bar sheet, with a 'cancel' button, for long scrollbacks.</string>
+			<string>GENERAL: Fixed &apos;Formatting&apos; tab text quirk.</string>
+			<string>GENERAL: Improved &apos;log scrollback&apos; performance.</string>
+			<string>GENERAL: General performance improvements on processing of each line. Should fix the slowdown introduced by 0.9.7.3&apos;s Perl hooks.</string>
+			<string>GENERAL: Logging scrollback now produces a progress-bar sheet, with a &apos;cancel&apos; button, for long scrollbacks.</string>
 			<string>GENERAL: Improved use of space() in output from MUSH Text Editor.</string>
 			<string>GENERAL: Ensure close Address Book with hotkey commits all changes immediately.</string>
 			<string>WORLD: Worlds of type MUD now default to a length-limited scrollback.</string>
@@ -310,19 +319,19 @@
 			<string>GENERAL: Customizable local echo prefixes.</string>
 			<string>GENERAL: General toolbar engine improvements.</string>
 			<string>GENERAL: Font metrics improvements.</string>
-			<string>GENERAL: Added 'ruler' tool to the MUSH Text Editor, showing columns.</string>
+			<string>GENERAL: Added &apos;ruler&apos; tool to the MUSH Text Editor, showing columns.</string>
 			<string>GENERAL: Text-selection background color can be set in the world preferences.</string>
 			<string>GENERAL: Lots of internal code-cleanup in preparation for the hardcode plugin API.</string>
 			<string>GENERAL: Improved first-run defaults.</string>
 			<string>GENERAL: Improved character set negotiation logic.</string>
-			<string>GENERAL: Fix for 'spawn lost bold' quirk.</string>
+			<string>GENERAL: Fix for &apos;spawn lost bold&apos; quirk.</string>
 			<string>WORLD: Correct support for MUDs that use only VT100 and never send colors.</string>
 			<string>WORLD: Support for 16-color (simultaneous intense foreground and background) ANSI, on games which support it.</string>
 			<string>WORLD: Vastly improved handling of MUD line endings.</string>
-			<string>SCRIPT: Added 'Remove all Scrollback from Spawn' action to event system.</string>
+			<string>SCRIPT: Added &apos;Remove all Scrollback from Spawn&apos; action to event system.</string>
 			<string>SCRIPT: Added Atlantis::ReplaceEventLine(amlstring) Perl function, allowing Perl scripts to directly alter text from a world before it is highlighted and displayed.</string>
-			<string>SCRIPT: Added AML 'tooltip' tag, letting Perl scripts add tooltips to Atlantis text output.</string>
-			<string>SCRIPT: Added AML 'class' tag, letting Perl scripts set the line-class of a line of text output.</string>
+			<string>SCRIPT: Added AML &apos;tooltip&apos; tag, letting Perl scripts add tooltips to Atlantis text output.</string>
+			<string>SCRIPT: Added AML &apos;class&apos; tag, letting Perl scripts set the line-class of a line of text output.</string>
 			<string>LEMURIA: Fixed mouseover quirk with always-on-top windows overlapping Atlantis.</string>
 			<string>LEMURIA: Improved mouseover logic for dynamic windows in general.</string>
 			<string>LEMURIA: Improved ChainedListView (event editor) performance.</string>
@@ -338,7 +347,7 @@
 			<string>SCRIPT: Added requested Atlantis::Speak(text) function.</string>
 			<string>SCRIPT: Added requested Atlantis::PlaySound(soundfile) function.</string>
 			<string>SCRIPT: Fix for hardcoded commands to co-exist nicely with Perl-scripted commands.  (Fixes /sc, /grab and /gname commands.)</string>
-			<string>SCRIPT: Added 'command.fulltext' variable, returns entire command parameters as entered (not just command.data portion).</string>
+			<string>SCRIPT: Added &apos;command.fulltext&apos; variable, returns entire command parameters as entered (not just command.data portion).</string>
 		</array>
 		<key>versionString</key>
 		<string>0.9.7.2</string>
@@ -369,20 +378,20 @@
 			<string>GENERAL: Help menu item now opens Atlantis wiki.</string>
 			<string>GENERAL: Dock badges now look like Mail, iPhoto and suchnot.</string>
 			<string>GENERAL: Dock badge can be disabled when Atlantis is hidden.</string>
-			<string>GENERAL: Got rid of 'MUSH' menu, moved to a submenu of Edit.</string>
+			<string>GENERAL: Got rid of &apos;MUSH&apos; menu, moved to a submenu of Edit.</string>
 			<string>GENERAL: Any clickable-link URLs now actually properly show a pointy-hand cursor.  Yay!</string>
-			<string>GENERAL: /ul and /quote no longer explode if you don't provide a filename.</string>
-			<string>GENERAL: Ability to create 'shortcut' files, which when clicked will open/connect a given world, starting Atlantis if necessary.</string>
+			<string>GENERAL: /ul and /quote no longer explode if you don&apos;t provide a filename.</string>
+			<string>GENERAL: Ability to create &apos;shortcut&apos; files, which when clicked will open/connect a given world, starting Atlantis if necessary.</string>
 			<string>GENERAL: Import for new .axworld XML file format.  (No export yet, first step of a larger planned feature.)</string>
-			<string>GENERAL: Can now set 'default text color' independent of ANSI colors.</string>
+			<string>GENERAL: Can now set &apos;default text color&apos; independent of ANSI colors.</string>
 			<string>NETWORK: Changed input/output layer to support multibyte/Unicode languages.  This adds support for multibyte character set games in Korean, Chinese, Japanese and so on.</string>
 			<string>NETWORK: Added ability to set the default encoding/codepage for a game.</string>
 			<string>NETWORK: Added support for Telnet codepage/charset negotiation, using RFC2066.  (If the server asks Atlantis to use a codepage, it will drop the user-set one in favor of the server-requested one.)</string>
 			<string>NETWORK: Modified MUD-style login slightly, to properly support CoffeeMUD servers as well as others. (I hope!)</string>
 			<string>NETWORK: Fixed NAWS logic so window size is properly negotiated at login.</string>
-			<string>NETWORK: Improved 'keepalive' system for users behind NAT.</string>
+			<string>NETWORK: Improved &apos;keepalive&apos; system for users behind NAT.</string>
 			<string>NETWORK: Added support for bell character, with different possible behaviors.</string>
-			<string>SCRIPT: WARNING, SCRIPTERS!  THIS IS A MAJOR SCRIPT ENGINE OVERHAUL.  There may be some quirks I haven't caught.</string>
+			<string>SCRIPT: WARNING, SCRIPTERS!  THIS IS A MAJOR SCRIPT ENGINE OVERHAUL.  There may be some quirks I haven&apos;t caught.</string>
 			<string>SCRIPT: Scripts can register triggers, aliases and hotkeys.</string>
 			<string>SCRIPT: Simple Atlantis markup.  Perl can now display colored/underlined/link-enabled lines, and can get at an AML representation of all the world-sent strings.</string>
 			<string>SCRIPT: Added worldtemp.* variable class, just like temp.* except per-world.  Worldtemp variables are NOT saved across runs.</string>
@@ -393,7 +402,7 @@
 			<string>SCRIPT: Spaces in alias names are properly converted to underscores.</string>
 			<string>SCRIPT: Invalid regexps are now ignored, rather than causing an exception.</string>
 			<string>SCRIPT: Scripts can add actual HTML, including images, to a spawn.  (NOT WELL TESTED, USE AT YOUR OWN RISK!  Does not work properly with HTML logging yet, either.  This will be fleshed out in 0.9.8)</string>
-			<string>LOGS: Added 'Include timestamps' option to all logfile formats.</string>
+			<string>LOGS: Added &apos;Include timestamps&apos; option to all logfile formats.</string>
 		</array>
 		<key>versionString</key>
 		<string>0.9.7</string>
@@ -428,8 +437,8 @@
 			<string>Fixed a doubled linefeed issue on some MUDs.</string>
 			<string>Sped up text engine somewhat.</string>
 			<string>Major fixes and improvements to MCCP support.</string>
-			<string>Got rid of annoying 'MCCP Compression Enabled' message, since the toolbar status display shows that now.</string>
-			<string>Fixed issue with single-character commands when 'No Slashies' mode was enabled.</string>
+			<string>Got rid of annoying &apos;MCCP Compression Enabled&apos; message, since the toolbar status display shows that now.</string>
+			<string>Fixed issue with single-character commands when &apos;No Slashies&apos; mode was enabled.</string>
 			<string>Improved indent calculation for fonts with odd metrics.</string>
 			<string>Fixed up crash bug in Perl script initialization.</string>
 			<string>Fix to a corner-case crash bug in the URL parser.</string>
@@ -463,16 +472,16 @@
 			<string>Improvements to MUSH ANSI Text Editor output.</string>
 			<string>Changed Command+Control+Number shortcuts to be just Command+Number.</string>
 			<string>Rewrote font size calculation (for cols X rows tooltip and NAWS).</string>
-			<string>Added 'Log Scrollback' option to Open Specific Logfile action.</string>
-			<string>Added 'Substitution' action to replace a regexp register from the last matched regexp.</string>
-			<string>Added 'Info' tab to worlds, to store a website and a game description.</string>
-			<string>Added new 'World Status' toolbar option.</string>
+			<string>Added &apos;Log Scrollback&apos; option to Open Specific Logfile action.</string>
+			<string>Added &apos;Substitution&apos; action to replace a regexp register from the last matched regexp.</string>
+			<string>Added &apos;Info&apos; tab to worlds, to store a website and a game description.</string>
+			<string>Added new &apos;World Status&apos; toolbar option.</string>
 			<string>Support for legacy MCP 1.0-style local editing.</string>
 			<string>MCP: Support for MCP 2.1 entirely.</string>
 			<string>MCP: mcp-negotiate package implemented, to negotiate feature support.</string>
 			<string>MCP: SimpleEdit MCP package implemented, to support local editing (like @mcpedit on MUCK).</string>
 			<string>Added /gname command, like /grab but for grabbing names of objects/exits/rooms.</string>
-			<string>Added 'No Slashies' option, to not require leading / on aliases.</string>
+			<string>Added &apos;No Slashies&apos; option, to not require leading / on aliases.</string>
 		</array>
 		<key>versionString</key>
 		<string>0.9.4</string>
@@ -482,14 +491,14 @@
 		<key>newFeatures</key>
 		<array>
 			<string>Another attempt at fixing the Panther crash issue. *sigh*</string>
-			<string>Fixed a 'log scrollback' bug in plain (unformatted) text logs.</string>
+			<string>Fixed a &apos;log scrollback&apos; bug in plain (unformatted) text logs.</string>
 			<string>Made input window colors match output window.</string>
 			<string>Made highlight editor commit changes on connected worlds more intuitively.</string>
 			<string>Fixed a regexp event bug that could cause regexp events to be eaten.</string>
 			<string>Fixed up some formatting bugs.</string>
-			<string>Fixed the 'lost spawn' bug.</string>
-			<string>Added 'Clear Screen' event action.</string>
-			<string>Added 'Beep' (or screen flash) action.</string>
+			<string>Fixed the &apos;lost spawn&apos; bug.</string>
+			<string>Added &apos;Clear Screen&apos; event action.</string>
+			<string>Added &apos;Beep&apos; (or screen flash) action.</string>
 			<string>Added /qc (quick connect) command.</string>
 			<string>Cursor now more intelligently picks its color on Tiger.</string>
 		</array>
@@ -500,7 +509,7 @@
 	<dict>
 		<key>newFeatures</key>
 		<array>
-			<string>Fixed 'Log Scrollback' bug.</string>
+			<string>Fixed &apos;Log Scrollback&apos; bug.</string>
 			<string>Tweaked autoscroll behavior to work better.</string>
 			<string>FINALLY, confirmably, nailed the sporadic Panther crash bug.</string>
 			<string>Fixed Telnet state bug in conjunction with odd MCCP init.</string>
@@ -536,7 +545,7 @@
 			<string>Fixed a crash issue under Panther.</string>
 			<string>Fixed cursor issues.</string>
 			<string>Fixed a formatting bug in MUSH Text Editor.</string>
-			<string>Added 'Toggle Drag and Drop' event action.</string>
+			<string>Added &apos;Toggle Drag and Drop&apos; event action.</string>
 		</array>
 		<key>versionString</key>
 		<string>0.9.1</string>
@@ -545,20 +554,20 @@
 	<dict>
 		<key>newFeatures</key>
 		<array>
-			<string>Minor tweaks to improve 'Disable ANSI' mode in the MUSH Text Editor.</string>
+			<string>Minor tweaks to improve &apos;Disable ANSI&apos; mode in the MUSH Text Editor.</string>
 			<string>Fixed breakage in user toolbar events.  Oops!</string>
-			<string>Fixed 'Output Status to Spawn' event to work right in all conditions.</string>
-			<string>Rewrote Quicktime media playback code for 'Play Sound' events.</string>
-			<string>Added 'Speak Text' event action.</string>
+			<string>Fixed &apos;Output Status to Spawn&apos; event to work right in all conditions.</string>
+			<string>Rewrote Quicktime media playback code for &apos;Play Sound&apos; events.</string>
+			<string>Added &apos;Speak Text&apos; event action.</string>
 			<string>Cleaned up input handling, slightly.</string>
-			<string>Added 'Bold Font on ANSI Highlight' formatting option.</string>
-			<string>Added 'regexp.*' variable class for regexp capture registers in events.</string>
-			<string>Added 'event.highlighted' variable, set to 'yes' if a line has been affected by highlighting rules.</string>
+			<string>Added &apos;Bold Font on ANSI Highlight&apos; formatting option.</string>
+			<string>Added &apos;regexp.*&apos; variable class for regexp capture registers in events.</string>
+			<string>Added &apos;event.highlighted&apos; variable, set to &apos;yes&apos; if a line has been affected by highlighting rules.</string>
 			<string>Fixed world reconnect issue.</string>
 			<string>Fixed some autoscroll quirks.</string>
 			<string>Hotkey events can now bind to the number pad.</string>
 			<string>Fixed a spawn crash.</string>
-			<string>Fixed 'cannot remove exceptions' spawn bug.</string>
+			<string>Fixed &apos;cannot remove exceptions&apos; spawn bug.</string>
 			<string>Added support for self-signed certificates in SSL connections under Tiger.</string>
 			<string>Added /clear command.</string>
 		</array>
@@ -576,13 +585,13 @@
 			<string>Added formatting option to prepend timestamps to lines.</string>
 			<string>Added prefix option to spawn configuration.</string>
 			<string>Event system UI fixes.</string>
-			<string>Added 'Disable Telnet keepalive' option to world config.</string>
+			<string>Added &apos;Disable Telnet keepalive&apos; option to world config.</string>
 			<string>Fixed a highlight crash bug if you had one and only one highlight in a world.</string>
-			<string>Added a 'Logs' menu to the menubar.</string>
+			<string>Added a &apos;Logs&apos; menu to the menubar.</string>
 			<string>Added some new Event System conditions and actions.</string>
-			<string>Added 'Disable Color Entirely' mode to MUSH Text Editor.</string>
+			<string>Added &apos;Disable Color Entirely&apos; mode to MUSH Text Editor.</string>
 			<string>Cleaned up toolbar engine.</string>
-			<string>Added 'Upload File' panel, menu entry and event.</string>
+			<string>Added &apos;Upload File&apos; panel, menu entry and event.</string>
 		</array>
 		<key>versionString</key>
 		<string>0.8.9</string>
@@ -593,7 +602,7 @@
 		<array>
 			<string>Updates to credits and about window, readme file.</string>
 			<string>Minor network efficiency fixes.</string>
-			<string>Added a checkbox to enable/disable the 'drop connections when network is lost' functionality.</string>
+			<string>Added a checkbox to enable/disable the &apos;drop connections when network is lost&apos; functionality.</string>
 			<string>PUBLIC BETA!</string>
 		</array>
 		<key>versionString</key>
@@ -629,9 +638,9 @@
 			<string>A few behavioral changes for MUSH Text Editor to improve usability.</string>
 			<string>Perl scripting engine!  Perl modules are loaded from ~/Library/Atlantis/Scripts</string>
 			<string>First cut of Atlantis.pm Perl module.</string>
-			<string>'Execute Perl Code' event system action.</string>
+			<string>&apos;Execute Perl Code&apos; event system action.</string>
 			<string>Added temp.* variable class.</string>
-			<string>Added 'Set Temporary Variable' event action.</string>
+			<string>Added &apos;Set Temporary Variable&apos; event action.</string>
 		</array>
 		<key>versionString</key>
 		<string>0.8.7.6</string>
@@ -641,9 +650,9 @@
 		<key>newFeatures</key>
 		<array>
 			<string>Hotkey events are now enabled by default when created.</string>
-			<string>Network should be less 'chunky' in some ways.</string>
+			<string>Network should be less &apos;chunky&apos; in some ways.</string>
 			<string>Embedded CamelBones/Perl for building the Perl scripting engine.</string>
-			<string>Fixed missing 'Connection closed by remote host.' disconnect message and event trigger.</string>
+			<string>Fixed missing &apos;Connection closed by remote host.&apos; disconnect message and event trigger.</string>
 			<string>Fixed bug when you closed the last item in a Tabbed-style Lemuria window.</string>
 			<string>Minor ChainedListView (event system UI) changes, in preparation for a UI reworking.</string>
 		</array>
@@ -679,7 +688,7 @@
 			<string>Changed world.character variable to be blank when no character, rather than undefined.</string>
 			<string>Added an event.detail variable for disconnection.</string>
 			<string>Added a MUSH ANSI text editor.</string>
-			<string>Added 'Strip Linefeeds from Input' action.</string>
+			<string>Added &apos;Strip Linefeeds from Input&apos; action.</string>
 		</array>
 		<key>versionString</key>
 		<string>0.8.7.2</string>
@@ -698,13 +707,13 @@
 	<dict>
 		<key>newFeatures</key>
 		<array>
-			<string>Lemuria: Tabbed display now uses 'small' control size, to fit more into a window.</string>
+			<string>Lemuria: Tabbed display now uses &apos;small&apos; control size, to fit more into a window.</string>
 			<string>Fixed window display bug.</string>
 			<string>Dock badging can be disabled when Atlantis is the active app.</string>
 			<string>Automatic shortcuts are now Command-Control-digit, to avoid yet another conflict.</string>
-			<string>Added 'Open Address Book on Current World' event action.</string>
-			<string>Added 'Edit current world settings...' menu event to World menu.</string>
-			<string>Added 'Copy Selected Text from Spawn to Clipboard' and 'Copy Selected Text from Spawn to Input' actions.</string>
+			<string>Added &apos;Open Address Book on Current World&apos; event action.</string>
+			<string>Added &apos;Edit current world settings...&apos; menu event to World menu.</string>
+			<string>Added &apos;Copy Selected Text from Spawn to Clipboard&apos; and &apos;Copy Selected Text from Spawn to Input&apos; actions.</string>
 			<string>Improved the time-to-open for the Address Book.</string>
 		</array>
 		<key>versionString</key>
@@ -740,7 +749,7 @@
 			<string>Dock badge position changed.</string>
 			<string>Ability to set window behavior.</string>
 			<string>Fixed string match condition bug.</string>
-			<string>Lemuria: Views internally track number of 'unseen activity' messages.</string>
+			<string>Lemuria: Views internally track number of &apos;unseen activity&apos; messages.</string>
 			<string>Lemuria: SplitView improvements.</string>
 		</array>
 		<key>versionString</key>
@@ -769,7 +778,7 @@
 		<key>newFeatures</key>
 		<array>
 			<string>String match events (Line matches and Variable matches) now expand variables before matching.</string>
-			<string>Reworked event editing system to have easier 'add condition' and 'add action' UI.</string>
+			<string>Reworked event editing system to have easier &apos;add condition&apos; and &apos;add action&apos; UI.</string>
 			<string>Added Line is Class event condition.</string>
 			<string>Added local echo option.</string>
 		</array>
@@ -797,7 +806,7 @@
 			<string>A couple of toolbar fixes for multiple-window Atlantis setups.</string>
 			<string>A couple more focus behavior tweaks.</string>
 			<string>Made toolbars customizable.</string>
-			<string>Fixed up 'disconnect' situation to work better in a few more cases.</string>
+			<string>Fixed up &apos;disconnect&apos; situation to work better in a few more cases.</string>
 			<string>Added recognition of Mac OS X sleep state, for handling disconnects.</string>
 		</array>
 		<key>versionString</key>
@@ -810,7 +819,7 @@
 			<string>Some reworking of event system UI.</string>
 			<string>Lemuria 0.5.6: ChainedListView changes.</string>
 			<string>Lemuria 0.5.6: Support for toolbars on Lemuria windows.</string>
-			<string>Restored 'network disconnect detected' functionality broken by network changes.  Oops.</string>
+			<string>Restored &apos;network disconnect detected&apos; functionality broken by network changes.  Oops.</string>
 			<string>Moved controls to a toolbar, which will eventually be customized.</string>
 		</array>
 		<key>versionString</key>
@@ -833,9 +842,9 @@
 			<string>Internal framework support for multiple fonts and sizes per world, displaying HTML in world view.  (To eventually support MXP, somewhere in a version after 1.0.0 has been finished and released.)</string>
 			<string>Fixed a focus-on-connect bug, hopefully.</string>
 			<string>Alerts now behave as is proper for OS X; Escape backs out, while Return confirms the action.</string>
-			<string>Changed 'World is Idle' event condition to work more intuitively.  Rather than user activity, it bases off of when data was last received or sent to the world in question.</string>
+			<string>Changed &apos;World is Idle&apos; event condition to work more intuitively.  Rather than user activity, it bases off of when data was last received or sent to the world in question.</string>
 			<string>Cleanup of notification center code that could cause a rare crash.</string>
-			<string>Complete rewrite of networking layer to use Apple's own networking kit.</string>
+			<string>Complete rewrite of networking layer to use Apple&apos;s own networking kit.</string>
 			<string>Added support for SSL connections.</string>
 			<string>Preliminary internal support for SOCKS and HTTP proxies.</string>
 			<string>Added /ul and /quote commands, and upload engine.</string>
@@ -856,13 +865,13 @@
 	<dict>
 		<key>newFeatures</key>
 		<array>
-			<string>Fixed a bug with 'Copy to Command History' action.</string>
+			<string>Fixed a bug with &apos;Copy to Command History&apos; action.</string>
 			<string>Fixed a bug with the address book.  Whups!</string>
 			<string>Minor tweaks to windowing behavior.</string>
-			<string>Added 'Aliases' tab to world and global defaults, letting you make your own /commands.</string>
+			<string>Added &apos;Aliases&apos; tab to world and global defaults, letting you make your own /commands.</string>
 			<string>Tweaked how the event editor (Hotkeys, Events, Aliases) works.</string>
-			<string>Made 'Focus Specific Spawn' fall-back to sub-spawns.  (I.e., 'Public' will focus 'world:Public' as a fallback.)</string>
-			<string>Added 'Disconnect All Worlds' action.</string>
+			<string>Made &apos;Focus Specific Spawn&apos; fall-back to sub-spawns.  (I.e., &apos;Public&apos; will focus &apos;world:Public&apos; as a fallback.)</string>
+			<string>Added &apos;Disconnect All Worlds&apos; action.</string>
 		</array>
 		<key>versionString</key>
 		<string>0.8.5.6</string>
@@ -871,10 +880,10 @@
 	<dict>
 		<key>newFeatures</key>
 		<array>
-			<string>Made HTML logs use the world's URL color in generating a stylesheet.  Whoot.</string>
+			<string>Made HTML logs use the world&apos;s URL color in generating a stylesheet.  Whoot.</string>
 			<string>Fixed wrapping bug in HTML logs.</string>
 			<string>Added custom CSS classes to HTML logs.</string>
-			<string>Added 'Log: Set Line as Class' action to set these custom classes.</string>
+			<string>Added &apos;Log: Set Line as Class&apos; action to set these custom classes.</string>
 			<string>Significant performance fix in ANSI parsing.</string>
 			<string>Changed to Unified window/toolbar look for things, when on Tiger.</string>
 		</array>
@@ -885,10 +894,10 @@
 	<dict>
 		<key>newFeatures</key>
 		<array>
-			<string>Fixed 'columns' calculation.  Silly text view insets!</string>
-			<string>Added 'Computer has been idle at least...' condition.</string>
-			<string>Added 'World has been idle at least...' condition.</string>
-			<string>Added 'HTML' logfile type, which took a while!</string>
+			<string>Fixed &apos;columns&apos; calculation.  Silly text view insets!</string>
+			<string>Added &apos;Computer has been idle at least...&apos; condition.</string>
+			<string>Added &apos;World has been idle at least...&apos; condition.</string>
+			<string>Added &apos;HTML&apos; logfile type, which took a while!</string>
 		</array>
 		<key>versionString</key>
 		<string>0.8.5.4</string>
@@ -898,7 +907,7 @@
 		<key>newFeatures</key>
 		<array>
 			<string>Fixed a huge event system bug, where event changes could be lost.</string>
-			<string>Fixed a related set of bugs in collected conditions (i.e. 'Logic: Complex Condition').</string>
+			<string>Fixed a related set of bugs in collected conditions (i.e. &apos;Logic: Complex Condition&apos;).</string>
 			<string>Released, because these were such big bugs.</string>
 		</array>
 		<key>versionString</key>
@@ -913,11 +922,11 @@
 			<string>Added support for telnet screen size negotiation.  (For PennMUSH and MUDs.)</string>
 			<string>Added support for NOP keepalive negotiation. (Automatic NAT keepalive for PennMUSH and MUDs.)</string>
 			<string>Added support for MCCP (MUD Client Compression Protocol), really only useful to MUD players.</string>
-			<string>Added 'Atlantis is not active app' condition to events system.</string>
-			<string>Changed 'Spawn is active spawn' condition to be true for the focused spawn even if Atlantis is not the active app.</string>
+			<string>Added &apos;Atlantis is not active app&apos; condition to events system.</string>
+			<string>Changed &apos;Spawn is active spawn&apos; condition to be true for the focused spawn even if Atlantis is not the active app.</string>
 			<string>Rewrote the URL and e-mail highlighting engine, hopefully will be nice and smooth now.</string>
-			<string>Added 'Play Sound' action.  (Plays WAV, AIFF, SND, MP3 and AAC.)</string>
-			<string>Fixed a couple of 'Rename Window' bugs, not that anyone uses that functionality!</string>
+			<string>Added &apos;Play Sound&apos; action.  (Plays WAV, AIFF, SND, MP3 and AAC.)</string>
+			<string>Fixed a couple of &apos;Rename Window&apos; bugs, not that anyone uses that functionality!</string>
 			<string>Added the ability to turn off support for drag-and-drop of spawns between windows.</string>
 		</array>
 		<key>versionString</key>
@@ -927,9 +936,9 @@
 	<dict>
 		<key>newFeatures</key>
 		<array>
-			<string>Fixed 'General' preference pane resize bug.</string>
+			<string>Fixed &apos;General&apos; preference pane resize bug.</string>
 			<string>FINALLY really fixed all scrolling behavior on size-limited scrollback.  Take my advice, never try to do this sort of stuff with the Cocoa text system!</string>
-			<string>Added 'Log Scrollback' functionality to the Open Log panel.</string>
+			<string>Added &apos;Log Scrollback&apos; functionality to the Open Log panel.</string>
 		</array>
 		<key>versionString</key>
 		<string>0.8.5.1</string>
@@ -941,10 +950,10 @@
 			<string>Added /command system.</string>
 			<string>Added /grab command, with ability to convert linefeeds on grab.</string>
 			<string>Added FugueEdit support.</string>
-			<string>Added /sc command, a'la SimpleMU's stacked command macro.</string>
+			<string>Added /sc command, a&apos;la SimpleMU&apos;s stacked command macro.</string>
 			<string>Added menu registration system.</string>
-			<string>Added 'World' menu, moved address book there.</string>
-			<string>Added 'MUSH' menu, created entries for converting input.</string>
+			<string>Added &apos;World&apos; menu, moved address book there.</string>
+			<string>Added &apos;MUSH&apos; menu, created entries for converting input.</string>
 		</array>
 		<key>versionString</key>
 		<string>0.8.5</string>
@@ -958,7 +967,7 @@
 			<string>Various minor Lemuria fixes.</string>
 			<string>Created proper Preferences window.</string>
 			<string>Converted Hotkey and World Defaults setup to panes of Preferences window.</string>
-			<string>Added a generic 'General' preference pane.</string>
+			<string>Added a generic &apos;General&apos; preference pane.</string>
 		</array>
 		<key>versionString</key>
 		<string>0.8.4.9</string>
@@ -977,8 +986,8 @@
 		<key>newFeatures</key>
 		<array>
 			<string>Sped up the text-view significantly.</string>
-			<string>Added 'convert input to MUSH' and 'convert input from MUSH' hotkey actions.</string>
-			<string>Really fixed 'activity' menu, so it removes properly on 'next active spawn' hotkey.</string>
+			<string>Added &apos;convert input to MUSH&apos; and &apos;convert input from MUSH&apos; hotkey actions.</string>
+			<string>Really fixed &apos;activity&apos; menu, so it removes properly on &apos;next active spawn&apos; hotkey.</string>
 		</array>
 		<key>versionString</key>
 		<string>0.8.4.7</string>
@@ -988,16 +997,16 @@
 		<key>newFeatures</key>
 		<array>
 			<string>Tweaked the focus logic in the event editor.</string>
-			<string>Changed disk image to not be 'internet enabled,' whups.</string>
-			<string>Changed a bunch of hotkey actions to also be event actions, at Thenomain's request.</string>
+			<string>Changed disk image to not be &apos;internet enabled,&apos; whups.</string>
+			<string>Changed a bunch of hotkey actions to also be event actions, at Thenomain&apos;s request.</string>
 			<string>Changed spawns to have a maximum scrollback size.  (Setting it to 0 lines means no limit.)</string>
-			<string>Made 'Add Character' button highlight new character.</string>
-			<string>Made 'Add Event' button highlight new event.</string>
+			<string>Made &apos;Add Character&apos; button highlight new character.</string>
+			<string>Made &apos;Add Event&apos; button highlight new event.</string>
 			<string>Lemuria: Fixed a lockup bug.  (No more frozen world, SarahScott!)</string>
-			<string>Changed 'display name' to just be the base spawn's name in the spawn tab.</string>
-			<string>Reworked the 'main' tab a lot to make Thenomain happy.</string>
-			<string>Fixed the 'Add Action' or 'Add Condition' sharedPanel problem.</string>
-			<string>Added a 'background color' to the formatting options.</string>
+			<string>Changed &apos;display name&apos; to just be the base spawn&apos;s name in the spawn tab.</string>
+			<string>Reworked the &apos;main&apos; tab a lot to make Thenomain happy.</string>
+			<string>Fixed the &apos;Add Action&apos; or &apos;Add Condition&apos; sharedPanel problem.</string>
+			<string>Added a &apos;background color&apos; to the formatting options.</string>
 		</array>
 		<key>versionString</key>
 		<string>0.8.4.6</string>
@@ -1018,12 +1027,12 @@
 		<key>newFeatures</key>
 		<array>
 			<string>Made next/prev actions wrap around to beginning or end of spawn list.</string>
-			<string>Added a 'request user attention' event action to bounce the dock icon once.</string>
-			<string>Added a 'display status in active spawn' event action.</string>
-			<string>Added a 'do not display activity indicator' event action.</string>
-			<string>Added a 'Copy or Move text to spawn' event action.</string>
-			<string>Added a 'Spawn does not have activity indicator' event condition.</string>
-			<string>Added a 'Close current spawn' hotkey action.</string>
+			<string>Added a &apos;request user attention&apos; event action to bounce the dock icon once.</string>
+			<string>Added a &apos;display status in active spawn&apos; event action.</string>
+			<string>Added a &apos;do not display activity indicator&apos; event action.</string>
+			<string>Added a &apos;Copy or Move text to spawn&apos; event action.</string>
+			<string>Added a &apos;Spawn does not have activity indicator&apos; event condition.</string>
+			<string>Added a &apos;Close current spawn&apos; hotkey action.</string>
 		</array>
 		<key>versionString</key>
 		<string>0.8.4.4</string>
@@ -1045,7 +1054,7 @@
 		<key>newFeatures</key>
 		<array>
 			<string>Fixed a bug where userconf variables could get lost.</string>
-			<string>Changed it so newly-created events default to 'match all conditions' instead of 'match any condition.'</string>
+			<string>Changed it so newly-created events default to &apos;match all conditions&apos; instead of &apos;match any condition.&apos;</string>
 			<string>Reworked a bunch of how the spawn configuration tab works.</string>
 			<string>Made Growl events actually remember their titles.  Whups!</string>
 			<string>Atlantis now knows when your network connection goes completely away, disconnects all connected worlds, and reconnects them when the network returns.</string>
@@ -1060,9 +1069,9 @@
 		<key>newFeatures</key>
 		<array>
 			<string>Fixed a few click-to-edit bugs due to overlapped fields in the address book.</string>
-			<string>Added a 'Variable matches Pattern' event condition, mostly useful in combinations.</string>
-			<string>Fixed it so you can actually SET events to be 'execute when all conditions are true' and have it remembered.  Whups!</string>
-			<string>Added 'User Variables' config tab.  User variables are available as userconf.* in the variable system.</string>
+			<string>Added a &apos;Variable matches Pattern&apos; event condition, mostly useful in combinations.</string>
+			<string>Fixed it so you can actually SET events to be &apos;execute when all conditions are true&apos; and have it remembered.  Whups!</string>
+			<string>Added &apos;User Variables&apos; config tab.  User variables are available as userconf.* in the variable system.</string>
 			<string>Fixed a significant bug in address book world addition, necessitating a new release.</string>
 		</array>
 		<key>versionString</key>
@@ -1073,20 +1082,20 @@
 		<key>newFeatures</key>
 		<array>
 			<string>Fixed display name bug, also made display names work in a more intuitive manner.</string>
-			<string>Broke autoconnect down into 'open' and 'open and connect' options.  (Picking just 'open' will put the world into your instances at startup, but will not connect it.)</string>
-			<string>'Open Log' panel now handles append warnings properly.</string>
+			<string>Broke autoconnect down into &apos;open&apos; and &apos;open and connect&apos; options.  (Picking just &apos;open&apos; will put the world into your instances at startup, but will not connect it.)</string>
+			<string>&apos;Open Log&apos; panel now handles append warnings properly.</string>
 			<string>Rearranged layout of address book buttons.</string>
 			<string>Fixed a spawn editor focus bug, if you clicked add spawn while still editing the name of an existing spawn.</string>
-			<string>Fixed a bug where you could delete a world's name entirely and thus crash the address book.  Eek!</string>
+			<string>Fixed a bug where you could delete a world&apos;s name entirely and thus crash the address book.  Eek!</string>
 			<string>Added a logical NOT condition to the events system.</string>
 			<string>Changed Address Book to remain on the same tab even when you change worlds.</string>
-			<string>New 'Timer' event condition, to do keepalives et al.</string>
+			<string>New &apos;Timer&apos; event condition, to do keepalives et al.</string>
 			<string>Added support for logfile format options.</string>
 			<string>Formatted Text logs now support turning on/off word wrap, indent, etc.</string>
-			<string>Added 'Open Log' event action, making it possible to auto-open logs on connect.</string>
-			<string>Added 'Close All Logs' event action, making it possible to automatically close logs on disconnect.</string>
-			<string>Lemuria 0.5.5: Fixed a very rare crash bug on closing the final spawn in a window's list.</string>
-			<string>Pretty 'About Atlantis' window.  (Oooh, shiny!)</string>
+			<string>Added &apos;Open Log&apos; event action, making it possible to auto-open logs on connect.</string>
+			<string>Added &apos;Close All Logs&apos; event action, making it possible to automatically close logs on disconnect.</string>
+			<string>Lemuria 0.5.5: Fixed a very rare crash bug on closing the final spawn in a window&apos;s list.</string>
+			<string>Pretty &apos;About Atlantis&apos; window.  (Oooh, shiny!)</string>
 		</array>
 		<key>versionString</key>
 		<string>0.8.4</string>
@@ -1099,15 +1108,15 @@
 			<string>Fixed a spawn configuration view getting out of sync bug.</string>
 			<string>When you connect a world manually from the address book, Atlantis automatically focuses it.</string>
 			<string>If there are no autoconnects, Atlantis automatically opens the address book when started.</string>
-			<string>New Action: 'Close Current Window.'  (Bind to Command-W for normal window closing!)</string>
+			<string>New Action: &apos;Close Current Window.&apos;  (Bind to Command-W for normal window closing!)</string>
 			<string>Lemuria 0.5.4: Window-picking logic on creation of a spawn has been improved.</string>
-			<string>Lemuria 0.5.4: Display classes now support 'show/hide' of the list of spawns.</string>
+			<string>Lemuria 0.5.4: Display classes now support &apos;show/hide&apos; of the list of spawns.</string>
 			<string>Lemuria 0.5.4: Minor fix for activity notifications.</string>
-			<string>New Action: 'Show/Hide Spawns List in Current Window.'</string>
+			<string>New Action: &apos;Show/Hide Spawns List in Current Window.&apos;</string>
 			<string>Dock menu actually maintains list of active spawns properly.</string>
 			<string>Dock menu brings Atlantis to foreground if not the active app.</string>
 			<string>Next/Prev Spawn actions are no longer blocked by placeholders (i.e., folders).  Oops!</string>
-			<string>Address Book now autoselects 'Main' tab when the selected world changes.</string>
+			<string>Address Book now autoselects &apos;Main&apos; tab when the selected world changes.</string>
 			<string>Added connection indicators and quick-click connection functionality, as per discussion with Thenomain.</string>
 		</array>
 		<key>versionString</key>
@@ -1119,11 +1128,11 @@
 		<array>
 			<string>Another fix for gagged lines and activity indicators.</string>
 			<string>A fix to keep PennMUSH happy with our Telnet negotiation.</string>
-			<string>Lemuria 0.5.3: Outline view shouldn't jump-and-dance on creation of spawns anymore.</string>
+			<string>Lemuria 0.5.3: Outline view shouldn&apos;t jump-and-dance on creation of spawns anymore.</string>
 			<string>Lemuria 0.5.3: Lemuria will remember divider bar position for windows.</string>
 			<string>Lemuria 0.5.3: Outline view properly displays a scrollbar if you have a ton of spawns. :P</string>
-			<string>Added 'Previous Spawn' and 'Next Spawn' actions.</string>
-			<string>Added 'Unseen Activity' menu to Windows menu.</string>
+			<string>Added &apos;Previous Spawn&apos; and &apos;Next Spawn&apos; actions.</string>
+			<string>Added &apos;Unseen Activity&apos; menu to Windows menu.</string>
 			<string>Added Unseen Activity list to dock menu.</string>
 			<string>Found and fixed MAJOR address book bug from 0.8.3.1, where you could lose spawns and highlighting.  Eek!  Sorry to anyone who was bitten by this.</string>
 		</array>
@@ -1142,7 +1151,7 @@
 			<string>Lemuria 0.5.2: RDNestedOutline Lemuria display class fixes.</string>
 			<string>Lemuria 0.5.2: Made changes necessary to get rid of spawn folders by 0.8.4</string>
 			<string>Lemuria 0.5.2: Sub-views (spawns) now open in the same world as their parent.</string>
-			<string>Lemuria 0.5.2: The 'close' button now appears even if the spawn list is not the active control.</string>
+			<string>Lemuria 0.5.2: The &apos;close&apos; button now appears even if the spawn list is not the active control.</string>
 			<string>NOTE: Due to Lemuria changes, this version has to forget all your window position and size settings!  Sorry. :(</string>
 		</array>
 		<key>versionString</key>
@@ -1152,7 +1161,7 @@
 	<dict>
 		<key>newFeatures</key>
 		<array>
-			<string>Fixed a bug where spawn list and spawn pattern portion could get out of synch.  (I want this fix out, but I am not re-versioning Atlantis for it.  This build remains 0.8.3, but shows as build 24 instead of build 23 in the 'About' window.)</string>
+			<string>Fixed a bug where spawn list and spawn pattern portion could get out of synch.  (I want this fix out, but I am not re-versioning Atlantis for it.  This build remains 0.8.3, but shows as build 24 instead of build 23 in the &apos;About&apos; window.)</string>
 		</array>
 		<key>versionString</key>
 		<string>0.8.3 (build 24)</string>
@@ -1163,11 +1172,11 @@
 		<array>
 			<string>Updated to Lemuria 0.5.1, fixing an occasional crash bug in closing spawns.</string>
 			<string>Added a Crash Reporter to hijack and report to me when Atlantis crashes, instead of Apple.  (Several reported this, but thanks to FJ for finding a repro case!)</string>
-			<string>Added an 'Open Address Book' action usable in key bindings.  (No more cut and paste.  Just hit 'Submit!')</string>
-			<string>Added a 'Gag Line from Screen' action usable in events.</string>
-			<string>Added a 'Gag Line from Logs' action usable in events.</string>
+			<string>Added an &apos;Open Address Book&apos; action usable in key bindings.  (No more cut and paste.  Just hit &apos;Submit!&apos;)</string>
+			<string>Added a &apos;Gag Line from Screen&apos; action usable in events.</string>
+			<string>Added a &apos;Gag Line from Logs&apos; action usable in events.</string>
 			<string>Child worlds now inherit spawns from their parent world.</string>
-			<string>The 'Rename' option on windows now works; users should be able to drag spawns to whatever window they want, and rename the windows accordingly.</string>
+			<string>The &apos;Rename&apos; option on windows now works; users should be able to drag spawns to whatever window they want, and rename the windows accordingly.</string>
 			<string>Reworked the control flow for creating spawns, hopefully it will be easier now.</string>
 			<string>Added a divider line between recent searches and the Clear option in the search menu.</string>
 			<string>Fixed bug where you could not truly remove character or password from a world.</string>
@@ -1233,7 +1242,7 @@
 	<dict>
 		<key>newFeatures</key>
 		<array>
-			<string>Fixed IAC GA ('MUD prompt') support to be a bit cleaner.</string>
+			<string>Fixed IAC GA (&apos;MUD prompt&apos;) support to be a bit cleaner.</string>
 			<string>Fixed IAC NOP support properly even when telnet has not negotiated.  (MUX2)</string>
 			<string>Fixed URL parser lockup bug which affected OGR login screen.</string>
 		</array>
@@ -1245,7 +1254,7 @@
 		<key>newFeatures</key>
 		<array>
 			<string>Network code cleanup, should be very clean now.</string>
-			<string>About window with shoutouts and credits.  It's pretty!</string>
+			<string>About window with shoutouts and credits.  It&apos;s pretty!</string>
 			<string>More Address Book cleanup.</string>
 			<string>Added preliminary telnet negotiation support.  TTYPE, SGA, BINARY, SB, etc.</string>
 		</array>
@@ -1257,7 +1266,7 @@
 		<key>newFeatures</key>
 		<array>
 			<string>Added logic for reconnecting after connection lost.</string>
-			<string>Added manual 'connect' and 'disconnect' menu items. (I took pity on you, FJ!)</string>
+			<string>Added manual &apos;connect&apos; and &apos;disconnect&apos; menu items. (I took pity on you, FJ!)</string>
 			<string>Fixed some ASCII art bugs.</string>
 		</array>
 		<key>versionString</key>
@@ -1290,7 +1299,7 @@
 		<array>
 			<string>Pretty much complete rewrite of basic Atlantis structure.</string>
 			<string>Spawn windows.</string>
-			<string>Support for version checking, using Daniel Todd Currie's version checking library.</string>
+			<string>Support for version checking, using Daniel Todd Currie&apos;s version checking library.</string>
 			<string>Support for regexps, using OgreKit and OniGuruma.</string>
 		</array>
 		<key>versionString</key>

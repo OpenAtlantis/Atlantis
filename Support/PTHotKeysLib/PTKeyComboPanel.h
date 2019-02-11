@@ -12,25 +12,30 @@
 @class PTKeyCombo;
 @class PTHotKey;
 
+@class PTKeyComboPanel;
+
+@protocol PTKeyComboPanelDelegate <NSObject>
+- (void)keyComboPanelEnded:(PTKeyComboPanel*)panel;
+@end
+
 @interface PTKeyComboPanel : NSWindowController
 {
 	IBOutlet NSTextField*		mTitleField;
 	IBOutlet NSTextField*		mComboField;
 	IBOutlet PTKeyBroadcaster*	mKeyBcaster;
+	
+	id<PTKeyComboPanelDelegate> currentModalDelegate;
 
 	NSString*				mTitleFormat;
 	NSString*				mKeyName;
 	PTKeyCombo*				mKeyCombo;
-
 }
 
 + (id)sharedPanel;
 
-- (int)runModal;
-- (void)runModalForHotKey: (PTHotKey*)hotKey;
+- (void)showSheetForHotkey:(PTHotKey*)hotKey forWindow:(NSWindow*)mainWindow modalDelegate:(id)target;
 
-- (void)runSheeetForModalWindow: (NSWindow*)wind target: (id)obj;
-	//Calls hotKeySheetDidEndWithReturnCode: (NSNumber*) on target object
+- (void)runModalForHotKey: (PTHotKey*)hotKey;
 
 - (void)setKeyCombo: (PTKeyCombo*)combo;
 - (PTKeyCombo*)keyCombo;
@@ -42,3 +47,5 @@
 - (IBAction)cancel: (id)sender;
 - (IBAction)clear: (id)sender;
 @end
+
+

@@ -1,10 +1,10 @@
 #import <Lemuria/Lemuria.h>
-#import <DTCVersionManager/DTCVersionManager.h>
+//#import <DTCVersionManager/DTCVersionManager.h>
 #import <SystemConfiguration/SystemConfiguration.h>
-#import <CamelBones/CamelBones.h>
+//#import <CamelBones/CamelBones.h>
 #import <OgreKit/OgreKit.h>
 #import "RDAtlantisMainController.h"
-#include "BugReporter.h"
+//#include "BugReporter.h"
 #import "NSDictionary+XMLPersistence.h"
 
 #import "ToolbarCollection.h"
@@ -170,21 +170,21 @@ static void networkReachabilityChangedCallback(SCNetworkReachabilityRef target, 
 
 - (void) awakeFromNib
 {
-    NSString *bugReporterPropertyList;
-    NSString *bugReporterPropertyListFilename;
-    
-    bugReporterPropertyListFilename = [[NSBundle mainBundle] pathForResource:@"bugreporter" ofType:@"plist"];
-    if (bugReporterPropertyListFilename) {
-        bugReporterPropertyList = [NSString stringWithContentsOfFile:bugReporterPropertyListFilename];
-        if (bugReporterPropertyList) {
-            BRStatus theErr;
-            theErr = EnableBugReporter((CFStringRef)bugReporterPropertyList);
-            if (theErr != kBRNoErr)
-                exit(theErr);
-        }
-    }
-
-    [NSApp setDelegate:self];    
+//    NSString *bugReporterPropertyList;
+//    NSString *bugReporterPropertyListFilename;
+//
+//    bugReporterPropertyListFilename = [[NSBundle mainBundle] pathForResource:@"bugreporter" ofType:@"plist"];
+//    if (bugReporterPropertyListFilename) {
+//        bugReporterPropertyList = [NSString stringWithContentsOfFile:bugReporterPropertyListFilename];
+//        if (bugReporterPropertyList) {
+//            BRStatus theErr;
+//            theErr = EnableBugReporter((CFStringRef)bugReporterPropertyList);
+//            if (theErr != kBRNoErr)
+//                exit(theErr);
+//        }
+//    }
+//
+    [NSApp setDelegate:self];
 }
 
 - (void) applicationDidFinishLaunching:(NSNotification *)notification
@@ -582,15 +582,15 @@ static void networkReachabilityChangedCallback(SCNetworkReachabilityRef target, 
     [self addMenuEvent:menuEvent toMenu:@"Logs" withTitle:@"Upload File..."];
 
 
-    BOOL skipCheck = [[NSUserDefaults standardUserDefaults] boolForKey:@"atlantis.update.skipcheck"];
-
-    if (!skipCheck) {
-        [DTCVersionManager checkVersionAt:@"http://www.riverdark.net/atlantis/atlantis_versions.plist"
-                      withProductPage:@"http://www.riverdark.net/atlantis/downloads/"
-                     andApplyToWindow:nil
-                           showAlerts:NO];
-    }
-                           
+//    BOOL skipCheck = [[NSUserDefaults standardUserDefaults] boolForKey:@"atlantis.update.skipcheck"];
+//
+//    if (!skipCheck) {
+//        [DTCVersionManager checkVersionAt:@"http://www.riverdark.net/atlantis/atlantis_versions.plist"
+//                      withProductPage:@"http://www.riverdark.net/atlantis/downloads/"
+//                     andApplyToWindow:nil
+//                           showAlerts:NO];
+//    }
+//
     SCNetworkReachabilityContext reachabilityContext = {
                 .version = 0,
                 .info = NULL,
@@ -653,8 +653,8 @@ static void networkReachabilityChangedCallback(SCNetworkReachabilityRef target, 
     [_rdScriptedEvents release];
 
     [super dealloc];
-    
-    DisableBugReporter();
+//    
+//    DisableBugReporter();
 }
 
 #pragma mark Notification
@@ -1899,10 +1899,10 @@ static void networkReachabilityChangedCallback(SCNetworkReachabilityRef target, 
 
 - (IBAction) checkForUpdates:(id) sender
 {
-    [DTCVersionManager checkVersionAt:@"http://www.riverdark.net/atlantis/atlantis_versions.plist"
-                      withProductPage:@"http://www.riverdark.net/atlantis/downloads/"
-                     andApplyToWindow:nil
-                           showAlerts:YES]; 
+//    [DTCVersionManager checkVersionAt:@"http://www.riverdark.net/atlantis/atlantis_versions.plist"
+//                      withProductPage:@"http://www.riverdark.net/atlantis/downloads/"
+//                     andApplyToWindow:nil
+//                           showAlerts:YES];
 }
 
 - (IBAction) launchDocWiki:(id) sender

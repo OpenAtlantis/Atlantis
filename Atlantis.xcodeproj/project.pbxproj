@@ -33,6 +33,9 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		5311D1882210FA390010AB9D /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5311D1872210FA390010AB9D /* AVFoundation.framework */; };
+		5311D18B2210FF300010AB9D /* PTKeyComboPanel.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5311D1892210FF300010AB9D /* PTKeyComboPanel.xib */; };
+		53ED3A8422112F03002BDC0F /* Lemuria.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53ED3A8322112F03002BDC0F /* Lemuria.framework */; };
 		8D11072A0486CEB800E47090 /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 29B97318FDCFA39411CA2CEA /* MainMenu.nib */; };
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
@@ -54,7 +57,6 @@
 		FF0C2FAE0A27AC6F002484B9 /* ToolbarSearch.nib in Resources */ = {isa = PBXBuildFile; fileRef = FF0C2FAD0A27AC6F002484B9 /* ToolbarSearch.nib */; };
 		FF1218A0136D021900363EB5 /* LogsCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = FF12189F136D021900363EB5 /* LogsCommand.m */; };
 		FF16E7E909A0733A00724F23 /* RDEmailFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = FF16E7E709A0733A00724F23 /* RDEmailFilter.m */; };
-		FF16EC6F09A16E4200724F23 /* PTKeyComboPanel.nib in Resources */ = {isa = PBXBuildFile; fileRef = FF16EC6E09A16E4200724F23 /* PTKeyComboPanel.nib */; };
 		FF191CFB09F33C7C0071917F /* Action-GlobalDisconnect.m in Sources */ = {isa = PBXBuildFile; fileRef = FF191CF909F33C7C0071917F /* Action-GlobalDisconnect.m */; };
 		FF1A2A640C43692D00F88216 /* Action-ShrinkURL.m in Sources */ = {isa = PBXBuildFile; fileRef = FF1A2A620C43692D00F88216 /* Action-ShrinkURL.m */; };
 		FF1C9D3409B68B6100E55E57 /* EventEditor.nib in Resources */ = {isa = PBXBuildFile; fileRef = FF1C9D3109B68B6100E55E57 /* EventEditor.nib */; };
@@ -94,8 +96,6 @@
 		FF25A4CC0BFFA3510005E24A /* uparrow.png in Resources */ = {isa = PBXBuildFile; fileRef = FF25A4CA0BFFA3510005E24A /* uparrow.png */; };
 		FF25A5050BFFA6040005E24A /* RDAtlantisEventItem.m in Sources */ = {isa = PBXBuildFile; fileRef = FF25A5030BFFA6040005E24A /* RDAtlantisEventItem.m */; };
 		FF261ED809C68290000E0026 /* RDBlockingOutlineView.m in Sources */ = {isa = PBXBuildFile; fileRef = FF261ED609C68290000E0026 /* RDBlockingOutlineView.m */; };
-		FF261F6909C68B2C000E0026 /* DTCVersionManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF261F6809C68B2C000E0026 /* DTCVersionManager.framework */; };
-		FF261F6C09C68B3C000E0026 /* DTCVersionManager.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = FF261F6809C68B2C000E0026 /* DTCVersionManager.framework */; };
 		FF267E7709A16F8900198A44 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF267E7609A16F8900198A44 /* Carbon.framework */; };
 		FF26F3240B84523D003043E5 /* NSBezierPathExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = FF26F3220B84523D003043E5 /* NSBezierPathExtensions.m */; };
 		FF26F3A70B845564003043E5 /* CTBadge.m in Sources */ = {isa = PBXBuildFile; fileRef = FF26F3A30B845564003043E5 /* CTBadge.m */; };
@@ -121,7 +121,6 @@
 		FF3C998809C401EB003A9509 /* WorldFormattingEditor.m in Sources */ = {isa = PBXBuildFile; fileRef = FF3C998609C401EB003A9509 /* WorldFormattingEditor.m */; };
 		FF3C99CC09C42269003A9509 /* WorldConf_Formatting.nib in Resources */ = {isa = PBXBuildFile; fileRef = FF3C99CB09C42269003A9509 /* WorldConf_Formatting.nib */; };
 		FF3C9A8C09C42FDF003A9509 /* RDView.m in Sources */ = {isa = PBXBuildFile; fileRef = FF3C9A8A09C42FDF003A9509 /* RDView.m */; };
-		FF4311D709C7DBEB007D8015 /* libBugReporter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FF4311D509C7DBEB007D8015 /* libBugReporter.a */; };
 		FF43120909C7DE8F007D8015 /* bugreporter.plist in Resources */ = {isa = PBXBuildFile; fileRef = FF43120809C7DE8F007D8015 /* bugreporter.plist */; };
 		FF43125009C7E812007D8015 /* Action-AddressBook.m in Sources */ = {isa = PBXBuildFile; fileRef = FF43124E09C7E811007D8015 /* Action-AddressBook.m */; };
 		FF4312A609C7E9A9007D8015 /* Action-TextOmitLog.m in Sources */ = {isa = PBXBuildFile; fileRef = FF4312A409C7E9A9007D8015 /* Action-TextOmitLog.m */; };
@@ -233,7 +232,6 @@
 		FF783E2D09EB853000D23B45 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF783E2C09EB853000D23B45 /* IOKit.framework */; };
 		FF7B37BB09EE120D00D63313 /* WorldAliasEditor.m in Sources */ = {isa = PBXBuildFile; fileRef = FF7B37B909EE120D00D63313 /* WorldAliasEditor.m */; };
 		FF7B37D809EE15C200D63313 /* AliasEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = FF7B37D609EE15C200D63313 /* AliasEvent.m */; };
-		FF7C169109EA3661003E280B /* QuickTime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF7C169009EA3661003E280B /* QuickTime.framework */; };
 		FF7FC3DB0B9777C400690B5F /* Action-ClearSpawn.m in Sources */ = {isa = PBXBuildFile; fileRef = FF7FC3D90B9777C400690B5F /* Action-ClearSpawn.m */; };
 		FF81295F099FF5EC004FAE20 /* RDAtlantisFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = FF81295D099FF5EC004FAE20 /* RDAtlantisFilter.m */; };
 		FF85DC250C34C3FA001EA8FC /* Action-StatusBarDisplay.m in Sources */ = {isa = PBXBuildFile; fileRef = FF85DC230C34C3FA001EA8FC /* Action-StatusBarDisplay.m */; };
@@ -325,14 +323,10 @@
 		FFECBB2D09DE15320049FF54 /* Action-InputConvertToMUSH.m in Sources */ = {isa = PBXBuildFile; fileRef = FFECBB2B09DE15320049FF54 /* Action-InputConvertToMUSH.m */; };
 		FFECBB5C09DE174A0049FF54 /* Action-InputConvertFromMUSH.m in Sources */ = {isa = PBXBuildFile; fileRef = FFECBB5A09DE174A0049FF54 /* Action-InputConvertFromMUSH.m */; };
 		FFEDD9B8120E39EA00254015 /* PerlScriptingEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = FFEDD9B7120E39EA00254015 /* PerlScriptingEngine.m */; };
-		FFEDD9D2120E39FF00254015 /* CamelBones.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = FF2CA47D0CD5096F00EC2E79 /* CamelBones.framework */; };
-		FFEDD9F0120E3A0600254015 /* CamelBones.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF2CA47D0CD5096F00EC2E79 /* CamelBones.framework */; };
 		FFF02C060A2CE90C000DC42B /* AddressBook.tiff in Resources */ = {isa = PBXBuildFile; fileRef = FFF02C050A2CE90C000DC42B /* AddressBook.tiff */; };
 		FFF02C0F0A2CEA15000DC42B /* ToolbarAddressBook.m in Sources */ = {isa = PBXBuildFile; fileRef = FFF02C0D0A2CEA15000DC42B /* ToolbarAddressBook.m */; };
 		FFF03CFC0A86964B00E514DA /* MCPMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = FFF03CFA0A86964B00E514DA /* MCPMessage.m */; };
 		FFF03D380A86A0EA00E514DA /* RDMCPFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = FFF03D360A86A0EA00E514DA /* RDMCPFilter.m */; };
-		FFF39E4E0CB067B1008F9D1D /* LuaCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFF39E2E0CB067B1008F9D1D /* LuaCore.framework */; };
-		FFF39E4F0CB067BC008F9D1D /* LuaCore.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = FFF39E2E0CB067B1008F9D1D /* LuaCore.framework */; };
 		FFFB27010B9A627F00288A9F /* RDMonospaceRulerView.m in Sources */ = {isa = PBXBuildFile; fileRef = FFFB26FF0B9A627F00288A9F /* RDMonospaceRulerView.m */; };
 		FFFB2A720B9AAA0500288A9F /* RDMonospaceLayoutManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FFFB2A700B9AAA0500288A9F /* RDMonospaceLayoutManager.m */; };
 		FFFBD40809E4CA0C00AE4DCF /* StackedCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = FFFBD40609E4CA0C00AE4DCF /* StackedCommand.m */; };
@@ -354,11 +348,24 @@
 		FFFE6AEE09A45192003F118B /* Variables.txt in Resources */ = {isa = PBXBuildFile; fileRef = FFFE6AED09A45192003F118B /* Variables.txt */; };
 		FFFF6C2B0999E00900E56390 /* Lemuria.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = FFFF6BD20999DF9000E56390 /* Lemuria.framework */; };
 		FFFF6CE40999E0DA00E56390 /* atlantis-logo.icns in Resources */ = {isa = PBXBuildFile; fileRef = FFFF6CE30999E0DA00E56390 /* atlantis-logo.icns */; };
-		FFFF6CE90999E22000E56390 /* Lemuria.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFFF6BD20999DF9000E56390 /* Lemuria.framework */; };
 		FFFF6D280999E54E00E56390 /* RDAtlantisMainController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFFF6D260999E54E00E56390 /* RDAtlantisMainController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		53E1940022110F4E00A0B0BE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 53E193FC22110F4E00A0B0BE /* Lemuria.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8DC2EF5B0486A6940098B216;
+			remoteInfo = Lemuria;
+		};
+		53E1940222110F5C00A0B0BE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 53E193FC22110F4E00A0B0BE /* Lemuria.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 8DC2EF4F0486A6940098B216;
+			remoteInfo = Lemuria;
+		};
 		FF5E92D709C966CF00B263C5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
@@ -406,9 +413,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				FFEDD9D2120E39FF00254015 /* CamelBones.framework in Copy Frameworks */,
-				FFF39E4F0CB067BC008F9D1D /* LuaCore.framework in Copy Frameworks */,
-				FF261F6C09C68B3C000E0026 /* DTCVersionManager.framework in Copy Frameworks */,
 				FFFE5ECD09A2B496003F118B /* Growl.framework in Copy Frameworks */,
 				FF967111099E6A0D005886F4 /* OgreKit.framework in Copy Frameworks */,
 				FFFF6C2B0999E00900E56390 /* Lemuria.framework in Copy Frameworks */,
@@ -427,6 +431,10 @@
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		32CA4F630368D1EE00C91783 /* Atlantis_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Atlantis_Prefix.pch; sourceTree = "<group>"; };
+		5311D1872210FA390010AB9D /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		5311D18A2210FF300010AB9D /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/PTKeyComboPanel.xib; sourceTree = "<group>"; };
+		53E193FC22110F4E00A0B0BE /* Lemuria.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Lemuria.xcodeproj; path = ../Lemuria/Lemuria.xcodeproj; sourceTree = "<group>"; };
+		53ED3A8322112F03002BDC0F /* Lemuria.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Lemuria.framework; path = Support/Lemuria.framework; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; explicitFileType = text.plist; fileEncoding = 4; path = Info.plist; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* Atlantis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Atlantis.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF00C30F09E1F90600083573 /* AtlantisPreferenceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AtlantisPreferenceController.h; path = Preferences/Application/AtlantisPreferenceController.h; sourceTree = "<group>"; };
@@ -462,7 +470,6 @@
 		FF12189F136D021900363EB5 /* LogsCommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogsCommand.m; sourceTree = "<group>"; };
 		FF16E7E609A0733A00724F23 /* RDEmailFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RDEmailFilter.h; path = "Filter System/RDEmailFilter.h"; sourceTree = "<group>"; };
 		FF16E7E709A0733A00724F23 /* RDEmailFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RDEmailFilter.m; path = "Filter System/RDEmailFilter.m"; sourceTree = "<group>"; };
-		FF16EC6609A16E3700724F23 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/PTKeyComboPanel.nib; sourceTree = "<group>"; };
 		FF191CF809F33C7C0071917F /* Action-GlobalDisconnect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Action-GlobalDisconnect.h"; path = "Event System/Actions/Action-GlobalDisconnect.h"; sourceTree = "<group>"; };
 		FF191CF909F33C7C0071917F /* Action-GlobalDisconnect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Action-GlobalDisconnect.m"; path = "Event System/Actions/Action-GlobalDisconnect.m"; sourceTree = "<group>"; };
 		FF1A2A610C43692D00F88216 /* Action-ShrinkURL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Action-ShrinkURL.h"; path = "Event System/Actions/Action-ShrinkURL.h"; sourceTree = "<group>"; };
@@ -536,7 +543,6 @@
 		FF25A5030BFFA6040005E24A /* RDAtlantisEventItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RDAtlantisEventItem.m; path = "Event Configuration Kit/RDAtlantisEventItem.m"; sourceTree = "<group>"; };
 		FF261ED509C68290000E0026 /* RDBlockingOutlineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RDBlockingOutlineView.h; path = "Utility Classes/RDBlockingOutlineView.h"; sourceTree = "<group>"; };
 		FF261ED609C68290000E0026 /* RDBlockingOutlineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RDBlockingOutlineView.m; path = "Utility Classes/RDBlockingOutlineView.m"; sourceTree = "<group>"; };
-		FF261F6809C68B2C000E0026 /* DTCVersionManager.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DTCVersionManager.framework; path = Support/DTCVersionManager.framework; sourceTree = "<group>"; };
 		FF267E7609A16F8900198A44 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = /System/Library/Frameworks/Carbon.framework; sourceTree = "<absolute>"; };
 		FF26F3210B84523C003043E5 /* NSBezierPathExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NSBezierPathExtensions.h; path = Extensions/NSBezierPathExtensions.h; sourceTree = "<group>"; };
 		FF26F3220B84523D003043E5 /* NSBezierPathExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NSBezierPathExtensions.m; path = Extensions/NSBezierPathExtensions.m; sourceTree = "<group>"; };
@@ -548,7 +554,6 @@
 		FF26F3AB0B84559D003043E5 /* CTBadge_3.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = CTBadge_3.pdf; path = "Utility Classes/CTBadge_3.pdf"; sourceTree = "<group>"; };
 		FF26F3AC0B84559D003043E5 /* CTBadge_4.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = CTBadge_4.pdf; path = "Utility Classes/CTBadge_4.pdf"; sourceTree = "<group>"; };
 		FF26F3AD0B84559D003043E5 /* CTBadge_5.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = CTBadge_5.pdf; path = "Utility Classes/CTBadge_5.pdf"; sourceTree = "<group>"; };
-		FF2CA47D0CD5096F00EC2E79 /* CamelBones.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CamelBones.framework; path = Support/CamelBones.framework; sourceTree = "<group>"; };
 		FF2D6E420F36440100E766CB /* MCPIcecrewServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MCPIcecrewServer.h; path = "MCP System/MCPIcecrewServer.h"; sourceTree = "<group>"; };
 		FF2D6E430F36440100E766CB /* MCPIcecrewServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MCPIcecrewServer.m; path = "MCP System/MCPIcecrewServer.m"; sourceTree = "<group>"; };
 		FF2EA2A209E34F4100DDD57E /* WorldDefaults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WorldDefaults.h; path = Preferences/Application/WorldDefaults.h; sourceTree = "<group>"; };
@@ -762,7 +767,6 @@
 		FF7B37B909EE120D00D63313 /* WorldAliasEditor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WorldAliasEditor.m; path = Preferences/World/WorldAliasEditor.m; sourceTree = "<group>"; };
 		FF7B37D509EE15C200D63313 /* AliasEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AliasEvent.h; path = "Command System/AliasEvent.h"; sourceTree = "<group>"; };
 		FF7B37D609EE15C200D63313 /* AliasEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AliasEvent.m; path = "Command System/AliasEvent.m"; sourceTree = "<group>"; };
-		FF7C169009EA3661003E280B /* QuickTime.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuickTime.framework; path = /System/Library/Frameworks/QuickTime.framework; sourceTree = "<absolute>"; };
 		FF7FC3D80B9777C400690B5F /* Action-ClearSpawn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Action-ClearSpawn.h"; path = "Event System/Actions/Action-ClearSpawn.h"; sourceTree = "<group>"; };
 		FF7FC3D90B9777C400690B5F /* Action-ClearSpawn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Action-ClearSpawn.m"; path = "Event System/Actions/Action-ClearSpawn.m"; sourceTree = "<group>"; };
 		FF81295C099FF5EC004FAE20 /* RDAtlantisFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RDAtlantisFilter.h; path = "Filter System/RDAtlantisFilter.h"; sourceTree = "<group>"; };
@@ -920,7 +924,6 @@
 		FFF03CFA0A86964B00E514DA /* MCPMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MCPMessage.m; path = "MCP System/MCPMessage.m"; sourceTree = "<group>"; };
 		FFF03D350A86A0EA00E514DA /* RDMCPFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RDMCPFilter.h; path = "Filter System/RDMCPFilter.h"; sourceTree = "<group>"; };
 		FFF03D360A86A0EA00E514DA /* RDMCPFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RDMCPFilter.m; path = "Filter System/RDMCPFilter.m"; sourceTree = "<group>"; };
-		FFF39E2E0CB067B1008F9D1D /* LuaCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LuaCore.framework; path = Support/LuaCore.framework; sourceTree = "<group>"; };
 		FFFB26FE0B9A627F00288A9F /* RDMonospaceRulerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RDMonospaceRulerView.h; path = "Utility Classes/RDMonospaceRulerView.h"; sourceTree = "<group>"; };
 		FFFB26FF0B9A627F00288A9F /* RDMonospaceRulerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RDMonospaceRulerView.m; path = "Utility Classes/RDMonospaceRulerView.m"; sourceTree = "<group>"; };
 		FFFB2A6F0B9AAA0500288A9F /* RDMonospaceLayoutManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RDMonospaceLayoutManager.h; path = "Utility Classes/RDMonospaceLayoutManager.h"; sourceTree = "<group>"; };
@@ -965,20 +968,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FFEDD9F0120E3A0600254015 /* CamelBones.framework in Frameworks */,
-				FFFF6CE90999E22000E56390 /* Lemuria.framework in Frameworks */,
+				5311D1882210FA390010AB9D /* AVFoundation.framework in Frameworks */,
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
 				FF967108099E69FF005886F4 /* OgreKit.framework in Frameworks */,
 				FF267E7709A16F8900198A44 /* Carbon.framework in Frameworks */,
 				FFFE5E8E09A2B26D003F118B /* Growl.framework in Frameworks */,
-				FF261F6909C68B2C000E0026 /* DTCVersionManager.framework in Frameworks */,
-				FF4311D709C7DBEB007D8015 /* libBugReporter.a in Frameworks */,
 				FF4E2CA809CE690900826DD9 /* SystemConfiguration.framework in Frameworks */,
+				53ED3A8422112F03002BDC0F /* Lemuria.framework in Frameworks */,
 				FF53276709E8CCD50013FB8A /* libz.dylib in Frameworks */,
-				FF7C169109EA3661003E280B /* QuickTime.framework in Frameworks */,
 				FF783E2D09EB853000D23B45 /* IOKit.framework in Frameworks */,
 				FFD59B120A80AA1300B4F5ED /* CoreServices.framework in Frameworks */,
-				FFF39E4E0CB067B1008F9D1D /* LuaCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1015,14 +1014,10 @@
 		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				FF2CA47D0CD5096F00EC2E79 /* CamelBones.framework */,
-				FFF39E2E0CB067B1008F9D1D /* LuaCore.framework */,
 				FFD59B110A80AA1300B4F5ED /* CoreServices.framework */,
-				FF7C169009EA3661003E280B /* QuickTime.framework */,
 				FF783E2C09EB853000D23B45 /* IOKit.framework */,
 				FF53276609E8CCD50013FB8A /* libz.dylib */,
 				FF4E2CA709CE690900826DD9 /* SystemConfiguration.framework */,
-				FF261F6809C68B2C000E0026 /* DTCVersionManager.framework */,
 				FFFE5E8D09A2B26D003F118B /* Growl.framework */,
 				FF267E7609A16F8900198A44 /* Carbon.framework */,
 				FF967107099E69FE005886F4 /* OgreKit.framework */,
@@ -1053,6 +1048,7 @@
 		29B97314FDCFA39411CA2CEA /* Atlantis */ = {
 			isa = PBXGroup;
 			children = (
+				53E193FC22110F4E00A0B0BE /* Lemuria.xcodeproj */,
 				FFFE64BE09A3D54B003F118B /* Documentation */,
 				080E96DDFE201D6D7F000001 /* Classes */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
@@ -1120,10 +1116,20 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				53ED3A8322112F03002BDC0F /* Lemuria.framework */,
+				5311D1872210FA390010AB9D /* AVFoundation.framework */,
 				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
 				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		53E193FD22110F4E00A0B0BE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				53E1940122110F4E00A0B0BE /* Lemuria.framework */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		FF0C2B9E0A279E17002484B9 /* Toolbar System */ = {
@@ -1423,6 +1429,7 @@
 		FF267F2109A170B500198A44 /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				5311D1892210FF300010AB9D /* PTKeyComboPanel.xib */,
 				FFB18D7209A16ED70067536D /* PTHotKey.h */,
 				FFB18D7309A16ED70067536D /* PTHotKey.m */,
 				FFB18D7409A16ED70067536D /* PTHotKeyCenter.h */,
@@ -1437,7 +1444,6 @@
 				FFB18D7D09A16ED70067536D /* PTKeyComboPanel.h */,
 				FFB18D7E09A16ED70067536D /* PTKeyComboPanel.m */,
 				FFB18D7009A16EC20067536D /* PTKeyCodes.plist */,
-				FF16EC6E09A16E4200724F23 /* PTKeyComboPanel.nib */,
 			);
 			name = Library;
 			sourceTree = "<group>";
@@ -1917,6 +1923,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				53E1940322110F5C00A0B0BE /* PBXTargetDependency */,
 				FF5E92D809C966CF00B263C5 /* PBXTargetDependency */,
 			);
 			name = Atlantis;
@@ -1938,9 +1945,16 @@
 			hasScannedForEncodings = 1;
 			knownRegions = (
 				en,
+				English,
 			);
 			mainGroup = 29B97314FDCFA39411CA2CEA /* Atlantis */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 53E193FD22110F4E00A0B0BE /* Products */;
+					ProjectRef = 53E193FC22110F4E00A0B0BE /* Lemuria.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				8D1107260486CEB800E47090 /* Atlantis */,
@@ -1949,6 +1963,16 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		53E1940122110F4E00A0B0BE /* Lemuria.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Lemuria.framework;
+			remoteRef = 53E1940022110F4E00A0B0BE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		8D1107290486CEB800E47090 /* Resources */ = {
@@ -1960,7 +1984,6 @@
 				FFFF6CE40999E0DA00E56390 /* atlantis-logo.icns in Resources */,
 				FFFE64F909A3FC86003F118B /* LogOptionPanel.nib in Resources */,
 				FF966B14099A8E8D005886F4 /* SpawnView.nib in Resources */,
-				FF16EC6F09A16E4200724F23 /* PTKeyComboPanel.nib in Resources */,
 				FFB18D7109A16EC20067536D /* PTKeyCodes.plist in Resources */,
 				FFB18D8309A16ED70067536D /* PTKeyboardIcon.tiff in Resources */,
 				FFFE66E409A411B3003F118B /* LogClosePanel.nib in Resources */,
@@ -1971,6 +1994,7 @@
 				FF590F6009B96984005C2E02 /* ActionPicker.nib in Resources */,
 				FF77E48909BBE9E500520233 /* ActionConf_HighlightText.nib in Resources */,
 				FF77E4D409BBEF4D00520233 /* ActionConf_Growl.nib in Resources */,
+				5311D18B2210FF300010AB9D /* PTKeyComboPanel.xib in Resources */,
 				FF77E5B809BC221700520233 /* CondConf_ViewActive.nib in Resources */,
 				FF4450DF09BD4574005E0DFC /* CondConf_ViewName.nib in Resources */,
 				FF44516409BD4E9D005E0DFC /* CondConf_StringMatch.nib in Resources */,
@@ -2065,7 +2089,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /usr/bin/perl;
-			shellScript = "#!/usr/bin/perl\n# Generate our InfoPlist.strings file\n\nuse Unicode::String;\nuse Time::Piece;\n\n$t = localtime;\n$projectbuilddate = $t->fullmonth . \" \" . $t->mday . \", \" . $t->year;\n\nmy $tmpfile=\"$ENV{'PROJECT_DIR'}/English.lproj/InfoPlist.strings\";\nopen(OUTFILE, \"> $tmpfile\") || exit (1);\n\nmy $u = Unicode::String::latin1(\"/* Localized versions of Info.plist keys, as generated by build script. */\\n\\n\");\n$u->stringify_as(utf16);\nprint OUTFILE \"$u\";\n\n$u = Unicode::String::latin1(\"CFBundleName = \\\"$ENV{'PROJECT'}\\\";\\n\");\n$u->stringify_as(utf16);\nprint OUTFILE \"$u\";\n$u = Unicode::String::latin1(\"CFBundleShortVersionString = \\\"$ENV{'PROJECT_DISPLAY_VERSION'}\\\";\\n\");\n$u->stringify_as(utf16);\nprint OUTFILE \"$u\";\n\n$tempval = \"$ENV{'PROJECT'} $ENV{'PROJECT_DISPLAY_VERSION'}\";\n\nif ($ENV{'PROJECT_RELEASE_STATUS'} ne \"\") {\n   $tempval .= \" $ENV{'PROJECT_RELEASE_STATUS'}\";\n}\n\n$u = Unicode::String::latin1(\"CFBundleGetInfoString = \\\"$tempval, Copyright 2007-2010 $ENV{'PROJECT_COMPANY'}\\\";\\n\");\n$u->stringify_as(utf16);\nprint OUTFILE \"$u\";\n$u = Unicode::String::latin1(\"RDProjectBuildDate = \\\"$projectbuilddate\\\";\\n\");\n$u->stringify_as(utf16);\nprint OUTFILE \"$u\";\n$u = Unicode::String::latin1(\"RDProjectStatus = \\\"$ENV{'PROJECT_RELEASE_STATUS'}\\\";\\n\");\n$u->stringify_as(utf16);\nprint OUTFILE \"$u\";\n$u = Unicode::String::latin1(\"RDBuildStyle = \\\"$ENV{'BUILD_STYLE'}\\\";\\n\");\n$u->stringify_as(utf16);\nprint OUTFILE \"$u\";\n\nclose (OUTFILE);\n\nUnicode::String::stringify_as(utf8);\n\nupdateFile(\"$ENV{'PROJECT_DIR'}/bugreporter.template\",\n\t\t\"$ENV{'PROJECT_DIR'}/bugreporter.plist\");\n\nexit (0);\n\nsub updateFile {\n    local($infilename, $outfilename) = @_;\n\n\topen (INFILE, \"< $infilename\") || exit(1);\n\topen (OUTFILE, \"> $outfilename\") || exit(1);\n\n\twhile ($line = <INFILE>) {\n\t\t$u = Unicode::String::utf8($line);\n   \t\t$u =~ s/\\$bundleversion/$ENV{'CURRENT_PROJECT_VERSION'}/;\n   \t\t$u =~ s/\\$projectversion/$ENV{'PROJECT_DISPLAY_VERSION'}/;\n   \t\t$u =~ s/\\$projectstatus/$ENV{'PROJECT_DISPLAY_VERSION'}/;\n\t\t$u =~ s/\\$projectbuilddate/$projectbuilddate/;\n   \t\tprint OUTFILE $u;\n\t}\n\n\tclose (INFILE);\n\tclose (OUTFILE);\n    \n}\n";
+			shellScript = "#!/usr/bin/perl\n# Generate our InfoPlist.strings file\n\nuse Unicode::String;\nuse Time::Piece;\n\n$t = localtime;\n$projectbuilddate = $t->fullmonth . \" \" . $t->mday . \", \" . $t->year;\n\nmy $tmpfile=\"$ENV{'PROJECT_DIR'}/English.lproj/InfoPlist.strings\";\nopen(OUTFILE, \"> $tmpfile\") || exit (1);\n\nmy $u = Unicode::String::latin1(\"/* Localized versions of Info.plist keys, as generated by build script. */\\n\\n\");\n$u->stringify_as(utf16);\nprint OUTFILE \"$u\";\n\n$u = Unicode::String::latin1(\"CFBundleName = \\\"$ENV{'PROJECT'}\\\";\\n\");\n$u->stringify_as(utf16);\nprint OUTFILE \"$u\";\n$u = Unicode::String::latin1(\"CFBundleShortVersionString = \\\"$ENV{'PROJECT_DISPLAY_VERSION'}\\\";\\n\");\n$u->stringify_as(utf16);\nprint OUTFILE \"$u\";\n\n$tempval = \"$ENV{'PROJECT'} $ENV{'PROJECT_DISPLAY_VERSION'}\";\n\nif ($ENV{'PROJECT_RELEASE_STATUS'} ne \"\") {\n   $tempval .= \" $ENV{'PROJECT_RELEASE_STATUS'}\";\n}\n\n$u = Unicode::String::latin1(\"CFBundleGetInfoString = \\\"$tempval, Copyright 2007-2010 $ENV{'PROJECT_COMPANY'}\\\";\\n\");\n$u->stringify_as(utf16);\nprint OUTFILE \"$u\";\n$u = Unicode::String::latin1(\"RDProjectBuildDate = \\\"$projectbuilddate\\\";\\n\");\n$u->stringify_as(utf16);\nprint OUTFILE \"$u\";\n$u = Unicode::String::latin1(\"RDProjectStatus = \\\"$ENV{'PROJECT_RELEASE_STATUS'}\\\";\\n\");\n$u->stringify_as(utf16);\nprint OUTFILE \"$u\";\n$u = Unicode::String::latin1(\"RDBuildStyle = \\\"$ENV{'BUILD_STYLE'}\\\";\\n\");\n$u->stringify_as(utf16);\nprint OUTFILE \"$u\";\n\nclose (OUTFILE);\n\nUnicode::String::stringify_as(utf8);\n\nexit (0);\n\nsub updateFile {\n    local($infilename, $outfilename) = @_;\n\n    open (INFILE, \"< $infilename\") || exit(1);\n    open (OUTFILE, \"> $outfilename\") || exit(1);\n\n    while ($line = <INFILE>) {\n        $u = Unicode::String::utf8($line);\n           $u =~ s/\\$bundleversion/$ENV{'CURRENT_PROJECT_VERSION'}/;\n           $u =~ s/\\$projectversion/$ENV{'PROJECT_DISPLAY_VERSION'}/;\n           $u =~ s/\\$projectstatus/$ENV{'PROJECT_DISPLAY_VERSION'}/;\n        $u =~ s/\\$projectbuilddate/$projectbuilddate/;\n           print OUTFILE $u;\n    }\n\n    close (INFILE);\n    close (OUTFILE);\n    \n}\n";
 		};
 		FF5E93FE09C97AAA00B263C5 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -2312,6 +2336,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		53E1940322110F5C00A0B0BE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Lemuria;
+			targetProxy = 53E1940222110F5C00A0B0BE /* PBXContainerItemProxy */;
+		};
 		FF5E92D809C966CF00B263C5 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = FF5E92D609C966BF00B263C5 /* GenerateVersionInfo */;
@@ -2341,12 +2370,12 @@
 			name = MainMenu.nib;
 			sourceTree = "<group>";
 		};
-		FF16EC6E09A16E4200724F23 /* PTKeyComboPanel.nib */ = {
+		5311D1892210FF300010AB9D /* PTKeyComboPanel.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				FF16EC6609A16E3700724F23 /* English */,
+				5311D18A2210FF300010AB9D /* English */,
 			);
-			name = PTKeyComboPanel.nib;
+			name = PTKeyComboPanel.xib;
 			sourceTree = "<group>";
 		};
 		FFB18D7009A16EC20067536D /* PTKeyCodes.plist */ = {
@@ -2379,11 +2408,13 @@
 		C01FCF4B08A954540054247B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 102;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(FRAMEWORK_SEARCH_PATHS)",
 					"$(SRCROOT)/Support",
+					"$(PROJECT_DIR)/Support",
 				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
@@ -2391,11 +2422,9 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
-				LIBRARY_SEARCH_PATHS = (
-					"$(LIBRARY_SEARCH_PATHS)",
-					"$(SRCROOT)/Support/BugReporter",
-				);
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_NAME = Atlantis;
+				PROJECT_DISPLAY_VERSION = 0.9.9.6;
 				SDKROOT = macosx;
 				WRAPPER_EXTENSION = app;
 				ZERO_LINK = YES;
@@ -2405,22 +2434,22 @@
 		C01FCF4C08A954540054247B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 102;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(FRAMEWORK_SEARCH_PATHS)",
 					"$(SRCROOT)/Support",
+					"$(PROJECT_DIR)/Support",
 				);
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_MODEL_TUNING = G5;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
-				LIBRARY_SEARCH_PATHS = (
-					"$(LIBRARY_SEARCH_PATHS)",
-					"$(SRCROOT)/Support/BugReporter",
-				);
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MACOSX_DEPLOYMENT_TARGET_ppc = 10.3;
 				PRODUCT_NAME = Atlantis;
+				PROJECT_DISPLAY_VERSION = 0.9.9.6;
 				SDKROOT = macosx;
 				WRAPPER_EXTENSION = app;
 			};
@@ -2429,20 +2458,21 @@
 		C01FCF4F08A954540054247B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				ARCHS = "$(ARCHS_STANDARD)";
 				CURRENT_PROJECT_VERSION = 100;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_ALLOW_INCOMPLETE_PROTOCOL = NO;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_CFLAGS = "-D_ATLANTIS_DEBUG";
 				PREBINDING = NO;
 				PROJECT_COMPANY = "Riverdark Studios";
 				PROJECT_DISPLAY_VERSION = 0.9.9.5;
 				PROJECT_RELEASE_STATUS = beta;
-				SDKROOT = macosx10.7;
-				VALID_ARCHS = i386;
+				SDKROOT = macosx;
+				VALID_ARCHS = x86_64;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
@@ -2450,20 +2480,21 @@
 		C01FCF5008A954540054247B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				ARCHS = "$(ARCHS_STANDARD)";
 				CURRENT_PROJECT_VERSION = 100;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_OPTIMIZATION_LEVEL = 3;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_ALLOW_INCOMPLETE_PROTOCOL = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				ONLY_ACTIVE_ARCH = NO;
 				PREBINDING = NO;
 				PROJECT_COMPANY = "Riverdark Studios";
 				PROJECT_DISPLAY_VERSION = 0.9.9.5;
 				PROJECT_RELEASE_STATUS = beta;
-				SDKROOT = macosx10.7;
-				VALID_ARCHS = i386;
+				SDKROOT = macosx;
+				VALID_ARCHS = x86_64;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
@@ -2476,6 +2507,7 @@
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				PRODUCT_NAME = GenerateVersionInfo;
+				VALID_ARCHS = x86_64;
 			};
 			name = Debug;
 		};
@@ -2486,6 +2518,7 @@
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				PRODUCT_NAME = GenerateVersionInfo;
+				VALID_ARCHS = x86_64;
 				ZERO_LINK = NO;
 			};
 			name = Release;

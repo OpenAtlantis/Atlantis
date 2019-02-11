@@ -33,9 +33,7 @@
 - (void) dealloc
 {
     if (_rdSound) {
-        if (!IsMovieDone([_rdSound QTMovie])) {
-            StopMovie([_rdSound QTMovie]);
-        }
+        [_rdSound stop];
         [_rdSound release];
         _rdSound = nil;
     }
@@ -692,8 +690,8 @@
 - (void) playSoundFile:(NSString *)filename
 {
     if (_rdSound) {
-        if (!IsMovieDone([_rdSound QTMovie])) {
-            StopMovie([_rdSound QTMovie]);
+        if (_rdSound.playing) {
+            [_rdSound stop];
         }
         [_rdSound release];
         _rdSound = nil;
@@ -701,10 +699,10 @@
 
     if (filename) {
         NSString *realFilename = [filename stringByExpandingTildeInPath];
-        _rdSound = [[NSMovie alloc] initWithURL:[NSURL fileURLWithPath:realFilename] byReference:YES];
+        NSURL *fileURL = [NSURL fileURLWithPath:realFilename];
+        _rdSound = [[AVAudioPlayer alloc] initWithContentsOfURL:fileURL error:nil];
         if (_rdSound) {
-            GoToBeginningOfMovie([_rdSound QTMovie]);
-            StartMovie([_rdSound QTMovie]);
+            [_rdSound play];
         }
     }    
 }

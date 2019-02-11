@@ -8,10 +8,11 @@
 
 #import <Cocoa/Cocoa.h>
 #import "BaseAction.h"
+#import <AVFoundation/AVFoundation.h>
 
 @interface Action_SoundPlay : BaseAction {
 
-    NSMovie                     *_rdSound;
+    AVAudioPlayer               *_rdSound;
     NSString                    *_rdSoundFilename;
     
     IBOutlet NSView             *_rdInternalConfigurationView;

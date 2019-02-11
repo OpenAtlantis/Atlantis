@@ -7,13 +7,14 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import <AVFoundation/AVFoundation.h>
 
 @class AtlantisState;
 
 @interface ScriptBridge : NSObject {
 
     NSSpeechSynthesizer         *_rdSpeaker;
-    NSMovie                     *_rdSound;
+    AVAudioPlayer               *_rdSound;
 
 }
 

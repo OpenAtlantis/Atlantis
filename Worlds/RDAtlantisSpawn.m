@@ -81,6 +81,9 @@ static NSImage *s_statusLockGreyImage = nil;
             [_rdOutputView setBackgroundColor:_rdBackgroundColor];
             [_rdOutputView setTextColor:_rdInputColor];
             [_rdOutputView setFont:_rdFont];
+            [_rdInputView setAutomaticDashSubstitutionEnabled:NO];
+            [_rdInputView setAutomaticSpellingCorrectionEnabled:NO];
+            [_rdInputView setAutomaticTextReplacementEnabled:NO];
             
             if ([_rdOutputView respondsToSelector:@selector(setAllowsNonContiguousLayout:)]) {
                 [(id)_rdOutputView setAllowsNonContiguousLayout:YES];
@@ -93,7 +96,7 @@ static NSImage *s_statusLockGreyImage = nil;
             [_rdSplitView setDivider:tempImage];
             
             tempImage = [[[NSImage alloc] initByReferencingFile:[[NSBundle mainBundle] pathForImageResource:@"spawn-splitter"]] autorelease];            
-            [_rdSplitView setBackgroundPattern:tempImage];
+//            [_rdSplitView setBackgroundPattern:tempImage];
             [_rdSplitView setDividerThickness:8.0f];
 
             _rdResizeTooltip = [[NSPanel alloc] initWithContentRect:NSMakeRect(0,0,100,25)

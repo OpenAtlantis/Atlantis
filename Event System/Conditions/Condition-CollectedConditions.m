@@ -10,6 +10,7 @@
 #import "ConditionPicker.h"
 #import "ConditionClasses.h"
 #import "RDAtlantisMainController.h"
+#import <objc/runtime.h>
 
 @implementation Condition_CollectedConditions
 

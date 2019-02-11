@@ -16,7 +16,7 @@
 @protocol RDNestedViewDescriptor;
 @protocol RDNestedViewDisplay;
 
-@interface RDNestedOutlineView : RBSplitView <RDNestedViewDisplay> {
+@interface RDNestedOutlineView : RBSplitView <RDNestedViewDisplay,NSOutlineViewDelegate,NSOutlineViewDataSource> {
 
     NSTabView                *_rdTabView;
     RDOutlineView            *_rdOutlineView;

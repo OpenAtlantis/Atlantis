@@ -3,8 +3,8 @@
  * Project: OgreKit
  *
  * Creation Date: Sep 22 2003
- * Author: Isao Sonobe <sonoisa (AT) muse (DOT) ocn (DOT) ne (DOT) jp>
- * Copyright: Copyright (c) 2003 Isao Sonobe, All rights reserved.
+ * Author: Isao Sonobe <sonoisa@gmail.com>
+ * Copyright: Copyright (c) 2003-2018 Isao Sonobe, All rights reserved.
  * License: OgreKit License
  *
  * Encoding: UTF8
@@ -46,9 +46,6 @@ extern NSString	* const OgreReplaceException;
   \x{HHHH}		16-bit Unicode character U+HHHH
   \その他の文字	\その他の文字
  */
-- (id)initWithString:(NSString*)replaceString 
-	syntax:(OgreSyntax)syntax 
-	escapeCharacter:(NSString*)character;
 - (id)initWithString:(NSString*)replaceString 
 	syntax:(OgreSyntax)syntax 
 	escapeCharacter:(NSString*)character;
