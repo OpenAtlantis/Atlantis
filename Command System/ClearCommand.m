@@ -30,7 +30,7 @@
         }
         
         NSAttributedString *realString = [[NSAttributedString alloc] initWithString:tempString  
-                                                                         attributes:[NSDictionary dictionaryWithObjectsAndKeys:[[state world] displayFont],NSFontAttributeName,[[state world] formattingParagraphStyle],NSParagraphStyleAttributeName,nil]];
+                                                                         attributes:[NSDictionary dictionaryWithObjectsAndKeys:[[state world] displayFont],NSFontAttributeName,[[state world] formattingParagraphStyle],NSParagraphStyleAttributeName,[NSNumber numberWithInt:NSUTF8StringEncoding], NSCharacterEncodingDocumentAttribute, nil]];
         
         [spawn appendString:realString];
         [realString release];        

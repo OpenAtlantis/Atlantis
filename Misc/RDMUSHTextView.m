@@ -136,4 +136,9 @@
         [super paste:sender];
 }
 
+- (void) drawRect:(NSRect)dirtyRect
+{
+    [super drawRect:[self bounds]];
+}
+
 @end

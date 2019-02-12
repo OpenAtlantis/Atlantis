@@ -115,19 +115,17 @@ static NSImage *s_rdKeyIcon = nil;
     // Do nothing, this is empty
 }
 
-- (void) hotKeySheetDidEndWithReturnCode: (NSNumber *) returnCode
+- (void)keyComboPanelEnded:(PTKeyComboPanel*)panel;
 {
-    if ([returnCode intValue] == NSOKButton) {
-        PTKeyCombo *key = [[PTKeyComboPanel sharedPanel] keyCombo];
+    PTKeyCombo *key = [panel keyCombo];
 
-        if ([key isValidHotKeyCombo]) {
-            HotkeyEvent *event = [[HotkeyEvent alloc] init];
-            [event setKeyCombo:key];
-            [event eventSetEnabled:YES];
-            [_rdHotkeyCollection addEvent:event];
-            [_rdEventEditor updateDataRepresentation];
-            [_rdEventEditor selectEvent:event];
-        } 
+    if ([key isValidHotKeyCombo]) {
+        HotkeyEvent *event = [[HotkeyEvent alloc] init];
+        [event setKeyCombo:key];
+        [event eventSetEnabled:YES];
+        [_rdHotkeyCollection addEvent:event];
+        [_rdEventEditor updateDataRepresentation];
+        [_rdEventEditor selectEvent:event];
     }
 }
 
@@ -137,7 +135,10 @@ static NSImage *s_rdKeyIcon = nil;
     PTKeyCombo *key = [[[PTKeyCombo alloc] init] autorelease];
     [panel setKeyCombo:key];
     [panel setKeyBindingName:@"Atlantis Hotkey Binding"];
-    [panel runSheeetForModalWindow:[NSApp keyWindow] target:self];    
+    PTHotKey *hotKey = [[PTHotKey alloc] init];
+    [hotKey setKeyCombo:key];
+    [panel showSheetForHotkey:hotKey forWindow:[[_rdEventEditor editorView] window] modalDelegate:self];
+    [hotKey autorelease];
 }
 
 

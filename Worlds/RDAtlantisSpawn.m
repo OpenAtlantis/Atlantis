@@ -230,9 +230,12 @@ static NSImage *s_statusLockGreyImage = nil;
     }
     [_rdTimerField setStringValue:connectTime];
 
-    NSString *encoding = [NSString localizedNameOfStringEncoding:[_rdWorld stringEncoding]];  
-    if (![encoding length])
-        encoding = @"default";
+    NSString *encoding = @"default";
+    if ([_rdWorld stringEncoding] != -1) {
+        encoding = [NSString localizedNameOfStringEncoding:[_rdWorld stringEncoding]];
+        if (![encoding length])
+            encoding = @"unknown";
+    }
         
     NSString *dimensions = [NSString stringWithFormat:@"%dx%d", _rdScreenWidth, _rdScreenHeight];
     

@@ -189,9 +189,9 @@ static void networkReachabilityChangedCallback(SCNetworkReachabilityRef target, 
 
 - (void) applicationDidFinishLaunching:(NSNotification *)notification
 {
-//#ifndef _ATLANTIS_DEBUG
+#ifndef _ATLANTIS_DEBUG
     [_rdWorlds doAutoconnects];
-//#endif
+#endif
     
     if (![_rdConnectedWorlds count]) {
         BOOL openAddressBook = [[NSUserDefaults standardUserDefaults] boolForKey:@"atlantis.startup.openBook"];
@@ -1846,11 +1846,11 @@ static void networkReachabilityChangedCallback(SCNetworkReachabilityRef target, 
 
     int activeCount = [[[RDNestedViewManager manager] activeViews] count];
 
-    if (shouldDisplay && (activeCount > 0)) {        
-        [_rdBadger badgeApplicationDockIconWithValue:activeCount insetX:3 y:0];        
+    if (shouldDisplay && (activeCount > 0)) {
+        [[NSApp dockTile] setBadgeLabel:[NSString stringWithFormat:@"%d", activeCount]];
     }
     else {
-        [NSApp setApplicationIconImage:[NSImage imageNamed:@"NSApplicationIcon"]];
+        [[NSApp dockTile] setBadgeLabel:nil];
     }
 }
 

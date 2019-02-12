@@ -40,7 +40,7 @@
 	int keyCode, modifiers;
 		
 	keyCode = [[plist objectForKey: @"keyCode"] intValue];
-	if( keyCode <= 0 ) keyCode = -1;
+	if( keyCode < 0 ) keyCode = -1;
 
 	modifiers = [[plist objectForKey: @"modifiers"] intValue];
 	if( modifiers <= 0 ) modifiers = -1;

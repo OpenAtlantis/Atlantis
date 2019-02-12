@@ -1116,7 +1116,7 @@ static NSString *alphabet = @"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWX
         }
         
         NSAttributedString *realString = [[NSAttributedString alloc] initWithString:[NSString stringWithFormat:@"%%%% %@", string]  
-                                                                         attributes:[NSDictionary dictionaryWithObjectsAndKeys:realColor,NSForegroundColorAttributeName,_rdDisplayFont,NSFontAttributeName,[self formattingParagraphStyle],NSParagraphStyleAttributeName,[NSDate date],@"RDTimeStamp",@"console",@"RDLineClass",nil]];
+                                                                         attributes:[NSDictionary dictionaryWithObjectsAndKeys:realColor,NSForegroundColorAttributeName,_rdDisplayFont,NSFontAttributeName,[self formattingParagraphStyle],NSParagraphStyleAttributeName,[NSDate date],@"RDTimeStamp",@"console",@"RDLineClass",[NSNumber numberWithInt:NSUTF8StringEncoding], NSCharacterEncodingDocumentAttribute, nil]];
         
         [spawn ensureNewline];
         [spawn appendString:realString];
@@ -1133,7 +1133,7 @@ static NSString *alphabet = @"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWX
         }
         
         NSAttributedString *realString = [[NSAttributedString alloc] initWithString:[NSString stringWithFormat:@"%@%@\n", _rdLocalEchoPrefix, string]  
-                                                                         attributes:[NSDictionary dictionaryWithObjectsAndKeys:realColor,NSForegroundColorAttributeName,_rdDisplayFont,NSFontAttributeName,[self formattingParagraphStyle],NSParagraphStyleAttributeName,[NSDate date],@"RDTimeStamp",@"localEcho",@"RDLineClass",nil]];
+                                                                         attributes:[NSDictionary dictionaryWithObjectsAndKeys:realColor,NSForegroundColorAttributeName,_rdDisplayFont,NSFontAttributeName,[self formattingParagraphStyle],NSParagraphStyleAttributeName,[NSDate date],@"RDTimeStamp",@"localEcho",@"RDLineClass",[NSNumber numberWithInt:NSUTF8StringEncoding],NSCharacterEncodingDocumentAttribute, nil]];
 
         _rdMudPrompted = NO;        
         [spawn ensureNewline];

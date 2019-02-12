@@ -72,7 +72,7 @@ static id _sharedKeyComboPanel = nil;
 	
 	if (hotKey && returnCode == NSOKButton) {
         [hotKey setKeyCombo: [self keyCombo]];
-		[[PTHotKeyCenter sharedCenter] updateHotKey: hotKey];
+//        [[PTHotKeyCenter sharedCenter] updateHotKey: hotKey];
 		if ([currentModalDelegate respondsToSelector:@selector(keyComboPanelEnded:)])
 			[currentModalDelegate keyComboPanelEnded:self];
 		else

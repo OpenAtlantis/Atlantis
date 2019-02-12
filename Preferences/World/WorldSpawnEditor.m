@@ -968,25 +968,25 @@
 
 - (void)handleRemoveResult:(NSAlert *)alert returnCode:(int)returnCode  contextInfo:(void  *)contextInfo
 {
-    WorldSpawnRecord *current = (WorldSpawnRecord *)contextInfo;
+    NSNumber *rowNum = (NSNumber *)contextInfo;
+    int row = [rowNum intValue];
     
-    if (current && (returnCode == NSAlertDefaultReturn)) {    
-        int row = [_rdSpawnList rowForItem:current];
+    if ((row != -1) && (returnCode == NSAlertDefaultReturn)) {
+        WorldSpawnRecord *current = [_rdSpawnList itemAtRow:row];
         if (row != -1) {
             [_rdSpawnList deselectRow:row];
         }
         [self traverseAndRemove:current];
         [_rdSpawnList reloadData];
     }
-    [current autorelease];
+    [rowNum release];
 }
 
 - (IBAction) removeSpawn:(id) sender
 {
     [[_rdSpawnList window] makeFirstResponder:[_rdSpawnList window]];
-
-    WorldSpawnRecord *current = [self currentSelectedSpawn];
-    [current retain];
+    int row = [_rdSpawnList selectedRow];
+    NSNumber *current = [NSNumber numberWithInt:row];
 
     [self askQuestion:@"Really Remove?" info:@"Removing this spawn or folder will remove it and all its children." action:@selector(handleRemoveResult:returnCode:contextInfo:) context:current];
 }
