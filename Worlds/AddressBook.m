@@ -311,7 +311,7 @@ AddressBook *s_addyBook = nil;
     int index;
     
     index = [_rdConfigContent indexOfTabViewItemWithIdentifier:[record uuid]];
-    if (index != NSNotFound) {
+    if (index >= 0) {
         item = [_rdConfigContent tabViewItemAtIndex:index];
         [item setView:[editor configView]];
     }
@@ -916,6 +916,7 @@ AddressBook *s_addyBook = nil;
     AddressBookRecord *newRecord;
     
     newRecord = [[AddressBookRecord alloc] initWithWorld:newWorld forCharacter:nil];
+    [self addEditorForWorldRecord:newRecord];
     [_rdWorldRecords addObject:newRecord];
     [_rdWorldRecords sortUsingSelector:@selector(compare:)];
     [self resynchAll];
@@ -972,6 +973,7 @@ AddressBook *s_addyBook = nil;
         [self reloadKeepingSelection];
         [_rdWorldList expandItem:current];
         AddressBookRecord *newRecord = [current characterWithName:characterName];
+        [self addEditorForWorldRecord:newRecord];
         
         if (newRecord) {
             int selected = [_rdWorldList rowForItem:newRecord];

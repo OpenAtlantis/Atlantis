@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 42;
+	objectVersion = 45;
 	objects = {
 
 /* Begin PBXAggregateTarget section */
@@ -35,8 +35,8 @@
 /* Begin PBXBuildFile section */
 		5311D1882210FA390010AB9D /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5311D1872210FA390010AB9D /* AVFoundation.framework */; };
 		5311D18B2210FF300010AB9D /* PTKeyComboPanel.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5311D1892210FF300010AB9D /* PTKeyComboPanel.xib */; };
-		536215C022114A9300176D73 /* Lemuria.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53E1940122110F4E00A0B0BE /* Lemuria.framework */; };
 		536215C122114AA900176D73 /* Lemuria.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 53E1940122110F4E00A0B0BE /* Lemuria.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		539862D022EE953E00ECB14D /* Lemuria.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53E1940122110F4E00A0B0BE /* Lemuria.framework */; };
 		8D11072A0486CEB800E47090 /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 29B97318FDCFA39411CA2CEA /* MainMenu.nib */; };
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
@@ -252,7 +252,7 @@
 		FF966CEA099ADC12005886F4 /* RDAtlantisTextInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = FF966CE8099ADC12005886F4 /* RDAtlantisTextInputView.m */; };
 		FF96706C099E5545005886F4 /* RDAnsiFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = FF96706A099E5545005886F4 /* RDAnsiFilter.m */; };
 		FF967108099E69FF005886F4 /* OgreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF967107099E69FE005886F4 /* OgreKit.framework */; };
-		FF967111099E6A0D005886F4 /* OgreKit.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = FF967107099E69FE005886F4 /* OgreKit.framework */; };
+		FF967111099E6A0D005886F4 /* OgreKit.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = FF967107099E69FE005886F4 /* OgreKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		FF967148099E6A7D005886F4 /* RDStringPattern.m in Sources */ = {isa = PBXBuildFile; fileRef = FF967146099E6A7C005886F4 /* RDStringPattern.m */; };
 		FF967296099EAB75005886F4 /* RDSpawnConfigRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = FF967294099EAB75005886F4 /* RDSpawnConfigRecord.m */; };
 		FF97175C0A69850700EE2ACD /* Action-SetTempVar.m in Sources */ = {isa = PBXBuildFile; fileRef = FF97175A0A69850700EE2ACD /* Action-SetTempVar.m */; };
@@ -336,7 +336,7 @@
 		FFFBD56209E4ED6100AE4DCF /* Condition-WorldIsMUSH.m in Sources */ = {isa = PBXBuildFile; fileRef = FFFBD56009E4ED6100AE4DCF /* Condition-WorldIsMUSH.m */; };
 		FFFE5DED09A2A9CE003F118B /* NSStringExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = FFFE5DEB09A2A9CE003F118B /* NSStringExtensions.m */; };
 		FFFE5E8E09A2B26D003F118B /* Growl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFFE5E8D09A2B26D003F118B /* Growl.framework */; };
-		FFFE5ECD09A2B496003F118B /* Growl.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = FFFE5E8D09A2B26D003F118B /* Growl.framework */; };
+		FFFE5ECD09A2B496003F118B /* Growl.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = FFFE5E8D09A2B26D003F118B /* Growl.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		FFFE623009A2FF7A003F118B /* RDLogType.m in Sources */ = {isa = PBXBuildFile; fileRef = FFFE622E09A2FF7A003F118B /* RDLogType.m */; };
 		FFFE623D09A3019D003F118B /* RDPlainText.m in Sources */ = {isa = PBXBuildFile; fileRef = FFFE623B09A3019D003F118B /* RDPlainText.m */; };
 		FFFE629C09A30A6C003F118B /* RDFormattedText.m in Sources */ = {isa = PBXBuildFile; fileRef = FFFE629A09A30A6B003F118B /* RDFormattedText.m */; };
@@ -433,6 +433,7 @@
 		32CA4F630368D1EE00C91783 /* Atlantis_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Atlantis_Prefix.pch; sourceTree = "<group>"; };
 		5311D1872210FA390010AB9D /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		5311D18A2210FF300010AB9D /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/PTKeyComboPanel.xib; sourceTree = "<group>"; };
+		539862CD22EE94D400ECB14D /* Lemuria.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Lemuria.framework; path = ../../../../System/Volumes/Data/Users/pax/Source/Atlantis/Support/Lemuria.framework; sourceTree = "<group>"; };
 		53E193FC22110F4E00A0B0BE /* Lemuria.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Lemuria.xcodeproj; path = ../Lemuria/Lemuria.xcodeproj; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; explicitFileType = text.plist; fileEncoding = 4; path = Info.plist; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* Atlantis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Atlantis.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -966,7 +967,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				536215C022114A9300176D73 /* Lemuria.framework in Frameworks */,
+				539862D022EE953E00ECB14D /* Lemuria.framework in Frameworks */,
 				5311D1882210FA390010AB9D /* AVFoundation.framework in Frameworks */,
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
 				FF967108099E69FF005886F4 /* OgreKit.framework in Frameworks */,
@@ -1113,6 +1114,7 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				539862CD22EE94D400ECB14D /* Lemuria.framework */,
 				5311D1872210FA390010AB9D /* AVFoundation.framework */,
 				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
 				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
@@ -2405,8 +2407,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CODE_SIGN_IDENTITY = "Developer ID Application";
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 102;
+				DEVELOPMENT_TEAM = KB2CP45L69;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(FRAMEWORK_SEARCH_PATHS)",
 					"$(SRCROOT)/Support",
@@ -2431,8 +2435,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CODE_SIGN_IDENTITY = "Developer ID Application";
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 102;
+				DEVELOPMENT_TEAM = KB2CP45L69;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(FRAMEWORK_SEARCH_PATHS)",
 					"$(SRCROOT)/Support",
