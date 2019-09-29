@@ -20,6 +20,8 @@
 
 #import "RDAtlantisEventItem.h"
 
+#import <objc/runtime.h>
+
 @interface EventEditorDelegate
 - (void) addEvent;
 - (NSArray *) actions;
