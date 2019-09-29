@@ -2,4 +2,6 @@ build/*
 .svn
 Atlantis.xcodeproj/project.xcworkspace/contents.xcworkspacedata
 Atlantis.xcodeproj/project.xcworkspace/xcuserdata
+Atlantis.xcodeproj/xcuserdata/*
 *.xcbkptlist
+.DS_Store
