@@ -35,6 +35,8 @@
 /* Begin PBXBuildFile section */
 		5311D1882210FA390010AB9D /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5311D1872210FA390010AB9D /* AVFoundation.framework */; };
 		5311D18B2210FF300010AB9D /* PTKeyComboPanel.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5311D1892210FF300010AB9D /* PTKeyComboPanel.xib */; };
+		53613BC9234132D7005527FD /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53613BC8234132D7005527FD /* Sparkle.framework */; };
+		53613BCA23413311005527FD /* Sparkle.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 53613BC8234132D7005527FD /* Sparkle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		536215C122114AA900176D73 /* Lemuria.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 53E1940122110F4E00A0B0BE /* Lemuria.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		539862D022EE953E00ECB14D /* Lemuria.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53E1940122110F4E00A0B0BE /* Lemuria.framework */; };
 		8D11072A0486CEB800E47090 /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 29B97318FDCFA39411CA2CEA /* MainMenu.nib */; };
@@ -413,6 +415,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				53613BCA23413311005527FD /* Sparkle.framework in Copy Frameworks */,
 				536215C122114AA900176D73 /* Lemuria.framework in Copy Frameworks */,
 				FFFE5ECD09A2B496003F118B /* Growl.framework in Copy Frameworks */,
 				FF967111099E6A0D005886F4 /* OgreKit.framework in Copy Frameworks */,
@@ -433,6 +436,7 @@
 		32CA4F630368D1EE00C91783 /* Atlantis_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Atlantis_Prefix.pch; sourceTree = "<group>"; };
 		5311D1872210FA390010AB9D /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		5311D18A2210FF300010AB9D /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/PTKeyComboPanel.xib; sourceTree = "<group>"; };
+		53613BC8234132D7005527FD /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Sparkle.framework; path = Support/Sparkle.framework; sourceTree = "<group>"; };
 		539862CD22EE94D400ECB14D /* Lemuria.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Lemuria.framework; path = ../../../../System/Volumes/Data/Users/pax/Source/Atlantis/Support/Lemuria.framework; sourceTree = "<group>"; };
 		53E193FC22110F4E00A0B0BE /* Lemuria.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Lemuria.xcodeproj; path = ../Lemuria/Lemuria.xcodeproj; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; explicitFileType = text.plist; fileEncoding = 4; path = Info.plist; sourceTree = "<group>"; };
@@ -967,6 +971,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53613BC9234132D7005527FD /* Sparkle.framework in Frameworks */,
 				539862D022EE953E00ECB14D /* Lemuria.framework in Frameworks */,
 				5311D1882210FA390010AB9D /* AVFoundation.framework in Frameworks */,
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
@@ -1013,6 +1018,7 @@
 		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				53613BC8234132D7005527FD /* Sparkle.framework */,
 				FFD59B110A80AA1300B4F5ED /* CoreServices.framework */,
 				FF783E2C09EB853000D23B45 /* IOKit.framework */,
 				FF53276609E8CCD50013FB8A /* libz.dylib */,
@@ -2422,6 +2428,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
+				LD_RUNPATH_SEARCH_PATHS = "$(LD_RUNPATH_SEARCH_PATHS_$(IS_MACCATALYST)) @loader_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_NAME = Atlantis;
 				PROJECT_DISPLAY_VERSION = "0.9.9.6 rc6";
@@ -2448,6 +2455,7 @@
 				GCC_MODEL_TUNING = G5;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
+				LD_RUNPATH_SEARCH_PATHS = "$(LD_RUNPATH_SEARCH_PATHS_$(IS_MACCATALYST)) @loader_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MACOSX_DEPLOYMENT_TARGET_ppc = 10.3;
 				PRODUCT_NAME = Atlantis;

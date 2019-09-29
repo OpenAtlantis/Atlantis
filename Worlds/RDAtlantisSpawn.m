@@ -84,6 +84,8 @@ static NSImage *s_statusLockGreyImage = nil;
             [_rdInputView setAutomaticDashSubstitutionEnabled:NO];
             [_rdInputView setAutomaticSpellingCorrectionEnabled:NO];
             [_rdInputView setAutomaticTextReplacementEnabled:NO];
+            [_rdInputView setAutomaticQuoteSubstitutionEnabled:NO];
+            [_rdInputView setAutomaticLinkDetectionEnabled:NO];
             
             if ([_rdOutputView respondsToSelector:@selector(setAllowsNonContiguousLayout:)]) {
                 [(id)_rdOutputView setAllowsNonContiguousLayout:YES];

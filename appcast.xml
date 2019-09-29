@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle"  xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Atlantis changelog</title>
+    <link>https://www.riverdark.net/atlantis/appcast.xml</link>
+    <description>Most recent changes with links to updates.</description>
+    <language>en</language>
+      <item>
+        <title>0.9.9.6 rc6</title>
+        <description>
+          <![CDATA[
+            <b>This changelog also covers the previous five 64-bit release candidates.</b>
+            <p>As you've all noticed, I haven't finished the Atlantis 2.0 clean rewrite in Swift I had started. As you've <i>also</i> all noticed, Catalina no longer will support 32-bit applications, which means Atlantis needed a rebuild. Hence the 0.9.9.6 line.</p>
+
+            <ul>
+              <li><b>Atlantis is now a 64-bit application and so will run under Catalina.</b></li>
+              <li>Input area will no longer en-smarten quotes.</li>
+              <li>Automatically disables dark mode until Atlantis can be rewritten to support it.</li>
+              <li>The Growl notification functionality will now also automatically support Notification Center.</li>
+              <li>Fixes for a number of crashes and bugs that arose due to aging code.</li>
+              <li><b>Unfortunately, scripting is no longer functional.</b> Neither CamelBones (written by my late friend Sherm Pendley) nor the Lua framework I used are supported anymore, and neither can compile under modern tools. I will be redoing the script system, but the 64-bit release was more immediately pressing.</li>
+             </ul>
+          ]]>
+        </description>
+        <pubDate>Sun, 29 Sep 2019 13:41:31 -0700</pubDate>
+        <enclosure url="https://www.riverdark.net/atlantis/downloads/Atlantis-0.9.9.6rc6.zip" sparkle:version="102" sparkle:shortVersionString="0.9.9.6 rc6" type="application/octet-stream" sparkle:edSignature="hPKM/tR/1cxcFL0pZOnev3dUaZlP6yUE1IfRTteJqlYttPS8kfUX+xacKptEUamYG50jUyl/c4kUf06d42o4DA==" length="3968073" />
+      </item>
+      <item>
+        <title>0.9.9.5</title>
+        <description>
+          <![CDATA[
+            <b>This is really just a sort of temporary build, one that fixed a couple of bugs for various friends, and where I began working on the 64-bit conversion. It's only in here as a placeholder so the appcast has somewhere to start before 0.9.9.6 real-version comes out.</b>
+          ]]>
+        </description>
+        <pubDate>Mon, 11 Feb 2019 20:00:00 -0700</pubDate>
+        <enclosure url="https://www.riverdark.net/atlantis/downloads/Atlantis-0.9.9.5.zip" sparkle:version="101" sparkle:shortVersionString="0.9.9.5" type="application/octet-stream" sparkle:edSignature="/y4CUHeusyYHmFb8Y4CFGGKaHW/Lfe+RFFdLA+v73YLaLCLgbN4Xn6PV1TPOTlE6KnYRYSWWnw7vxxUvgV4GCg==" length="3721988" />
+      </item>
+  </channel>
+</rss>

@@ -1,5 +1,6 @@
 #import <Lemuria/Lemuria.h>
 //#import <DTCVersionManager/DTCVersionManager.h>
+#import <Sparkle/Sparkle.h>
 #import <SystemConfiguration/SystemConfiguration.h>
 //#import <CamelBones/CamelBones.h>
 #import <OgreKit/OgreKit.h>
@@ -189,6 +190,8 @@ static void networkReachabilityChangedCallback(SCNetworkReachabilityRef target, 
 
 - (void) applicationDidFinishLaunching:(NSNotification *)notification
 {
+    [[SUUpdater sharedUpdater] resetUpdateCycle];
+    
 #ifndef _ATLANTIS_DEBUG
     [_rdWorlds doAutoconnects];
 #endif
@@ -581,16 +584,6 @@ static void networkReachabilityChangedCallback(SCNetworkReachabilityRef target, 
     [menuEvent eventAddAction:[[Action_UploadpanelOpen alloc] init]];
     [self addMenuEvent:menuEvent toMenu:@"Logs" withTitle:@"Upload File..."];
 
-
-//    BOOL skipCheck = [[NSUserDefaults standardUserDefaults] boolForKey:@"atlantis.update.skipcheck"];
-//
-//    if (!skipCheck) {
-//        [DTCVersionManager checkVersionAt:@"http://www.riverdark.net/atlantis/atlantis_versions.plist"
-//                      withProductPage:@"http://www.riverdark.net/atlantis/downloads/"
-//                     andApplyToWindow:nil
-//                           showAlerts:NO];
-//    }
-//
     SCNetworkReachabilityContext reachabilityContext = {
                 .version = 0,
                 .info = NULL,
@@ -1899,10 +1892,7 @@ static void networkReachabilityChangedCallback(SCNetworkReachabilityRef target, 
 
 - (IBAction) checkForUpdates:(id) sender
 {
-//    [DTCVersionManager checkVersionAt:@"http://www.riverdark.net/atlantis/atlantis_versions.plist"
-//                      withProductPage:@"http://www.riverdark.net/atlantis/downloads/"
-//                     andApplyToWindow:nil
-//                           showAlerts:YES];
+    [[SUUpdater sharedUpdater] checkForUpdates:self];
 }
 
 - (IBAction) launchDocWiki:(id) sender
