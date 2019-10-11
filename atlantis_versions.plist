@@ -2,13 +2,15 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>102</key>
+	<key>104</key>
 	<dict>
 		<key>versionString</key>
 		<string>0.9.9.6</string>
 		<key>newFeatures</key>
 		<array>
-			<string>GENERAL: Convert Atlantis to 64-bit. This meant losing the Lua and Perl support entirely. :(</string>
+			<string>GENERAL: Convert Atlantis to 64-bit. This meant losing the Lua and Perl support entirely, at least for now. This also means we no longer run on older versions of MacOS, unfortunately.</string>
+			<string>GENERAL: A whooole bunch of bugfixes related to converting us to 64-bit and newer SDKs. Thank you to my very patient testers who put up with some weird behavior during the 64-bit betas.</string>
+			<string>INFO: If you'd like to join us in testing, feel free to join the Atlantis Discord server linked from my (semi-)updated website.</string>
 		</array>
 	</dict>
 	<key>101</key>

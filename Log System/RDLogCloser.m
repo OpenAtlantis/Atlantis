@@ -52,7 +52,7 @@
 {
     NSIndexSet *logsToClose = [_rdTableView selectedRowIndexes];
     
-    unsigned nextToClose = [logsToClose firstIndex];
+    NSUInteger nextToClose = [logsToClose firstIndex];
 
     NSMutableArray *closers = [[NSMutableArray alloc] init];
     

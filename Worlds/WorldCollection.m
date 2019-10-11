@@ -212,17 +212,8 @@ NSInteger compareWorlds(id obj1, id obj2, void *context)
     tempPref = [[RDAtlantisWorldPreferences alloc] init];
     [tempPref setPreference:@"Arx" forKey:@"atlantis.world.name" withCharacter:nil];
     [tempPref setPreference:@"play.arxgame.org" forKey:@"atlantis.world.host" withCharacter:nil];
-    [tempPref setPreference:[NSNumber numberWithInt:4000] forKey:@"atlantis.world.port" withCharacter:nil];
+    [tempPref setPreference:[NSNumber numberWithInt:3000] forKey:@"atlantis.world.port" withCharacter:nil];
     [tempPref setPreference:@"http://play.arxgame.org/" forKey:@"atlantis.world.website" withCharacter:nil];
-    [_rdWorlds addObject:tempPref];
-    [tempPref release];
-    
-    // BSGU
-    tempPref = [[RDAtlantisWorldPreferences alloc] init];
-    [tempPref setPreference:@"BSGU" forKey:@"atlantis.world.name" withCharacter:nil];
-    [tempPref setPreference:@"mush.aresmush.com" forKey:@"atlantis.world.host" withCharacter:nil];
-    [tempPref setPreference:[NSNumber numberWithInt:7206] forKey:@"atlantis.world.port" withCharacter:nil];
-    [tempPref setPreference:@"http://bsgunificationmush.wikidot.com/" forKey:@"atlantis.world.website" withCharacter:nil];
     [_rdWorlds addObject:tempPref];
     [tempPref release];
     

@@ -6,6 +6,32 @@
     <description>Most recent changes with links to updates.</description>
     <language>en</language>
       <item>
+        <title>0.9.9.6</title>
+        <description>
+          <![CDATA[
+            <ul>
+            	<li><b>MAJOR:</b> Final release build of our first 64-bit version!</li>
+            	<li><b>FIXED:</b> Unable to close logs when more than one are running in a world.</li>
+             </ul>
+          ]]>
+        </description>
+        <pubDate>Thu, 10 Oct 2019 22:12:58 -0700</pubDate>
+        <enclosure url="https://www.riverdark.net/atlantis/downloads/Atlantis-0.9.9.6.zip" sparkle:version="104" sparkle:shortVersionString="0.9.9.6" type="application/octet-stream" sparkle:edSignature="Fo5xL2Mrg0NsvrWuOMVyqW7EOO7CnhtzX36drVwirnApGk9Eyyh1DXOwzP0HToGJB+Ygg2q9O2upcOhs9iCuAg==" length="3987397" />
+      </item>
+      <item>
+        <title>0.9.9.6 rc7</title>
+        <description>
+          <![CDATA[
+            <ul>
+            	<li>Fixed issue with tabbed window style hanging.</li>
+            	<li>Fixed issue with drag-and-drop of spawns going completely broken.</li>
+             </ul>
+          ]]>
+        </description>
+        <pubDate>Sun, 29 Sep 2019 13:41:31 -0700</pubDate>
+        <enclosure url="https://www.riverdark.net/atlantis/downloads/Atlantis-0.9.9.6rc7.zip" sparkle:version="103" sparkle:shortVersionString="0.9.9.6 rc7" type="application/octet-stream" sparkle:edSignature="lYTBPa43oWZ75bCxrmzn8nxpqRUeSoi4DytLziB7+Xyk2mE7T5YLPBRbS9Kxg06L1JONZoQyJwzXLCPn7CShAg==" length="3987385" />
+      </item>
+      <item>
         <title>0.9.9.6 rc6</title>
         <description>
           <![CDATA[
