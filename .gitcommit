@@ -1,0 +1,60 @@
+fix(): 
+#
+# As the project moves towards open source, it's important to
+# switch to using standardized commit messages for everyone's 
+# sanity.
+# 
+# Please use the following guidelines to format all your commit     
+# messages:
+# 
+#     <type>(<scope>): <subject>
+#     <BLANK LINE>
+#     <body>
+#     <BLANK LINE>
+#     <footer>
+# 
+# Please note that:
+#  - The HEADER is a single line of max. 50 characters that         
+#    contains a succinct description of the change. It contains a   
+#    type, an optional scope, and a subject
+#       + <type> describes the kind of change that this commit is   
+#                providing. Allowed types are:
+#             * feat (feature)
+#             * fix (bug fix)
+#             * docs (documentation)
+#             * style (formatting, missing semicolons, …)
+#             * refactor
+#             * test (when adding missing tests)
+#             * chore (maintain)
+#       + <scope> can be anything specifying the place of the commit    
+#                 change; often this will be the subsystem that it
+#                 modifies.
+#       + <subject> is a very short description of the change, in   
+#                   the following format:
+#             * no dot (.) at the end
+#  - The BODY should include the motivation for the change and      
+#    contrast this with previous behavior
+
+#  - The FOOTER should contain any information about Breaking       
+#    Changes and is also the place to reference issues that this  
+#    commit resolves. Issues should be referenced in the form
+#    #xxxx, such as #1234 for issue 1234.
+#
+# An example might be:
+#
+# ----
+# fix(spawns): correct font metrics
+#
+# Previous font metric calculations were incorrect; this caused
+# the calculation of screen size for a given spawn to be off
+# slightly. Rewrite font metric calculation in order to correct 
+# this.
+#
+# Resolves issue #2.
+# ----
+# 
+# Hopefully this will help make a cleaner commit history for
+# everyone to read. (And I need to adhere to it as well, going
+# forward!)
+#
+# - Rachel / Packetdancer
