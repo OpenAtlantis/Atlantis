@@ -1,0 +1,7 @@
+# Integration with Issue Tracker
+#
+# (note that '\' need to be escaped).
+
+[issuetracker "Atlantis Redmine"]
+  regex = "#(\\d+)"
+  url = "https://issues.riverdark.net/issue/$1"
