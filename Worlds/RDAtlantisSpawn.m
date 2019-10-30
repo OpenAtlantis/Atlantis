@@ -81,12 +81,16 @@ static NSImage *s_statusLockGreyImage = nil;
             [_rdOutputView setBackgroundColor:_rdBackgroundColor];
             [_rdOutputView setTextColor:_rdInputColor];
             [_rdOutputView setFont:_rdFont];
+            [_rdOutputView turnOffKerning:self];
+            [_rdOutputView turnOffLigatures:self];
             [_rdInputView setAutomaticDashSubstitutionEnabled:NO];
             [_rdInputView setAutomaticSpellingCorrectionEnabled:NO];
             [_rdInputView setAutomaticTextReplacementEnabled:NO];
             [_rdInputView setAutomaticQuoteSubstitutionEnabled:NO];
             [_rdInputView setAutomaticLinkDetectionEnabled:NO];
-            
+            [_rdInputView turnOffKerning:self];
+            [_rdInputView turnOffLigatures:self];
+
             if ([_rdOutputView respondsToSelector:@selector(setAllowsNonContiguousLayout:)]) {
                 [(id)_rdOutputView setAllowsNonContiguousLayout:YES];
             }
@@ -344,8 +348,9 @@ static NSImage *s_statusLockGreyImage = nil;
     NSSize advance = [_rdFont maximumAdvancement];
     float lineheight = [[_rdOutputView layoutManager] defaultLineHeightForFont:_rdFont];
     
-    float cellwidth;
-    cellwidth = advance.width;    
+    NSRect fontRect = [_rdFont boundingRectForFont];
+    
+    float cellwidth = (fontRect.size.width + fontRect.origin.x);
     
     int oldWidth = _rdScreenWidth;
     int oldHeight = _rdScreenHeight;
