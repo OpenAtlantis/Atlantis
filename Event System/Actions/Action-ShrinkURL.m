@@ -39,7 +39,7 @@
 {
     NSString *escaped = [(NSString*)CFURLCreateStringByAddingPercentEscapes(kCFAllocatorDefault,  (CFStringRef)input, NULL,  CFSTR(":/?=&+#"), kCFStringEncodingUTF8) autorelease];	
 	
-	NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://tinyurl.com/api-create.php?url=%@", escaped]];
+	NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"https://tinyurl.com/api-create.php?url=%@", escaped]];
     NSData *data = [url resourceDataUsingCache:YES];
     
     NSString *result = [[NSString alloc] initWithData:data encoding:NSASCIIStringEncoding];
