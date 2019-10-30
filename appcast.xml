@@ -6,6 +6,22 @@
     <description>Most recent changes with links to updates.</description>
     <language>en</language>
       <item>
+        <title>0.9.9.7</title>
+        <description>
+          <![CDATA[
+            <ul>
+              <li><b>FIXED:</b> Restored the ability to shrink URLs via TinyURL.</li>
+              <li><b>FIXED:</b> If your hotkey settings file has somehow gotten corrupted, you will no longer be barred from creating new hotkey events for all eternity. (The curse is lifted! Rejoice!)</li>
+              <li><b>FIXED:</b> In the above case, it will also now recreate the default hotkey set for you, so you at least aren't left completely without hotkeys.</li>
+              <li><b>FIXED:</b> Font metrics calculations now reflect reality even when a font has an offset for glyphs. Any deviation from the 'real' width of a spawn will now be an underestimation, so a line of the width reported to the game via Telnet NAWS will never wrap.</li>
+              <li><b>FIXED:</b> After a great deal of macOS text layout system forensics, the breaking change to the system has been found and the MUSH Text Editor works again.</li> 
+             </ul>
+          ]]>
+        </description>
+        <pubDate>Thu, 10 Oct 2019 22:12:58 -0700</pubDate>
+        <enclosure url="https://www.riverdark.net/atlantis/downloads/Atlantis-0.9.9.7.zip" sparkle:version="105" sparkle:shortVersionString="0.9.9.7" type="application/octet-stream" sparkle:edSignature="hoP1m/nKKg0GOQeK8kXRysRweNW9QnEraxbxKU7pDlHZfeGcuhrwV+MS6sFrAsnd9ZY5I+0mToJGqW4hVjVIBA==" length="3968120" />
+      </item>
+      <item>
         <title>0.9.9.6</title>
         <description>
           <![CDATA[
