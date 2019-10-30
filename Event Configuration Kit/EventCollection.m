@@ -30,6 +30,9 @@
 {
     self = [super init];
     _rdEvents = [[coder decodeObjectForKey:@"events"] mutableCopy];
+    if (!_rdEvents) {
+        _rdEvents = [[NSMutableArray alloc] init];
+    }
     return self;
 }
 
