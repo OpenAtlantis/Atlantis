@@ -89,13 +89,14 @@
         _rdFont = [[NSFont userFixedPitchFontOfSize:12.0f] retain];
 
     if (!_rdRuler) {
-        NSTextContainer *container = [[NSTextContainer alloc] initWithContainerSize:[[_rdEditorView textContainer] containerSize]];
-        NSTextStorage *storage = [[NSTextStorage alloc] initWithString:@""];
+//        NSTextContainer *container = [[NSTextContainer alloc] initWithContainerSize:[[_rdEditorView textContainer] containerSize]];
+//        NSTextStorage *storage = [[NSTextStorage alloc] initWithString:@""];
         _rdLayoutManager = [[RDMonospaceLayoutManager alloc] init];
-        [_rdLayoutManager addTextContainer:container];
-        [storage addLayoutManager:_rdLayoutManager];
-        [container setTextView:_rdEditorView];
-        [container release];
+        [[_rdEditorView textContainer] replaceLayoutManager:_rdLayoutManager];
+//        [_rdLayoutManager addTextContainer:container];
+//        [storage addLayoutManager:_rdLayoutManager];
+//        [container setTextView:_rdEditorView];
+//        [container release];
 
         _rdRuler = [[RDMonospaceRulerView alloc] initWithScrollView:[_rdEditorView enclosingScrollView] orientation:NSHorizontalRuler];
         [[_rdEditorView enclosingScrollView] setRulersVisible:YES];
@@ -120,6 +121,9 @@
     int ansiType = [[NSUserDefaults standardUserDefaults] integerForKey:@"atlantis.mushEdit.ansiType"];    
     [_rdAnsiTypePicker selectCellWithTag:ansiType];
         
+    [_rdEditorView setSelectedRange:NSMakeRange(0,[[_rdEditorView textStorage] length])];
+    [_rdEditorView delete:self];
+    
     NSColor *selectColor = [_rdWorld preferenceForKey:@"atlantis.colors.selection"];
     if (selectColor) {    
         NSDictionary *selectDict =

@@ -16,9 +16,4 @@
     return nil;
 }
 
-- (void)drawGlyphsForGlyphRange:(NSRange)glyphRange atPoint:(NSPoint)containerOrigin
-{
-    [super drawGlyphsForGlyphRange:glyphRange atPoint:containerOrigin];
-}
-
 @end
