@@ -8,7 +8,7 @@
 
 #import "ConditionClasses.h"
 #import <objc/runtime.h>
-
+#import <objc/message.h>
 
 NSInteger conditionSort(id obj1, id obj2, void *context)
 {

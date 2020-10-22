@@ -44,6 +44,12 @@
     self = [super initWithCoder:coder];
     if (self) {
         _rdString = [[coder decodeObjectForKey:@"action.text"] retain];
+        if ([coder containsValueForKey:@"action.splitline"]) {
+            _rdSplitLines = [coder decodeBoolForKey:@"action.splitline"];
+        }
+        else {
+            _rdSplitLines = YES;
+        }
     }
     return self;
 }
@@ -52,6 +58,7 @@
 {
     [super encodeWithCoder:coder];
     [coder encodeObject:_rdString forKey:@"action.text"];
+    [coder encodeBool:_rdSplitLines forKey:@"action.splitline"];
 }
 
 
@@ -93,12 +100,17 @@
 
     NSString *newString = [_rdString expandWithDataIn:[state data]];
 
-    NSArray *newCommand = [newString componentsSeparatedByString:@";"];
-    NSEnumerator *commandEnum = [newCommand objectEnumerator];
-    NSString *walk;
-    
-    while (walk = [commandEnum nextObject]) {
-        [state textToWorld:walk];
+    if (_rdSplitLines) {
+        NSArray *newCommand = [newString componentsSeparatedByString:@";"];
+        NSEnumerator *commandEnum = [newCommand objectEnumerator];
+        NSString *walk;
+        
+        while (walk = [commandEnum nextObject]) {
+            [state textToWorld:walk];
+        }
+    }
+    else {
+        [state textToWorld:newString];
     }
     
     return NO;
@@ -109,7 +121,7 @@
 - (NSView *) actionConfigurationView
 {
     if (!_rdInternalConfigurationView) {
-        [NSBundle loadNibNamed:@"ActionConf_SendText" owner:self];
+        [[NSBundle mainBundle] loadNibNamed:@"ActionConf_SendText" owner:self topLevelObjects:nil];
     }
     
     [_rdActualText setDelegate:self];
@@ -119,6 +131,8 @@
     else
         [_rdActualText setStringValue:@""];
     
+    _rdSplitLineToggle.state = _rdSplitLines ? NSControlStateValueOn : NSControlStateValueOff;
+    
     return _rdInternalConfigurationView;
 }
 
@@ -126,6 +140,11 @@
 {
     [_rdString release];
     _rdString = [[_rdActualText stringValue] retain];
+}
+
+- (void) lineSplitToggled:(id)sender
+{
+    _rdSplitLines = (_rdSplitLineToggle.state == NSControlStateValueOn);
 }
 
 

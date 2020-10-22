@@ -9,15 +9,18 @@
 #import <Cocoa/Cocoa.h>
 #import "BaseAction.h"
 
-@interface Action_WorldSend : BaseAction {
+@interface Action_WorldSend : BaseAction <NSTextFieldDelegate> {
 
     NSString                *_rdString;
+    bool                     _rdSplitLines;
     
     IBOutlet NSView         *_rdInternalConfigurationView;
     IBOutlet NSTextField    *_rdActualText;
+    IBOutlet NSButton       *_rdSplitLineToggle;
 
 }
 
 - (id) initWithString:(NSString *) string;
+- (IBAction) lineSplitToggled:(id)sender;
 
 @end

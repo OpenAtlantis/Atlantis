@@ -13,6 +13,7 @@
 #import "NSStringExtensions.h"
 #import "RDAtlantisSpawn.h"
 #import <objc/runtime.h>
+#import <objc/message.h>
 
 @implementation Action_OpenLog
 

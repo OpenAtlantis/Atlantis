@@ -36,6 +36,7 @@
 #include <string.h>
 
 #import <objc/runtime.h>
+#import <objc/message.h>
 
         
 static NSString *alphabet = @"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";

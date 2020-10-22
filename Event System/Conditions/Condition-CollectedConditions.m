@@ -11,6 +11,7 @@
 #import "ConditionClasses.h"
 #import "RDAtlantisMainController.h"
 #import <objc/runtime.h>
+#import <objc/message.h>
 
 @implementation Condition_CollectedConditions
 

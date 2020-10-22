@@ -33,6 +33,7 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		5303ACB925413BF100565FBD /* ActionConf_SendText.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5303ACB825413BF100565FBD /* ActionConf_SendText.xib */; };
 		5311D1882210FA390010AB9D /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5311D1872210FA390010AB9D /* AVFoundation.framework */; };
 		5311D18B2210FF300010AB9D /* PTKeyComboPanel.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5311D1892210FF300010AB9D /* PTKeyComboPanel.xib */; };
 		53613BC9234132D7005527FD /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53613BC8234132D7005527FD /* Sparkle.framework */; };
@@ -189,7 +190,6 @@
 		FF5E906809C9491100B263C5 /* Action-NextWorld.m in Sources */ = {isa = PBXBuildFile; fileRef = FF5E906609C9491100B263C5 /* Action-NextWorld.m */; };
 		FF5E909009C94A3600B263C5 /* Action-PrevWorld.m in Sources */ = {isa = PBXBuildFile; fileRef = FF5E908E09C94A3600B263C5 /* Action-PrevWorld.m */; };
 		FF60A3AF0D6121B200D7B9F2 /* MCPVMooClient.m in Sources */ = {isa = PBXBuildFile; fileRef = FF60A3AE0D6121B200D7B9F2 /* MCPVMooClient.m */; };
-		FF61821A09A800EB00EB4D80 /* ActionConf_SendText.nib in Resources */ = {isa = PBXBuildFile; fileRef = FF61821909A800EB00EB4D80 /* ActionConf_SendText.nib */; };
 		FF61828209A807C500EB4D80 /* ActionConf_FocusSpawn.nib in Resources */ = {isa = PBXBuildFile; fileRef = FF61828109A807C500EB4D80 /* ActionConf_FocusSpawn.nib */; };
 		FF61CD1A0B8A37910058CDEA /* NSDictionary+XMLPersistence.m in Sources */ = {isa = PBXBuildFile; fileRef = FF61CD160B8A37910058CDEA /* NSDictionary+XMLPersistence.m */; };
 		FF61CD1B0B8A37910058CDEA /* UKXMLPersistence.c in Sources */ = {isa = PBXBuildFile; fileRef = FF61CD170B8A37910058CDEA /* UKXMLPersistence.c */; };
@@ -434,6 +434,7 @@
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		32CA4F630368D1EE00C91783 /* Atlantis_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Atlantis_Prefix.pch; sourceTree = "<group>"; };
+		5303ACB825413BF100565FBD /* ActionConf_SendText.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ActionConf_SendText.xib; path = "Event System/Actions/ActionConf_SendText.xib"; sourceTree = "<group>"; };
 		5311D1872210FA390010AB9D /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		5311D18A2210FF300010AB9D /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/PTKeyComboPanel.xib; sourceTree = "<group>"; };
 		53613BC8234132D7005527FD /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Sparkle.framework; path = Support/Sparkle.framework; sourceTree = "<group>"; };
@@ -695,7 +696,6 @@
 		FF5E908E09C94A3600B263C5 /* Action-PrevWorld.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Action-PrevWorld.m"; path = "Event System/Actions/Action-PrevWorld.m"; sourceTree = "<group>"; };
 		FF60A3AD0D6121B200D7B9F2 /* MCPVMooClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MCPVMooClient.h; path = "MCP System/MCPVMooClient.h"; sourceTree = "<group>"; };
 		FF60A3AE0D6121B200D7B9F2 /* MCPVMooClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MCPVMooClient.m; path = "MCP System/MCPVMooClient.m"; sourceTree = "<group>"; };
-		FF61821909A800EB00EB4D80 /* ActionConf_SendText.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = ActionConf_SendText.nib; path = "Event System/Actions/ActionConf_SendText.nib"; sourceTree = "<group>"; };
 		FF61828109A807C500EB4D80 /* ActionConf_FocusSpawn.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = ActionConf_FocusSpawn.nib; path = "Event System/Actions/ActionConf_FocusSpawn.nib"; sourceTree = "<group>"; };
 		FF61CD150B8A37910058CDEA /* NSDictionary+XMLPersistence.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = "NSDictionary+XMLPersistence.h"; path = "Extensions/NSDictionary+XMLPersistence.h"; sourceTree = "<group>"; };
 		FF61CD160B8A37910058CDEA /* NSDictionary+XMLPersistence.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = "NSDictionary+XMLPersistence.m"; path = "Extensions/NSDictionary+XMLPersistence.m"; sourceTree = "<group>"; };
@@ -1511,13 +1511,13 @@
 		FF61822009A800F900EB4D80 /* Configuration Views */ = {
 			isa = PBXGroup;
 			children = (
+				5303ACB825413BF100565FBD /* ActionConf_SendText.xib */,
 				FFAD77000F2AD8A300FA2652 /* ActionConf_ClearSpawn.nib */,
 				FF557F340D1C61190092B7A5 /* ActionConf_SpawnPrefix.nib */,
 				FF59EA7A0AB392740026D7DB /* ActionConf_Substitution.nib */,
 				FF68E8D10A7BFC20001D43A7 /* ActionConf_TextSpeak.nib */,
 				FF9717970A69877D00EE2ACD /* ActionConf_SetTempVar.nib */,
 				FF6E57900A66EB9400AE3E0B /* ActionConf_PerlEval.nib */,
-				FF61821909A800EB00EB4D80 /* ActionConf_SendText.nib */,
 				FF61828109A807C500EB4D80 /* ActionConf_FocusSpawn.nib */,
 				FF77E48809BBE9E500520233 /* ActionConf_HighlightText.nib */,
 				FF77E4D309BBEF4D00520233 /* ActionConf_Growl.nib */,
@@ -1983,6 +1983,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5303ACB925413BF100565FBD /* ActionConf_SendText.xib in Resources */,
 				8D11072A0486CEB800E47090 /* MainMenu.nib in Resources */,
 				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
 				FFFF6CE40999E0DA00E56390 /* atlantis-logo.icns in Resources */,
@@ -1992,7 +1993,6 @@
 				FFB18D8309A16ED70067536D /* PTKeyboardIcon.tiff in Resources */,
 				FFFE66E409A411B3003F118B /* LogClosePanel.nib in Resources */,
 				FFFE6AEE09A45192003F118B /* Variables.txt in Resources */,
-				FF61821A09A800EB00EB4D80 /* ActionConf_SendText.nib in Resources */,
 				FF61828209A807C500EB4D80 /* ActionConf_FocusSpawn.nib in Resources */,
 				FF1C9D3409B68B6100E55E57 /* EventEditor.nib in Resources */,
 				FF590F6009B96984005C2E02 /* ActionPicker.nib in Resources */,
@@ -2475,7 +2475,7 @@
 				OTHER_CFLAGS = "-D_ATLANTIS_DEBUG";
 				PREBINDING = NO;
 				PROJECT_COMPANY = "Riverdark Studios";
-				PROJECT_DISPLAY_VERSION = 0.9.9.7;
+				PROJECT_DISPLAY_VERSION = 0.9.9.8;
 				PROJECT_RELEASE_STATUS = beta;
 				SDKROOT = macosx;
 				VALID_ARCHS = x86_64;
@@ -2497,7 +2497,7 @@
 				ONLY_ACTIVE_ARCH = NO;
 				PREBINDING = NO;
 				PROJECT_COMPANY = "Riverdark Studios";
-				PROJECT_DISPLAY_VERSION = 0.9.9.7;
+				PROJECT_DISPLAY_VERSION = 0.9.9.8;
 				PROJECT_RELEASE_STATUS = beta;
 				SDKROOT = macosx;
 				VALID_ARCHS = x86_64;
