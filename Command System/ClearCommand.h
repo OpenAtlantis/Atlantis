@@ -7,7 +7,7 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#import <BaseCommand.h>
+#import "BaseCommand.h"
 
 @interface ClearCommand : BaseCommand {
 
