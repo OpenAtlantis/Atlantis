@@ -15,8 +15,10 @@ NSInteger conditionSort(id obj1, id obj2, void *context)
     NSString *s1;
     NSString *s2;
     
-    s1 = (NSString *)objc_msgSend((Class)obj1,@selector(conditionName));
-    s2 = (NSString *)objc_msgSend((Class)obj2,@selector(conditionName));
+    NSString* (*SendReturningString)(id, SEL) = (NSString* (*)(id, SEL))objc_msgSend;
+    
+    s1 = SendReturningString((Class)obj1,@selector(conditionName));
+    s2 = SendReturningString((Class)obj2,@selector(conditionName));
 
     return [s1 compare:s2];
 }
@@ -60,9 +62,11 @@ NSInteger conditionSort(id obj1, id obj2, void *context)
         
     NSString *result = nil;
         
+    NSString* (*SendReturningString)(id, SEL) = (NSString* (*)(id, SEL))objc_msgSend;
+    
     Class aClass = (Class)[_rdClasses objectAtIndex:index];
     if (aClass) {
-        result = (NSString *)objc_msgSend(aClass,@selector(conditionName));
+        result = SendReturningString(aClass,@selector(conditionName));
     }
     
     return result;
@@ -97,8 +101,10 @@ NSInteger conditionSort(id obj1, id obj2, void *context)
     
     Class walkClass;
     
+    NSNumber* (*SendTypeReturningNumber)(id, SEL, AtlantisEventType) = (NSNumber* (*)(id, SEL, AtlantisEventType))objc_msgSend;
+    
     while (walkClass = [conditionClassEnum nextObject]) {
-        NSNumber * result = objc_msgSend(walkClass, @selector(validForType:), type);
+        NSNumber * result = SendTypeReturningNumber(walkClass, @selector(validForType:), type);
         if (result && [result boolValue])
             [tempArray addObject:walkClass];
     }

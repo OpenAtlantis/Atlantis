@@ -96,8 +96,10 @@
     Class logWalk;
     RDLogType *result = nil;
     
+    NSString* (*SendReturningString)(id, SEL) = (NSString* (*)(id, SEL))objc_msgSend;
+    
     while (!result && (logWalk = [logEnum nextObject])) {
-        NSString *tempString = objc_msgSend(logWalk,@selector(shortTypeName));
+        NSString *tempString = SendReturningString(logWalk,@selector(shortTypeName));
         
         if (tempString && [tempString isEqualToString:logType]) {
             result = (RDLogType *)class_createInstance(logWalk,0);
@@ -196,15 +198,19 @@ extern int scrollbackSort(id obj1, id obj2, void *context);
     
     NSArray *logTypes = [[RDAtlantisMainController controller] logTypes];
     Class newLogType = [logTypes objectAtIndex:selected];
+
+    NSString* (*SendReturningString)(id, SEL) = (NSString* (*)(id, SEL))objc_msgSend;
+    BOOL (*SendReturningBool)(id, SEL) = (BOOL (*)(id, SEL))objc_msgSend;
+
     
-    NSString *newLogName = (NSString *)objc_msgSend(newLogType,@selector(shortTypeName));
+    NSString *newLogName = SendReturningString(newLogType,@selector(shortTypeName));
     if (newLogName && ![newLogName isEqualToString:_rdLogType]) {
         [_rdLogType release];
         _rdLogType = [newLogName retain];
         [_rdOptions release];
         _rdOptions = nil;
         
-        if (objc_msgSend(newLogType,@selector(supportsOptions))) {
+        if (SendReturningBool(newLogType,@selector(supportsOptions))) {
             [_rdOptionsButton setEnabled:YES];
         }
         else {
@@ -289,10 +295,13 @@ extern int scrollbackSort(id obj1, id obj2, void *context);
     
     int selectMe = 0;
     BOOL enabled = YES;
+
+    NSString* (*SendReturningString)(id, SEL) = (NSString* (*)(id, SEL))objc_msgSend;
+    BOOL (*SendReturningBool)(id, SEL) = (BOOL (*)(id, SEL))objc_msgSend;
     
     while (logWalk = [logEnum nextObject]) {
-        NSString *result = (NSString *)objc_msgSend(logWalk,@selector(logtypeName));
-        NSString *typeName = (NSString *)objc_msgSend(logWalk,@selector(shortTypeName));
+        NSString *result = SendReturningString(logWalk,@selector(logtypeName));
+        NSString *typeName = SendReturningString(logWalk,@selector(shortTypeName));
         
         if (!result) {
             result = @"<unknown log type>";
@@ -301,7 +310,7 @@ extern int scrollbackSort(id obj1, id obj2, void *context);
         [_rdLogTypes addItemWithTitle:result];        
         if (typeName && [typeName isEqualToString:_rdLogType]) {
             selectMe = [_rdLogTypes indexOfItemWithTitle:result];
-            enabled = (objc_msgSend(logWalk,@selector(supportsOptions)) != nil);
+            enabled = (SendReturningBool(logWalk,@selector(supportsOptions)) != nil);
         }
     }
 

@@ -139,8 +139,10 @@
         NSEnumerator *classEnum = [conditionClasses objectEnumerator];
         Class classWalk;
         
+        NSString* (*SendReturningString)(id, SEL) = (NSString* (*)(id, SEL))objc_msgSend;
+        
         while (classWalk = [classEnum nextObject]) {
-            NSString *result = objc_msgSend(classWalk,@selector(conditionName));
+            NSString *result = SendReturningString(classWalk,@selector(conditionName));
             [_rdConditionPicker addItemWithTitle:result];
         }
 

@@ -81,8 +81,10 @@ static ActionPicker *s_Picker = nil;
     
     Class classWalk;
     
+    NSString* (*SendReturningString)(id, SEL) = (NSString* (*)(id, SEL))objc_msgSend;
+    
     while (classWalk = [actionEnum nextObject]) {
-        NSString *result = objc_msgSend(classWalk,@selector(actionName));
+        NSString *result = SendReturningString(classWalk,@selector(actionName));
         [_rdActionList addItemWithTitle:result];
     }
     
@@ -109,8 +111,10 @@ static ActionPicker *s_Picker = nil;
     
     Class classWalk;
     
+    NSString* (*SendReturningString)(id, SEL) = (NSString* (*)(id, SEL))objc_msgSend;
+    
     while (classWalk = [actionEnum nextObject]) {
-        NSString *result = objc_msgSend(classWalk,@selector(actionName));
+        NSString *result = SendReturningString(classWalk,@selector(actionName));
         
         NSMenuItem *item = [[NSMenuItem alloc] initWithTitle:result action:@selector(addAction:) keyEquivalent:@""];
         [item setTarget:obj];

@@ -9,7 +9,7 @@
 #import <Cocoa/Cocoa.h>
 #import "BaseAction.h"
 
-@interface Action_OpenLog : BaseAction {
+@interface Action_OpenLog : BaseAction <NSTextFieldDelegate> {
 
     NSDictionary        *_rdOptions;
     NSString            *_rdLogType;

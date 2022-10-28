@@ -81,8 +81,10 @@ static ConditionPicker *s_cPicker = nil;
     
     Class classWalk;
     
+    NSString* (*SendReturningString)(id, SEL) = (NSString* (*)(id, SEL))objc_msgSend;
+    
     while (classWalk = [conditionEnum nextObject]) {
-        NSString *result = objc_msgSend(classWalk,@selector(conditionName));
+        NSString *result = SendReturningString(classWalk,@selector(conditionName));
         [_rdConditionList addItemWithTitle:result];
     }
     
@@ -108,9 +110,11 @@ static ConditionPicker *s_cPicker = nil;
     NSEnumerator *conditionEnum = [conditions objectEnumerator];
     
     Class classWalk;
+
+    NSString* (*SendReturningString)(id, SEL) = (NSString* (*)(id, SEL))objc_msgSend;
     
     while (classWalk = [conditionEnum nextObject]) {
-        NSString *result = objc_msgSend(classWalk,@selector(conditionName));
+        NSString *result = SendReturningString(classWalk,@selector(conditionName));
         
         NSMenuItem *item = [[NSMenuItem alloc] initWithTitle:result action:@selector(addCondition:) keyEquivalent:@""];
         [item setTarget:obj];

@@ -77,8 +77,10 @@ NSInteger scrollbackSort(id obj1, id obj2, void *context)
 
         NSString *filename = [sheet filename];
         Class logClass = [logtypes objectAtIndex:[_rdLogTypes indexOfSelectedItem]];
-                
-        NSString *logtype = (NSString *)objc_msgSend(logClass,@selector(logtypeName));
+
+        NSString* (*SendReturningString)(id, SEL) = (NSString* (*)(id, SEL))objc_msgSend;
+        
+        NSString *logtype = SendReturningString(logClass,@selector(logtypeName));
         
         if (logtype) {
             [[NSUserDefaults standardUserDefaults] setObject:logtype forKey:@"atlantis.logsave.type"];
@@ -209,7 +211,9 @@ NSInteger scrollbackSort(id obj1, id obj2, void *context)
     NSArray *logtypes = [[RDAtlantisMainController controller] logTypes];
     Class logClass = [logtypes objectAtIndex:[_rdLogTypes indexOfSelectedItem]];
 
-    if(objc_msgSend(logClass,@selector(supportsOptions))) {
+    BOOL (*SendReturningBool)(id, SEL) = (BOOL (*)(id, SEL))objc_msgSend;
+    
+    if(SendReturningBool(logClass,@selector(supportsOptions))) {
         [_rdOptionsButton setEnabled:YES];
     }
     else {
@@ -256,9 +260,11 @@ NSInteger scrollbackSort(id obj1, id obj2, void *context)
         NSString *lastType = 
             [[NSUserDefaults standardUserDefaults] objectForKey:@"atlantis.logsave.type"];
 
+        NSString* (*SendReturningString)(id, SEL) = (NSString* (*)(id, SEL))objc_msgSend;
+        
         while (logWalk = [logtypeEnum nextObject]) {
             if (logWalk) {
-                NSString *result = (NSString *)objc_msgSend(logWalk,@selector(logtypeName));
+                NSString *result = SendReturningString(logWalk,@selector(logtypeName));
                 
                 if (!result) {
                     result = @"<unknown log type>";
@@ -305,8 +311,11 @@ NSInteger scrollbackSort(id obj1, id obj2, void *context)
         
         if ([manager fileExistsAtPath:realFilename]) {
             NSArray *logtypes = [[RDAtlantisMainController controller] logTypes];
-            Class logClass = [logtypes objectAtIndex:[_rdLogTypes indexOfSelectedItem]];      
-            if (objc_msgSend(logClass,@selector(canAppendToLog))) {                
+            Class logClass = [logtypes objectAtIndex:[_rdLogTypes indexOfSelectedItem]];
+            
+            BOOL (*SendReturningBool)(id, SEL) = (BOOL (*)(id, SEL))objc_msgSend;
+            
+            if (SendReturningBool(logClass,@selector(canAppendToLog))) {                
                 // Lookie, lookie; we need to ask if we should append, or replace!
                 
                 NSAlert *alert = 

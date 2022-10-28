@@ -35,7 +35,7 @@
         _rdTarget = [[coder decodeObjectForKey:@"action.clearTarget"] retain];
         
         if (!_rdTarget)
-            _rdTarget = [[NSString stringWithString:@"%{event.spawn}"] retain];
+            _rdTarget = [@"%{event.spawn}" retain];
     }
     return self;
 }

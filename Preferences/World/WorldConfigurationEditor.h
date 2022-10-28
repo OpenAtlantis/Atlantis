@@ -10,7 +10,7 @@
 
 @class RDAtlantisWorldPreferences;
 
-@interface WorldConfigurationEditor : NSObject {
+@interface WorldConfigurationEditor : NSObject <NSTabViewDelegate> {
 
     NSTabView                   *_rdConfigTabView;
 

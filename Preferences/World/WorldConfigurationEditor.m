@@ -34,8 +34,10 @@
         NSEnumerator *tabEnum = [tabClasses objectEnumerator];
         Class tabWalk;
         
+        int (*SendReturningInt)(id, SEL) = (int (*)(id, SEL)) objc_msgSend;
+        
         while (tabWalk = [tabEnum nextObject]) {
-            int result = (int)objc_msgSend(tabWalk, @selector(globalTab));
+            int result = SendReturningInt(tabWalk, @selector(globalTab));
             if (result) {        
                 WorldConfigurationTab *tab = (WorldConfigurationTab *)class_createInstance(tabWalk,0);
                 
