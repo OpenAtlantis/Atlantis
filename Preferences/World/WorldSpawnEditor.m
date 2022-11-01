@@ -10,7 +10,7 @@
 #import "RDStringPattern.h"
 #import "RDSpawnConfigRecord.h"
 
-@interface WorldSpawnRecord : NSObject {
+@interface WorldSpawnRecord : NSObject <NSTableViewDataSource> {
 
     BOOL             _rdIsFolder;
     NSString        *_rdName;

@@ -11,7 +11,7 @@
 
 @class RDStringPattern;
 
-@interface Condition_VariableMatch : BaseCondition {
+@interface Condition_VariableMatch : BaseCondition <NSTextFieldDelegate> {
 
     RDStringPattern             *_rdPattern;
     NSString                    *_rdVariableName;

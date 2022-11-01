@@ -11,7 +11,7 @@
 
 @class RDHotkeyState;
 
-@interface RDLogOpener : NSObject {
+@interface RDLogOpener : NSObject <NSOpenSavePanelDelegate> {
 
     IBOutlet NSPopUpButton              *_rdLogTypes;
     IBOutlet NSButton                   *_rdSpawnOnlyButton;

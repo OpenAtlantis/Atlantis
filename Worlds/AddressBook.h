@@ -10,7 +10,7 @@
 @class WorldCollection;
 @class RDAtlantisWorldPreferences;
 
-@interface AddressBook : NSWindowController {
+@interface AddressBook : NSWindowController <NSOutlineViewDelegate, NSOutlineViewDataSource, NSWindowDelegate> {
 
     IBOutlet NSOutlineView          *_rdWorldList;
     IBOutlet NSTabView              *_rdConfigContent;

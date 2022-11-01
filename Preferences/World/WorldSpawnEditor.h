@@ -11,7 +11,7 @@
 
 @class WorldSpawnRecord;
 
-@interface WorldSpawnEditor : WorldConfigurationTab {
+@interface WorldSpawnEditor : WorldConfigurationTab <NSTableViewDelegate, NSTableViewDataSource, NSOutlineViewDelegate, NSOutlineViewDataSource, NSTextFieldDelegate> {
 
     IBOutlet NSView             *_rdConfigView;
     

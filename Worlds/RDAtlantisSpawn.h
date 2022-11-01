@@ -13,7 +13,7 @@
 #import "RDSpawnConfigRecord.h"
 #import "ImageBackgroundView.h"
 
-@interface RDAtlantisSpawn : NSObject <RDNestedViewDescriptor> {
+@interface RDAtlantisSpawn : NSObject <NSTextViewDelegate, RDNestedViewDescriptor> {
 
     // View elements
     IBOutlet NSView     *        _rdSpawnContentView;

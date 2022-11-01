@@ -139,7 +139,7 @@ void resolveHSV(float *color1, float *color2);
   
   CTGradientElement color1;
   CTGradientElement color2;
-  
+      
   [[begin colorUsingColorSpaceName:NSCalibratedRGBColorSpace] getRed:&color1.red
 															   green:&color1.green
 																blue:&color1.blue

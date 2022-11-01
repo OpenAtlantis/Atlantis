@@ -9,7 +9,7 @@
 #import <Cocoa/Cocoa.h>
 #import "BaseAction.h"
 
-@interface Action_PerlEval : BaseAction {
+@interface Action_PerlEval : BaseAction <NSTextViewDelegate> {
 
     IBOutlet NSView         *_rdInternalConfigurationView;
     IBOutlet NSTextView     *_rdActualText;

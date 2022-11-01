@@ -26,7 +26,7 @@ typedef enum {
 @class WorldNotesView;
 @class BaseAction;
 
-@interface RDAtlantisWorldInstance : NSObject {
+@interface RDAtlantisWorldInstance : NSObject <NSStreamDelegate> {
 
     NSString                    *_rdBaseViewPath;
     NSString                    *_rdCharacter;
