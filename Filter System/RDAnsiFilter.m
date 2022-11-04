@@ -700,13 +700,16 @@ static NSMutableArray *s_extendedColors = nil;
             
             if (!endRange.length) {
                 // unterminated ANSI!  Aiie!
-                NSRange eatMe = NSMakeRange(foundRange.location, length - foundRange.location);
-                NSAttributedString *holdover = [string attributedSubstringFromRange:eatMe];
-                // Munch these from our existing string, having stored them as holdover
-//                [string replaceCharactersInRange:eatMe withString:@""];
-                [_rdState setHoldover:holdover];
-                [string release];
-                [(NSMutableAttributedString *)input setAttributedString:result];
+                
+                // Hold over the current input for the next packet until we have
+                // don't have a split ANSI sequence. Outside of high latency
+                // between packets, this shouldn't take very long. Unfortunately,
+                // partial line parsing and attempted display sometimes causes
+                // visual artifacts.
+                [_rdState setHoldover:string];
+                NSMutableAttributedString *empty = [[NSMutableAttributedString alloc] initWithString:@"" attributes:[_rdState attributes]];
+                [(NSMutableAttributedString *)input setAttributedString:empty];
+                [empty release];
                 [result release];
                 return;
             }
