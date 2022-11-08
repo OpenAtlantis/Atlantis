@@ -10,7 +10,7 @@
 #import <Lemuria/Lemuria.h>
 #import "RDAtlantisWorldInstance.h"
 
-@interface WorldNotesView : NSObject <RDNestedViewDescriptor> {
+@interface WorldNotesView : NSObject <RDNestedViewDescriptor, NSTextViewDelegate> {
 
     RDAtlantisWorldInstance             *_rdWorld;
     NSString                            *_rdUID;

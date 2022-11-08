@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="21225" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment version="1070" identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="21225"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="GeneralPreferences">
+            <connections>
+                <outlet property="_rdAutoShrink" destination="53" id="55"/>
+                <outlet property="_rdAutoShrinkLen" destination="54" id="56"/>
+                <outlet property="_rdBeepBehavior" destination="37" id="44"/>
+                <outlet property="_rdCheckOnStartup" destination="7" id="8"/>
+                <outlet property="_rdClearInput" destination="11" id="14"/>
+                <outlet property="_rdConfigView" destination="5" id="6"/>
+                <outlet property="_rdDockBadgeActive" destination="17" id="18"/>
+                <outlet property="_rdDockBadgeHidden" destination="45" id="46"/>
+                <outlet property="_rdDoubleConnect" destination="71" id="73"/>
+                <outlet property="_rdEasyShortcut" destination="15" id="16"/>
+                <outlet property="_rdFugueEnabled" destination="9" id="10"/>
+                <outlet property="_rdNoSlashies" destination="25" id="26"/>
+                <outlet property="_rdOpenAddressBook" destination="47" id="50"/>
+                <outlet property="_rdSilentConvert" destination="51" id="52"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="5" userLabel="View">
+            <rect key="frame" x="0.0" y="0.0" width="433" height="414"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <box fixedFrame="YES" title="Startup Options" translatesAutoresizingMaskIntoConstraints="NO" id="48">
+                    <rect key="frame" x="17" y="16" width="399" height="79"/>
+                    <autoresizingMask key="autoresizingMask"/>
+                    <view key="contentView" id="3Qj-Ji-hsu">
+                        <rect key="frame" x="3" y="3" width="393" height="61"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button fixedFrame="YES" imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7">
+                                <rect key="frame" x="14" y="32" width="312" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="check" title="Check for new versions of Atlantis on startup" bezelStyle="regularSquare" imagePosition="leading" alignment="left" inset="2" id="91">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </button>
+                            <button fixedFrame="YES" imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="47">
+                                <rect key="frame" x="14" y="12" width="337" height="18"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <buttonCell key="cell" type="check" title="Open Address Book on startup if no autoconnects" bezelStyle="regularSquare" imagePosition="leading" alignment="left" inset="2" id="92">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </button>
+                        </subviews>
+                    </view>
+                </box>
+                <box fixedFrame="YES" title="Global UI Options" translatesAutoresizingMaskIntoConstraints="NO" id="19">
+                    <rect key="frame" x="17" y="248" width="399" height="146"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <view key="contentView" id="XVq-cC-jA7">
+                        <rect key="frame" x="3" y="3" width="393" height="128"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button fixedFrame="YES" imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="15">
+                                <rect key="frame" x="12" y="99" width="361" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="check" title="Use Command+Number spawn shortcuts" bezelStyle="regularSquare" imagePosition="leading" alignment="left" inset="2" id="85">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <outlet property="nextKeyView" destination="17" id="30"/>
+                                </connections>
+                            </button>
+                            <button fixedFrame="YES" imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="17">
+                                <rect key="frame" x="12" y="79" width="361" height="18"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <buttonCell key="cell" type="check" title="Show dock badge only when Atlantis is not active app" bezelStyle="regularSquare" imagePosition="leading" alignment="left" inset="2" id="86">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <outlet property="nextKeyView" destination="25" id="31"/>
+                                </connections>
+                            </button>
+                            <popUpButton verticalHuggingPriority="750" fixedFrame="YES" imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="37">
+                                <rect key="frame" x="11" y="9" width="161" height="26"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <popUpButtonCell key="cell" type="push" title="Do nothing" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" inset="2" arrowPosition="arrowAtCenter" preferredEdge="maxY" selectedItem="39" id="87">
+                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="menu"/>
+                                    <menu key="menu" title="OtherViews" id="38">
+                                        <items>
+                                            <menuItem title="Do nothing" state="on" id="39"/>
+                                            <menuItem title="Show &quot;Beep!&quot;" id="40"/>
+                                            <menuItem title="Play system beep" id="41"/>
+                                        </items>
+                                    </menu>
+                                </popUpButtonCell>
+                            </popUpButton>
+                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="43">
+                                <rect key="frame" x="174" y="15" width="200" height="17"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="when receiving a &quot;bell.&quot;" id="88">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <button fixedFrame="YES" imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="45">
+                                <rect key="frame" x="12" y="59" width="260" height="18"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <buttonCell key="cell" type="check" title="Hide dock badge if Atlantis is hidden." bezelStyle="regularSquare" imagePosition="leading" alignment="left" inset="2" id="89">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </button>
+                            <button fixedFrame="YES" imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="71">
+                                <rect key="frame" x="12" y="39" width="343" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="check" title="Allow worlds to be double-connected from toolbar" bezelStyle="regularSquare" imagePosition="leading" alignment="left" imageScaling="proportionallyDown" inset="2" id="90">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </button>
+                        </subviews>
+                    </view>
+                </box>
+                <box fixedFrame="YES" title="Global Input Window Options" translatesAutoresizingMaskIntoConstraints="NO" id="12">
+                    <rect key="frame" x="17" y="99" width="399" height="145"/>
+                    <autoresizingMask key="autoresizingMask"/>
+                    <view key="contentView" id="Ar8-c8-MAh">
+                        <rect key="frame" x="3" y="3" width="393" height="127"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button fixedFrame="YES" imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9">
+                                <rect key="frame" x="12" y="81" width="244" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="check" title="Support FugueEdit input-grabbing" bezelStyle="regularSquare" imagePosition="leading" alignment="left" inset="2" id="79">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <outlet property="nextKeyView" destination="11" id="33"/>
+                                </connections>
+                            </button>
+                            <button fixedFrame="YES" imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="11">
+                                <rect key="frame" x="12" y="61" width="205" height="18"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <buttonCell key="cell" type="check" title="Clear input window on enter" bezelStyle="regularSquare" imagePosition="leading" alignment="left" inset="2" id="80">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <outlet property="nextKeyView" destination="7" id="34"/>
+                                </connections>
+                            </button>
+                            <button fixedFrame="YES" imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="25">
+                                <rect key="frame" x="12" y="101" width="223" height="18"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <buttonCell key="cell" type="check" title="Aliases do not require leading /" bezelStyle="regularSquare" imagePosition="leading" alignment="left" inset="2" id="81">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <outlet property="nextKeyView" destination="9" id="32"/>
+                                </connections>
+                            </button>
+                            <button fixedFrame="YES" imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="51">
+                                <rect key="frame" x="12" y="41" width="353" height="18"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <buttonCell key="cell" type="check" title="Do not warn when stripping unsupported characters" bezelStyle="regularSquare" imagePosition="leading" alignment="left" inset="2" id="82">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </button>
+                            <button fixedFrame="YES" imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="53">
+                                <rect key="frame" x="12" y="21" width="287" height="18"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <buttonCell key="cell" type="check" title="Automatically shrink any URL longer than " bezelStyle="regularSquare" imagePosition="leading" alignment="left" inset="2" id="83">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </button>
+                            <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="54">
+                                <rect key="frame" x="305" y="20" width="76" height="22"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="84">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </subviews>
+                    </view>
+                </box>
+            </subviews>
+            <point key="canvasLocation" x="86" y="114"/>
+        </customView>
+    </objects>
+</document>

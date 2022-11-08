@@ -9,7 +9,7 @@
 #import <Cocoa/Cocoa.h>
 #import "BaseAction.h"
 
-@interface Action_Substitute : BaseAction {
+@interface Action_Substitute : BaseAction <NSTextFieldDelegate> {
 
     int                      _rdRegister;
     NSString                *_rdReplaceWith;

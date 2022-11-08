@@ -27,7 +27,7 @@
 @class CTBadge;
 @class AtlantisState;
 
-@interface RDAtlantisMainController : NSObject <GrowlApplicationBridgeDelegate>
+@interface RDAtlantisMainController : NSObject <NSApplicationDelegate, NSToolbarDelegate, GrowlApplicationBridgeDelegate>
 {
     IBOutlet NSMenuItem*    _rdRenameMenuItem;
     IBOutlet NSMenuItem*    _rdCustomizeToolbarMenuItem;

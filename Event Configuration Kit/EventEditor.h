@@ -12,7 +12,7 @@
 @class EventCollection;
 @protocol EventDataProtocol;
 
-@interface EventEditor : NSObject {
+@interface EventEditor : NSObject <NSTableViewDataSource, NSTableViewDelegate> {
 
     IBOutlet NSView                  *_rdEditorContentView;
     

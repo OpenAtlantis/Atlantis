@@ -9,7 +9,7 @@
 #import <Cocoa/Cocoa.h>
 #import "BaseAction.h"
 
-@interface Action_ClearSpawn : BaseAction {
+@interface Action_ClearSpawn : BaseAction <NSTextFieldDelegate> {
 
     NSString                    *_rdTarget;
     

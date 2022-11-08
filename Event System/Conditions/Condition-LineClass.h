@@ -9,7 +9,7 @@
 #import <Cocoa/Cocoa.h>
 #import "BaseCondition.h"
 
-@interface Condition_LineClass : BaseCondition {
+@interface Condition_LineClass : BaseCondition <NSTextFieldDelegate> {
 
     IBOutlet NSView         *_rdInternalConfigurationView;
     IBOutlet NSTextField    *_rdLineClassField;

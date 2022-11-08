@@ -9,7 +9,7 @@
 #import <Cocoa/Cocoa.h>
 #import "BaseCondition.h"
 
-@interface Condition_ViewName : BaseCondition {
+@interface Condition_ViewName : BaseCondition <NSTextFieldDelegate> {
     NSString                    *_rdViewName;
     
     IBOutlet NSView             *_rdInternalConfigurationView;

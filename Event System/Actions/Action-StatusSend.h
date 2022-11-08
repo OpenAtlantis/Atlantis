@@ -9,7 +9,7 @@
 #import <Cocoa/Cocoa.h>
 #import "BaseAction.h"
 
-@interface Action_StatusSend : BaseAction {
+@interface Action_StatusSend : BaseAction <NSTextFieldDelegate> {
 
     NSString                    *_rdString;
     NSString                    *_rdTarget;

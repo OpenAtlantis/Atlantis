@@ -9,7 +9,7 @@
 #import <Cocoa/Cocoa.h>
 #import "RDTextField.h"
 
-@interface ToolbarSearchController : NSObject {
+@interface ToolbarSearchController : NSObject <NSSearchFieldDelegate> {
 
     IBOutlet NSView *               _rdSearchView;
     IBOutlet RDTextField *          _rdSearchField;

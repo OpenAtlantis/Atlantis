@@ -9,7 +9,7 @@
 #import <Cocoa/Cocoa.h>
 #import "BaseAction.h"
 
-@interface Action_SpawnPrefix : BaseAction {
+@interface Action_SpawnPrefix : BaseAction <NSTextFieldDelegate> {
 
     NSString                    *_rdSpawnPath;
     NSString                    *_rdSpawnPrefix;

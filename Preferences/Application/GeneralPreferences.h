@@ -9,7 +9,7 @@
 #import <Cocoa/Cocoa.h>
 #import "AtlantisPreferencePane.h"
 
-@interface GeneralPreferences : NSObject <AtlantisPreferencePane> {
+@interface GeneralPreferences : NSObject <AtlantisPreferencePane, NSTextFieldDelegate> {
 
     IBOutlet  NSView                *_rdConfigView;
 

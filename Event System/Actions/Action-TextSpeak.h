@@ -9,7 +9,7 @@
 #import <Cocoa/Cocoa.h>
 #import "BaseAction.h"
 
-@interface Action_TextSpeak : BaseAction {
+@interface Action_TextSpeak : BaseAction <NSTextFieldDelegate> {
 
     IBOutlet NSView         *_rdInternalConfigurationView;
     IBOutlet NSTextField    *_rdActualText;

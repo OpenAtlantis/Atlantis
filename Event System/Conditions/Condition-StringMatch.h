@@ -10,7 +10,7 @@
 #import "BaseCondition.h"
 #import "RDStringPattern.h"
 
-@interface Condition_StringMatch : BaseCondition {
+@interface Condition_StringMatch : BaseCondition <NSTextFieldDelegate> {
 
     RDStringPattern             *_rdPattern;
     

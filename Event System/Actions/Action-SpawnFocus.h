@@ -9,7 +9,7 @@
 #import <Cocoa/Cocoa.h>
 #import "BaseAction.h"
 
-@interface Action_SpawnFocus : BaseAction {
+@interface Action_SpawnFocus : BaseAction <NSTextFieldDelegate> {
 
     NSString                    *_rdSpawnPath;
     

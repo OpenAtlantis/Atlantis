@@ -9,7 +9,7 @@
 #import <Cocoa/Cocoa.h>
 #import "WorldConfigurationTab.h"
 
-@interface WorldUserconfEditor : WorldConfigurationTab {
+@interface WorldUserconfEditor : WorldConfigurationTab <NSTableViewDelegate, NSTableViewDataSource> {
 
     NSMutableDictionary             *_rdUserConf;
     NSMutableArray                  *_rdUserConfKeys;

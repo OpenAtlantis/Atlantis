@@ -9,7 +9,7 @@
 #import <Cocoa/Cocoa.h>
 #import "WorldConfigurationTab.h"
 
-@interface WorldInfoEditor : WorldConfigurationTab {
+@interface WorldInfoEditor : WorldConfigurationTab <NSTextViewDelegate, NSTextFieldDelegate> {
 
     IBOutlet NSView                  *_rdConfigView;
     

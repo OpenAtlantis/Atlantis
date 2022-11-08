@@ -10,7 +10,7 @@
 #import "AtlantisPreferencePane.h"
 
 
-@interface NetworkPreferences : NSObject<AtlantisPreferencePane> {
+@interface NetworkPreferences : NSObject <AtlantisPreferencePane, NSTextFieldDelegate> {
 
     IBOutlet NSView *                   _rdConfigView;
 

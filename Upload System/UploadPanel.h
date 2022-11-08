@@ -9,7 +9,7 @@
 #import <Cocoa/Cocoa.h>
 @class AtlantisState;
 
-@interface UploadPanel : NSObject {
+@interface UploadPanel : NSObject <NSOpenSavePanelDelegate> {
 
     IBOutlet NSView                     *_rdOptionsView;
     IBOutlet NSButton                   *_rdCodeButton;

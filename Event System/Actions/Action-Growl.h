@@ -9,7 +9,7 @@
 #import <Cocoa/Cocoa.h>
 #import "BaseAction.h"
 
-@interface Action_Growl : BaseAction {
+@interface Action_Growl : BaseAction <NSTextFieldDelegate> {
 
     NSString                    *_rdGrowlTitle;
     NSString                    *_rdGrowlString;

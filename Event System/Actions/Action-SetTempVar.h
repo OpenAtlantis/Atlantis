@@ -9,7 +9,7 @@
 #import <Cocoa/Cocoa.h>
 #import "BaseAction.h"
 
-@interface Action_SetTempVar : BaseAction {
+@interface Action_SetTempVar : BaseAction <NSTextFieldDelegate> {
 
     IBOutlet NSTextField            *_rdVariableNameField;
     IBOutlet NSTextField            *_rdVariableValueField;

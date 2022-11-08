@@ -9,7 +9,7 @@
 #import <Cocoa/Cocoa.h>
 #import "AtlantisPreferencePane.h"
 
-@interface AtlantisPreferenceController : NSWindowController {
+@interface AtlantisPreferenceController : NSWindowController <NSToolbarDelegate, NSWindowDelegate> {
 
     NSWindow                *_rdPrefsWindow;
     NSMutableDictionary     *_rdPreferencePanes;

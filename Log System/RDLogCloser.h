@@ -11,7 +11,7 @@
 
 @class RDHotkeyState;
 
-@interface RDLogCloser : NSObject {
+@interface RDLogCloser : NSObject <NSTableViewDataSource> {
 
     IBOutlet NSPanel                    *_rdCloserView;
     IBOutlet NSTableView                *_rdTableView;

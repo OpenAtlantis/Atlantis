@@ -9,7 +9,7 @@
 #import <Cocoa/Cocoa.h>
 #import "BaseCondition.h"
 
-@interface Condition_Timer : BaseCondition {
+@interface Condition_Timer : BaseCondition <NSTextFieldDelegate> {
 
     NSTimeInterval              _rdInterval;
 
