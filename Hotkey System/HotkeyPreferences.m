@@ -133,10 +133,9 @@ static NSImage *s_rdKeyIcon = nil;
 {
     PTKeyComboPanel *panel = [PTKeyComboPanel sharedPanel];
     PTKeyCombo *key = [[[PTKeyCombo alloc] init] autorelease];
-    [panel setKeyCombo:key];
-    [panel setKeyBindingName:@"Atlantis Hotkey Binding"];
     PTHotKey *hotKey = [[PTHotKey alloc] init];
     [hotKey setKeyCombo:key];
+    [hotKey setName:@"set hotkey"];
     [panel showSheetForHotkey:hotKey forWindow:[[_rdEventEditor editorView] window] modalDelegate:self];
     [hotKey autorelease];
 }
