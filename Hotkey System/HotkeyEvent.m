@@ -216,10 +216,11 @@
     PTKeyCombo *key = [self keyCombo];
 
     PTKeyComboPanel *panel = [PTKeyComboPanel sharedPanel];
-    [panel setKeyCombo:key];
-    [panel setKeyBindingName:@"Atlantis Hotkey Binding"];
+    //[panel setKeyCombo:key];
+    //[panel setKeyBindingName:@"Atlantis Hotkey Binding"];
     PTHotKey *hotKey = [[[PTHotKey alloc] init] autorelease];
     [hotKey setKeyCombo:key];
+    [hotKey setName:@"set hotkey"];
     [panel showSheetForHotkey:hotKey forWindow:[NSApp keyWindow] modalDelegate:self];
 }
 
